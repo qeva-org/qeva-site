@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 type AnalyzeResp = {
-  reflection: any;
+  reflection: Record<string, unknown>;
   metrics: Record<string, number>;
   color: { color: string; intensity: number; note: string };
 };
@@ -25,8 +25,8 @@ export default function Home() {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       const data = (await r.json()) as AnalyzeResp;
       setRes(data);
-    } catch (e: any) {
-      setErr(e.message ?? "Request failed");
+    } catch (e: unknown) {
+      setErr(e instanceof Error ? e.message : "Request failed");
     } finally {
       setLoading(false);
     }

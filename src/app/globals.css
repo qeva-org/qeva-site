@@ -1,3 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* noise + subtle vignette for depth */
+:root {
+  --noise: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04), transparent 40%),
+           radial-gradient(circle at 80% 0%, rgba(255,255,255,0.03), transparent 45%);
+}
+body {
+  background: linear-gradient(180deg, #070a13 0%, #0b0f19 70%, #06080e 100%);
+  background-blend-mode: normal;
+}
+
 @import "tailwindcss";
 
 :root {

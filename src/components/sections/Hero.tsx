@@ -1,4 +1,3 @@
-// src/components/sections/Hero.tsx
 "use client";
 
 import HoloOrb from "@/components/visual/HoloOrb";

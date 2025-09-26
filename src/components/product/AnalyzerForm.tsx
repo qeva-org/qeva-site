@@ -1,4 +1,3 @@
-// src/components/product/AnalyzerForm.tsx
 "use client";
 
 import { useState } from "react";

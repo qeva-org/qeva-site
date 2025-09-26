@@ -1,4 +1,3 @@
-// src/components/visual/HoloOrb.tsx
 "use client";
 
 export default function HoloOrb() {

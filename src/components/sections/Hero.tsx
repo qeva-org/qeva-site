@@ -8,7 +8,7 @@ export default function Hero() {
     <header className="grid gap-8 md:grid-cols-2 md:items-center">
       <div className="space-y-4">
         <h1 className="text-4xl md:text-5xl tracking-tight font-semibold">
-          Research-grade Reflection
+          Self Reflection
         </h1>
         <p className="text-slate-400">
           Precision metrics, private by design. Paste text and get values, themes, and stability—fast.

@@ -1,17 +1,16 @@
-import { ComponentProps } from "react";
-import { motion } from "framer-motion";
+// src/components/ui/GradientButton.tsx
+"use client";
 
-type Props = ComponentProps<"button"> & { loading?: boolean; label: string };
+type Props = React.ComponentProps<"button"> & { label: string; loading?: boolean };
 
-export default function GradientButton({ loading, label, ...rest }: Props) {
+export default function GradientButton({ label, loading, ...rest }: Props) {
   return (
-    <motion.button
-      whileTap={{ scale: 0.98 }}
-      disabled={loading || rest.disabled}
-      className="rounded-xl px-5 py-2.5 font-medium bg-gradient-to-r from-neon-violet via-neon-magenta to-neon-cyan hover:opacity-90 disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-cyan"
+    <button
       {...rest}
+      disabled={loading || rest.disabled}
+      className="rounded-xl px-5 py-2.5 font-medium bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-400 hover:opacity-90 disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
     >
       {loading ? "Working…" : label}
-    </motion.button>
+    </button>
   );
 }

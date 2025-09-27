@@ -1,6 +1,10 @@
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+function errToString(e: unknown): string {
+  return e instanceof Error ? e.message : String(e);
+}
+
 export async function POST(req: Request) {
   try {
     const base = process.env.NEXT_PUBLIC_ENGINE_URL;
@@ -37,8 +41,8 @@ export async function POST(req: Request) {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
-  } catch (err: any) {
-    return new Response(JSON.stringify({ error: String(err?.message || err) }), {
+  } catch (e: unknown) {
+    return new Response(JSON.stringify({ error: errToString(e) }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });

@@ -1,12 +1,46 @@
-// /api/pill/score
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function POST(req: Request) {
-  const { snippet, goals, host, title, now } = await req.json();
-  const base = process.env.NEXT_PUBLIC_ENGINE_URL!;
-  const r = await fetch(`${base}/v1/pill/score`, {
-    method: "POST",
-    headers: { "Content-Type":"application/json" },
-    body: JSON.stringify({ snippet, goals, host, title, now })
-  });
-  const data = await r.json();
-  return Response.json(data, { status: r.status });
+  try {
+    const base = process.env.NEXT_PUBLIC_ENGINE_URL;
+    if (!base) {
+      return new Response(
+        JSON.stringify({ error: "Missing NEXT_PUBLIC_ENGINE_URL" }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    const payload = await req.json();
+
+    const upstream = await fetch(`${base}/v1/pill/score`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const text = await upstream.text();
+    const isJSON =
+      (upstream.headers.get("content-type") || "").includes("application/json") &&
+      text.trim().length > 0;
+
+    if (!upstream.ok) {
+      const body = isJSON ? JSON.parse(text) : { error: text || "Upstream error" };
+      return new Response(JSON.stringify(body), {
+        status: upstream.status,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    const body = isJSON ? JSON.parse(text) : { raw: text };
+    return new Response(JSON.stringify(body), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (err: any) {
+    return new Response(JSON.stringify({ error: String(err?.message || err) }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 }

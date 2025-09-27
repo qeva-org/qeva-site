@@ -1,5 +1,5 @@
 // src/artifacts.ts
-import Ajv, { DefinedError } from "ajv";
+import Ajv, { DefinedError } from "ajv/dist/2020";
 import addFormats from "ajv-formats";
 
 // === JSON Schemas (inlined for a self-contained module) ===
@@ -60,8 +60,8 @@ export const SlideDeckSchema = /* json */ (/* keep exact match to JSON file */{
           "notes": { "type": "string", "minLength": 0, "maxLength": 1000 }
         },
         "anyOf": [
-          { "required": ["bullets"], "properties": { "bullets": { "minItems": 1 } } },
-          { "required": ["figureStubs"], "properties": { "figureStubs": { "minItems": 1 } } }
+          { "type": "object", "required": ["bullets"], "properties": { "bullets": { "type": "array", "minItems": 1 } } },
+          { "type": "object", "required": ["figureStubs"], "properties": { "figureStubs": { "type": "array", "minItems": 1 } } }
         ]
       }
     },
@@ -427,14 +427,30 @@ export function validateArtifact(artifact: unknown): CalcResult {
     return { ok: false, errors: ["artifact must be an object with a 'kind' field"] };
   }
 
-  if (!schemaOk) return { ok: false, errors: ajvErrors };
+  const runCalc = (): string[] => {
+    switch ((a as Artifact).kind) {
+      case "SlideDeck":
+        return calcSlideDeck(a as SlideDeck);
+      case "OnePager":
+        return calcOnePager(a as OnePager);
+      case "Flashcards":
+        return calcFlashcards(a as Flashcards);
+      default:
+        return [];
+    }
+  };
 
-  // Run calculator
-  let calcErrors: string[] = [];
-  switch ((a as Artifact).kind) {
-    case "SlideDeck": calcErrors = calcSlideDeck(a as SlideDeck); break;
-    case "OnePager": calcErrors = calcOnePager(a as OnePager); break;
-    case "Flashcards": calcErrors = calcFlashcards(a as Flashcards); break;
+  const calcErrors = (() => {
+    try {
+      return runCalc();
+    } catch {
+      return [];
+    }
+  })();
+
+  if (!schemaOk) {
+    const mergedErrors = [...ajvErrors, ...calcErrors];
+    return { ok: false, errors: mergedErrors };
   }
 
   return { ok: calcErrors.length === 0, errors: calcErrors };
@@ -448,3 +464,4 @@ function asErrs(e: null | undefined | DefinedError[]): string[] {
     return `${err.keyword} ${where} ${JSON.stringify(err.params)}`.trim();
   });
 }
+

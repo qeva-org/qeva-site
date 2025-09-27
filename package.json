@@ -7,28 +7,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-      "lint": "next lint",
-  "test": "vitest",
+    "lint": "next lint",
+    "test": "vitest",
     "postinstall": "tailwindcss -v >/dev/null 2>&1 || true"
   },
   "dependencies": {
+    "@mdx-js/react": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "next": "15.0.0",
+    "next": "15.5.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "tailwind-merge": "^2.5.2",
-    "@mdx-js/react": "^3.0.0"
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@next/mdx": "15.0.0",
-    "@types/node": "^20.14.9",
+    "@types/node": "^20.19.17",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.4"
   }
 }

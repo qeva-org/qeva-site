@@ -1,6 +1,7 @@
 // src/app/page.tsx  (SERVER COMPONENT)
 import Hero from "@/components/sections/Hero";
 import AnalyzerForm from "@/components/product/AnalyzerForm";
+import AlignPillDemo from "@/components/product/AlignPillDemo";
 
 export default function Page() {
   return (
@@ -9,6 +10,11 @@ export default function Page() {
       <section className="mt-12">
         <AnalyzerForm />
       </section>
+      
+      <section className="mt-12">
+        <AlignPillDemo />
+      </section>
     </main>
   );
 }
+

@@ -8,18 +8,15 @@ function errToString(e: unknown): string {
 export async function POST(req: Request) {
   try {
     const base = process.env.NEXT_PUBLIC_ENGINE_URL;
-    console.assert(Boolean(base), 'NEXT_PUBLIC_ENGINE_URL is missing at build time');
-
     if (!base) {
       return new Response(
         JSON.stringify({ error: "Missing NEXT_PUBLIC_ENGINE_URL" }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
-
     const payload = await req.json();
 
-    const upstream = await fetch(`${base}/v1/pill/score`, {
+    const upstream = await fetch(`${base}/v1/events/append`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -30,17 +27,9 @@ export async function POST(req: Request) {
       (upstream.headers.get("content-type") || "").includes("application/json") &&
       text.trim().length > 0;
 
-    if (!upstream.ok) {
-      const body = isJSON ? JSON.parse(text) : { error: text || "Upstream error" };
-      return new Response(JSON.stringify(body), {
-        status: upstream.status,
-        headers: { "Content-Type": "application/json" },
-      });
-    }
-
-    const body = isJSON ? JSON.parse(text) : { raw: text };
+    const body = isJSON ? JSON.parse(text) : (text ? { raw: text } : {});
     return new Response(JSON.stringify(body), {
-      status: 200,
+      status: upstream.ok ? 200 : upstream.status,
       headers: { "Content-Type": "application/json" },
     });
   } catch (e: unknown) {

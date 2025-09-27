@@ -1,5 +1,14 @@
 {
-    "files.watcherExclude": {
+    
+    "files.exclude": {
+        "**/.env": true,
+        "**/.env.*": true,
         "**/target": true
+
+    },
+    "search.exclude": {
+        "**/.env": true,
+        "**/.env.*": true
     }
+
 }

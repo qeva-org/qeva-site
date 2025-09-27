@@ -1,0 +1,65 @@
+{
+  "$id": "https://qeva.org/schemas/OnePager.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OnePager",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "meta", "problem", "keyFacts", "implications", "actions", "citations", "sources"],
+  "properties": {
+    "kind": { "const": "OnePager" },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "wordBudget"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "wordBudget": { "type": "integer", "minimum": 200, "maximum": 1000 }
+      }
+    },
+    "problem": { "type": "string", "minLength": 1, "maxLength": 4000 },
+    "keyFacts": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": { "type": "string", "minLength": 1, "maxLength": 400 }
+    },
+    "implications": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": { "type": "string", "minLength": 1, "maxLength": 400 }
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 10,
+      "items": { "type": "string", "minLength": 1, "maxLength": 200 }
+    },
+    "citations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": { "type": "string", "pattern": "^[A-Za-z0-9._:-]+$" }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": { "$ref": "#/$defs/source" }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "value"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z0-9._:-]+$" },
+        "kind": { "type": "string", "enum": ["url", "doi", "paper", "book", "other"] },
+        "value": { "type": "string", "minLength": 1 },
+        "title": { "type": "string" },
+        "accessed": { "type": "string", "format": "date" }
+      }
+    }
+  }
+}

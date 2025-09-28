@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import PlausibleTracker from "@/components/PlausibleTracker";
@@ -24,10 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div aria-hidden className="pointer-events-none fixed inset-0 mix-blend-soft-light opacity-70" style={{ backgroundImage: "var(--noise)" }} />
         {children}
         {/* SPA pageview tracking */}
-        <PlausibleTracker />
+        <Suspense fallback={null}>
+          <PlausibleTracker />
+        </Suspense>
       </body>
     </html>
   );
 }
-
-

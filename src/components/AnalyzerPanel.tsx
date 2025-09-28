@@ -35,7 +35,7 @@ export default function AnalyzerPanel() {
       });
 
       if (!res.ok) {
-        let message = Upstream error (status );
+        let message = `Upstream error (status ${res.status})`;
         try {
           const payload = await res.json();
           if (payload?.error) message = String(payload.error);
@@ -129,3 +129,4 @@ export default function AnalyzerPanel() {
     </form>
   );
 }
+

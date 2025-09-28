@@ -1,5 +1,5 @@
 // src/artifacts.ts
-import Ajv, { DefinedError } from "ajv/dist/2020";
+import Ajv, { type ErrorObject } from "ajv/dist/2020";
 import addFormats from "ajv-formats";
 
 // === JSON Schemas (inlined for a self-contained module) ===
@@ -456,7 +456,7 @@ export function validateArtifact(artifact: unknown): CalcResult {
   return { ok: calcErrors.length === 0, errors: calcErrors };
 }
 
-function asErrs(e: null | undefined | DefinedError[]): string[] {
+function asErrs(e: null | undefined | ErrorObject[]): string[] {
   if (!e || !e.length) return [];
   return e.map(err => {
     const instPath = err.instancePath || "";
@@ -464,4 +464,6 @@ function asErrs(e: null | undefined | DefinedError[]): string[] {
     return `${err.keyword} ${where} ${JSON.stringify(err.params)}`.trim();
   });
 }
+
+
 

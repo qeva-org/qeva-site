@@ -15,12 +15,12 @@ import { NextRequest, NextResponse } from 'next/server';
         if (line.startsWith('edge ')) {
           const m = /^edge\s+(\w[\w\-]*)\s*->\s*(\w[\w\-]*)\s*:\s*(\w+)\s*$/.exec(line);
           if (!m) throw new Error(`Invalid edge syntax: ${line}`);
-          edges.push({from:m[1], to:m[2], type: m[3] as any});
+          edges.push({from:m[1]!, to:m[2]!, type: m[3]! as TGIREDgeType});
           continue;
         }
         const head = /^(goal|task|data|transform|metric|deliverable|constraint|test)\s+(\w[\w\-]*)\s+/.exec(line);
         if (!head) throw new Error(`Invalid statement: ${line}`);
-        const kind = head[1]; const id = head[2];
+        const kind = head[1]!; const id = head[2]!;
         const rest = line.slice(head[0].length).trim();
 
         let label = '';
@@ -30,22 +30,23 @@ import { NextRequest, NextResponse } from 'next/server';
         if (rest.startsWith('"')) {
           const m2 = /^"([^"]+)"\s*(.*)$/.exec(rest);
           if (!m2) throw new Error(`Unclosed label in: ${line}`);
-          label = m2[1];
-          const tail = m2[2].trim();
+          label = m2[1]!;
+          const tail = m2[2]!.trim();
           if (tail.startsWith('{')) props = parseProps(tail);
           else if (tail.startsWith(':=')) expr = tail.slice(2).trim();
           else if (tail.length>0) throw new Error(`Unexpected trailing tokens: ${tail}`);
         } else {
           const m2 = /^(\w[\w\-]*)\s*(.*)$/.exec(rest);
           if (!m2) throw new Error(`Missing label in: ${line}`);
-          label = m2[1];
-          const tail = m2[2].trim();
+          label = m2[1]!;
+          const tail = m2[2]!.trim();
           if (tail.startsWith('{')) props = parseProps(tail);
           else if (tail.startsWith(':=')) expr = tail.slice(2).trim();
           else if (tail.length>0) throw new Error(`Unexpected trailing tokens: ${tail}`);
         }
 
-        const node: Node = { id, type: (kind[0].toUpperCase()+kind.slice(1)) as any, label, properties: props };
+        const node: Node = { id, type: (kind[0].toUpperCase()+kind.slice(1)) as TGIRNodeType, label };
+        if (props) node.properties = props;
         if (expr) node.properties = {...(node.properties||{}), expr};
         nodes.push(node);
       }
@@ -55,13 +56,15 @@ import { NextRequest, NextResponse } from 'next/server';
     function parseProps(src: string){
       const m = /^\{([\s\S]*)\}\s*$/.exec(src);
       if (!m) throw new Error(`Invalid properties object: ${src}`);
-      const body = m[1].trim();
+      const body = m[1]!.trim();
       if (!body) return {};
       const out: Record<string, unknown> = {};
       const parts = body.split(/,(?![^\[\{\(]*[\]\}\)])/).map(s=>s.trim());
       for (const p of parts) {
         const [k, v] = p.split(':').map(x=>x.trim());
-        out[k] = parseValue(v);
+        if (k && v !== undefined) {
+          out[k] = parseValue(v);
+        }
       }
       return out;
     }
@@ -80,7 +83,7 @@ import { NextRequest, NextResponse } from 'next/server';
     export async function POST(req: NextRequest){
       try{
         const { source } = await req.json();
-        if (typeof source !== 'string' or source.trim()==='') {
+        if (typeof source !== 'string' || source.trim()==='') {
           return NextResponse.json({error: 'Body must include non-empty "source" string'}, {status: 400});
         }
         const tgir = compileQGL(source);

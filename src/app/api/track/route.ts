@@ -37,7 +37,6 @@ export async function POST(req: NextRequest) {
 
   if (isDev) {
     // In dev: log to console, do not retain
-    // eslint-disable-next-line no-console
     console.log(`[track] ${name}`, safe)
   } else {
     pushEvent({ ts: Date.now(), name, props: safe })

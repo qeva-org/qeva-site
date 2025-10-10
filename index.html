@@ -3,91 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qeva — Meaning‑as‑a‑Service</title>
-  <meta name="description" content="Qeva helps you encode, preserve, and operate on your values, memories, and self‑narratives in an AI‑accelerating world." />
-  <meta property="og:title" content="Qeva — Meaning‑as‑a‑Service" />
-  <meta property="og:description" content="Back up your soul. Map your mind. Prepare for the next intelligence." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://qeva.org" />
-  <meta name="theme-color" content="#0F172A" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧭</text></svg>">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Qeva — AI Alignment Calibration</title>
+  <meta name="description" content="Qeva is an AI alignment organization focused on behavior calibration and scoring systems." />
   <style>
-    .radial-bg{background:radial-gradient(1000px 600px at 20% -10%,rgba(56,189,248,0.15),transparent),radial-gradient(800px 500px at 90% 10%,rgba(167,139,250,0.12),transparent),radial-gradient(1200px 800px at 50% 120%,rgba(16,185,129,0.10),transparent);}
+    :root { --bg:#fbfbf9; --fg:#0b1020; --accent:#3a78ff; }
+    *{box-sizing:border-box} body{margin:0;font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--fg)}
+    header{max-width:920px;margin:48px auto 0;padding:0 16px;display:flex;gap:16px;align-items:center}
+    header img{width:110px;height:110px}
+    main{max-width:920px;margin:24px auto;padding:0 16px}
+    h1{font-size:2.2rem;margin:.25rem 0}
+    p.lead{font-size:1.15rem;opacity:.9;margin:.5rem 0 1rem}
+    .card{background:#fff;border:1px solid #e9e9ee;border-radius:14px;padding:18px 16px;margin:18px 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    form{display:flex;gap:10px;flex-wrap:wrap}
+    input[type=email]{flex:1;min-width:260px;padding:12px;border-radius:10px;border:1px solid #cfd4e0}
+    button{padding:12px 16px;border:0;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
+    small{opacity:.7}
+    footer{max-width:920px;margin:18px auto 48px;padding:0 16px;opacity:.8}
+    .hidden{display:none}
   </style>
 </head>
-<body class="min-h-screen bg-slate-950 text-slate-100 selection:bg-sky-300/30 selection:text-slate-900">
-  <main class="radial-bg relative isolate">
-    <div class="mx-auto max-w-3xl px-6 pt-24 pb-24">
-      <header class="mb-12">
-        <div class="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1 text-xs text-slate-300">
-          <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Private Pilot • v0.1 Waitlist
-        </div>
-        <h1 class="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">Qeva <span class="text-slate-400">—</span> <span class="text-slate-200">Meaning‑as‑a‑Service</span></h1>
-        <p class="mt-4 text-slate-300 text-lg leading-relaxed">Encode, preserve, and operate on your values, memories, and self‑narratives so you stay coherent in an AI‑accelerating world.</p>
-      </header>
-
-      <section class="mb-10">
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-xl">
-          <form id="waitlistForm" class="flex w-full flex-col gap-3 sm:flex-row" onsubmit="submitWaitlist(event)">
-            <label for="email" class="sr-only">Email</label>
-            <input id="email" name="email" required type="email" autocomplete="email" placeholder="you@domain.com"
-                   class="flex-1 rounded-xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-base outline-none ring-0 placeholder:text-slate-500 focus:border-slate-500" />
-            <button type="submit" class="rounded-xl bg-sky-400 px-5 py-3 font-medium text-slate-900 shadow hover:bg-sky-300 active:translate-y-px">Join waitlist</button>
-          </form>
-          <p class="mt-3 text-sm text-slate-400">We’ll send an invite when the private pilot opens. No spam. Opt‑out anytime.</p>
-          <p id="thanks" class="mt-3 hidden rounded-lg border border-emerald-800 bg-emerald-900/40 px-4 py-2 text-sm text-emerald-200">Thanks! Your email client should have opened a pre‑filled message to <span class="font-semibold">hello@qeva.org</span>. Just hit send. If it didn’t, email <a href="mailto:hello@qeva.org?subject=Qeva%20Waitlist&body=Please%20add%20me%20to%20the%20waitlist." class="underline">hello@qeva.org</a> with subject: <span class="font-mono">Qeva Waitlist</span>.</p>
-        </div>
-      </section>
-
-      <section class="grid gap-6 sm:grid-cols-3">
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-          <h3 class="mb-2 text-base font-semibold">Why Qeva</h3>
-          <p class="text-sm text-slate-300">A companion and protocol to keep your identity coherent as AI accelerates. Back up your soul. Map your mind.</p>
-        </div>
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-          <h3 class="mb-2 text-base font-semibold">What you get</h3>
-          <p class="text-sm text-slate-300">Journaling → distilled emotions, values, themes. Weekly Meaning Report. Encrypted continuity capsules (opt‑in).</p>
-        </div>
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-          <h3 class="mb-2 text-base font-semibold">Privacy‑first</h3>
-          <p class="text-sm text-slate-300">Consent‑driven. Encryption at rest. Research Mode is optional and anonymized.</p>
-        </div>
-      </section>
-
-      <footer class="mt-14 flex flex-col items-center gap-2 text-xs text-slate-500">
-        <div class="flex items-center gap-2">
-          <span>© <span id="year"></span> Qeva</span>
-          <span>•</span>
-          <a href="mailto:hello@qeva.org" class="underline">hello@qeva.org</a>
-        </div>
-        <div>Align AI with human values and preserve our meanings in the world</div>
-      </footer>
+<body>
+  <header>
+    <img src="/qeva-logo.png" alt="Qeva logo" />
+    <div>
+      <h1>Qeva — AI Alignment Calibration</h1>
+      <p class="lead">We build open, testable alignment behavior metrics and scoring systems for AI—an <b>ethical calibration standard</b> for models & products.</p>
     </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Collaborators wanted</h2>
+      <p>We’re assembling a small group (research, eng, product) to develop alignment scoring, evaluation pipelines, and open conformance tests. If this resonates, reach out.</p>
+      <ul>
+        <li>Focus: alignment behavior, evaluation, scoring ("Qeva Score”)</li>
+        <li>Stack: Python/JS, reproducible notebooks, CI, privacy-first telemetry</li>
+        <li>Email: <a href="mailto:hello@qeva.org">hello@qeva.org</a></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Join the early list</h2>
+      <form id="waitlist-form" action="/api/waitlist" method="post" novalidate>
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <!-- honeypot -->
+        <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" />
+        <button type="submit">Notify me</button>
+      </form>
+      <div id="msg" role="status" style="margin-top:10px;"></div>
+      <small>We’ll only use your email to contact you about Qeva. Opt-out anytime.</small>
+    </section>
   </main>
 
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <footer>
+    © <span id="y"></span> Qeva. An alignment organization building AI ethical calibration & scoring.
+  </footer>
 
-    // waitlist handler → opens a pre‑filled email (no backend needed)
-    function submitWaitlist(e){
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const f = document.getElementById('waitlist-form');
+    const m = document.getElementById('msg');
+    f.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const input = document.getElementById('email');
-      const email = (input.value || '').trim();
-      if(!email){ input.focus(); return; }
-      const subject = encodeURIComponent('Qeva Waitlist');
-      const body = encodeURIComponent(`Please add me to the Qeva private pilot.\nEmail: ${email}\nConsent: yes`);
-      const mailto = `mailto:hello@qeva.org?subject=${subject}&body=${body}`;
-      // Try opening the mail client
-      window.location.href = mailto;
-      // Show thanks / fallback instructions
-      const thanks = document.getElementById('thanks');
-      thanks.classList.remove('hidden');
-      // Optional: clear input
-      input.value = '';
-    }
+      m.textContent = 'Submitting…';
+      const fd = new FormData(f);
+      const res = await fetch('/api/waitlist', { method:'POST', body: fd });
+      const data = await res.json().catch(()=>({ok:false}));
+      if (res.ok && data.ok) {
+        m.textContent = 'Thanks! We’ll be in touch from hello@qeva.org.'; f.reset();
+      } else {
+        m.textContent = 'Something went wrong. Email us directly: hello@qeva.org';
+      }
+    });
   </script>
 </body>
 </html>

@@ -60,21 +60,43 @@
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const f = document.getElementById('waitlist-form');
-    const m = document.getElementById('msg');
-    f.addEventListener('submit', async (e) => {
+    async function submitWaitlist(e){
       e.preventDefault();
-      m.textContent = 'Submitting…';
-      const fd = new FormData(f);
-      const res = await fetch('/api/waitlist', { method:'POST', body: fd });
-      const data = await res.json().catch(()=>({ok:false}));
-      if (res.ok && data.ok) {
-        m.textContent = 'Thanks! We’ll be in touch from hello@qeva.org.'; f.reset();
-      } else {
-        m.textContent = 'Something went wrong. Email us directly: hello@qeva.org';
+      const emailEl = document.getElementById('email');
+      const thanks = document.getElementById('thanks');
+      const fallback = document.getElementById('fallback');
+      thanks.classList.add('hidden'); fallback.classList.add('hidden');
+
+      const email = (emailEl.value||'').trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailEl.focus(); return; }
+
+      // 8s timeout so you never hang on "Submitting…"
+      const controller = new AbortController();
+      const t = setTimeout(()=>controller.abort(), 8000);
+
+      try {
+        const res = await fetch('/api/waitlist', {
+          method:'POST',
+          headers:{ 'Content-Type':'application/json' },
+          body: JSON.stringify({ email }),
+          signal: controller.signal
+        });
+        clearTimeout(t);
+        const data = await res.json().catch(()=>({ok:false}));
+
+        if (res.ok && data.ok) {
+          thanks.classList.remove('hidden'); emailEl.value='';
+          return;
+        }
+        // server reachable but unhappy
+        fallback.classList.remove('hidden');
+      } catch (err) {
+        // request never reached server (blocked, DNS, CORS, timeout)
+        console.error('waitlist fetch failed:', err);
+        fallback.classList.remove('hidden');
       }
-    });
+    }
   </script>
+
 </body>
 </html>

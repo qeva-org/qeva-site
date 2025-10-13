@@ -1,40 +1,126 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Qeva — AI Alignment Calibration</title>
-  <meta name="description" content="Qeva is an AI alignment organization focused on behavior calibration and scoring systems." />
+  <meta name="description"
+    content="Qeva is an AI alignment organization focused on behavior calibration and scoring systems." />
   <style>
-    :root { --bg:#fbfbf9; --fg:#0b1020; --accent:#3a78ff; }
-    *{box-sizing:border-box} body{margin:0;font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--fg)}
-    header{max-width:920px;margin:48px auto 0;padding:0 16px;display:flex;gap:16px;align-items:center}
-    header img{width:110px;height:110px}
-    main{max-width:920px;margin:24px auto;padding:0 16px}
-    h1{font-size:2.2rem;margin:.25rem 0}
-    p.lead{font-size:1.15rem;opacity:.9;margin:.5rem 0 1rem}
-    .card{background:#fff;border:1px solid #e9e9ee;border-radius:14px;padding:18px 16px;margin:18px 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-    form{display:flex;gap:10px;flex-wrap:wrap}
-    input[type=email]{flex:1;min-width:260px;padding:12px;border-radius:10px;border:1px solid #cfd4e0}
-    button{padding:12px 16px;border:0;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
-    small{opacity:.7}
-    footer{max-width:920px;margin:18px auto 48px;padding:0 16px;opacity:.8}
-    .hidden{display:none}
+    :root {
+      --bg: #fbfbf9;
+      --fg: #0b1020;
+      --accent: #3a78ff;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.5 system-ui, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg);
+      color: var(--fg)
+    }
+
+    header {
+      max-width: 920px;
+      margin: 48px auto 0;
+      padding: 0 16px;
+      display: flex;
+      gap: 16px;
+      align-items: center
+    }
+
+    header img {
+      width: 110px;
+      height: 110px
+    }
+
+    main {
+      max-width: 920px;
+      margin: 24px auto;
+      padding: 0 16px
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: .25rem 0
+    }
+
+    p.lead {
+      font-size: 1.15rem;
+      opacity: .9;
+      margin: .5rem 0 1rem
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e9e9ee;
+      border-radius: 14px;
+      padding: 18px 16px;
+      margin: 18px 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .04)
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    input[type=email] {
+      flex: 1;
+      min-width: 260px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #cfd4e0
+    }
+
+    button {
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer
+    }
+
+    small {
+      opacity: .7
+    }
+
+    footer {
+      max-width: 920px;
+      margin: 18px auto 48px;
+      padding: 0 16px;
+      opacity: .8
+    }
+
+    .hidden {
+      display: none
+    }
   </style>
 </head>
+
 <body>
   <header>
     <img src="/qeva-logo.png" alt="Qeva logo" />
     <div>
       <h1>Qeva — AI Alignment Calibration</h1>
-      <p class="lead">We build open, testable alignment behavior metrics and scoring systems for AI—an <b>ethical calibration standard</b> for models & products.</p>
+      <p class="lead">We build open, testable alignment behavior metrics and scoring systems for AI—an <b>ethical
+          calibration standard</b> for models & products.</p>
     </div>
   </header>
 
   <main>
     <section class="card">
       <h2>Collaborators wanted</h2>
-      <p>We’re assembling a small group (research, eng, product) to develop alignment scoring, evaluation pipelines, and open conformance tests. If this resonates, reach out.</p>
+      <p>We’re assembling a small group (research, eng, product) to develop alignment scoring, evaluation pipelines, and
+        open conformance tests. If this resonates, reach out.</p>
       <ul>
         <li>Focus: alignment behavior, evaluation, scoring ("Qeva Score”)</li>
         <li>Stack: Python/JS, reproducible notebooks, CI, privacy-first telemetry</li>
@@ -60,32 +146,32 @@
   </footer>
 
   <script>
-    async function submitWaitlist(e){
+    async function submitWaitlist(e) {
       e.preventDefault();
       const emailEl = document.getElementById('email');
       const thanks = document.getElementById('thanks');
       const fallback = document.getElementById('fallback');
       thanks.classList.add('hidden'); fallback.classList.add('hidden');
 
-      const email = (emailEl.value||'').trim();
+      const email = (emailEl.value || '').trim();
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailEl.focus(); return; }
 
       // 8s timeout so you never hang on "Submitting…"
       const controller = new AbortController();
-      const t = setTimeout(()=>controller.abort(), 8000);
+      const t = setTimeout(() => controller.abort(), 8000);
 
       try {
         const res = await fetch('/api/waitlist', {
-          method:'POST',
-          headers:{ 'Content-Type':'application/json' },
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email }),
           signal: controller.signal
         });
         clearTimeout(t);
-        const data = await res.json().catch(()=>({ok:false}));
+        const data = await res.json().catch(() => ({ ok: false }));
 
         if (res.ok && data.ok) {
-          thanks.classList.remove('hidden'); emailEl.value='';
+          thanks.classList.remove('hidden'); emailEl.value = '';
           return;
         }
         // server reachable but unhappy
@@ -96,7 +182,32 @@
         fallback.classList.remove('hidden');
       }
     }
+    document.getElementById('waitlist-form')
+      .addEventListener('submit', async (e) => {
+        e.preventDefault(); // stop browser redirect
+        const msg = document.getElementById('msg');
+        msg.textContent = 'Submitting…';
+        const email = e.target.email.value.trim();
+        if (!email) return (msg.textContent = 'Please enter your email.');
+
+        try {
+          const res = await fetch('/api/waitlist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email })
+          });
+          const data = await res.json().catch(() => ({ ok: false }));
+          msg.textContent = (res.ok && data.ok)
+            ? 'You’re on the list! We’ll contact you soon.'
+            : 'Something went wrong. Please email hello@qeva.org.';
+          e.target.reset();
+        } catch (err) {
+          console.error(err);
+          msg.textContent = 'Network error. Please email hello@qeva.org.';
+        }
+      });
   </script>
 
 </body>
+
 </html>

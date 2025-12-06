@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Qeva — AI Alignment Calibration</title>
   <meta name="description"
-    content="Qeva is an AI alignment organization focused on behavior calibration and scoring systems." />
+    content="Qeva is an AI alignment research organization developing predictive, error-correcting human-values alignment systems that learn and calibrate AI behavior from real-world value datasets." />
   <style>
     :root {
       --bg: #fbfbf9;
@@ -111,25 +111,31 @@
     <img src="/qeva-logo.png" alt="Qeva logo" />
     <div>
       <h1>Qeva — AI Alignment Calibration</h1>
-      <p class="lead">We build open, testable alignment behavior metrics and scoring systems for AI—an <b>ethical
-          calibration standard</b> for models & products.</p>
+      <p class="lead">
+        We build open, testable systems for <b>predictive, error-correcting AI value alignment</b>—developing
+        metrics, calibration methods, and learning pipelines that help AI systems understand and follow
+        human values derived from real datasets.
+      </p>
     </div>
   </header>
 
   <main>
     <section class="card">
       <h2>Collaborators wanted</h2>
-      <p>We’re assembling a small group (research, eng, product) to develop alignment scoring, evaluation pipelines, and
-        open conformance tests. If this resonates, reach out.</p>
+      <p>
+        We’re assembling a small research–and–engineering team to advance predictive error-correcting
+        alignment, human-values learning from datasets, and open evaluation pipelines for model behavior.
+        If this mission resonates, reach out.
+      </p>
       <ul>
-        <li>Focus: alignment behavior, evaluation, scoring ("Qeva Score”)</li>
-        <li>Stack: Python/JS, reproducible notebooks, CI, privacy-first telemetry</li>
+        <li>Focus: predictive alignment, value-learning signals, error correction, evaluation pipelines</li>
+        <li>Stack: Python/JS, reproducible research, alignment metrics, privacy-first telemetry</li>
         <li>Email: <a href="mailto:hello@qeva.org">hello@qeva.org</a></li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Join the early list</h2>
+      <h2>Join Our Team</h2>
       <form id="waitlist-form" action="/api/waitlist" method="post" novalidate>
         <input type="email" name="email" placeholder="you@example.com" required />
         <!-- honeypot -->
@@ -142,7 +148,7 @@
   </main>
 
   <footer>
-    © <span id="y"></span> Qeva. An alignment organization building AI ethical calibration & scoring.
+    © <span id="y"></span> Qeva. An alignment organization building predictive, error-correcting AI calibration systems.
   </footer>
 
   <script>
@@ -156,7 +162,6 @@
       const email = (emailEl.value || '').trim();
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailEl.focus(); return; }
 
-      // 8s timeout so you never hang on "Submitting…"
       const controller = new AbortController();
       const t = setTimeout(() => controller.abort(), 8000);
 
@@ -174,17 +179,16 @@
           thanks.classList.remove('hidden'); emailEl.value = '';
           return;
         }
-        // server reachable but unhappy
         fallback.classList.remove('hidden');
       } catch (err) {
-        // request never reached server (blocked, DNS, CORS, timeout)
         console.error('waitlist fetch failed:', err);
         fallback.classList.remove('hidden');
       }
     }
+
     document.getElementById('waitlist-form')
       .addEventListener('submit', async (e) => {
-        e.preventDefault(); // stop browser redirect
+        e.preventDefault();
         const msg = document.getElementById('msg');
         msg.textContent = 'Submitting…';
         const email = e.target.email.value.trim();
@@ -206,6 +210,8 @@
           msg.textContent = 'Network error. Please email hello@qeva.org.';
         }
       });
+
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 
 </body>

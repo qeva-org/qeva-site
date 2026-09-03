@@ -1,219 +1,89 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qeva — AI Alignment Calibration</title>
-  <meta name="description"
-    content="Qeva is an AI alignment research organization developing predictive, error-correcting human-values alignment systems that learn and calibrate AI behavior from real-world value datasets." />
-  <style>
-    :root {
-      --bg: #fbfbf9;
-      --fg: #0b1020;
-      --accent: #3a78ff;
-    }
-
-    * {
-      box-sizing: border-box
-    }
-
-    body {
-      margin: 0;
-      font: 16px/1.5 system-ui, Segoe UI, Roboto, Helvetica, Arial;
-      background: var(--bg);
-      color: var(--fg)
-    }
-
-    header {
-      max-width: 920px;
-      margin: 48px auto 0;
-      padding: 0 16px;
-      display: flex;
-      gap: 16px;
-      align-items: center
-    }
-
-    header img {
-      width: 110px;
-      height: 110px
-    }
-
-    main {
-      max-width: 920px;
-      margin: 24px auto;
-      padding: 0 16px
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin: .25rem 0
-    }
-
-    p.lead {
-      font-size: 1.15rem;
-      opacity: .9;
-      margin: .5rem 0 1rem
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #e9e9ee;
-      border-radius: 14px;
-      padding: 18px 16px;
-      margin: 18px 0;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, .04)
-    }
-
-    form {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap
-    }
-
-    input[type=email] {
-      flex: 1;
-      min-width: 260px;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #cfd4e0
-    }
-
-    button {
-      padding: 12px 16px;
-      border: 0;
-      border-radius: 10px;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer
-    }
-
-    small {
-      opacity: .7
-    }
-
-    footer {
-      max-width: 920px;
-      margin: 18px auto 48px;
-      padding: 0 16px;
-      opacity: .8
-    }
-
-    .hidden {
-      display: none
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="QEVA is an open, permanent first-principles archive of mathematical structure.">
+  <title>QEVA — First Principles Archive</title>
+  <link rel="icon" href="/assets/q.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
-
 <body>
-  <header>
-    <img src="/qeva-logo.png" alt="Qeva logo" />
-    <div>
-      <h1>Qeva — AI Alignment Calibration</h1>
-      <p class="lead">
-        We build open, testable systems for <b>predictive, error-correcting AI value alignment</b>—developing
-        metrics, calibration methods, and learning pipelines that help AI systems understand and follow
-        human values derived from real datasets.
-      </p>
-    </div>
+  <header class="shell masthead">
+    <a class="wordmark" href="/" aria-label="QEVA home">QEVA</a>
+    <nav aria-label="Primary">
+      <a href="/archive/">Archive</a>
+      <a href="/protocol/">Protocol</a>
+      <a href="/preservation/">Preservation</a>
+      <a href="/institution/">Institution</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="card">
-      <h2>Collaborators wanted</h2>
-      <p>
-        We’re assembling a small research–and–engineering team to advance predictive error-correcting
-        alignment, human-values learning from datasets, and open evaluation pipelines for model behavior.
-        If this mission resonates, reach out.
-      </p>
-      <ul>
-        <li>Focus: predictive alignment, value-learning signals, error correction, evaluation pipelines</li>
-        <li>Stack: Python/JS, reproducible research, alignment metrics, privacy-first telemetry</li>
-        <li>Email: <a href="mailto:hello@qeva.org">hello@qeva.org</a></li>
-      </ul>
+  <main class="shell">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">FIRST PRINCIPLES ARCHIVE</p>
+      <h1 id="title">Start with assumptions.<br>See what follows.</h1>
+      <p class="lede">QEVA is an open atlas of mathematical structure: objects, relations, transformations, invariants, dynamics, representations, claims, proofs, counterexamples, and dependencies.</p>
+      <form class="search" action="/archive/" method="get" role="search">
+        <label class="sr-only" for="q">Search QEVA</label>
+        <input id="q" name="q" type="search" placeholder="Search parity, primes, recurrence, chirality…" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
     </section>
 
-    <section class="card">
-      <h2>Join Our Team</h2>
-      <form id="waitlist-form" action="/api/waitlist" method="post" novalidate>
-        <input type="email" name="email" placeholder="you@example.com" required />
-        <!-- honeypot -->
-        <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" />
-        <button type="submit">Notify me</button>
-      </form>
-      <div id="msg" role="status" style="margin-top:10px;"></div>
-      <small>We’ll only use your email to contact you about Qeva. Opt-out anytime.</small>
+    <section class="grid" aria-label="Core lenses">
+      <a href="/archive/?q=logic"><strong>Logic</strong><span>assumptions · inference · consequence</span></a>
+      <a href="/archive/?q=number"><strong>Number</strong><span>parity · primes · divisibility</span></a>
+      <a href="/archive/?q=symmetry"><strong>Symmetry</strong><span>transformations · equivalence · chirality</span></a>
+      <a href="/archive/?q=space"><strong>Space</strong><span>geometry · topology · orientation</span></a>
+      <a href="/archive/?q=change"><strong>Change</strong><span>iteration · recurrence · periodicity</span></a>
+      <a href="/archive/?q=randomness"><strong>Randomness</strong><span>probability · uncertainty · information</span></a>
+      <a href="/archive/?q=computation"><strong>Computation</strong><span>algorithms · decidability · complexity</span></a>
+      <a href="/archive/?q=structure"><strong>Structure</strong><span>relations · invariants · representations</span></a>
+    </section>
+
+    <section class="statement" aria-labelledby="method">
+      <h2 id="method">One rule</h2>
+      <p>Nothing appears from nowhere. Every record states what it means, what it assumes, what it depends on, how it is represented, and how strongly it is verified.</p>
+      <pre aria-label="QEVA relation example">formal system
+    ↓
+assumptions → definition → claim → proof
+                  ↘ relation ↙
+                 other forms</pre>
+    </section>
+
+    <section class="split">
+      <div>
+        <h2>Human readable</h2>
+        <p>Every object should admit an explanation that a careful non-specialist can follow without sacrificing the exact mathematics.</p>
+      </div>
+      <div>
+        <h2>Machine readable</h2>
+        <p>The canonical archive is plain structured text. The website is a view of the archive, not the archive itself.</p>
+      </div>
+      <div>
+        <h2>Forkable forever</h2>
+        <p>Anyone may copy the complete archive. QEVA must remain reconstructible without qeva.org, GitHub, Vercel, or the QEVA institution.</p>
+      </div>
+    </section>
+
+    <section class="principles" aria-labelledby="principles-title">
+      <h2 id="principles-title">Permanent principles</h2>
+      <ol>
+        <li>Assumptions are explicit.</li>
+        <li>Provenance is permanent.</li>
+        <li>Formal truth is system-relative.</li>
+        <li>Canonical records are immutable; corrections create descendants.</li>
+        <li>The complete archive is freely reproducible.</li>
+        <li>No implementation is sacred.</li>
+        <li>QEVA must remain reconstructible without QEVA.</li>
+      </ol>
     </section>
   </main>
 
-  <footer>
-    © <span id="y"></span> Qeva. An alignment organization building predictive, error-correcting AI calibration systems.
+  <footer class="shell footer">
+    <span>QEVA · First Principles Archive</span>
+    <span><a href="/archive/qeva.jsonl">Download archive</a> · <a href="/snapshot/QEVA-BOOTSTRAP-0.1.txt">Bootstrap</a></span>
   </footer>
-
-  <script>
-    async function submitWaitlist(e) {
-      e.preventDefault();
-      const emailEl = document.getElementById('email');
-      const thanks = document.getElementById('thanks');
-      const fallback = document.getElementById('fallback');
-      thanks.classList.add('hidden'); fallback.classList.add('hidden');
-
-      const email = (emailEl.value || '').trim();
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailEl.focus(); return; }
-
-      const controller = new AbortController();
-      const t = setTimeout(() => controller.abort(), 8000);
-
-      try {
-        const res = await fetch('/api/waitlist', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email }),
-          signal: controller.signal
-        });
-        clearTimeout(t);
-        const data = await res.json().catch(() => ({ ok: false }));
-
-        if (res.ok && data.ok) {
-          thanks.classList.remove('hidden'); emailEl.value = '';
-          return;
-        }
-        fallback.classList.remove('hidden');
-      } catch (err) {
-        console.error('waitlist fetch failed:', err);
-        fallback.classList.remove('hidden');
-      }
-    }
-
-    document.getElementById('waitlist-form')
-      .addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const msg = document.getElementById('msg');
-        msg.textContent = 'Submitting…';
-        const email = e.target.email.value.trim();
-        if (!email) return (msg.textContent = 'Please enter your email.');
-
-        try {
-          const res = await fetch('/api/waitlist', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email })
-          });
-          const data = await res.json().catch(() => ({ ok: false }));
-          msg.textContent = (res.ok && data.ok)
-            ? 'You’re on the list! We’ll contact you soon.'
-            : 'Something went wrong. Please email hello@qeva.org.';
-          e.target.reset();
-        } catch (err) {
-          console.error(err);
-          msg.textContent = 'Network error. Please email hello@qeva.org.';
-        }
-      });
-
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-
 </body>
-
 </html>

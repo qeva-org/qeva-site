@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QEVA Protocol</title><link rel="icon" href="/assets/q.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css"></head><body>
+<header class="shell masthead"><a class="wordmark" href="/">QEVA</a><nav><a href="/archive/">Archive</a><a href="/protocol/" aria-current="page">Protocol</a><a href="/preservation/">Preservation</a><a href="/institution/">Institution</a></nav></header>
+<main class="shell page"><header class="page-header"><p class="eyebrow">QEVA PROTOCOL 0.1</p><h1>Specify before asserting.</h1><p>The protocol describes a mathematical record independently of any website, database, theorem prover, or institution.</p></header>
+<article class="doc">
+<section><h2>1. Canonical object</h2><p>A QEVA record separates identity, context, assumptions, content, dependencies, relations, verification, and provenance. Human explanations are views of the same record, not substitutes for its exact content.</p><pre>record = {
+  identity,
+  type,
+  context,
+  assumptions,
+  content,
+  dependencies,
+  relations,
+  verification,
+  provenance,
+  revision
+}</pre><p>The normative machine schema is <a class="inline-link" href="qeva-object.schema.json">qeva-object.schema.json</a>.</p></section>
+<section><h2>2. Truth is qualified</h2><p>QEVA does not store an unqualified universal flag called <code>true</code>. A mathematical claim is evaluated relative to stated assumptions and a formal context whenever one is available.</p><pre>S ⊢ P
+
+Read: under formal system S, proposition P is derivable.</pre><p>Records may instead be conjectural, refuted, empirically supported, context-dependent, or purely expository. Those states must not be conflated.</p></section>
+<section><h2>3. Representations are not identities</h2><p>The same structure may appear as a formula, recurrence, sequence, graph, algorithm, diagram, or formal term. QEVA records those as related representations rather than silently treating them as different objects.</p></section>
+<section><h2>4. Context-dependent terms stay context-dependent</h2><p>Words such as “closed form”, “chaos”, and “quasiperiodic” do not have one universal definition across all mathematics. QEVA must attach a definition to its context instead of manufacturing false universality.</p></section>
+<section><h2>5. Immutability</h2><p>A released record is never silently rewritten. A correction creates a new revision that points to the earlier record. Historical error remains inspectable.</p></section>
+<section><h2>6. Minimal canonical encodings</h2><p>The archive uses UTF-8 JSON for individual records and UTF-8 JSON Lines for complete sequential export. Digests are release metadata, not eternal identity assumptions; algorithms may be added or replaced as cryptography changes.</p></section>
+<section><h2>7. Versioning</h2><p>Protocol version <code>0.1</code> is intentionally small and provisional. Future versions may extend fields, but a decoder must never reinterpret an older record under new semantics without declaring the conversion.</p></section>
+</article></main>
+<footer class="shell footer"><span>QEVA Protocol 0.1</span><span><a href="qeva-object.schema.json">Schema</a> · <a href="/snapshot/QEVA-BOOTSTRAP-0.1.txt">Bootstrap</a></span></footer></body></html>

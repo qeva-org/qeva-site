@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.1",
+  "id": "qeva:1:definition:recurrence",
+  "revision": 1,
+  "type": "definition",
+  "title": "Recurrence relation",
+  "summary": "A relation constraining indexed values using other indexed values, often earlier ones.",
+  "status": "formalized",
+  "context": {
+    "domain": [
+      "dynamics",
+      "sequence",
+      "computation"
+    ],
+    "formal_system": "standard discrete mathematics",
+    "scope_note": null
+  },
+  "assumptions": [
+    "A sequence or family of indexed values is specified."
+  ],
+  "content": {
+    "human": "A recurrence describes how values are linked across index steps. It need not always determine a unique sequence unless enough initial data and uniqueness conditions are supplied.",
+    "exact": "A recurrence relation for a sequence (a_n) is a relation R(n,a_n,a_{n-1},...,a_{n-k}) that is required to hold for specified n. A recurrence plus initial conditions may determine the sequence.",
+    "example": "a_{n+1}=2a_n with a_0=1 gives 1,2,4,8,...",
+    "caveat": null
+  },
+  "dependencies": [
+    "qeva:1:definition:sequence"
+  ],
+  "relations": [
+    {
+      "kind": "representation-related",
+      "target": "qeva:1:terminology:closed-form",
+      "note": "Some recurrences admit alternative explicit formula representations."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Definition checked for internal consistency; not yet linked to an external formal proof artifact.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
+  },
+  "revision_of": null
+}

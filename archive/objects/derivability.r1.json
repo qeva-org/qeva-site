@@ -1,0 +1,53 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:derivability",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Derivability",
+  "summary": "The existence of a finite proof of a statement from declared assumptions under declared inference rules.",
+  "domains": [
+    "logic",
+    "proof",
+    "foundations"
+  ],
+  "context": {
+    "framework": "formal proof systems",
+    "framework_ref": "qeva:1:formal-system@1",
+    "note": "Derivability is syntactic: it concerns permitted proof steps."
+  },
+  "assumptions": [
+    {
+      "text": "A formal system S and a set Gamma of admitted premises are fixed.",
+      "ref": "qeva:1:formal-system@1"
+    }
+  ],
+  "content": {
+    "plain": "Writing Gamma |- P means that P can be reached by a finite sequence of allowed proof steps from the declared axioms and premises.",
+    "exact": "Gamma |-_{S} P means that there exists a finite S-valid derivation whose undischarged premises are permitted by Gamma and whose final formula is P.",
+    "example": "Whether a statement is derivable can change when axioms or inference rules change.",
+    "caveat": "Derivability is not identical to semantic truth. Soundness/completeness results relate the two only under stated hypotheses."
+  },
+  "dependencies": [
+    "qeva:1:formal-system@1"
+  ],
+  "relations": [
+    {
+      "kind": "contrasts-with",
+      "target": "qeva:1:satisfaction@1",
+      "note": "Derivability is syntactic; satisfaction is semantic."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record written to make QEVA Protocol 0.2 explicit. It is an editorial mathematical formulation, not a claim that one foundation is uniquely privileged."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

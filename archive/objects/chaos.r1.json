@@ -1,33 +1,33 @@
 {
-  "qeva_version": "0.1",
-  "id": "qeva:1:terminology:chaos",
+  "qeva_version": "0.2",
+  "id": "qeva:1:chaos",
   "revision": 1,
-  "type": "terminology",
+  "kind": "terminology",
   "title": "Chaos",
   "summary": "A family of precise but non-equivalent dynamical notions rather than one universal predicate.",
-  "status": "context-dependent",
+  "domains": [
+    "dynamics",
+    "chaos"
+  ],
   "context": {
-    "domain": [
-      "dynamics",
-      "chaos"
-    ],
-    "formal_system": null,
-    "scope_note": null
+    "framework": null,
+    "framework_ref": null,
+    "note": "No single formal framework is asserted for this context-dependent seed record."
   },
   "assumptions": [],
   "content": {
-    "human": "“Chaos” has several rigorous definitions. QEVA should name the definition being used instead of treating the word as self-explanatory.",
+    "plain": "“Chaos” has several rigorous definitions. QEVA should name the definition being used instead of treating the word as self-explanatory.",
     "exact": "QEVA Protocol 0.1 assigns no universal predicate Chaos(T). A record claiming chaos must identify a contextual criterion (for example a named topological, measure-theoretic, symbolic, or metric definition) and state its hypotheses.",
     "example": "A map may satisfy sensitive dependence while failing some stronger named chaos criterion.",
     "caveat": "Popular descriptions such as “random-looking” or “small errors grow” are not by themselves mathematical definitions of chaos."
   },
   "dependencies": [
-    "qeva:1:definition:sensitivity"
+    "qeva:1:sensitivity@1"
   ],
   "relations": [],
   "verification": {
     "level": "editorial",
-    "method": "Definition checked for internal consistency; not yet linked to an external formal proof artifact.",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
     "artifact": null
   },
   "provenance": {
@@ -36,5 +36,8 @@
     "license": "CC0-1.0",
     "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
   },
-  "revision_of": null
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:terminology:chaos"
+  ]
 }

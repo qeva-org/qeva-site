@@ -1,23 +1,23 @@
 {
-  "qeva_version": "0.1",
-  "id": "qeva:1:terminology:closed-form",
+  "qeva_version": "0.2",
+  "id": "qeva:1:closed-form",
   "revision": 1,
-  "type": "terminology",
+  "kind": "terminology",
   "title": "Closed form",
   "summary": "A widely used but non-universal label for formulas considered explicit relative to an allowed vocabulary of operations/functions.",
-  "status": "context-dependent",
+  "domains": [
+    "representation",
+    "algebra",
+    "analysis"
+  ],
   "context": {
-    "domain": [
-      "representation",
-      "algebra",
-      "analysis"
-    ],
-    "formal_system": null,
-    "scope_note": null
+    "framework": null,
+    "framework_ref": null,
+    "note": "No single formal framework is asserted for this context-dependent seed record."
   },
   "assumptions": [],
   "content": {
-    "human": "“Closed form” usually means an explicit formula, but what operations are allowed differs by field and author.",
+    "plain": "“Closed form” usually means an explicit formula, but what operations are allowed differs by field and author.",
     "exact": "QEVA Protocol 0.1 assigns no universal predicate ClosedForm(E). Any claim that an expression is “closed form” must declare the permitted expression language or cite a contextual convention.",
     "example": "a_n=2^n may be called a closed form for the recurrence a_{n+1}=2a_n, a_0=1 when exponentiation is allowed.",
     "caveat": "Treating “closed form” as one globally defined mathematical property would create false precision."
@@ -26,13 +26,13 @@
   "relations": [
     {
       "kind": "representation-related",
-      "target": "qeva:1:definition:recurrence",
+      "target": "qeva:1:recurrence@1",
       "note": "Explicit formulas are often compared with recurrence representations."
     }
   ],
   "verification": {
     "level": "editorial",
-    "method": "Definition checked for internal consistency; not yet linked to an external formal proof artifact.",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
     "artifact": null
   },
   "provenance": {
@@ -41,5 +41,8 @@
     "license": "CC0-1.0",
     "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
   },
-  "revision_of": null
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:terminology:closed-form"
+  ]
 }

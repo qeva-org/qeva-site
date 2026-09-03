@@ -1,42 +1,45 @@
 {
-  "qeva_version": "0.1",
-  "id": "qeva:1:definition:recurrence",
+  "qeva_version": "0.2",
+  "id": "qeva:1:recurrence",
   "revision": 1,
-  "type": "definition",
+  "kind": "definition",
   "title": "Recurrence relation",
   "summary": "A relation constraining indexed values using other indexed values, often earlier ones.",
-  "status": "formalized",
+  "domains": [
+    "dynamics",
+    "sequence",
+    "computation"
+  ],
   "context": {
-    "domain": [
-      "dynamics",
-      "sequence",
-      "computation"
-    ],
-    "formal_system": "standard discrete mathematics",
-    "scope_note": null
+    "framework": "standard discrete mathematics",
+    "framework_ref": null,
+    "note": "Context is named textually in this seed release; its foundations are not yet recursively expanded into QEVA records."
   },
   "assumptions": [
-    "A sequence or family of indexed values is specified."
+    {
+      "text": "A sequence or family of indexed values is specified.",
+      "ref": null
+    }
   ],
   "content": {
-    "human": "A recurrence describes how values are linked across index steps. It need not always determine a unique sequence unless enough initial data and uniqueness conditions are supplied.",
+    "plain": "A recurrence describes how values are linked across index steps. It need not always determine a unique sequence unless enough initial data and uniqueness conditions are supplied.",
     "exact": "A recurrence relation for a sequence (a_n) is a relation R(n,a_n,a_{n-1},...,a_{n-k}) that is required to hold for specified n. A recurrence plus initial conditions may determine the sequence.",
     "example": "a_{n+1}=2a_n with a_0=1 gives 1,2,4,8,...",
     "caveat": null
   },
   "dependencies": [
-    "qeva:1:definition:sequence"
+    "qeva:1:sequence@1"
   ],
   "relations": [
     {
       "kind": "representation-related",
-      "target": "qeva:1:terminology:closed-form",
+      "target": "qeva:1:closed-form@1",
       "note": "Some recurrences admit alternative explicit formula representations."
     }
   ],
   "verification": {
     "level": "editorial",
-    "method": "Definition checked for internal consistency; not yet linked to an external formal proof artifact.",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
     "artifact": null
   },
   "provenance": {
@@ -45,5 +48,8 @@
     "license": "CC0-1.0",
     "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
   },
-  "revision_of": null
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:definition:recurrence"
+  ]
 }

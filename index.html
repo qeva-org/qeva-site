@@ -1,89 +1,22 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="QEVA is an open, permanent first-principles archive of mathematical structure.">
-  <title>QEVA — First Principles Archive</title>
-  <link rel="icon" href="/assets/q.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/site.css">
-</head>
-<body>
-  <header class="shell masthead">
-    <a class="wordmark" href="/" aria-label="QEVA home">QEVA</a>
-    <nav aria-label="Primary">
-      <a href="/archive/">Archive</a>
-      <a href="/protocol/">Protocol</a>
-      <a href="/preservation/">Preservation</a>
-      <a href="/institution/">Institution</a>
-    </nav>
-  </header>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="QEVA traces mathematical ideas from plain explanation to exact definitions, assumptions, dependencies, and preserved records."><title>QEVA — First Principles Archive</title><link rel="icon" href="assets/q.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"></head><body>
+<header class="shell masthead"><a class="brand" href="./" aria-label="QEVA home"><img src="assets/q.svg" width="32" height="32" alt=""><span>QEVA</span></a><nav aria-label="Primary"><a href="archive/">Archive</a><a href="protocol/">Protocol</a><a href="preservation/">Preservation</a><a href="institution/">Institution</a></nav></header>
+<main class="shell">
+<section class="hero" aria-labelledby="title"><p class="eyebrow">FIRST PRINCIPLES ARCHIVE</p><h1 id="title">What exactly does this mean?</h1><p class="lede">QEVA makes mathematical ideas traceable: plain explanation → exact formulation → assumptions → dependencies → related forms → verification.</p><form class="search" action="archive/" method="get" role="search"><label class="sr-only" for="q">Search QEVA</label><input id="q" name="q" type="search" placeholder="Search prime, parity, recurrence, symmetry…" autocomplete="off"><button type="submit">Search</button></form></section>
 
-  <main class="shell">
-    <section class="hero" aria-labelledby="title">
-      <p class="eyebrow">FIRST PRINCIPLES ARCHIVE</p>
-      <h1 id="title">Start with assumptions.<br>See what follows.</h1>
-      <p class="lede">QEVA is an open atlas of mathematical structure: objects, relations, transformations, invariants, dynamics, representations, claims, proofs, counterexamples, and dependencies.</p>
-      <form class="search" action="/archive/" method="get" role="search">
-        <label class="sr-only" for="q">Search QEVA</label>
-        <input id="q" name="q" type="search" placeholder="Search parity, primes, recurrence, chirality…" autocomplete="off">
-        <button type="submit">Search</button>
-      </form>
-    </section>
+<section class="jobs" aria-labelledby="why"><h2 id="why">What problem does QEVA solve?</h2><div class="job-grid"><article><strong>Understand</strong><p>Math often jumps over the assumptions and definitions that make a statement meaningful. QEVA puts the plain and exact versions together.</p></article><article><strong>Trace</strong><p>A theorem or concept may depend on layers hidden across textbooks and fields. QEVA exposes explicit prerequisite links and pins them to exact revisions.</p></article><article><strong>Compare</strong><p>The same word can mean different things, and the same structure can have different representations. QEVA records the context instead of flattening the differences.</p></article><article><strong>Preserve</strong><p>Knowledge should not depend on one website or institution. The archive is downloadable, checkable, mirrorable, and readable as plain structured text.</p></article></div></section>
 
-    <section class="grid" aria-label="Core lenses">
-      <a href="/archive/?q=logic"><strong>Logic</strong><span>assumptions · inference · consequence</span></a>
-      <a href="/archive/?q=number"><strong>Number</strong><span>parity · primes · divisibility</span></a>
-      <a href="/archive/?q=symmetry"><strong>Symmetry</strong><span>transformations · equivalence · chirality</span></a>
-      <a href="/archive/?q=space"><strong>Space</strong><span>geometry · topology · orientation</span></a>
-      <a href="/archive/?q=change"><strong>Change</strong><span>iteration · recurrence · periodicity</span></a>
-      <a href="/archive/?q=randomness"><strong>Randomness</strong><span>probability · uncertainty · information</span></a>
-      <a href="/archive/?q=computation"><strong>Computation</strong><span>algorithms · decidability · complexity</span></a>
-      <a href="/archive/?q=structure"><strong>Structure</strong><span>relations · invariants · representations</span></a>
-    </section>
+<section class="examples" aria-labelledby="start"><h2 id="start">Start with something concrete</h2><div class="example-grid"><a href="archive/?q=prime"><strong>Prime number</strong><span>What exactly makes a number prime?</span></a><a href="archive/?q=parity"><strong>Parity</strong><span>Why are even and odd exhaustive?</span></a><a href="archive/?q=symmetry"><strong>Symmetry</strong><span>What does “unchanged” mean?</span></a><a href="archive/?q=chirality"><strong>Chirality</strong><span>When is handedness mathematically real?</span></a><a href="archive/?q=recurrence"><strong>Recurrence</strong><span>How does a rule generate a sequence?</span></a><a href="archive/?q=periodicity"><strong>Periodicity</strong><span>What counts as exact repetition?</span></a></div></section>
 
-    <section class="statement" aria-labelledby="method">
-      <h2 id="method">One rule</h2>
-      <p>Nothing appears from nowhere. Every record states what it means, what it assumes, what it depends on, how it is represented, and how strongly it is verified.</p>
-      <pre aria-label="QEVA relation example">formal system
-    ↓
-assumptions → definition → claim → proof
-                  ↘ relation ↙
-                 other forms</pre>
-    </section>
+<section class="statement" aria-labelledby="rule"><h2 id="rule">Permanent rule</h2><div><p>QEVA does not ask you to trust a page title. A record should tell you what is being discussed, in which framework, what is assumed, what it depends on, and what checking has actually occurred.</p><pre>context + assumptions
+        ↓
+     exact claim
+      ↙      ↘
+dependencies  relations
+        ↓
+   verification</pre></div></section>
 
-    <section class="split">
-      <div>
-        <h2>Human readable</h2>
-        <p>Every object should admit an explanation that a careful non-specialist can follow without sacrificing the exact mathematics.</p>
-      </div>
-      <div>
-        <h2>Machine readable</h2>
-        <p>The canonical archive is plain structured text. The website is a view of the archive, not the archive itself.</p>
-      </div>
-      <div>
-        <h2>Forkable forever</h2>
-        <p>Anyone may copy the complete archive. QEVA must remain reconstructible without qeva.org, GitHub, Vercel, or the QEVA institution.</p>
-      </div>
-    </section>
-
-    <section class="principles" aria-labelledby="principles-title">
-      <h2 id="principles-title">Permanent principles</h2>
-      <ol>
-        <li>Assumptions are explicit.</li>
-        <li>Provenance is permanent.</li>
-        <li>Formal truth is system-relative.</li>
-        <li>Canonical records are immutable; corrections create descendants.</li>
-        <li>The complete archive is freely reproducible.</li>
-        <li>No implementation is sacred.</li>
-        <li>QEVA must remain reconstructible without QEVA.</li>
-      </ol>
-    </section>
-  </main>
-
-  <footer class="shell footer">
-    <span>QEVA · First Principles Archive</span>
-    <span><a href="/archive/qeva.jsonl">Download archive</a> · <a href="/snapshot/QEVA-BOOTSTRAP-0.1.txt">Bootstrap</a></span>
-  </footer>
-</body>
-</html>
+<section class="warning"><p><strong>Seed, not completed foundation.</strong> The current archive is deliberately small. Its framework labels are not yet recursively reduced to a closed first-principles base. QEVA marks that incompleteness instead of pretending the grand map is already finished.</p></section>
+</main>
+<footer class="shell footer"><span>QEVA · First Principles Archive</span><span><a href="archive/qeva.jsonl">Download archive</a> · <a href="snapshot/READ-ME-FIRST.txt">Bootstrap</a></span></footer>
+</body></html>

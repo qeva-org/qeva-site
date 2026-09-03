@@ -1,0 +1,6 @@
+QEVA LOGO ASSET NOTE
+The historical qeva-logo.png referenced by the pre-refoundation live site was
+not present in the available source snapshot used for release 0.2. The small
+q.svg mark is retained as a functional fallback. If the historical logo is
+recovered, preserve it as a separate original binary; do not silently replace
+or rewrite it.

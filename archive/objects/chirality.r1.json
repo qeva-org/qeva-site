@@ -1,37 +1,46 @@
 {
-  "qeva_version": "0.1",
-  "id": "qeva:1:definition:chirality",
+  "qeva_version": "0.2",
+  "id": "qeva:1:chirality",
   "revision": 1,
-  "type": "definition",
+  "kind": "definition",
   "title": "Chirality",
   "summary": "Failure of an object to be superimposable on its mirror image using only orientation-preserving transformations.",
-  "status": "formalized",
+  "domains": [
+    "symmetry",
+    "geometry"
+  ],
   "context": {
-    "domain": [
-      "symmetry",
-      "geometry"
-    ],
-    "formal_system": "group actions with orientation class",
-    "scope_note": null
+    "framework": "group actions with orientation class",
+    "framework_ref": null,
+    "note": "Context is named textually in this seed release; its foundations are not yet recursively expanded into QEVA records."
   },
   "assumptions": [
-    "A group G acts on X.",
-    "H is an index-2 subgroup of orientation-preserving transformations.",
-    "r is any element of G\\H."
+    {
+      "text": "A group G acts on X.",
+      "ref": null
+    },
+    {
+      "text": "H is an index-2 subgroup of orientation-preserving transformations.",
+      "ref": null
+    },
+    {
+      "text": "r is any element of G\\H.",
+      "ref": null
+    }
   ],
   "content": {
-    "human": "A chiral object has a handedness: mirroring changes it in a way that allowed orientation-preserving motions cannot undo.",
+    "plain": "A chiral object has a handedness: mirroring changes it in a way that allowed orientation-preserving motions cannot undo.",
     "exact": "For x in X, define the mirror image r·x. The object x is chiral relative to (G,H) iff r·x is not in the H-orbit H·x. Because H has index 2, the property is independent of which r in G\\H is chosen.",
     "example": "Left and right hands are the usual physical analogy: a mirror swaps handedness, while rotations alone do not.",
     "caveat": "Chirality is relative to a declared transformation group and an orientation-preserving subgroup; it is not an intrinsic word without that context."
   },
   "dependencies": [
-    "qeva:1:definition:symmetry"
+    "qeva:1:symmetry@1"
   ],
   "relations": [],
   "verification": {
     "level": "editorial",
-    "method": "Definition checked for internal consistency; not yet linked to an external formal proof artifact.",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
     "artifact": null
   },
   "provenance": {
@@ -40,5 +49,8 @@
     "license": "CC0-1.0",
     "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
   },
-  "revision_of": null
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:definition:chirality"
+  ]
 }

@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:addition",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Addition",
+  "summary": "Addition combines counts by repeated successor.",
+  "domains": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "context": {
+    "framework": "Peano-style arithmetic",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared Peano-style arithmetic context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Addition combines counts by repeated successor.",
+    "exact": "Recursively, add(a,0)=a and add(a,S(b))=S(add(a,b)). These equations define addition on a Peano natural-number structure.",
+    "example": "2+3=S(S(S(S(S(0))))), written 5.",
+    "caveat": "Other number systems extend addition and must specify their construction and laws."
+  },
+  "dependencies": [
+    "qeva:1:natural-number@1",
+    "qeva:1:recurrence@2",
+    "qeva:1:operation@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

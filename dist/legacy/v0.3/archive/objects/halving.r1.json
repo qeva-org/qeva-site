@@ -1,0 +1,42 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:halving",
+  "revision": 1,
+  "kind": "concept",
+  "title": "Halving",
+  "summary": "The inverse problem to doubling, defined only when the ambient structure makes division by 2 meaningful or solvable.",
+  "domains": [
+    "number",
+    "algebra",
+    "structure"
+  ],
+  "context": {
+    "framework": null,
+    "framework_ref": null,
+    "note": "No single formal framework is asserted for this context-dependent seed record."
+  },
+  "assumptions": [],
+  "content": {
+    "plain": "“Half of x” is not one universal operation. It depends on what x is and which operations exist in its mathematical structure.",
+    "exact": "Given a structure with an addition operation, y is a half of x when y+y=x. A unique halving operation x↦x/2 exists only in contexts where this equation has exactly one solution y for each x under consideration.",
+    "example": "In the real numbers, half of 7 is 7/2. In the integers, 7 has no integer half. In arithmetic modulo 5, 2 has a unique multiplicative inverse 3, so division by 2 is well-defined.",
+    "caveat": "The existence and uniqueness of halves depend on the ambient algebraic structure."
+  },
+  "dependencies": [],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:concept:halving"
+  ]
+}

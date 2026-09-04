@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:axiom-extensionality",
+  "revision": 1,
+  "kind": "axiom",
+  "title": "Axiom of extensionality",
+  "summary": "Two sets are equal when they have exactly the same members.",
+  "domains": [
+    "set-theory",
+    "foundations"
+  ],
+  "context": {
+    "framework": "first-order set theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared first-order set theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Two sets are equal when they have exactly the same members.",
+    "exact": "∀A∀B[(∀x(x∈A↔x∈B))→A=B].",
+    "example": "The written sets {1,2} and {2,1} have the same members and are equal.",
+    "caveat": "Extensionality does not say which sets exist; it constrains equality among sets that do."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:membership@1",
+    "qeva:1:identity@1",
+    "qeva:1:axiom@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

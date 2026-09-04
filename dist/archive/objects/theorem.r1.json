@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:theorem",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Theorem",
+  "summary": "A theorem is a statement accompanied by a valid derivation from declared assumptions in a declared system.",
+  "domains": [
+    "logic",
+    "proof"
+  ],
+  "context": {
+    "framework": "formal or mathematical theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared formal or mathematical theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A theorem is a statement accompanied by a valid derivation from declared assumptions in a declared system.",
+    "exact": "P is a theorem of T relative to proof calculus S when T ⊢ₛ P. The claim is incomplete unless T, S, and the reading of P are recoverable.",
+    "example": "The Pythagorean theorem is a family of precisely stated results whose assumptions depend on the geometry used.",
+    "caveat": "The label theorem records derivational status, not importance or universal truth across all models."
+  },
+  "dependencies": [
+    "qeva:1:proof@1",
+    "qeva:1:statement@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

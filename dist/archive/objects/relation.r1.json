@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:relation",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Relation",
+  "summary": "A relation records which tuples of objects stand in a chosen connection.",
+  "domains": [
+    "foundations",
+    "structure"
+  ],
+  "context": {
+    "framework": "set-like metalanguage",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared set-like metalanguage context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A relation records which tuples of objects stand in a chosen connection.",
+    "exact": "An n-ary relation on sets X₁,…,Xₙ is a subset R⊆X₁×⋯×Xₙ; writing R(x₁,…,xₙ) means the tuple belongs to R.",
+    "example": "The less-than relation contains pairs (a,b) for which a<b.",
+    "caveat": "In type theory or categorical settings, relations may be represented differently."
+  },
+  "dependencies": [
+    "qeva:1:object@1",
+    "qeva:1:identity@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

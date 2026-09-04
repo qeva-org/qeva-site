@@ -1,0 +1,56 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:nonlinearity",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Nonlinearity",
+  "summary": "A map is nonlinear when it fails the defining linearity conditions of additivity and scalar homogeneity.",
+  "domains": [
+    "algebra",
+    "dynamics",
+    "optimization"
+  ],
+  "context": {
+    "framework": "linear algebra",
+    "framework_ref": null,
+    "note": "Framework is named textually in this seed release; full recursive first-principles closure remains future work."
+  },
+  "assumptions": [
+    {
+      "text": "Vector spaces and a map f between them are specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "In a nonlinear system, combining inputs need not combine outputs by simple superposition.",
+    "exact": "A map f:V→W is linear iff f(ax+by)=af(x)+bf(y) for all x,y and scalars a,b. It is nonlinear if this condition fails.",
+    "example": "f(x)=x^2 on R is nonlinear because f(x+y) generally differs from f(x)+f(y).",
+    "caveat": "Nonlinearity alone does not imply complexity, instability, or chaos."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "can-enable",
+      "target": "qeva:1:sensitivity@1",
+      "note": "Nonlinear feedback can produce sensitivity, but does not guarantee it."
+    },
+    {
+      "kind": "appears-in",
+      "target": "qeva:1:optimization@1",
+      "note": "Nonlinear objectives can create multiple local extrema."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record for the QEVA machinery map. It is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

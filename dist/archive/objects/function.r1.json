@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:function",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Function",
+  "summary": "A function assigns exactly one output to each permitted input.",
+  "domains": [
+    "foundations",
+    "structure"
+  ],
+  "context": {
+    "framework": "structural mathematics",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared structural mathematics context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A function assigns exactly one output to each permitted input.",
+    "exact": "A function f:X→Y may be represented by a relation f⊆X×Y such that every x∈X occurs in exactly one pair (x,y) with y∈Y.",
+    "example": "f(n)=n+1 defines a function from integers to integers.",
+    "caveat": "A rule, graph, program, and extensional mapping can represent a function differently."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:relation@1",
+    "qeva:1:ordered-pair@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

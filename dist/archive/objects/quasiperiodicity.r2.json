@@ -1,0 +1,55 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:quasiperiodicity",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Quasiperiodicity",
+  "summary": "A context-dependent torus-frequency representation often used for recurrent behavior with several incommensurate frequencies.",
+  "domains": [
+    "dynamics",
+    "analysis",
+    "sequence"
+  ],
+  "context": {
+    "framework": "quasiperiodic functions on R",
+    "framework_ref": "qeva:1:real-number@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "F:T^k→X is periodic in each angular coordinate, where T=R/(2πZ).",
+      "ref": null
+    },
+    {
+      "text": "ω in R^k is a frequency vector.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A common quasiperiodic model combines several angular motions whose basic frequencies are rationally independent. The representation itself must be distinguished from the extra conditions needed to guarantee that the resulting function is nonperiodic.",
+    "exact": "Under this convention, f:R->X has a quasiperiodic torus representation when f(t)=F(theta_0+omega t), where F:T^k->X, theta_0 in T^k, and omega in R^k. A commonly imposed nonresonance condition is rational independence of the components of omega: m·omega=0 for m in Z^k implies m=0. Nonperiodicity of f does not follow from that condition alone if F has additional symmetries or degeneracies.",
+    "example": "f(t)=cos(t)+cos(sqrt(2)t) is nonperiodic and has a two-frequency quasiperiodic representation under this convention.",
+    "caveat": "“Quasiperiodic” has other precise meanings in tilings, symbolic dynamics, cocycles, and other areas. Each use must state its convention."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:periodicity@2",
+    "qeva:1:real-number@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:quasiperiodicity@1",
+  "legacy_ids": [
+    "qeva:1:definition:quasiperiodicity"
+  ]
+}

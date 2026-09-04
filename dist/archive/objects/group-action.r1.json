@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:group-action",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Group action",
+  "summary": "A group action describes how reversible transformations move objects while respecting composition.",
+  "domains": [
+    "algebra",
+    "symmetry",
+    "geometry"
+  ],
+  "context": {
+    "framework": "group theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared group theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A group action describes how reversible transformations move objects while respecting composition.",
+    "exact": "A left action of G on X is a map G×X→X with e·x=x and (gh)·x=g·(h·x).",
+    "example": "Rotations act on points of the plane.",
+    "caveat": "The same group can act on the same set in inequivalent ways."
+  },
+  "dependencies": [
+    "qeva:1:group@1",
+    "qeva:1:function@1",
+    "qeva:1:composition@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

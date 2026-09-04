@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:one-plus-one",
+  "revision": 1,
+  "kind": "theorem",
+  "title": "One plus one equals two",
+  "summary": "In the tiny arithmetic kernel shipped with this release, adding one to one rewrites to two.",
+  "domains": [
+    "arithmetic",
+    "proof"
+  ],
+  "context": {
+    "framework": "QEVA Peano Kernel 0",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared QEVA Peano Kernel 0 context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "In the tiny arithmetic kernel shipped with this release, adding one to one rewrites to two.",
+    "exact": "With 1:=S(0), 2:=S(S(0)), add(a,0)=a, and add(a,S(b))=S(add(a,b)), add(1,1)=2 by two checked rewrites.",
+    "example": "add(S(0),S(0)) → S(add(S(0),0)) → S(S(0)).",
+    "caveat": "This certificate proves a statement only in the declared toy kernel; it is a demonstration of verifiable linkage, not a foundation for all arithmetic."
+  },
+  "dependencies": [
+    "qeva:1:addition@1",
+    "qeva:1:natural-number@1",
+    "qeva:1:proof@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "machine-checked",
+    "method": "Replayed by scripts/verify.py against the two rewrite rules declared by QEVA Peano Kernel 0.",
+    "artifact": "certificates/peano-kernel-0/one-plus-one.json"
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

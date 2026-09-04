@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:bijection",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Bijection",
+  "summary": "A bijection pairs two collections without omission or collision.",
+  "domains": [
+    "set-theory",
+    "structure"
+  ],
+  "context": {
+    "framework": "functions",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared functions context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A bijection pairs two collections without omission or collision.",
+    "exact": "f:X→Y is bijective iff it is injective and surjective; equivalently, it has a two-sided inverse.",
+    "example": "n↦n+1 is a bijection from ℤ to ℤ.",
+    "caveat": "Bijection captures one notion of equal cardinality, not every notion of structural equivalence."
+  },
+  "dependencies": [
+    "qeva:1:injective-function@1",
+    "qeva:1:surjective-function@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

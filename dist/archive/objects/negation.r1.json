@@ -1,0 +1,45 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:negation",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Negation",
+  "summary": "Negation forms a statement that denies another statement under the chosen semantics.",
+  "domains": [
+    "logic"
+  ],
+  "context": {
+    "framework": "propositional language",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared propositional language context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Negation forms a statement that denies another statement under the chosen semantics.",
+    "exact": "¬ is a unary connective. In classical two-valued semantics, v(¬P)=1 exactly when v(P)=0; constructive semantics gives a different proof-theoretic reading.",
+    "example": "¬(2=3) denies the equality 2=3.",
+    "caveat": "Double-negation elimination is not valid in every logic."
+  },
+  "dependencies": [
+    "qeva:1:statement@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

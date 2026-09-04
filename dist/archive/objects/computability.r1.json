@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:computability",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Computability",
+  "summary": "Computability asks which input-output tasks can be carried out by an idealized finite procedure.",
+  "domains": [
+    "computation",
+    "logic"
+  ],
+  "context": {
+    "framework": "theory of computation",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared theory of computation context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Computability asks which input-output tasks can be carried out by an idealized finite procedure.",
+    "exact": "A partial function is computable when some accepted model of effective computation computes it; standard models agree on the classical computable functions.",
+    "example": "Integer addition is computable; the halting problem is undecidable.",
+    "caveat": "Computability ignores practical resource bounds unless complexity is added."
+  },
+  "dependencies": [
+    "qeva:1:algorithm@1",
+    "qeva:1:function@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

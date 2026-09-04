@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:vector-space",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Vector space",
+  "summary": "A vector space supports vector addition and scalar multiplication under compatibility laws.",
+  "domains": [
+    "linear-algebra",
+    "geometry"
+  ],
+  "context": {
+    "framework": "abstract algebra",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared abstract algebra context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A vector space supports vector addition and scalar multiplication under compatibility laws.",
+    "exact": "A vector space V over field F is an abelian group under + with an action F×V→V satisfying distributive, associative, and identity axioms.",
+    "example": "ℝ² is a vector space over ℝ.",
+    "caveat": "The scalar field is part of the structure."
+  },
+  "dependencies": [
+    "qeva:1:field@1",
+    "qeva:1:group@1",
+    "qeva:1:operation@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

@@ -1,0 +1,46 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:existential-quantifier",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Existential quantifier",
+  "summary": "Existential quantification asserts that at least one permitted witness satisfies a condition.",
+  "domains": [
+    "logic"
+  ],
+  "context": {
+    "framework": "predicate logic",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared predicate logic context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Existential quantification asserts that at least one permitted witness satisfies a condition.",
+    "exact": "Given formula φ(x), ∃x φ(x) is satisfied in M when some domain element assigned to x makes φ hold.",
+    "example": "∃p∈ℕ such that p is prime and p>100.",
+    "caveat": "Classical existence and constructive exhibition of a witness need not be treated identically."
+  },
+  "dependencies": [
+    "qeva:1:statement@1",
+    "qeva:1:model@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

@@ -1,0 +1,654 @@
+{
+  "release": "0.4.0",
+  "scope": "global orientation seed; historical relations are not logical dependencies",
+  "milestones": [
+    {
+      "year": -20000,
+      "date": "before 20,000 BCE",
+      "branch": "number",
+      "region": "global prehistory",
+      "title": "Tallying and patterned marks",
+      "people": "unknown makers",
+      "note": "Material marks preserve discrete counts and repeated structure.",
+      "qeva": [
+        "qeva:1:distinction@1",
+        "qeva:1:natural-number@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": -1800,
+      "date": "c. 1800 BCE",
+      "branch": "number",
+      "region": "Mesopotamia",
+      "title": "Old Babylonian problem mathematics",
+      "people": "scribal traditions",
+      "note": "Place-value computation and worked procedures organize arithmetic and geometry.",
+      "qeva": [
+        "qeva:1:algorithm@1",
+        "qeva:1:rational@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": -1650,
+      "date": "c. 1650 BCE",
+      "branch": "geometry",
+      "region": "Egypt",
+      "title": "Rhind Mathematical Papyrus",
+      "people": "Ahmes; earlier sources",
+      "note": "Problems record fractions, areas, volumes, and practical algorithms.",
+      "qeva": [
+        "qeva:1:rational@1",
+        "qeva:1:algorithm@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": -300,
+      "date": "c. 300 BCE",
+      "branch": "foundations",
+      "region": "Hellenistic world",
+      "title": "Euclid's Elements",
+      "people": "Euclid",
+      "note": "Definitions, postulates, propositions, and proofs are organized into a durable deductive architecture.",
+      "qeva": [
+        "qeva:1:axiom@1",
+        "qeva:1:proof@1",
+        "qeva:1:prime@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": -250,
+      "date": "c. 250 BCE",
+      "branch": "analysis",
+      "region": "Hellenistic world",
+      "title": "Method of exhaustion",
+      "people": "Archimedes and predecessors",
+      "note": "Controlled finite approximations anticipate rigorous limiting arguments.",
+      "qeva": [
+        "qeva:1:limit@1",
+        "qeva:1:integral@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 263,
+      "date": "3rd century",
+      "branch": "number",
+      "region": "China",
+      "title": "The Nine Chapters and Liu Hui's commentary",
+      "people": "Liu Hui; earlier compilers",
+      "note": "Algorithms for linear problems, geometry, fractions, and approximation are explained and justified.",
+      "qeva": [
+        "qeva:1:algorithm@1",
+        "qeva:1:rational@1",
+        "qeva:1:function@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 499,
+      "date": "499",
+      "branch": "number",
+      "region": "India",
+      "title": "Aryabhatiya",
+      "people": "Aryabhata",
+      "note": "Positional computation, trigonometric tables, and astronomical algorithms are systematized.",
+      "qeva": [
+        "qeva:1:algorithm@1",
+        "qeva:1:periodicity@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 628,
+      "date": "628",
+      "branch": "number",
+      "region": "India",
+      "title": "Arithmetic with zero and signed quantities",
+      "people": "Brahmagupta",
+      "note": "Rules for zero and negative quantities become explicit parts of algebraic arithmetic.",
+      "qeva": [
+        "qeva:1:zero@1",
+        "qeva:1:integer@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 820,
+      "date": "c. 820",
+      "branch": "algebra",
+      "region": "Abbasid Baghdad",
+      "title": "Al-jabr as systematic equation solving",
+      "people": "al-Khwarizmi",
+      "note": "Equation-solving procedures are organized into a recognizable algebraic discipline.",
+      "qeva": [
+        "qeva:1:algorithm@1",
+        "qeva:1:operation@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1070,
+      "date": "c. 1070",
+      "branch": "algebra",
+      "region": "Persia",
+      "title": "Geometric classification of cubic equations",
+      "people": "Omar Khayyam",
+      "note": "Cubic equations are classified and solved by intersections of conics in appropriate cases.",
+      "qeva": [
+        "qeva:1:function@1",
+        "qeva:1:operation@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1202,
+      "date": "1202",
+      "branch": "number",
+      "region": "Mediterranean Europe",
+      "title": "Liber Abaci",
+      "people": "Fibonacci",
+      "note": "Hindu-Arabic numeration and algorithms spread through Latin mathematical practice.",
+      "qeva": [
+        "qeva:1:sequence@2",
+        "qeva:1:algorithm@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1637,
+      "date": "1637",
+      "branch": "geometry",
+      "region": "France",
+      "title": "Analytic geometry",
+      "people": "Descartes; Fermat",
+      "note": "Algebraic equations and geometric curves become interoperable representations.",
+      "qeva": [
+        "qeva:1:function@1",
+        "qeva:1:equivalence@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1666,
+      "date": "1660s–1680s",
+      "branch": "analysis",
+      "region": "Europe",
+      "title": "Calculus",
+      "people": "Newton; Leibniz",
+      "note": "Independent calculi provide general machinery for change and accumulation.",
+      "qeva": [
+        "qeva:1:derivative@1",
+        "qeva:1:integral@1",
+        "qeva:1:limit@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1736,
+      "date": "1736",
+      "branch": "discrete",
+      "region": "Prussia",
+      "title": "Königsberg bridges",
+      "people": "Euler",
+      "note": "Connectivity is separated from metric geometry, opening graph-theoretic reasoning.",
+      "qeva": [
+        "qeva:1:graph@1",
+        "qeva:1:invariant@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1801,
+      "date": "1801",
+      "branch": "number",
+      "region": "Germany",
+      "title": "Disquisitiones Arithmeticae",
+      "people": "Gauss",
+      "note": "Congruences and structural number theory organize residues and arithmetic relations.",
+      "qeva": [
+        "qeva:1:parity@2",
+        "qeva:1:prime@2",
+        "qeva:1:equivalence@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1822,
+      "date": "1822",
+      "branch": "analysis",
+      "region": "France",
+      "title": "Analytical Theory of Heat",
+      "people": "Fourier",
+      "note": "Trigonometric representation links frequency, analysis, and differential equations.",
+      "qeva": [
+        "qeva:1:periodicity@2",
+        "qeva:1:integral@1",
+        "qeva:1:function@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1832,
+      "date": "1830s",
+      "branch": "algebra",
+      "region": "France",
+      "title": "Galois theory",
+      "people": "Évariste Galois",
+      "note": "Solvability of equations becomes linked to groups of transformations.",
+      "qeva": [
+        "qeva:1:group@1",
+        "qeva:1:symmetry@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1847,
+      "date": "1847",
+      "branch": "logic",
+      "region": "Britain",
+      "title": "Algebraic logic",
+      "people": "George Boole",
+      "note": "Logical operations are treated algebraically.",
+      "qeva": [
+        "qeva:1:conjunction@1",
+        "qeva:1:negation@1",
+        "qeva:1:operation@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1854,
+      "date": "1854",
+      "branch": "geometry",
+      "region": "Germany",
+      "title": "Riemannian geometry",
+      "people": "Bernhard Riemann",
+      "note": "Geometry expands to manifolds with variable metric structure.",
+      "qeva": [
+        "qeva:1:metric-space@1",
+        "qeva:1:continuity@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1872,
+      "date": "1870s",
+      "branch": "foundations",
+      "region": "Europe",
+      "title": "Rigorous real numbers and set theory",
+      "people": "Dedekind; Cantor; others",
+      "note": "Limits, continua, cardinality, and number systems receive explicit constructions.",
+      "qeva": [
+        "qeva:1:real-number@1",
+        "qeva:1:set@1",
+        "qeva:1:cardinality@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1889,
+      "date": "1889",
+      "branch": "foundations",
+      "region": "Italy",
+      "title": "Peano-style arithmetic",
+      "people": "Giuseppe Peano",
+      "note": "Arithmetic is presented through primitive notions and axioms.",
+      "qeva": [
+        "qeva:1:natural-number@1",
+        "qeva:1:induction@1",
+        "qeva:1:axiom@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1899,
+      "date": "1899",
+      "branch": "foundations",
+      "region": "Germany",
+      "title": "Foundations of Geometry",
+      "people": "David Hilbert",
+      "note": "Axioms are studied structurally through models, consistency, and independence.",
+      "qeva": [
+        "qeva:1:axiom@1",
+        "qeva:1:model@1",
+        "qeva:1:consistency@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1900,
+      "date": "1900",
+      "branch": "frontier",
+      "region": "Paris",
+      "title": "Hilbert's problems",
+      "people": "David Hilbert",
+      "note": "A public problem list redirects research across generations.",
+      "qeva": [
+        "qeva:1:theorem@1",
+        "qeva:1:proof@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1910,
+      "date": "1910–1913",
+      "branch": "logic",
+      "region": "Britain",
+      "title": "Principia Mathematica",
+      "people": "Whitehead; Russell",
+      "note": "A large program seeks to derive mathematics within symbolic logic.",
+      "qeva": [
+        "qeva:1:formal-system@2",
+        "qeva:1:derivability@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1931,
+      "date": "1931",
+      "branch": "logic",
+      "region": "Austria",
+      "title": "Incompleteness theorems",
+      "people": "Kurt Gödel",
+      "note": "Sufficiently expressive formal theories face limits on complete self-certification.",
+      "qeva": [
+        "qeva:1:formal-system@2",
+        "qeva:1:consistency@1",
+        "qeva:1:completeness@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1936,
+      "date": "1936",
+      "branch": "computation",
+      "region": "Europe and United States",
+      "title": "Formal models of computation",
+      "people": "Turing; Church; Post; others",
+      "note": "Computability becomes precise enough for impossibility proofs.",
+      "qeva": [
+        "qeva:1:algorithm@1",
+        "qeva:1:computability@1",
+        "qeva:1:decidability@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1948,
+      "date": "1948",
+      "branch": "information",
+      "region": "United States",
+      "title": "Mathematical theory of communication",
+      "people": "Claude Shannon",
+      "note": "Uncertainty, coding, and noisy channels receive quantitative structure.",
+      "qeva": [
+        "qeva:1:information@1",
+        "qeva:1:entropy@1",
+        "qeva:1:signal-noise@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1957,
+      "date": "1957",
+      "branch": "computation",
+      "region": "United States",
+      "title": "FORTRAN compiler",
+      "people": "Backus and team",
+      "note": "High-level mathematical instructions are translated into machine execution at scale.",
+      "qeva": [
+        "qeva:1:algorithm@1",
+        "qeva:1:formal-system@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1963,
+      "date": "1963",
+      "branch": "dynamics",
+      "region": "United States",
+      "title": "Deterministic nonperiodic flow",
+      "people": "Edward Lorenz",
+      "note": "A low-dimensional nonlinear model reveals sensitive aperiodic behavior.",
+      "qeva": [
+        "qeva:1:nonlinearity@2",
+        "qeva:1:sensitivity@2",
+        "qeva:1:chaos@2",
+        "qeva:1:attractor@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1965,
+      "date": "1965",
+      "branch": "category",
+      "region": "United States",
+      "title": "Categorical foundations and topoi mature",
+      "people": "Lawvere; Grothendieck; others",
+      "note": "Structural and categorical languages reshape geometry, algebra, and foundations.",
+      "qeva": [
+        "qeva:1:category-theoretic-foundations@1",
+        "qeva:1:function@1",
+        "qeva:1:composition@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1975,
+      "date": "1975",
+      "branch": "dynamics",
+      "region": "United States",
+      "title": "Period three implies chaos",
+      "people": "Li; Yorke",
+      "note": "An interval-map theorem links a period-three orbit to many other periods.",
+      "qeva": [
+        "qeva:1:periodicity@2",
+        "qeva:1:chaos@2"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1976,
+      "date": "1976",
+      "branch": "verification",
+      "region": "United States",
+      "title": "Computer-assisted four-color proof",
+      "people": "Appel; Haken",
+      "note": "Large computation becomes an explicit component of a major proof.",
+      "qeva": [
+        "qeva:1:proof@1",
+        "qeva:1:graph@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1984,
+      "date": "1984",
+      "branch": "foundations",
+      "region": "United States",
+      "title": "Homotopy type ideas connect proofs and spaces",
+      "people": "multiple traditions",
+      "note": "Type-theoretic and homotopical viewpoints begin a long convergence.",
+      "qeva": [
+        "qeva:1:dependent-type-theory@1",
+        "qeva:1:topological-space@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 1994,
+      "date": "1994",
+      "branch": "number",
+      "region": "United States and Britain",
+      "title": "Fermat's Last Theorem proof",
+      "people": "Wiles; Taylor",
+      "note": "An elementary-looking claim is resolved through deep modular and geometric connections.",
+      "qeva": [
+        "qeva:1:prime@2",
+        "qeva:1:theorem@1",
+        "qeva:1:proof@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 2003,
+      "date": "2002–2003",
+      "branch": "geometry",
+      "region": "Russia",
+      "title": "Ricci-flow proof of geometrization",
+      "people": "Grigori Perelman",
+      "note": "Geometric evolution and surgery resolve the Poincaré conjecture.",
+      "qeva": [
+        "qeva:1:continuity@2",
+        "qeva:1:stability@2",
+        "qeva:1:topological-space@1"
+      ],
+      "source_refs": [
+        "mactutor"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 2014,
+      "date": "2014",
+      "branch": "verification",
+      "region": "international",
+      "title": "Flyspeck completion",
+      "people": "Hales and collaborators",
+      "note": "Proof assistants verify the Kepler conjecture proof.",
+      "qeva": [
+        "qeva:1:proof@1",
+        "qeva:1:derivability@2",
+        "qeva:1:formal-system@2"
+      ],
+      "source_refs": [
+        "mathlib"
+      ],
+      "confidence": "orientation-level"
+    },
+    {
+      "year": 2021,
+      "date": "2021",
+      "branch": "verification",
+      "region": "international",
+      "title": "Liquid Tensor Experiment",
+      "people": "Scholze; Clausen; Lean/mathlib community",
+      "note": "Formalization participates in active research rather than only later checking.",
+      "qeva": [
+        "qeva:1:dependent-type-theory@1",
+        "qeva:1:proof@1",
+        "qeva:1:theorem@1"
+      ],
+      "source_refs": [
+        "mathlib"
+      ],
+      "confidence": "orientation-level"
+    }
+  ]
+}

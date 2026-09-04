@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:real-number",
+  "revision": 1,
+  "kind": "framework",
+  "title": "Real number",
+  "summary": "Real numbers complete the rationals so convergent measurement processes need not leave gaps.",
+  "domains": [
+    "analysis",
+    "number-theory"
+  ],
+  "context": {
+    "framework": "complete ordered field",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared complete ordered field context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Real numbers complete the rationals so convergent measurement processes need not leave gaps.",
+    "exact": "Up to unique order-preserving field isomorphism, ℝ is a complete ordered field; completeness may be stated by least upper bounds or equivalent principles.",
+    "example": "√2 is real but not rational.",
+    "caveat": "Construction by Dedekind cuts or Cauchy sequences depends on a prior foundation."
+  },
+  "dependencies": [
+    "qeva:1:rational@1",
+    "qeva:1:field@1",
+    "qeva:1:order@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

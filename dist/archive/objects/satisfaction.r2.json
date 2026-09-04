@@ -1,0 +1,54 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:satisfaction",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Satisfaction",
+  "summary": "A semantic relation stating that a formula holds in a declared interpretation or model.",
+  "domains": [
+    "logic",
+    "semantics",
+    "foundations"
+  ],
+  "context": {
+    "framework": "model-theoretic semantics",
+    "framework_ref": "qeva:1:model@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "A language, an interpretation/model M, and a formula P suitable for that semantics are fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A formula can be true in one mathematical structure and false in another. QEVA must name the semantics or model when it uses semantic truth.",
+    "exact": "The notation M |= P denotes that P is satisfied by model M according to the declared semantic clauses for the language in use.",
+    "example": "A sentence about order can hold in one ordered structure and fail in another.",
+    "caveat": "The symbol |= has framework-specific semantics. A QEVA record must not silently identify semantic truth with formal provability."
+  },
+  "dependencies": [
+    "qeva:1:model@1",
+    "qeva:1:statement@1"
+  ],
+  "relations": [
+    {
+      "kind": "contrasts-with",
+      "target": "qeva:1:derivability@2",
+      "note": "Satisfaction is semantic; derivability is syntactic."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:satisfaction@1",
+  "legacy_ids": []
+}

@@ -1,0 +1,55 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:periodicity",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Periodicity of a sequence",
+  "summary": "Exact repetition after a fixed positive index shift.",
+  "domains": [
+    "dynamics",
+    "sequence",
+    "recurrence"
+  ],
+  "context": {
+    "framework": "sequences indexed by integers or natural numbers",
+    "framework_ref": null,
+    "note": "Context is named textually in this seed release; its foundations are not yet recursively expanded into QEVA records."
+  },
+  "assumptions": [
+    {
+      "text": "A sequence (a_n) has an index domain on which n+p is defined for the stated n.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A periodic sequence repeats exactly after some fixed positive number of steps.",
+    "exact": "A sequence (a_n) is periodic with period p>0 iff a_{n+p}=a_n for every index n for which both terms are in the domain. A least positive such p, when it exists, is called the fundamental period.",
+    "example": "0,1,0,1,0,1,... has period 2.",
+    "caveat": "Continuous functions, group actions, tilings, and dynamical systems use related but context-specific notions of periodicity."
+  },
+  "dependencies": [
+    "qeva:1:sequence@1"
+  ],
+  "relations": [
+    {
+      "kind": "contrasts-with",
+      "target": "qeva:1:quasiperiodicity@1",
+      "note": "Quasiperiodicity can exhibit recurrent structure without one global exact finite period."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:definition:periodicity"
+  ]
+}

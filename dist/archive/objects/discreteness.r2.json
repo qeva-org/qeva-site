@@ -1,0 +1,59 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:discreteness",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Discrete structure",
+  "summary": "A precise notion of discreteness depends on the ambient structure; in topology, a discrete space has every singleton open.",
+  "domains": [
+    "topology",
+    "discrete-math",
+    "foundations"
+  ],
+  "context": {
+    "framework": "topology",
+    "framework_ref": "qeva:1:topological-space@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "A set X with a topology is specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A discrete description treats states as individually separable rather than forcing arbitrarily close intermediate states.",
+    "exact": "A topological space X is discrete iff every subset of X is open; equivalently, every singleton {x} is open.",
+    "example": "The integers with the discrete topology are a discrete topological space.",
+    "caveat": "“Discrete = maximal information” is not a universal theorem. Information content depends on encoding, probability model, resolution, and task."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:topological-space@1"
+  ],
+  "relations": [
+    {
+      "kind": "contrasts",
+      "target": "qeva:1:continuity@2",
+      "note": "Continuity is a property of maps between topological spaces, including discrete ones."
+    },
+    {
+      "kind": "supports",
+      "target": "qeva:1:sequence@2",
+      "note": "Sequences are naturally indexed by a discrete set such as N."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:discreteness@1",
+  "legacy_ids": []
+}

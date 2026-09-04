@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="QEVA is an open, durable map of mathematical ideas, their exact dependencies, proofs, history, and unresolved frontiers.">
+  <title>QEVA — The map of mathematical ideas</title>
+  <link rel="icon" href="assets/q.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast shell">
+  <a class="brand" href="./" aria-label="QEVA home"><img src="assets/q.svg" width="34" height="34" alt=""><span>QEVA</span><small>0.4</small></a>
+  <nav aria-label="Primary"><a href="map/">Map</a><a href="foundations/">Foundations</a><a href="history/">History</a><a href="archive/">Archive</a><a href="sandbox/">Sandbox</a><a href="sources/">Harvester</a></nav>
+</header>
+<main id="main">
+  <section class="command shell" aria-labelledby="home-title">
+    <div class="command-intro">
+      <div><p class="kicker">THE OPEN MAP OF MATHEMATICAL IDEAS</p><h1 id="home-title">What does this depend on?</h1></div>
+      <p class="lede">Start with any idea. Move backward to its assumptions, sideways to equivalent structures, forward to consequences, and through time to the work that revealed it.</p>
+    </div>
+    <div class="search-lab" role="search">
+      <label for="global-search"><span>SEARCH THE MAP</span><input id="global-search" type="search" placeholder="Try symmetry, prime, proof, entropy…" autocomplete="off" aria-controls="global-results" aria-expanded="false"></label>
+      <div id="global-results" class="search-results" role="listbox" aria-live="polite"></div>
+    </div>
+    <div class="command-stats" aria-label="Release size">
+      <div><strong data-stat="objects">—</strong><span>current objects</span></div>
+      <div><strong data-stat="revisions">—</strong><span>exact revisions</span></div>
+      <div><strong data-stat="history">—</strong><span>history milestones</span></div>
+      <div><strong data-stat="fields">—</strong><span>field nodes</span></div>
+    </div>
+    <div class="seed-strip"><span>BEGIN WITH</span><a href="objects/distinction/">distinction</a><a href="objects/identity/">identity</a><a href="objects/statement/">statement</a><a href="objects/operation/">operation</a><a href="objects/recurrence/">recurrence</a><a href="objects/symmetry/">symmetry</a></div>
+  </section>
+
+  <section class="home-section shell" aria-labelledby="two-maps">
+    <div class="section-lead"><p class="kicker">ONE ARCHIVE · SEPARATE QUESTIONS</p><div><h2 id="two-maps">Two maps that must never collapse into one.</h2><p>A theorem can be logically elementary yet historically late. A famous paper can be wrong. A citation records intellectual traffic; it does not prove a prerequisite.</p></div></div>
+    <div class="thesis-grid">
+      <article><div><p class="kicker">LOGICAL ANCESTRY</p><h3>What must already be in place?</h3></div><p>Trace exact, revision-pinned dependencies from primitive distinctions through language, rules, structures, mechanisms, results, and frontiers.</p><code>assumption → definition → mechanism → result</code></article>
+      <article><div><p class="kicker">HISTORICAL ANCESTRY</p><h3>How did people actually find it?</h3></div><p>Trace works, traditions, independent discoveries, corrections, formalizations, disputes, and later influence with source references and uncertainty.</p><code>work → claim → response → branch</code></article>
+    </div>
+  </section>
+
+  <section class="home-section shell" aria-labelledby="separate-title">
+    <p class="kicker">THE LOAD-BEARING RULE</p><h2 id="separate-title" class="separation">Published <span>≠</span> proved. Cited <span>≠</span> fundamental. Simulated <span>≠</span> settled.</h2>
+    <p style="max-width:760px">QEVA stores the difference instead of smoothing it away. Every current object separates a human explanation, exact statement, assumptions, dependencies, verification performed, provenance, and revision history.</p>
+  </section>
+
+  <section class="home-section shell" aria-labelledby="system-title">
+    <div class="section-lead"><p class="kicker">THE DURABLE OBJECT</p><div><h2 id="system-title">The website is only today's instrument panel.</h2><p>The archive must survive the domain, interface, maintainer, host, and file format. Every part can be copied and reconstructed independently.</p></div></div>
+    <div class="system-grid">
+      <a href="protocol/"><b>Protocol</b><span>A small grammar for exact mathematical records.</span></a>
+      <a href="archive/"><b>Open archive</b><span>Immutable revisions, portable exports, no account required.</span></a>
+      <a href="preservation/#mirrors"><b>Many mirrors</b><span>Independent custody and periodic fixity checks.</span></a>
+      <a href="snapshot/"><b>Snapshots</b><span>Text, BagIt subset, print core, and migration rules.</span></a>
+      <a href="institution/"><b>Institution</b><span>Stewardship bounded by a permanent right to fork.</span></a>
+    </div>
+  </section>
+
+  <section class="home-section shell" aria-labelledby="beginner-title">
+    <div class="section-lead"><p class="kicker">FOR ANY AGE</p><div><h2 id="beginner-title">One idea, three resolutions.</h2><p>Readers can stop at the intuition or keep drilling. The formal layer never replaces the plain layer, and the plain layer never impersonates a proof.</p></div></div>
+    <div class="thesis-grid">
+      <article><div><p class="kicker">PLAIN</p><h3>Equivalence means choosing which differences to ignore.</h3></div><p>Clock times 1 and 13 are different integers, but the same hour on a twelve-hour clock.</p><code>mental model</code></article>
+      <article><div><p class="kicker">EXACT</p><h3>Reflexive · symmetric · transitive</h3></div><p>For a set X, a relation ~ is an equivalence relation when x~x; x~y implies y~x; and x~y with y~z implies x~z.</p><code>qeva:1:equivalence@2</code></article>
+    </div>
+  </section>
+
+  <section class="integrity-band"><div class="shell"><div><p class="kicker">HONEST RELEASE BOUNDARY</p><h2>This is a real foundation seed, not “all mathematics” theater.</h2><p>Release 0.4 ships a larger exact graph, a working metadata harvester, individual object pages, a global history seed, a high-level field map, an offline proof certificate, and preservation artifacts. It does not claim that the internet has already been scraped or that the map is complete.</p></div><ul class="integrity-list"><li><span>External corpus bundled</span><code>NO</code></li><li><span>Harvester implementation</span><code>YES</code></li><li><span>Runtime packages required</span><code>0</code></li><li><span>Legacy 0.3 bytes preserved</span><code>YES</code></li><li><span>Complete map of mathematics</span><code>NOT YET</code></li></ul></div></section>
+</main>
+<footer class="footer shell"><div><strong>QEVA</strong><span>Protocol · archive · mirrors · snapshots · institution</span></div><nav aria-label="Project"><a href="protocol/">Protocol</a><a href="preservation/">Preservation</a><a href="institution/">Institution</a><a href="README.md">README</a></nav></footer>
+<script src="assets/qeva-data.js"></script><script src="assets/home.js"></script>
+</body>
+</html>

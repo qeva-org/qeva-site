@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:decidability",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Decidability",
+  "summary": "A decision problem is decidable when one algorithm always halts and returns the correct yes/no answer.",
+  "domains": [
+    "logic",
+    "computation"
+  ],
+  "context": {
+    "framework": "computability theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared computability theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A decision problem is decidable when one algorithm always halts and returns the correct yes/no answer.",
+    "exact": "A language A⊆Σ* is decidable if there exists a total computable characteristic function χ_A:Σ*→{0,1}.",
+    "example": "Primality testing is decidable even though particular algorithms differ greatly in efficiency.",
+    "caveat": "Decidable does not mean easy; runtime and memory complexity are separate questions."
+  },
+  "dependencies": [
+    "qeva:1:algorithm@1",
+    "qeva:1:statement@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

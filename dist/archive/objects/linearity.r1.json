@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:linearity",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Linearity",
+  "summary": "A linear map preserves addition and scalar multiplication.",
+  "domains": [
+    "linear-algebra",
+    "analysis"
+  ],
+  "context": {
+    "framework": "vector spaces",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared vector spaces context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A linear map preserves addition and scalar multiplication.",
+    "exact": "T:V→W is linear iff T(av+bw)=aT(v)+bT(w) for all vectors v,w and scalars a,b.",
+    "example": "Differentiation is linear on suitable function spaces.",
+    "caveat": "Linear behavior is relative to chosen vector-space structures."
+  },
+  "dependencies": [
+    "qeva:1:vector-space@1",
+    "qeva:1:function@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

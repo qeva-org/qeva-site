@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:symbol",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Symbol",
+  "summary": "A symbol is an atomic mark or token admitted by a formal language.",
+  "domains": [
+    "foundations",
+    "language"
+  ],
+  "context": {
+    "framework": "formal language",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared formal language context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A symbol is an atomic mark or token admitted by a formal language.",
+    "exact": "A formal alphabet Σ is a set of distinguishable tokens. Symbols acquire syntactic roles from formation rules and meaning only through an interpretation.",
+    "example": "The glyph + can be a binary function symbol before any meaning is assigned to it.",
+    "caveat": "A glyph, token, and interpreted mathematical object are different layers."
+  },
+  "dependencies": [
+    "qeva:1:distinction@1",
+    "qeva:1:object@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

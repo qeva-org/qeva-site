@@ -1,0 +1,45 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:disjunction",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Disjunction",
+  "summary": "Disjunction joins alternatives and says that at least one is admitted under the chosen logic.",
+  "domains": [
+    "logic"
+  ],
+  "context": {
+    "framework": "propositional language",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared propositional language context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Disjunction joins alternatives and says that at least one is admitted under the chosen logic.",
+    "exact": "P∨Q is true in classical semantics exactly when at least one of P or Q is true; constructive proof normally supplies which side holds and its proof.",
+    "example": "‘n is negative or n is nonnegative’ is a disjunction over an ordered number system.",
+    "caveat": "Inclusive mathematical disjunction differs from everyday exclusive ‘or’, and its proof meaning varies by logic."
+  },
+  "dependencies": [
+    "qeva:1:statement@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

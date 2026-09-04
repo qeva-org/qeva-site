@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:proof",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Proof",
+  "summary": "A proof is a finite, checkable chain from admitted premises to a conclusion under declared rules.",
+  "domains": [
+    "logic",
+    "proof"
+  ],
+  "context": {
+    "framework": "formal proof system",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared formal proof system context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A proof is a finite, checkable chain from admitted premises to a conclusion under declared rules.",
+    "exact": "An S-proof of P from Γ is a finite sequence of formulas ending in P, each of which is an axiom, an admitted premise, or follows from earlier formulas by an S-rule.",
+    "example": "A two-line derivation may use P and P→Q to conclude Q by modus ponens.",
+    "caveat": "A persuasive explanation and a formal derivation serve different purposes; QEVA can link both without calling them identical."
+  },
+  "dependencies": [
+    "qeva:1:axiom@1",
+    "qeva:1:inference-rule@1",
+    "qeva:1:statement@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

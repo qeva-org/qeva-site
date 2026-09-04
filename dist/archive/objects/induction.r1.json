@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:induction",
+  "revision": 1,
+  "kind": "inference-rule",
+  "title": "Mathematical induction",
+  "summary": "Induction proves a property of every natural number from a base case and a successor step.",
+  "domains": [
+    "number-theory",
+    "proof"
+  ],
+  "context": {
+    "framework": "natural-number arithmetic",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared natural-number arithmetic context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Induction proves a property of every natural number from a base case and a successor step.",
+    "exact": "From P(0) and ∀n(P(n)→P(S(n))), infer ∀n P(n), in a system admitting the corresponding induction rule or axiom scheme.",
+    "example": "Prove 0+ n=n by fixing n and using the recursive equations for addition.",
+    "caveat": "The strength and allowed formulas of induction depend on the theory."
+  },
+  "dependencies": [
+    "qeva:1:natural-number@1",
+    "qeva:1:inference-rule@1",
+    "qeva:1:universal-quantifier@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

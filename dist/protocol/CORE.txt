@@ -1,0 +1,112 @@
+QEVA RECOVERY CORE 0.4
+======================
+
+PURPOSE
+QEVA preserves explicit mathematical objects, their exact revision-pinned
+logical dependencies, their provenance, and separate historical/corpus
+relations.  This file is a low-complexity recovery description.  A future
+custodian does not need this website, Python, JSON Schema, a database, or the
+QEVA institution in order to interpret the archive.
+
+FOUR LAYERS
+1. LOGICAL ARCHIVE: definitions, axioms, statements, proofs, conjectures,
+   counterexamples, algorithms, and frameworks.
+2. HISTORICAL GRAPH: people, works, dates, discoveries, corrections,
+   formalizations, and disputes.
+3. CORPUS GRAPH: source records, identifiers, retrieval events, rights, raw
+   fixity, normalization, and machine-extracted candidates.
+4. VIEWS: website, maps, timelines, sandboxes, indexes, and future software.
+
+The first three layers are data.  The fourth is replaceable software.
+
+PERMANENT SEPARATIONS
+  syntax                is not semantics
+  derivability          is not model satisfaction
+  citation              is not logical dependence
+  co-occurrence         is not mechanism
+  analogy               is not equivalence
+  simulation            is not proof
+  publication           is not truth
+  popularity            is not importance
+  web accessibility     is not redistribution permission
+
+FOUNDATIONAL STANCE
+QEVA does not claim that all mathematics has one uncontested absolute root.
+It records a small shared metalanguage (distinction, object, expression,
+statement, rule) and then exposes multiple explicit foundational branches,
+including classical set-theoretic, constructive/type-theoretic, and
+category-theoretic presentations.  A bridge between branches must name the
+translation or interpretation that supports it.
+
+IDENTITY
+A stable logical object identifier is:
+  qeva:1:sequence
+An exact released revision is:
+  qeva:1:sequence@2
+
+The namespace number after qeva: is part of the identifier grammar, not a
+protocol version.  Object kind is metadata and is not part of identity.
+Every QEVA dependency, relation target, framework_ref, and supersedes link
+uses an exact revision.  Released revision bytes never change.
+
+OBJECT 0.2
+The canonical object fields are documented by qeva-object.schema.json:
+  qeva_version, id, revision, kind, title, summary, domains, context,
+  assumptions, content, dependencies, relations, verification, provenance,
+  supersedes, legacy_ids.
+
+The schema is an interoperability aid.  CORE.txt remains readable without a
+schema implementation.  Protocol 0.2 objects remain valid inside release 0.4.
+
+PROOF AND TRUTH
+  Gamma |-_{S} P    means a permitted finite S-derivation of P from Gamma.
+  M |= P            means P is satisfied in model M under declared semantics.
+
+Neither notation has a complete meaning until S or M and the language are
+recoverable.  QEVA never stores one unlabeled Boolean named true.
+
+VERIFICATION LEVELS
+  unreviewed       recorded but not editorially qualified
+  editorial        checked for clarity/coherence by an editor
+  formal-proof     accompanied by a formal derivation artifact
+  machine-checked  replayed by a named checker/kernel
+  refuted          an exact claim has a counterexample or derivation of denial
+
+A level describes performed checking.  It does not transfer automatically to
+dependent objects.
+
+QUALIFICATION ASSERTIONS
+An object's verification field is a release-time summary.  Independent checks
+also live as append-only qualification records.  Each names an exact subject,
+dimension, outcome, method, artifact, asserter, date, and environment.  Thus an
+editorial review, formal derivation, machine replay, computational experiment,
+empirical replication, and refutation can coexist without rewriting the
+mathematical object or collapsing unlike evidence into one score.
+
+ENCODING
+Text is UTF-8 without a byte-order mark.  Generated lines end with LF byte
+0x0A.  JSON follows RFC 8259.  Canonical JSON for digests sorts keys
+lexicographically, emits no insignificant whitespace, emits Unicode directly,
+and appends one LF byte.  JSONL contains one complete object per line.
+
+FIXITY
+SHA-256 and SHA-512 manifests record byte fixity.  Hashes do not prove
+authorship, mathematical truth, or timeless security.  Future releases may add
+new algorithms but must preserve old manifests and released bytes.
+
+MIRRORS AND MIGRATION
+Anyone may copy the complete QEVA-native release.  A migration preserves the
+source bytes, writes a new representation, documents the transformation, and
+keeps both.  A successor may continue from any complete mirror but must not
+impersonate an earlier release.
+
+RECOVERY ORDER
+1. Verify MANIFEST.sha256 and/or MANIFEST.sha512.
+2. Read RELEASE.json and this CORE.txt.
+3. Read archive/CATALOG.tsv for a low-complexity index.
+4. Read archive/current.jsonl for current objects.
+5. Read archive/all.jsonl for exact revision history.
+6. Read corpus/source-registry.json before handling third-party material.
+7. Use snapshot/QEVA-BAG as a portable BagIt-style recovery subset.
+
+END QEVA RECOVERY CORE 0.4

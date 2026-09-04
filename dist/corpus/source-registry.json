@@ -1,0 +1,105 @@
+{
+  "release": "0.4.0",
+  "retrieval_rule": "Re-check current terms and rights at each run.",
+  "sources": [
+    {
+      "id": "openalex",
+      "name": "OpenAlex",
+      "class": "bibliographic",
+      "mode": "API + snapshot",
+      "url": "https://developers.openalex.org/",
+      "rights": "Metadata and snapshot terms must be checked at retrieval time.",
+      "role": "broad works, authors, institutions, topics, citations"
+    },
+    {
+      "id": "crossref",
+      "name": "Crossref",
+      "class": "bibliographic",
+      "mode": "REST + annual public data file",
+      "url": "https://www.crossref.org/documentation/retrieve-metadata/",
+      "rights": "Most metadata is openly reusable; abstracts can carry separate copyright.",
+      "role": "DOIs, references, updates, licenses, retractions"
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "class": "repository",
+      "mode": "OAI-PMH + API + S3 bulk",
+      "url": "https://info.arxiv.org/help/bulk_data.html",
+      "rights": "Article files retain submission-specific licenses; metadata and content rights are tracked separately.",
+      "role": "modern research metadata and permitted source/full text"
+    },
+    {
+      "id": "commoncrawl",
+      "name": "Common Crawl",
+      "class": "web-crawl",
+      "mode": "CDXJ + URL Index + WARC/WET",
+      "url": "https://commoncrawl.org/get-started",
+      "rights": "Presence in a crawl does not grant redistribution rights.",
+      "role": "discovery layer for the broader public web"
+    },
+    {
+      "id": "zbmath",
+      "name": "zbMATH Open",
+      "class": "math-index",
+      "mode": "API + OAI-PMH",
+      "url": "https://zbmath.org/",
+      "rights": "Use only after accepting and recording current API terms.",
+      "role": "math-specific classifications, reviews, identities, citations"
+    },
+    {
+      "id": "oeis",
+      "name": "OEIS",
+      "class": "specialized-corpus",
+      "mode": "bulk files",
+      "url": "https://oeis.org/wiki/Download",
+      "rights": "CC BY-SA 4.0; attribution and share-alike must remain attached.",
+      "role": "integer sequences, formulas, references, transforms"
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "class": "knowledge-graph",
+      "mode": "dumps + SPARQL",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+      "rights": "Structured data is CC0; linked media and sources may differ.",
+      "role": "identity, dates, works, people, historical reconciliation"
+    },
+    {
+      "id": "internet-archive",
+      "name": "Internet Archive",
+      "class": "digital-library",
+      "mode": "metadata + item APIs",
+      "url": "https://archive.org/developers/",
+      "rights": "Rights vary by item and file; public access is not proof of public-domain status.",
+      "role": "historical books, scans, manuscripts, preserved pages"
+    },
+    {
+      "id": "mathlib",
+      "name": "Mathlib",
+      "class": "formal-library",
+      "mode": "Git repository + generated declarations",
+      "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib.html",
+      "rights": "Preserve repository license, commit, imports, and declaration names.",
+      "role": "machine-checked definitions, theorems, dependency edges"
+    },
+    {
+      "id": "mactutor",
+      "name": "MacTutor History of Mathematics Archive",
+      "class": "historical-reference",
+      "mode": "curated web archive",
+      "url": "https://mathshistory.st-andrews.ac.uk/",
+      "rights": "Index and cite; do not mirror prose without permission.",
+      "role": "historical orientation and source leads"
+    },
+    {
+      "id": "clay",
+      "name": "Clay Mathematics Institute",
+      "class": "frontier-reference",
+      "mode": "official web publications",
+      "url": "https://www.claymath.org/millennium-problems/",
+      "rights": "Reference and quote only within applicable rights.",
+      "role": "official Millennium Problem status and descriptions"
+    }
+  ]
+}

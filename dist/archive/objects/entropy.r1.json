@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:entropy",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Shannon entropy",
+  "summary": "Entropy is the expected self-information of a random variable's distribution.",
+  "domains": [
+    "information-theory",
+    "probability"
+  ],
+  "context": {
+    "framework": "discrete information theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared discrete information theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Entropy is the expected self-information of a random variable's distribution.",
+    "exact": "For discrete X with probabilities p(x), H_b(X)=−Σ_x p(x)log_b p(x), with 0log0 interpreted as 0.",
+    "example": "A fair bit has entropy 1 bit; a deterministic bit has entropy 0.",
+    "caveat": "Shannon entropy is distribution-relative and does not measure semantic importance."
+  },
+  "dependencies": [
+    "qeva:1:random-variable@1",
+    "qeva:1:information@1",
+    "qeva:1:addition@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

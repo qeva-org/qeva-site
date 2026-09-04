@@ -1,0 +1,58 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:collatz-conjecture",
+  "revision": 1,
+  "kind": "conjecture",
+  "title": "Collatz conjecture",
+  "summary": "The open claim that every positive integer orbit under the Collatz map eventually reaches 1.",
+  "domains": [
+    "number-theory",
+    "dynamics",
+    "open-problems"
+  ],
+  "context": {
+    "framework": "positive integers",
+    "framework_ref": null,
+    "note": "Framework is named textually in this seed release; full recursive first-principles closure remains future work."
+  },
+  "assumptions": [
+    {
+      "text": "The Collatz map T is as defined in qeva:1:collatz-map@1.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Every tested starting value appears eventually to enter the 1→4→2→1 cycle, but no proof is known for all positive integers.",
+    "exact": "For every n∈N_{>0}, there exists k≥0 such that T^k(n)=1.",
+    "example": "The orbit of 6 reaches 1 after eight steps if the starting value is counted as step 0.",
+    "caveat": "This is open. Error-amplification, chaos, hierarchy, or emergent-invariance descriptions are research hypotheses unless made precise and proved."
+  },
+  "dependencies": [
+    "qeva:1:collatz-map@1"
+  ],
+  "relations": [
+    {
+      "kind": "open-related-lens",
+      "target": "qeva:1:hierarchy@1",
+      "note": "One may search for multiscale structure, but none is asserted here."
+    },
+    {
+      "kind": "open-related-lens",
+      "target": "qeva:1:sensitivity@1",
+      "note": "Sensitivity-like comparisons can be studied after specifying a metric/embedding; they do not resolve the conjecture by themselves."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record for the QEVA machinery map. It is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

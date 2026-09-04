@@ -1,0 +1,62 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:coarse-graining",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Coarse-graining",
+  "summary": "A many-to-one map from fine states to a smaller set of macro-descriptions, intentionally discarding distinctions.",
+  "domains": [
+    "information",
+    "statistical-mechanics",
+    "learning",
+    "systems"
+  ],
+  "context": {
+    "framework": "set/function theory",
+    "framework_ref": null,
+    "note": "Framework is named textually in this seed release; full recursive first-principles closure remains future work."
+  },
+  "assumptions": [
+    {
+      "text": "Fine state space X, macrostate space Y, and map C:X→Y are specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Coarse-graining keeps distinctions relevant at one scale or task and merges others.",
+    "exact": "A coarse-graining can be represented by a non-injective map C:X→Y. States x1≠x2 with C(x1)=C(x2) are indistinguishable at the coarse level.",
+    "example": "Block averaging maps many high-resolution samples to fewer averages.",
+    "caveat": "Coarse-graining is not automatically intelligent or optimal. Whether discarded information is nuisance depends on an objective, observer, model, and scale."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "induces",
+      "target": "qeva:1:grouping@1",
+      "note": "Preimages of macro-values form groups of fine states."
+    },
+    {
+      "kind": "interacts-with",
+      "target": "qeva:1:signal-noise@1",
+      "note": "A chosen coarse-graining can suppress variation treated as noise."
+    },
+    {
+      "kind": "builds",
+      "target": "qeva:1:hierarchy@1",
+      "note": "Repeated coarse-grainings can define multiple scales."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record for the QEVA machinery map. It is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

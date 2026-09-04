@@ -1,0 +1,51 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:satisfaction",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Satisfaction",
+  "summary": "A semantic relation stating that a formula holds in a declared interpretation or model.",
+  "domains": [
+    "logic",
+    "semantics",
+    "foundations"
+  ],
+  "context": {
+    "framework": "model-theoretic semantics",
+    "framework_ref": null,
+    "note": "The exact satisfaction relation depends on the language and semantic framework."
+  },
+  "assumptions": [
+    {
+      "text": "A language, an interpretation/model M, and a formula P suitable for that semantics are fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A formula can be true in one mathematical structure and false in another. QEVA must name the semantics or model when it uses semantic truth.",
+    "exact": "The notation M |= P denotes that P is satisfied by model M according to the declared semantic clauses for the language in use.",
+    "example": "A sentence about order can hold in one ordered structure and fail in another.",
+    "caveat": "The symbol |= has framework-specific semantics. A QEVA record must not silently identify semantic truth with formal provability."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "contrasts-with",
+      "target": "qeva:1:derivability@1",
+      "note": "Satisfaction is semantic; derivability is syntactic."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record written to make QEVA Protocol 0.2 explicit. It is an editorial mathematical formulation, not a claim that one foundation is uniquely privileged."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

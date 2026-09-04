@@ -1,0 +1,281 @@
+{
+  "release": "0.4.0",
+  "scope": "high-level navigational field map; not an ontology of unique roots",
+  "fields": [
+    {
+      "id": "foundations",
+      "title": "Foundations & logic",
+      "parent": null,
+      "question": "What may be stated, inferred, and modeled?",
+      "bridges": [
+        "computation",
+        "set-theory",
+        "category-theory"
+      ]
+    },
+    {
+      "id": "set-theory",
+      "title": "Set theory",
+      "parent": "foundations",
+      "question": "How are collections and infinities organized?",
+      "bridges": [
+        "topology",
+        "measure-theory",
+        "combinatorics"
+      ]
+    },
+    {
+      "id": "category-theory",
+      "title": "Category theory",
+      "parent": "foundations",
+      "question": "Which structures are revealed by maps and composition?",
+      "bridges": [
+        "algebra",
+        "topology",
+        "logic"
+      ]
+    },
+    {
+      "id": "number-theory",
+      "title": "Number theory",
+      "parent": null,
+      "question": "What structure is hidden in integers and divisibility?",
+      "bridges": [
+        "algebra",
+        "analysis",
+        "cryptography"
+      ]
+    },
+    {
+      "id": "algebra",
+      "title": "Algebra",
+      "parent": null,
+      "question": "Which operations and symmetries obey reusable laws?",
+      "bridges": [
+        "geometry",
+        "number-theory",
+        "representation-theory"
+      ]
+    },
+    {
+      "id": "representation-theory",
+      "title": "Representation theory",
+      "parent": "algebra",
+      "question": "How can abstract symmetries act linearly?",
+      "bridges": [
+        "geometry",
+        "number-theory",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "geometry",
+      "title": "Geometry",
+      "parent": null,
+      "question": "Which structures encode shape, distance, and curvature?",
+      "bridges": [
+        "topology",
+        "algebra",
+        "analysis"
+      ]
+    },
+    {
+      "id": "topology",
+      "title": "Topology",
+      "parent": null,
+      "question": "What survives continuous deformation?",
+      "bridges": [
+        "geometry",
+        "analysis",
+        "dynamics"
+      ]
+    },
+    {
+      "id": "analysis",
+      "title": "Analysis",
+      "parent": null,
+      "question": "How do limits, approximation, and infinite processes behave?",
+      "bridges": [
+        "differential-equations",
+        "probability",
+        "optimization"
+      ]
+    },
+    {
+      "id": "differential-equations",
+      "title": "Differential equations",
+      "parent": "analysis",
+      "question": "How do local rates generate global evolution?",
+      "bridges": [
+        "dynamics",
+        "numerical-analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "dynamics",
+      "title": "Dynamical systems",
+      "parent": null,
+      "question": "What patterns emerge under repeated evolution?",
+      "bridges": [
+        "analysis",
+        "ergodic-theory",
+        "control"
+      ]
+    },
+    {
+      "id": "ergodic-theory",
+      "title": "Ergodic theory",
+      "parent": "dynamics",
+      "question": "How do time averages and space averages relate?",
+      "bridges": [
+        "probability",
+        "number-theory",
+        "statistical-mechanics"
+      ]
+    },
+    {
+      "id": "probability",
+      "title": "Probability",
+      "parent": null,
+      "question": "How is uncertainty structured?",
+      "bridges": [
+        "statistics",
+        "measure-theory",
+        "information-theory"
+      ]
+    },
+    {
+      "id": "statistics",
+      "title": "Statistics",
+      "parent": "probability",
+      "question": "What can data reveal under explicit uncertainty?",
+      "bridges": [
+        "optimization",
+        "learning-theory",
+        "applied-mathematics"
+      ]
+    },
+    {
+      "id": "measure-theory",
+      "title": "Measure theory",
+      "parent": "analysis",
+      "question": "How is generalized size assigned consistently?",
+      "bridges": [
+        "probability",
+        "integration",
+        "ergodic-theory"
+      ]
+    },
+    {
+      "id": "combinatorics",
+      "title": "Combinatorics",
+      "parent": null,
+      "question": "How can finite structures be counted and arranged?",
+      "bridges": [
+        "graph-theory",
+        "probability",
+        "algebra"
+      ]
+    },
+    {
+      "id": "graph-theory",
+      "title": "Graph theory",
+      "parent": "combinatorics",
+      "question": "What follows from connectivity alone?",
+      "bridges": [
+        "algorithms",
+        "topology",
+        "networks"
+      ]
+    },
+    {
+      "id": "computation",
+      "title": "Computation",
+      "parent": null,
+      "question": "Which transformations are mechanically possible?",
+      "bridges": [
+        "logic",
+        "algorithms",
+        "complexity"
+      ]
+    },
+    {
+      "id": "algorithms",
+      "title": "Algorithms",
+      "parent": "computation",
+      "question": "How can a procedure be made correct and efficient?",
+      "bridges": [
+        "optimization",
+        "graph-theory",
+        "numerical-analysis"
+      ]
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity theory",
+      "parent": "computation",
+      "question": "What resources are intrinsically required?",
+      "bridges": [
+        "logic",
+        "combinatorics",
+        "cryptography"
+      ]
+    },
+    {
+      "id": "information-theory",
+      "title": "Information theory",
+      "parent": null,
+      "question": "How are uncertainty, compression, and transmission quantified?",
+      "bridges": [
+        "probability",
+        "computation",
+        "dynamics"
+      ]
+    },
+    {
+      "id": "optimization",
+      "title": "Optimization",
+      "parent": null,
+      "question": "How are best feasible states found or certified?",
+      "bridges": [
+        "analysis",
+        "algorithms",
+        "control"
+      ]
+    },
+    {
+      "id": "numerical-analysis",
+      "title": "Numerical analysis",
+      "parent": "analysis",
+      "question": "How do approximation and roundoff affect computation?",
+      "bridges": [
+        "algorithms",
+        "differential-equations",
+        "optimization"
+      ]
+    },
+    {
+      "id": "mathematical-physics",
+      "title": "Mathematical physics",
+      "parent": null,
+      "question": "Which mathematical structures express physical laws?",
+      "bridges": [
+        "geometry",
+        "analysis",
+        "probability"
+      ]
+    },
+    {
+      "id": "applied-mathematics",
+      "title": "Applied mathematics",
+      "parent": null,
+      "question": "How are mathematical structures connected to domain models?",
+      "bridges": [
+        "optimization",
+        "statistics",
+        "differential-equations"
+      ]
+    }
+  ]
+}

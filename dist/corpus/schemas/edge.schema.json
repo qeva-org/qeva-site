@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/corpus/schemas/edge.schema.json",
+  "title": "QEVA Typed Edge 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["edge_version", "source", "target", "layer", "kind", "basis", "status"],
+  "properties": {
+    "edge_version": {"const": "0.1"},
+    "source": {"type": "string"},
+    "target": {"type": "string"},
+    "layer": {"enum": ["logical", "historical", "corpus", "editorial"]},
+    "kind": {"type": "string", "minLength": 1},
+    "basis": {"type": "string", "minLength": 1},
+    "status": {"enum": ["asserted", "candidate", "disputed", "refuted"]}
+  }
+}

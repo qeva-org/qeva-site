@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:subset",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Subset",
+  "summary": "A is a subset of B when every member of A is also a member of B.",
+  "domains": [
+    "set-theory"
+  ],
+  "context": {
+    "framework": "set-like mathematics",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared set-like mathematics context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A is a subset of B when every member of A is also a member of B.",
+    "exact": "A⊆B iff ∀x(x∈A→x∈B).",
+    "example": "The even integers form a subset of the integers.",
+    "caveat": "Subset inclusion is a relation between sets; membership relates an element to a set."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:membership@1",
+    "qeva:1:implication@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

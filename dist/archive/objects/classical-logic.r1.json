@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:classical-logic",
+  "revision": 1,
+  "kind": "framework",
+  "title": "Classical logic",
+  "summary": "Classical logic is the branch that validates principles such as excluded middle and double-negation elimination.",
+  "domains": [
+    "logic",
+    "foundations"
+  ],
+  "context": {
+    "framework": "formal logic",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared formal logic context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Classical logic is the branch that validates principles such as excluded middle and double-negation elimination.",
+    "exact": "A precise classical system declares its language and proof rules; semantically, ordinary propositional classical logic uses Boolean valuations.",
+    "example": "A proof by contradiction commonly relies on classical principles.",
+    "caveat": "‘Classical’ names a family of equivalent presentations under suitable conditions, not one file format."
+  },
+  "dependencies": [
+    "qeva:1:first-order-logic@1",
+    "qeva:1:excluded-middle@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

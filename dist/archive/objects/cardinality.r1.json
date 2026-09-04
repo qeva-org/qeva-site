@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:cardinality",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Cardinality",
+  "summary": "Cardinality compares collections by whether their elements can be paired exactly.",
+  "domains": [
+    "set-theory",
+    "combinatorics"
+  ],
+  "context": {
+    "framework": "set theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared set theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Cardinality compares collections by whether their elements can be paired exactly.",
+    "exact": "Sets A and B have equal cardinality iff a bijection A→B exists. Infinite cardinal arithmetic requires an explicit foundation.",
+    "example": "The even natural numbers and all natural numbers have equal cardinality via n↦2n.",
+    "caveat": "Equal cardinality ignores order, geometry, and other structure."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:bijection@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

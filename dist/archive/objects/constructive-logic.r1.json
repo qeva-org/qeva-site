@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:constructive-logic",
+  "revision": 1,
+  "kind": "framework",
+  "title": "Constructive logic",
+  "summary": "Constructive logic treats a proof as information and does not accept every classical principle without a construction.",
+  "domains": [
+    "logic",
+    "foundations"
+  ],
+  "context": {
+    "framework": "intuitionistic and constructive logics",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared intuitionistic and constructive logics context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Constructive logic treats a proof as information and does not accept every classical principle without a construction.",
+    "exact": "In intuitionistic natural deduction, P∨¬P is not a theorem for arbitrary P; an existence proof normally carries a witness or method yielding one.",
+    "example": "To prove ∃n P(n), one commonly gives n together with a proof of P(n).",
+    "caveat": "Constructive logic has several formulations and should not be reduced to one slogan."
+  },
+  "dependencies": [
+    "qeva:1:first-order-logic@1",
+    "qeva:1:proof@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

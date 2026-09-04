@@ -1,0 +1,61 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:symmetry",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Symmetry",
+  "summary": "A transformation that leaves a specified object unchanged relative to a specified action.",
+  "domains": [
+    "symmetry",
+    "structure"
+  ],
+  "context": {
+    "framework": "group actions",
+    "framework_ref": null,
+    "note": "Context is named textually in this seed release; its foundations are not yet recursively expanded into QEVA records."
+  },
+  "assumptions": [
+    {
+      "text": "A group G acts on a set X.",
+      "ref": null
+    },
+    {
+      "text": "An object x belongs to X.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Symmetry is never just “looks the same”: one must specify which transformations are allowed and what counts as unchanged.",
+    "exact": "The symmetry group of x relative to the action of G on X is Stab_G(x) = { g in G : g·x = x }.",
+    "example": "A square in the Euclidean plane has rotations and reflections that map the square to itself.",
+    "caveat": "Symmetry depends on the chosen object representation and transformation group."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "supports",
+      "target": "qeva:1:invariant@1",
+      "note": "Invariants are quantities preserved by specified transformations."
+    },
+    {
+      "kind": "supports",
+      "target": "qeva:1:chirality@1",
+      "note": "Chirality is defined relative to transformation classes."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:definition:symmetry"
+  ]
+}

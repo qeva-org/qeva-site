@@ -1,0 +1,57 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:sensitivity",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Sensitive dependence on initial conditions",
+  "summary": "A metric dynamical property in which arbitrarily nearby starting states can eventually separate by a fixed positive amount.",
+  "domains": [
+    "dynamics",
+    "chaos",
+    "analysis"
+  ],
+  "context": {
+    "framework": "metric dynamical systems",
+    "framework_ref": null,
+    "note": "Context is named textually in this seed release; its foundations are not yet recursively expanded into QEVA records."
+  },
+  "assumptions": [
+    {
+      "text": "(X,d) is a metric space.",
+      "ref": null
+    },
+    {
+      "text": "T:X→X is a map.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Sensitivity formalizes one kind of error amplification: no matter how closely two starting states are chosen, some nearby state can eventually move a definite distance away.",
+    "exact": "T has sensitive dependence on initial conditions iff there exists δ>0 such that for every x in X and every ε>0 there exist y in X and n>=0 with d(x,y)<ε and d(T^n(x),T^n(y))>δ.",
+    "example": "In chaotic systems, small initial discrepancies may become macroscopically separated under iteration.",
+    "caveat": "Sensitivity alone is not a universal definition of chaos."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "component-of-some-definitions",
+      "target": "qeva:1:chaos@1",
+      "note": "Some definitions of chaos include sensitivity; others formulate chaos differently."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record written to demonstrate QEVA Protocol 0.1; it is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": [
+    "qeva:1:definition:sensitivity"
+  ]
+}

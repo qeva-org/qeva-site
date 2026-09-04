@@ -13,7 +13,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
 
 SCRIPT = Path(__file__).resolve()
-PROJECT = SCRIPT.parents[2]
+PROJECT = SCRIPT.parents[1]
 ROOT = SCRIPT.parents[1]
 sys.path.insert(0, str(PROJECT))
 
@@ -357,8 +357,9 @@ def write_manifests():
     for path in ROOT.rglob("*"):
         if not path.is_file():
             continue
-        rel = path.relative_to(ROOT).as_posix()
-        if rel in excluded:
+        rel_path = path.relative_to(ROOT)
+        rel = rel_path.as_posix()
+        if rel in excluded or "__pycache__" in rel_path.parts or path.suffix == ".pyc":
             continue
         files.append((rel, path))
     files.sort()

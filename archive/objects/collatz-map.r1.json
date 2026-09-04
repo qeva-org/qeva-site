@@ -1,0 +1,59 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:collatz-map",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Collatz map",
+  "summary": "A piecewise integer map sending even n to n/2 and odd n to 3n+1.",
+  "domains": [
+    "number-theory",
+    "dynamics",
+    "computation"
+  ],
+  "context": {
+    "framework": "positive integers",
+    "framework_ref": null,
+    "note": "Framework is named textually in this seed release; full recursive first-principles closure remains future work."
+  },
+  "assumptions": [
+    {
+      "text": "n is a positive integer.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Collatz dynamics repeatedly applies one of two arithmetic rules depending on parity.",
+    "exact": "T(n)=n/2 if n is even, and T(n)=3n+1 if n is odd, for n∈N_{>0}. The orbit is n,T(n),T^2(n),....",
+    "example": "Starting at 6: 6→3→10→5→16→8→4→2→1→4→2→1→...",
+    "caveat": "The map is deterministic and discrete, but calling it chaotic requires a separate precise definition and proof."
+  },
+  "dependencies": [
+    "qeva:1:parity@1",
+    "qeva:1:recurrence@1"
+  ],
+  "relations": [
+    {
+      "kind": "generates-problem",
+      "target": "qeva:1:collatz-conjecture@1",
+      "note": "The conjecture concerns all positive integer orbits of this map."
+    },
+    {
+      "kind": "uses",
+      "target": "qeva:1:periodicity@1",
+      "note": "The 1→4→2→1 cycle is periodic."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record for the QEVA machinery map. It is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

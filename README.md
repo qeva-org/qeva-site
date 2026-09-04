@@ -1,87 +1,121 @@
-# QEVA — First Principles Archive
+# QEVA — Mathematical World Map
 
-**Make the assumptions, meanings, dependencies, and verification state of mathematics inspectable.**
+**See the machinery beneath the fields.**
 
-QEVA is a small open protocol plus archive. The website is only one view of it.
+QEVA is a first-principles mathematics platform whose long-term goal is to make the global structure of mathematics inspectable, executable, historically traceable, and continuously extensible.
 
-## Who it is for
+The website is not the durable object. The durable object is the coupled graph:
 
-1. **Curious non-specialists** who can read a mathematical statement but are blocked by hidden prerequisites or undefined notation.
-2. **Students and researchers** who need to compare exact definitions, assumptions, equivalent formulations, or dependency chains across fields.
-3. **Formalization/tool builders** who need stable, machine-readable mathematical records without scraping prose pages.
-4. **Libraries and independent custodians** who want a corpus that can be copied and checked without a proprietary service.
+```text
+logical graph:     assumptions → definitions → mechanisms → results → frontiers
+historical graph:  works → people → claims → citations → corrections → branches
+```
 
-## Pain points QEVA is designed to remove
+These graphs must never be conflated.
 
-- “What was assumed, and what was actually proved or defined?”
-- “Which exact earlier version does this result depend on?”
-- “Is this word universal, or does this field use a special convention?”
-- “Are these two formulas different objects or two representations of one object?”
-- “Can I explain this to a careful beginner without deleting the real mathematics?”
-- “Can I still reconstruct this corpus if the current website and organization vanish?”
+## Primary user
 
-## Repository
+Anyone, at any age, who is willing to reason carefully but is blocked by the compressed conventions of mathematical literature.
+
+QEVA should let that person quickly build a mental map of recurring machinery such as:
+
+- distinction and equivalence
+- grouping and classification
+- symmetry and chirality
+- parity and prime structure
+- discreteness and continuity
+- sequence and recurrence
+- periodicity and quasiperiodicity
+- nonlinearity, sensitivity, stability, and attractors
+- coarse-graining, hierarchy, and task-relative signal/noise
+- optimization, local/global structure, and exploration/exploitation
+- open frontiers such as Collatz dynamics, with speculation clearly separated from theorem
+
+## What problem it solves
+
+Mathematics is split across papers, books, notation systems, fields, historical terminology, theorem provers, databases, and tacit prerequisite chains. Search engines return documents. QEVA should return **structure**.
+
+A visitor should be able to ask:
+
+- What are the smallest assumptions behind this statement?
+- What mechanism appears here and where else does it reappear?
+- Are these two formulations equivalent or only analogous?
+- What information was discarded by this abstraction?
+- Which parameter change creates a qualitative transition?
+- When did humans discover this branch, and through which works?
+- Which parts are proved, conjectural, refuted, empirical, or merely explanatory?
+- Where is the frontier growing or stuck?
+
+## Release 0.3 contents
 
 ```text
 /
-├── index.html                 minimal public entrance
-├── archive/                   records + JSONL + TSV catalog
-├── protocol/                  Protocol 0.2, schema, compact CORE.txt
-├── preservation/              threat model and custody rules
-├── institution/               constitutional stewardship rules
-├── snapshot/                  READ-ME-FIRST recovery bootstrap
-├── scripts/                   stdlib-only release/verification tools
-├── LICENSES/                  complete local license texts
-├── MANIFEST.sha256            full-repo fixity manifest
-└── MANIFEST.sha512            second full-repo fixity manifest
+├── index.html                  public first-principles entrance
+├── map/                        interactive logical machinery map
+├── sandbox/                    dependency-free executable experiments
+├── history/                    seed historical branch timeline
+├── sources/                    global corpus / ingestion architecture
+├── atlas/                      machine-readable map + history datasets
+├── corpus/                     source registry and corpus data model
+├── archive/                    immutable QEVA concept records
+├── protocol/                   object protocol and compact recovery spec
+├── preservation/               preservation threat model
+├── institution/                stewardship constitution
+├── snapshot/                   bootstrap recovery text
+├── scripts/                    release, verify, metadata adapters
+├── MANIFEST.sha256
+└── MANIFEST.sha512
 ```
 
-## Important scope boundary
+No npm, React, build framework, database, account system, analytics service, webfont, or runtime package dependency is required.
 
-This is a **seed archive, not a completed foundation of mathematics**. Most seed records still name their ambient framework textually instead of recursively resolving every primitive, axiom, and inference rule to QEVA records. That incompleteness is intentional and visible.
+## Sandbox
 
-The long-term completion target is stronger: a record that claims first-principles closure must have an explicit chain to declared roots rather than merely saying “standard mathematics.”
+Release 0.3 includes three deliberately small experiments:
 
-## Offline use
+1. logistic recurrence — compare nearby initial states as `r` changes;
+2. coarse-graining — trade fine detail for macrostructure;
+3. multi-peak optimization — compare local ascent with controlled exploration.
 
-All public links are relative. Open `index.html` directly from an extracted directory, or serve the directory from any static HTTP server.
+The simulations are explanatory instruments, not proofs.
 
-Optional full audit:
+## Global literature map
+
+The long-term corpus should ingest structured metadata and legally reusable content from sources such as OpenAlex, Crossref, arXiv, zbMATH Open, OEIS, Wikidata/Wikimedia, and public-domain libraries.
+
+The ingestion policy is conservative:
+
+- prefer APIs/dumps/OAI feeds over brittle HTML scraping;
+- obey robots directives, rate limits, terms, copyright, and licenses;
+- preserve provenance even when full text cannot be mirrored;
+- never treat publication or citation count as mathematical truth;
+- machine-extracted claims remain candidates until qualified.
+
+Reference metadata adapters:
 
 ```bash
-python3 scripts/verify.py
+python3 scripts/ingest_metadata.py openalex "dynamical systems" --limit 20
+python3 scripts/ingest_metadata.py crossref "prime number theorem" --limit 20 --mailto you@example.org
+python3 scripts/ingest_metadata.py arxiv "cat:math.DS" --limit 20
 ```
 
-Regenerate exports and manifests after editing records:
+## Verify the release
 
 ```bash
 python3 scripts/release.py
 python3 scripts/verify.py
 ```
 
-No package manager, build system, runtime framework, database, account, analytics service, or webfont is required.
+## Preservation principle
 
-## Identity and revisions
+A million-year promise cannot be made by freezing one website. Longevity comes from transparent formats, independent mirrors, periodic migration, self-description, provenance, replaceable software, and the right to reconstruct/fork the archive.
 
-Logical object:
+## Logo provenance
 
-```text
-qeva:1:sequence
-```
-
-Exact immutable revision:
-
-```text
-qeva:1:sequence@1
-```
-
-Dependencies always pin exact revisions.
-
-## Historical provenance
-
-Keep the earlier Git history when applying this release to the existing public repository. QEVA was refounded in 2026 from an earlier AI-alignment site into the First Principles Archive. Historical direction changes are provenance, not a reason to rewrite Git history.
+The historical `qeva-logo.png` referenced by the pre-refoundation site was not available to this build. The repository retains the available minimal Q mark and explicitly records the missing historical asset rather than fabricating provenance.
 
 ## License
 
-- Code: MIT — `LICENSES/MIT.txt`
-- Archive records, protocol text, and site content: CC0-1.0 — full local legal text in `LICENSES/CC0-1.0.txt`
+- code: MIT
+- QEVA-created protocol/site/seed archive: CC0-1.0
+- imported third-party corpus material retains its own source license; QEVA must never overwrite that provenance with CC0.

@@ -1,0 +1,56 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:grouping",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Grouping / partition",
+  "summary": "A precise grouping can be modeled as a partition or as a map assigning objects to classes.",
+  "domains": [
+    "foundations",
+    "set-theory",
+    "information"
+  ],
+  "context": {
+    "framework": "elementary set theory",
+    "framework_ref": null,
+    "note": "Framework is named textually in this seed release; full recursive first-principles closure remains future work."
+  },
+  "assumptions": [
+    {
+      "text": "A set X and a grouping criterion or assignment are specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Grouping makes some distinctions irrelevant by assigning multiple objects to the same class.",
+    "exact": "A partition P of a set X is a family of nonempty subsets whose union is X and whose distinct members are disjoint. Equivalently, an equivalence relation ~ on X induces classes [x]={y in X:y~x}.",
+    "example": "Integers grouped by parity form the two classes even and odd.",
+    "caveat": "Not every informal act of grouping is best modeled by a partition: overlapping clusters and probabilistic memberships require other structures."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "example-specialization",
+      "target": "qeva:1:parity@1",
+      "note": "Parity is a two-class grouping of integers modulo 2."
+    },
+    {
+      "kind": "structural",
+      "target": "qeva:1:equivalence@1",
+      "note": "Equivalence relations canonically induce partitions."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record for the QEVA machinery map. It is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

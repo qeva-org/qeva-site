@@ -1,0 +1,12 @@
+QEVA SOURCE POLICY 0.1
+
+1. A source record states where information came from; it does not certify mathematical truth.
+2. Prefer official APIs, dumps, feeds, and bulk exports to ad-hoc page scraping.
+3. Respect robots directives, rate limits, access controls, contracts/terms, copyright, and database rights.
+4. Do not bypass anti-bot or access-control mechanisms.
+5. Metadata, abstracts, reviews, figures, source files, and PDFs may have different rights. Track rights at the field/item level.
+6. Mirror full text only when permitted. Otherwise preserve identifiers, metadata, derived factual structure where lawful, and canonical links.
+7. Imported records retain their source licenses. QEVA's CC0 license applies only to QEVA-created material.
+8. Machine extraction produces candidates. Mathematical status must be separately qualified as definition, theorem, proof, conjecture, refutation, empirical claim, interpretation, or unknown.
+9. Preserve corrections and retractions; never silently erase a historical state.
+10. Logical dependency and historical/citation dependency are distinct edge types.

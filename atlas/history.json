@@ -1,0 +1,351 @@
+{
+  "release": "0.3",
+  "scope": "seed timeline; historical influence graph, not logical dependency graph",
+  "milestones": [
+    {
+      "year": -1800,
+      "date": "c. 1800 BCE",
+      "branch": "number",
+      "title": "Old Babylonian problem mathematics",
+      "people": "scribal traditions",
+      "note": "Place-value arithmetic and worked numerical procedures show sophisticated algorithmic mathematics long before modern symbolic notation.",
+      "qeva": []
+    },
+    {
+      "year": -300,
+      "date": "c. 300 BCE",
+      "branch": "foundations",
+      "title": "Euclid's Elements",
+      "people": "Euclid",
+      "note": "A durable model of organizing mathematics through definitions, postulates, propositions, and proofs.",
+      "qeva": [
+        "equivalence",
+        "prime"
+      ]
+    },
+    {
+      "year": -250,
+      "date": "c. 250 BCE",
+      "branch": "analysis",
+      "title": "Method of exhaustion",
+      "people": "Archimedes and predecessors",
+      "note": "Finite approximations are used to reason rigorously about areas and volumes that anticipate limiting arguments.",
+      "qeva": [
+        "continuity"
+      ]
+    },
+    {
+      "year": 628,
+      "date": "628",
+      "branch": "number",
+      "title": "Arithmetic with zero and signed quantities",
+      "people": "Brahmagupta",
+      "note": "Systematic rules for zero and negative quantities become part of algebraic arithmetic traditions.",
+      "qeva": [
+        "equivalence"
+      ]
+    },
+    {
+      "year": 820,
+      "date": "c. 820",
+      "branch": "algebra",
+      "title": "Al-jabr as systematic equation solving",
+      "people": "al-Khwarizmi",
+      "note": "Equation-solving procedures are organized into a recognizable algebraic discipline.",
+      "qeva": [
+        "grouping"
+      ]
+    },
+    {
+      "year": 1202,
+      "date": "1202",
+      "branch": "number",
+      "title": "Liber Abaci",
+      "people": "Fibonacci",
+      "note": "Hindu-Arabic numeration and algorithms are transmitted broadly into Latin European mathematical practice.",
+      "qeva": [
+        "sequence"
+      ]
+    },
+    {
+      "year": 1637,
+      "date": "1637",
+      "branch": "geometry",
+      "title": "Analytic geometry",
+      "people": "Descartes; Fermat (independent development)",
+      "note": "Algebraic equations and geometric curves become systematically interoperable representations.",
+      "qeva": [
+        "equivalence"
+      ]
+    },
+    {
+      "year": 1666,
+      "date": "1660s–1680s",
+      "branch": "analysis",
+      "title": "Calculus",
+      "people": "Newton; Leibniz",
+      "note": "Independent calculi provide general machinery for rates of change, accumulation, and local approximation.",
+      "qeva": [
+        "continuity"
+      ]
+    },
+    {
+      "year": 1736,
+      "date": "1736",
+      "branch": "discrete",
+      "title": "Königsberg bridges",
+      "people": "Euler",
+      "note": "Connectivity is abstracted away from geometry, helping inaugurate graph-theoretic reasoning.",
+      "qeva": [
+        "discreteness"
+      ]
+    },
+    {
+      "year": 1801,
+      "date": "1801",
+      "branch": "number",
+      "title": "Disquisitiones Arithmeticae",
+      "people": "Gauss",
+      "note": "Congruence notation and structural number theory organize residues, forms, and arithmetic relations.",
+      "qeva": [
+        "parity",
+        "prime"
+      ]
+    },
+    {
+      "year": 1822,
+      "date": "1822",
+      "branch": "analysis",
+      "title": "Fourier's Théorie analytique de la chaleur",
+      "people": "Fourier",
+      "note": "Functions are represented through trigonometric components, profoundly linking frequency, analysis, and differential equations.",
+      "qeva": [
+        "periodicity",
+        "quasiperiodicity"
+      ]
+    },
+    {
+      "year": 1832,
+      "date": "1830s",
+      "branch": "algebra",
+      "title": "Galois theory",
+      "people": "Galois",
+      "note": "Solvability of polynomial equations becomes connected to transformation groups and symmetry.",
+      "qeva": [
+        "symmetry"
+      ]
+    },
+    {
+      "year": 1847,
+      "date": "1847",
+      "branch": "logic",
+      "title": "Algebraic logic",
+      "people": "Boole",
+      "note": "Logical operations are treated algebraically, strengthening the bridge between formal reasoning and symbolic computation.",
+      "qeva": [
+        "discreteness"
+      ]
+    },
+    {
+      "year": 1854,
+      "date": "1854",
+      "branch": "geometry",
+      "title": "Riemannian geometry",
+      "people": "Riemann",
+      "note": "Geometry is generalized through manifolds and variable metric structure rather than a single fixed Euclidean space.",
+      "qeva": [
+        "continuity",
+        "symmetry"
+      ]
+    },
+    {
+      "year": 1872,
+      "date": "1870s",
+      "branch": "foundations",
+      "title": "Rigorous real-number and set-theoretic foundations",
+      "people": "Dedekind; Cantor; others",
+      "note": "Limits, continua, cardinality, and number systems receive increasingly explicit structural foundations.",
+      "qeva": [
+        "continuity",
+        "equivalence"
+      ]
+    },
+    {
+      "year": 1889,
+      "date": "1889",
+      "branch": "foundations",
+      "title": "Peano-style axiomatization of arithmetic",
+      "people": "Peano",
+      "note": "Arithmetic is presented through explicit primitive notions and axioms, sharpening the foundations program.",
+      "qeva": [
+        "formal-system"
+      ]
+    },
+    {
+      "year": 1899,
+      "date": "1899",
+      "branch": "foundations",
+      "title": "Foundations of Geometry",
+      "people": "Hilbert",
+      "note": "Axioms are treated structurally, with attention to consistency, independence, and models.",
+      "qeva": [
+        "formal-system",
+        "equivalence"
+      ]
+    },
+    {
+      "year": 1900,
+      "date": "1900",
+      "branch": "frontier",
+      "title": "Hilbert's problems",
+      "people": "Hilbert",
+      "note": "A curated frontier list demonstrates how explicit unsolved problems can redirect mathematical development.",
+      "qeva": []
+    },
+    {
+      "year": 1931,
+      "date": "1931",
+      "branch": "logic",
+      "title": "Incompleteness theorems",
+      "people": "Gödel",
+      "note": "Sufficiently expressive consistent formal systems face intrinsic limitations on what they can prove about arithmetic.",
+      "qeva": [
+        "formal-system",
+        "derivability"
+      ]
+    },
+    {
+      "year": 1936,
+      "date": "1936",
+      "branch": "computation",
+      "title": "Formal models of computation",
+      "people": "Turing; Church; others",
+      "note": "Computability is formalized through precise models, enabling impossibility theorems about algorithms.",
+      "qeva": [
+        "discreteness",
+        "recurrence"
+      ]
+    },
+    {
+      "year": 1948,
+      "date": "1948",
+      "branch": "information",
+      "title": "Mathematical theory of communication",
+      "people": "Shannon",
+      "note": "Information, uncertainty, coding, and noisy channels receive a quantitative mathematical framework.",
+      "qeva": [
+        "signal-noise",
+        "coarse-graining"
+      ]
+    },
+    {
+      "year": 1960,
+      "date": "1960s",
+      "branch": "dynamics",
+      "title": "Modern qualitative dynamical systems",
+      "people": "Smale; many others",
+      "note": "Hyperbolic structure, horseshoes, stability, and bifurcation ideas reshape the global study of dynamics.",
+      "qeva": [
+        "stability",
+        "attractor",
+        "chaos"
+      ]
+    },
+    {
+      "year": 1963,
+      "date": "1963",
+      "branch": "dynamics",
+      "title": "Deterministic nonperiodic flow",
+      "people": "Lorenz",
+      "note": "A low-dimensional nonlinear model reveals sensitive, aperiodic behavior and becomes a central chaos case study.",
+      "qeva": [
+        "nonlinearity",
+        "sensitivity",
+        "chaos",
+        "attractor"
+      ]
+    },
+    {
+      "year": 1975,
+      "date": "1975",
+      "branch": "dynamics",
+      "title": "Period three implies chaos",
+      "people": "Li; Yorke",
+      "note": "A precise interval-map theorem links a period-three orbit to a rich set of other periods and helped popularize the term chaos.",
+      "qeva": [
+        "periodicity",
+        "chaos"
+      ]
+    },
+    {
+      "year": 1976,
+      "date": "1976",
+      "branch": "computation",
+      "title": "Computer-assisted proof of the four-color theorem",
+      "people": "Appel; Haken",
+      "note": "Large-scale computation becomes an explicit component of a major mathematical proof, raising new verification questions.",
+      "qeva": [
+        "verification"
+      ]
+    },
+    {
+      "year": 1978,
+      "date": "1970s",
+      "branch": "dynamics",
+      "title": "Feigenbaum scaling",
+      "people": "Feigenbaum",
+      "note": "Universal numerical constants appear in period-doubling routes to chaos across broad families of nonlinear maps.",
+      "qeva": [
+        "periodicity",
+        "chaos",
+        "hierarchy"
+      ]
+    },
+    {
+      "year": 1994,
+      "date": "1994",
+      "branch": "number",
+      "title": "Fermat's Last Theorem proof",
+      "people": "Wiles; Taylor",
+      "note": "A centuries-old elementary statement is resolved through deep connections among elliptic curves, modular forms, and representation theory.",
+      "qeva": [
+        "prime"
+      ]
+    },
+    {
+      "year": 2003,
+      "date": "2002–2003",
+      "branch": "geometry",
+      "title": "Ricci-flow proof program for geometrization",
+      "people": "Perelman",
+      "note": "Geometric evolution equations and surgery resolve the Poincaré conjecture within the broader geometrization program.",
+      "qeva": [
+        "continuity",
+        "stability"
+      ]
+    },
+    {
+      "year": 2014,
+      "date": "2014",
+      "branch": "verification",
+      "title": "Flyspeck completion",
+      "people": "Hales and collaborators",
+      "note": "Formal proof assistants verify the Kepler conjecture proof, demonstrating large-scale machine-checked mathematics.",
+      "qeva": [
+        "verification"
+      ]
+    },
+    {
+      "year": 2021,
+      "date": "2021",
+      "branch": "verification",
+      "title": "Liquid Tensor Experiment",
+      "people": "Scholze; Clausen; Lean/mathlib community",
+      "note": "A difficult contemporary result is formalized interactively, showing formal systems can participate in active research rather than only post-hoc checking.",
+      "qeva": [
+        "formal-system",
+        "derivability"
+      ]
+    }
+  ]
+}

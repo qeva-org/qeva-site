@@ -49,3 +49,6 @@ representation, document the transformation, and keep both. Never overwrite
 history merely because a newer encoding is easier to use.
 
 END QEVA RECOVERY BOOTSTRAP 0.2
+
+QEVA RELEASE 0.3 MAP LAYERS
+The logical atlas lives in atlas/concepts.json. The seed historical timeline lives in atlas/history.json. The literature-source registry lives in corpus/source-registry.json. These are plain UTF-8 JSON and can be reconstructed independently of the website. Historical/citation edges must not be interpreted as logical proof dependencies.

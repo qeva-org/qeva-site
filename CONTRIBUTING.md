@@ -20,3 +20,12 @@ python3 scripts/verify.py
 ```
 
 Open, refuted, incomplete, or editorial records can be valuable. Their state must remain explicit.
+
+## Historical and corpus contributions
+
+- Never infer logical dependence from citation or historical influence alone.
+- Attach identifiers, dates, source provenance, and uncertainty to historical claims.
+- Disputed priority should remain representable as disagreement, not silently collapsed to one winner.
+- Imported third-party material retains its own rights; do not relabel it CC0.
+- Machine-extracted definitions, theorems, problems, or relations enter as candidates until qualified.
+- Prefer official APIs/dumps/feeds and comply with source-specific access and reuse rules.

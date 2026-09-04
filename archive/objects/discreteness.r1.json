@@ -1,0 +1,56 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:discreteness",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Discrete structure",
+  "summary": "A precise notion of discreteness depends on the ambient structure; in topology, a discrete space has every singleton open.",
+  "domains": [
+    "topology",
+    "discrete-math",
+    "foundations"
+  ],
+  "context": {
+    "framework": "topology",
+    "framework_ref": null,
+    "note": "Framework is named textually in this seed release; full recursive first-principles closure remains future work."
+  },
+  "assumptions": [
+    {
+      "text": "A set X with a topology is specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A discrete description treats states as individually separable rather than forcing arbitrarily close intermediate states.",
+    "exact": "A topological space X is discrete iff every subset of X is open; equivalently, every singleton {x} is open.",
+    "example": "The integers with the discrete topology are a discrete topological space.",
+    "caveat": "“Discrete = maximal information” is not a universal theorem. Information content depends on encoding, probability model, resolution, and task."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "contrasts",
+      "target": "qeva:1:continuity@1",
+      "note": "Continuity is a property of maps between topological spaces, including discrete ones."
+    },
+    {
+      "kind": "supports",
+      "target": "qeva:1:sequence@1",
+      "note": "Sequences are naturally indexed by a discrete set such as N."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record for the QEVA machinery map. It is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

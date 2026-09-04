@@ -1,0 +1,55 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:attractor",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Attractor",
+  "summary": "An attractor is an invariant set approached by trajectories from a nontrivial basin, under a specified definition.",
+  "domains": [
+    "dynamics",
+    "systems"
+  ],
+  "context": {
+    "framework": "metric dynamical systems",
+    "framework_ref": null,
+    "note": "Framework is named textually in this seed release; full recursive first-principles closure remains future work."
+  },
+  "assumptions": [
+    {
+      "text": "A dynamical system, invariant set A, metric, and basin notion are specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "An attractor is long-run structure toward which many permitted starting states move.",
+    "exact": "One common definition: a compact invariant set A is an attractor if there exists a neighborhood U of A such that dist(F^n(x),A)→0 for every x∈U, often with an additional minimality condition.",
+    "example": "For F(x)=x/2 on R, {0} is an attractor for all initial x.",
+    "caveat": "Attractor definitions vary across dynamical-systems literature; “strange attractor” additionally needs explicitly stated properties."
+  },
+  "dependencies": [],
+  "relations": [
+    {
+      "kind": "related-to",
+      "target": "qeva:1:stability@1",
+      "note": "Attracting behavior is analyzed together with stability."
+    },
+    {
+      "kind": "can-be",
+      "target": "qeva:1:fixed-point@1",
+      "note": "A stable fixed point may be an attractor."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation checked editorially for mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA seed archive",
+    "license": "CC0-1.0",
+    "source_note": "Seed record for the QEVA machinery map. It is not claimed to be the unique foundational presentation of this concept."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

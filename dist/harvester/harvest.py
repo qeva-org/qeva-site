@@ -150,14 +150,19 @@ def first(value):
 
 
 def iso_from_parts(parts) -> str | None:
+    """Preserve source date precision; do not invent January or a first day."""
+    from datetime import date
     try:
         values = parts.get("date-parts", [[]])[0]
-        if not values:
+        if not isinstance(values, list) or not 1 <= len(values) <= 3:
             return None
-        year = int(values[0])
-        month = int(values[1]) if len(values) > 1 else 1
-        day = int(values[2]) if len(values) > 2 else 1
-        return f"{year:04d}-{month:02d}-{day:02d}"
+        if any(isinstance(value, bool) or not isinstance(value, int) for value in values):
+            return None
+        year = values[0]
+        month = values[1] if len(values) > 1 else 1
+        day = values[2] if len(values) > 2 else 1
+        date(year, month, day)  # Validate, but serialize only the components supplied.
+        return "-".join(f"{value:04d}" if i == 0 else f"{value:02d}" for i, value in enumerate(values))
     except (AttributeError, TypeError, ValueError, IndexError):
         return None
 
@@ -577,7 +582,7 @@ def request(url: str, store: Store, *, attempts: int = 5, timeout: int = 45, age
 def fetch_openalex(query: str, limit: int, store: Store, mailto: str | None) -> list[dict]:
     output, cursor = [], "*"
     while len(output) < limit and cursor:
-        params = {"search": query, "per-page": min(200, limit - len(output)), "cursor": cursor}
+        params = {"search": query, "per-page": min(100, limit - len(output)), "cursor": cursor}
         if mailto:
             params["mailto"] = mailto
         url = "https://api.openalex.org/works?" + urllib.parse.urlencode(params)

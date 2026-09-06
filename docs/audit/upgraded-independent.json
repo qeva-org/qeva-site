@@ -1,0 +1,62 @@
+{
+  "files": 846,
+  "distinct_file_hashes": 594,
+  "file_categories": {
+    "current-source/data": 122,
+    "public-html": 290,
+    "index/manifest/export": 11,
+    "mathematical-revision": 159,
+    "historical-retained": 6,
+    "snapshot-copy/generated": 258
+  },
+  "extensions": {
+    ".yml": 1,
+    "": 2,
+    ".json": 422,
+    ".md": 32,
+    ".png": 2,
+    ".html": 291,
+    ".txt": 22,
+    ".sha256": 3,
+    ".sha512": 3,
+    ".jsonl": 16,
+    ".tsv": 2,
+    ".js": 13,
+    ".svg": 2,
+    ".css": 1,
+    ".py": 23,
+    ".zip": 6,
+    ".mjs": 3,
+    ".xml": 1,
+    ".log": 1
+  },
+  "independent_schema_checks": 538,
+  "parse_schema_errors": [],
+  "mathematics": {
+    "current": 116,
+    "all_revisions": 159,
+    "review_levels": {
+      "editorial": 115,
+      "machine-checked": 1
+    },
+    "assumption_refs": {
+      "unresolved-text": 105,
+      "exact": 18
+    }
+  },
+  "relation_kinds": {
+    "definition-uses": 301,
+    "instantiated-by-experiment": 26,
+    "conceptually-explains": 18,
+    "specializes": 2,
+    "analogous-to": 8,
+    "derives": 2,
+    "often-studied-with": 6,
+    "hypothesized-connection": 3
+  },
+  "relation_status": {
+    "candidate": 340,
+    "asserted": 26
+  },
+  "history_type": "dict"
+}

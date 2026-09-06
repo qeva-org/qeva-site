@@ -1,0 +1,1 @@
+harvester 0.2: deterministic output · atomic files · bounded bytes · raw quarantine · provider assertion preservation · rights-gated extraction · Retry-After fail-closed · Crossref omission · arXiv versions PASS

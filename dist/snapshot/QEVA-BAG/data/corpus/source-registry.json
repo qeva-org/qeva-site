@@ -1,5 +1,5 @@
 {
-  "release": "0.5.0",
+  "release": "0.5.1",
   "retrieval_rule": "Re-check current terms and rights at each run.",
   "sources": [
     {

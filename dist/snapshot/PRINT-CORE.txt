@@ -4,7 +4,7 @@ QEVA PRINT CORE 0.5
 QEVA is a map and executable instrument for explicit mathematical objects, experiments, evidence, history, and open questions.
 The domain and website are replaceable. Preserve exact revisions, provenance, manifests, and the right to fork.
 
-Release: 0.5.0
+Release: 0.5.1
 Current objects: 116
 Current experiments: 6
 Start with protocol/CORE.txt, archive/current.jsonl, and experiments/current.jsonl.

@@ -1,0 +1,20 @@
+{
+  "baseline_verifier": "all three tiers pass",
+  "baseline_engine_fixture_cases": 124,
+  "new_local_record_assertions": 96,
+  "new_local_record_mode_envelopes": 30,
+  "dom_family_mode_cases": 30,
+  "dom_export_import_roundtrips": 30,
+  "dom_javascript_errors": [],
+  "dom_hidden_required_field_case": "passed",
+  "dom_tampered_analysis": "rejected",
+  "dom_native_url_navigation": "not tested: blocked by managed Chromium policy",
+  "dom_storage": "simulated; native storage persistence not certified",
+  "http": "local Python client only",
+  "old_todo_items_preserved": 560,
+  "no_original_paths_removed": true,
+  "proof_engine_bindings_preserved": true,
+  "remote_deployment_tested": false,
+  "provider_apis_tested_live": false,
+  "accounts_groups_agents_implemented": false
+}

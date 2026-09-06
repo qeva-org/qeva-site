@@ -60,10 +60,10 @@ CORRIDOR_LABS = {
     "relation": "finite-map-cycles", "grouping": "modular-equivalence",
     "equivalence": "modular-equivalence", "order": "local-global-search",
     "composition": "finite-map-cycles", "symmetry": "modular-equivalence",
-    "chirality": "finite-map-cycles", "invariant": "finite-map-cycles",
+    "invariant": "finite-map-cycles",
     "parity": "collatz-orbit", "sequence": "logistic-sensitivity",
     "recurrence": "logistic-sensitivity", "periodicity": "finite-map-cycles",
-    "quasiperiodicity": "logistic-sensitivity", "nonlinearity": "logistic-sensitivity",
+    "nonlinearity": "logistic-sensitivity",
     "fixed-point": "finite-map-cycles", "stability": "logistic-sensitivity",
     "sensitivity": "logistic-sensitivity", "attractor": "finite-map-cycles",
     "coarse-graining": "coarse-grained-signal", "hierarchy": "coarse-grained-signal",
@@ -276,8 +276,8 @@ def page(title: str, description: str, body: str, prefix: str, current: str = ""
     )
     script_tags = "".join(f'<script src="{prefix}{src}"></script>' for src in scripts)
     return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'"><meta name="description" content="{html.escape(description, quote=True)}"><title>{html.escape(title)}</title><link rel="icon" href="{prefix}assets/q.svg" type="image/svg+xml"><link rel="stylesheet" href="{prefix}assets/site.css"></head>
-<body><a class="skip" href="#main">Skip to content</a><header class="mast shell"><a class="brand" href="{prefix}" aria-label="QEVA home"><img src="{prefix}assets/q.svg" width="34" height="34" alt=""><span>QEVA</span></a><nav aria-label="Primary">{links}</nav></header><main id="main">{body}</main><footer class="footer shell"><div><strong>QEVA</strong><span>Public mathematics remains readable, runnable, downloadable, and forkable.</span></div><nav aria-label="Project"><a href="{prefix}map/">Map</a><a href="{prefix}archive/">Archive</a><a href="{prefix}protocol/">Protocol</a><a href="{prefix}about/">About</a></nav></footer>{script_tags}</body></html>'''
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'"><meta name="description" content="{html.escape(description, quote=True)}"><title>{html.escape(title)}</title><link rel="icon" href="{prefix}assets/qeva-logo.png" type="image/png"><link rel="stylesheet" href="{prefix}assets/site.css"></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="mast shell"><a class="brand" href="{prefix}" aria-label="QEVA home"><img src="{prefix}assets/qeva-logo.png" width="34" height="34" alt=""><span>QEVA</span></a><nav aria-label="Primary">{links}</nav></header><main id="main">{body}</main><footer class="footer shell"><div><strong>QEVA</strong><span>Definitions, experiments, and sources.</span></div><nav aria-label="Project"><a href="{prefix}map/">Map</a><a href="{prefix}archive/">Archive</a><a href="{prefix}protocol/">Protocol</a><a href="{prefix}about/">About</a></nav></footer>{script_tags}</body></html>'''
 
 
 def ref_link(ref: str, prefix: str, titles: dict) -> str:
@@ -632,7 +632,7 @@ def build_release_metadata(records, latest, history, qualifications, experiment_
     earlier_zip = ROOT / "legacy" / "qeva-site-v0.3-world-map.zip"
     metadata = {
         "release": RELEASE, "released": RELEASE_DATE,
-        "title": "Mechanism Engine Alpha",
+        "title": "Audited mathematical instrument",
         "protocol": "QEVA Object 0.2; Experiment 0.1; Run 0.1; Observation 0.1; Typed Relation 0.2; Release Envelope 0.5",
         "current_objects": len(latest), "all_revisions": len(records),
         "qualification_assertions": len(qualifications),
@@ -651,6 +651,8 @@ def build_release_metadata(records, latest, history, qualifications, experiment_
             "parameter_sweep": True,
             "conjecture_attack": True,
             "accounts_groups_agents": False,
+            "browser_local_workspace": True,
+            "replayable_local_analysis_exports": True,
             "offline_runtime_dependencies": 0,
         },
         "legacy": {

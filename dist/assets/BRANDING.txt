@@ -1,0 +1,7 @@
+QEVA logo provenance
+
+qeva-logo.png is a resized rendition of the original logo supplied in
+qeva-site-main (2).zip at qeva-site-main/qeva-logo.png. The exact original
+is retained in branding/qeva-logo-original.png in the outer source repository.
+No replacement identity was generated. Existing rights in the supplied logo
+remain with their holders; it is not relicensed by the archive CC0 statement.

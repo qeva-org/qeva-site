@@ -4,8 +4,8 @@ The data is deliberately small enough to inspect and large enough to prove the
 architecture.  It is not presented as a complete map of mathematics.
 """
 
-RELEASE = "0.5.0"
-RELEASE_DATE = "2026-09-05"
+RELEASE = "0.5.1"
+RELEASE_DATE = "2026-09-07"
 
 
 def S(slug, title, kind, lane, stage, domains, framework, plain, exact,

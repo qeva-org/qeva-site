@@ -1,0 +1,449 @@
+{
+  "mode": "in-memory DOM; CSP/resource loading omitted for script injection; no deployed browser claim",
+  "pageerrors": [],
+  "cases": [
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Run details\n\nBounded Collatz orbit produced 3 observations under the displayed parameters and resource limits. Executable and version details are retained in the exact record.\n\nA bounded computation establishes only the "
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run 128fd894ba8b843a9ff6c22b900eae611f7c6799ef4e5bf376cbb8e085"
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: 128fd894ba8b843a9ff6c22b900eae611f7c6799ef4e5bf376cbb8e085f52035. Only the observer changed.\n\nFirst observer\nidentity; 112 visible states\nSecond observer\nparity; 2 visible states\nDif"
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "sweep",
+      "status": "SAMPLED 20 VALUES",
+      "error": "",
+      "summary": "Requested 20 samples; evaluated 20. Stop: requested-complete. Intermediate parameter values are not covered by this finite sample.\n\nSweep of start\nParameter\tTransitions\tRun completed within bound\n1\t0\tyes\n52633\t78\tyes\n105"
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "attack",
+      "status": "BOUNDED SEARCH \u00b7 REQUESTED-COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nFor every integer start in [1,256], the declared Collatz kernel reaches 1 within 250 transitions.\n\nbounded-exhaustive \u00b7 bounded-proof\n\nEnumerate every start in the finite interval and replay at "
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Run details\n\nCoarse-grained signal produced 2 observations under the displayed parameters and resource limits. Executable and version details are retained in the exact record.\n\nA bounded computation establishes only the "
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run 9b814d55873edee4b74170a4e5361c850ccad2ae5018bcf6fc8734331d"
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: 9b814d55873edee4b74170a4e5361c850ccad2ae5018bcf6fc8734331d60610b. Only the observer changed.\n\nFirst observer\nidentity; 240 visible states\nSecond observer\nthreshold; 2 visible states\n"
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "sweep",
+      "status": "SAMPLED 20 VALUES",
+      "error": "",
+      "summary": "Requested 20 samples; evaluated 20. Stop: requested-complete. Intermediate parameter values are not covered by this finite sample.\n\nSweep of block_size\nParameter\tDiscarded-detail mean squared error\tRun completed within b"
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "attack",
+      "status": "BOUNDED SEARCH \u00b7 REQUESTED-COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nThe finite primary output of qeva-experiment:1:coarse-grained-signal@1 contains only finite numeric values.\n\nnumerical-observation \u00b7 not-proof\n\nInspect every value emitted in one bounded, conten"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Run details\n\nFinite map cycles produced 5 observations under the displayed parameters and resource limits. Executable and version details are retained in the exact record.\n\nA bounded computation establishes only the fini"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run 5d9215c5670371870ba911ffccb9bab9a69663d3576ad78fa62cc7388e"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: 5d9215c5670371870ba911ffccb9bab9a69663d3576ad78fa62cc7388e052c43. Only the observer changed.\n\nFirst observer\nidentity; 3 visible states\nSecond observer\nparity; 2 visible states\nDiffe"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "sweep",
+      "status": "BOUNDED SWEEP \u00b7 8/20 SAMPLES \u00b7 PARAMETER-DOMAIN-BOUND",
+      "error": "",
+      "summary": "Requested 20 samples; evaluated 8. Stop: parameter-domain-bound. Intermediate parameter values are not covered by this finite sample.\n\nSweep of start\nParameter\tDetected cycle length (0 = not detected)\tRun completed withi"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "attack",
+      "status": "COUNTEREXAMPLE TO STATED CLAIM",
+      "error": "",
+      "summary": "Bounded claim\nCOUNTEREXAMPLE\n\nEvery state in the explicit 8-state map reaches target 0 within 24 transitions.\n\nbounded-exhaustive \u00b7 refutation-of-bounded-claim\n\nExhaust every state of the declared finite map.\n\n{\"effectiv"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Run details\n\nLocal and exploratory search produced 1 observations under the displayed parameters and resource limits. Executable and version details are retained in the exact record.\n\nA bounded computation establishes on"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run fd4ae3e12f147b4f6de9f42cea531a2ea315d01244319cafa76e8d512c"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: fd4ae3e12f147b4f6de9f42cea531a2ea315d01244319cafa76e8d512cf648bc. Only the observer changed.\n\nFirst observer\nidentity; 26 visible states\nSecond observer\nthreshold; 1 visible states\nD"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "sweep",
+      "status": "BOUNDED SWEEP \u00b7 10/20 SAMPLES \u00b7 AGGREGATE-OPERATION-BOUND",
+      "error": "",
+      "summary": "Requested 20 samples; evaluated 10. Stop: aggregate-operation-bound. Intermediate parameter values are not covered by this finite sample.\n\nSweep of start\nParameter\tBest objective value\tRun completed within bound\n0\t0.3796"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "attack",
+      "status": "BOUNDED SEARCH \u00b7 REQUESTED-COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nThe finite primary output of qeva-experiment:1:local-global-search@1 contains only finite numeric values.\n\nnumerical-observation \u00b7 not-proof\n\nInspect every value emitted in one bounded, content-"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Run details\n\nLogistic recurrence and sensitivity produced 4 observations under the displayed parameters and resource limits. Executable and version details are retained in the exact record.\n\nA bounded computation establi"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run d80950441dd84d161735c7134a3395586734fe7f2ff8710e1d64e647b1"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: d80950441dd84d161735c7134a3395586734fe7f2ff8710e1d64e647b17bd0c6. Only the observer changed.\n\nFirst observer\nidentity; 71 visible states\nSecond observer\nthreshold; 2 visible states\nD"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "sweep",
+      "status": "SAMPLED 20 VALUES",
+      "error": "",
+      "summary": "Requested 20 samples; evaluated 20. Stop: requested-complete. Intermediate parameter values are not covered by this finite sample.\n\nSweep of r\nParameter\tMaximum separation\tRun completed within bound\n2.5\t0.0001\tyes\n2.5789"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "attack",
+      "status": "BOUNDED SEARCH \u00b7 REQUESTED-COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\n256 evenly spaced binary64 initial samples under r=3.9 for 70 steps remain in [0,1].\n\nnumerical-observation \u00b7 not-proof\n\nTest a finite grid of binary64 samples; this is not exhaustive over the c"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Run details\n\nModular equivalence classes produced 2 observations under the displayed parameters and resource limits. Executable and version details are retained in the exact record.\n\nA bounded computation establishes onl"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run d7201565ee29b104cd48506c6a021d9c628736054f25e637a300b64ef0"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: d7201565ee29b104cd48506c6a021d9c628736054f25e637a300b64ef0f70de7. Only the observer changed.\n\nFirst observer\nidentity; 5 visible states\nSecond observer\nparity; 2 visible states\nDiffe"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "sweep",
+      "status": "SAMPLED 20 VALUES",
+      "error": "",
+      "summary": "Requested 20 samples; evaluated 20. Stop: requested-complete. Intermediate parameter values are not covered by this finite sample.\n\nSweep of modulus\nParameter\tClass count\tRun completed within bound\n2\t2\tyes\n3\t3\tyes\n4\t4\tye"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "attack",
+      "status": "BOUNDED SEARCH \u00b7 REQUESTED-COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nThe finite primary output of qeva-experiment:1:modular-equivalence@1 contains only finite numeric values.\n\nbounded-exhaustive \u00b7 bounded-proof\n\nInspect every value emitted in one bounded, content"
+    }
+  ],
+  "routes": [
+    {
+      "path": "index.html",
+      "overflow": false
+    },
+    {
+      "path": "lab/index.html",
+      "overflow": false
+    },
+    {
+      "path": "map/index.html",
+      "overflow": false
+    },
+    {
+      "path": "history/index.html",
+      "overflow": false
+    },
+    {
+      "path": "search/index.html",
+      "overflow": false
+    },
+    {
+      "path": "about/index.html",
+      "overflow": false
+    },
+    {
+      "path": "index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "lab/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "map/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "history/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "search/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    }
+  ],
+  "mode_roundtrips": [
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "run",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "diff",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "observer",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "sweep",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "attack",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "run",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "diff",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "observer",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "sweep",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "attack",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "run",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "diff",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "observer",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "sweep",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "attack",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "run",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "diff",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "observer",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "sweep",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "attack",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "run",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "diff",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "observer",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "sweep",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "attack",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "run",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "diff",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "observer",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "sweep",
+      "error": ""
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "attack",
+      "error": ""
+    }
+  ],
+  "sweep_requested_vs_status": {
+    "requested": "20",
+    "status": "SAMPLED 20 VALUES",
+    "text": "Requested 20 samples; evaluated 20. Stop: requested-complete. Intermediate parameter values are not covered by this finite sample.\n\nSweep of r\nParameter\tMaximum separation\tRun completed within bound\n2.5\t0.0001\tyes\n2.5789474\t0.0001\tyes\n2.6578947\t0.0001\tyes\n2.7368421\t0.0001\tyes\n2.8157895\t0.0001\tyes\n2.8947368\t0.0001\tyes\n2.9736842\t0.0001\tyes\n3.0526316\t0.0001\tyes\n3.1315789\t0.0001\tyes\n3.2105263\t0.00011149523\tyes\n3.2894737\t0.00012524317\tyes\n3.3684211\t0.00013992231\tyes\n3.4473684\t0.00015556098\tyes\n3.5263158\t0.00025642994\tyes\n3.6052632\t0.22497789\tyes\n3.6842105\t0.62488259\tyes\n3.7631579\t0.72242826\tyes\n3.8421053\t0.81446452\tyes\n3.9210526\t0.9011132\tyes\n4\t0.95761188\tyes"
+  },
+  "run_export_reimport": {
+    "error": ""
+  },
+  "hidden_field_validation": {
+    "disabled": true,
+    "error": "",
+    "status": "COMPLETE"
+  },
+  "local_save": {
+    "status": "Saved in this browser.",
+    "entries": 1
+  },
+  "local_restore": {
+    "status": "Saved record loaded and replayed.",
+    "notes": "Reference note"
+  },
+  "tampered_analysis": {
+    "error": "Import rejected: Attached analysis does not match replay."
+  },
+  "mobile_overflow_elements": []
+}

@@ -7,24 +7,24 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'">
   <meta name="description" content="Build and compare bounded mathematical systems with reproducible analyzers and explicit evidence limits.">
   <title>Mechanism Lab — QEVA</title>
-  <link rel="icon" href="../assets/q.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/qeva-logo.png" type="image/png">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast shell">
-  <a class="brand" href="../index.html" aria-label="QEVA home"><img src="../assets/q.svg" width="34" height="34" alt=""><span>QEVA</span></a>
+  <a class="brand" href="../index.html" aria-label="QEVA home"><img src="../assets/qeva-logo.png" width="34" height="34" alt=""><span>QEVA</span></a>
   <nav aria-label="Primary"><a href="../index.html">Explore</a><a href="./index.html" aria-current="page">Lab</a><a href="../history/index.html">History</a><a href="../search/index.html">Search</a></nav>
 </header>
 <main id="main">
   <section class="lab-command shell" aria-labelledby="lab-title">
     <div>
-      <p class="kicker">MECHANISM ENGINE</p>
-      <h1 id="lab-title">Change one thing. See what follows.</h1>
+      <p class="kicker">EXPERIMENTS</p>
+      <h1 id="lab-title">Mathematical experiments</h1>
       <p>Select a bounded rule, change its assumptions, and inspect the trace and evidence. Every result states what ran and what it does not prove.</p>
     </div>
     <div class="lab-file-actions">
-      <label class="file-button">Import experiment<input id="experiment-file" type="file" accept="application/json,.json"></label>
+      <label class="file-button">Import experiment or run<input id="experiment-file" type="file" accept="application/json,.json"></label>
       <button class="button ghost" id="export-experiment" type="button">Fork as JSON</button>
       <button class="button ghost" id="export-run" type="button">Export run</button>
     </div>
@@ -107,15 +107,25 @@
     </div>
   </section>
 
-  <section class="lab-boundary shell">
-    <h2>What this release deliberately does not fake</h2>
-    <p>Local forks and run records can be downloaded now. Accounts, shared workspaces, publication, groups, and AI agents belong to the future live layer and are not simulated by placeholder buttons. Public mathematics remains usable without them.</p>
+  <section class="lab-boundary shell" aria-labelledby="workspace-title">
+    <h2 id="workspace-title">Saved in this browser</h2>
+    <p>No account or synchronization is used. Browser data can be cleared or accessed by other users of this browser profile. Do not store secrets. Export runs as JSON for a separate copy; notes below remain in browser storage.</p>
+    <div class="workspace-fields">
+      <label>Name<input id="workspace-name" type="text" maxlength="160" autocomplete="off"></label>
+      <label>Notes<textarea id="workspace-notes" rows="3" maxlength="4000"></textarea></label>
+    </div>
+    <div class="lab-file-actions"><button class="button" id="workspace-save" type="button">Save current run</button>
+      <label>Saved entries<select id="workspace-select"></select></label>
+      <button class="button ghost" id="workspace-load" type="button">Load</button>
+      <button class="button ghost" id="workspace-delete" type="button">Remove</button></div>
+    <p id="workspace-status" role="status" aria-live="polite"></p>
   </section>
 </main>
 <footer class="footer shell"><div><strong>QEVA</strong><span>Experiment ≠ proof. Finite search ≠ unbounded theorem.</span></div><nav aria-label="Project"><a href="../experiments/index.json">Experiments</a><a href="../analyzers/index.json">Analyzers</a><a href="../protocol/experiment.schema.json">Schema</a><a href="../about/index.html">About</a></nav></footer>
 <script src="../assets/qeva-data.js"></script>
 <script src="../assets/experiment-data.js"></script>
 <script src="../assets/mechanism-engine.js"></script>
+<script src="../assets/lab-records.js"></script>
 <script src="../assets/lab.js"></script>
 </body>
 </html>

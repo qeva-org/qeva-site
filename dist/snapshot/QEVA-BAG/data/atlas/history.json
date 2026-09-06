@@ -1,5 +1,5 @@
 {
-  "release": "0.5.0",
+  "release": "0.5.1",
   "scope": "global orientation seed; historical relations are not logical dependencies",
   "milestones": [
     {

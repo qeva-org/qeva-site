@@ -1,7 +1,7 @@
 {
-  "release": "0.5.0",
-  "released": "2026-09-05",
-  "title": "Mechanism Engine Alpha",
+  "release": "0.5.1",
+  "released": "2026-09-07",
+  "title": "Audited mathematical instrument",
   "protocol": "QEVA Object 0.2; Experiment 0.1; Run 0.1; Observation 0.1; Typed Relation 0.2; Release Envelope 0.5",
   "current_objects": 116,
   "all_revisions": 159,
@@ -26,6 +26,8 @@
     "parameter_sweep": true,
     "conjecture_attack": true,
     "accounts_groups_agents": false,
+    "browser_local_workspace": true,
+    "replayable_local_analysis_exports": true,
     "offline_runtime_dependencies": 0
   },
   "legacy": {

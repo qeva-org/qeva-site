@@ -1,4 +1,4 @@
-# QEVA 0.5 — Mechanism Engine Alpha
+# QEVA 0.5.1 — audited mathematical instrument
 
 QEVA is an open, revisioned map of mathematical objects, executable mechanisms,
 evidence, history, literature, and unresolved questions. It aims toward a map of
@@ -13,7 +13,7 @@ harvester prototype. It also preserves the supplied v0.4 ZIP byte-for-byte.
 ## Open the site
 
 Open `index.html` directly, or serve `dist/` as the web root. The enclosing
-project's `.openai/hosting.json` already points hosting at `dist/`. No package
+project's `vercel.json` and `.openai/hosting.json` both point hosting at `dist/`. No package
 manager, framework, database, analytics, webfont, or network request is needed.
 
 ## Rebuild and verify
@@ -76,7 +76,21 @@ and quarantines fixity conflicts. It is not a web-scale crawler.
 ## Licensing and boundary
 
 Original QEVA records and prose are CC0 1.0; reference software is MIT.
+The restored supplied logo is a branding exception; see `assets/BRANDING.txt`.
 Imported material keeps its own rights and provenance. See `SOURCE_POLICY.md`
 and `LICENSES/`. Planet-scale ingestion, independent mirrors, signed release
 witnesses, formal-library bridges, and institutional succession remain roadmap
 work—not accomplished claims.
+
+## Local-record patch
+
+`assets/lab-records.js` handles bounded strict JSON, replayable local exports
+and browser-local saving. `node scripts/test_lab_records.mjs` tests that module.
+No account, cloud sync, shared workspace or AI provider is implemented. Local
+notes are not yet included in run exports; export support remains a TODO.
+Browser storage can be cleared and is not encrypted private storage.
+
+Run `python3 -B scripts/check_project.py` from the **outer repository root**
+to check deployment configuration, package coverage and all test tiers.
+See the outer `docs/` directory for the v0.5 audit and complete v3 TODO.
+The original v2 TODO remains unchanged as the historical plan.

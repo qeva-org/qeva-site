@@ -1,0 +1,7 @@
+Tier A / canonical PASS — 116 current objects, 6 current experiments, 366 typed relations, proof bindings replayed
+Tier B / runtime PASS — 290 pages, links and fragments closed, offline dependencies and deterministic fixtures verified
+Tier C / preservation PASS — path safety, no symlinks/private sentinels, dual manifests, complete BagIt tags, and clean-room recovery verified
+== Tier A / Canonical integrity ==
+== Tier B / Product/runtime ==
+== Tier C / Preservation release ==
+QEVA 0.5.0 — 116 objects, 6 experiments, 366 typed relations: requested verification tiers PASS

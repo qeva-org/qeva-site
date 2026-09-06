@@ -1,5 +1,5 @@
 {
-  "release": "0.5.0",
+  "release": "0.5.1",
   "scope": "current exact revisions; legacy logical edges remain visibly candidate until qualified",
   "concepts": [
     {

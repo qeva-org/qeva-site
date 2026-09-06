@@ -1,0 +1,65 @@
+{
+  "scope": "Python HTTP client to temporary static server; not Vercel or browser CSP testing",
+  "routes": [
+    {
+      "path": "",
+      "status": 200,
+      "bytes": 6411
+    },
+    {
+      "path": "lab/",
+      "status": 200,
+      "bytes": 8549
+    },
+    {
+      "path": "map/",
+      "status": 200,
+      "bytes": 29113
+    },
+    {
+      "path": "history/",
+      "status": 200,
+      "bytes": 29442
+    },
+    {
+      "path": "search/",
+      "status": 200,
+      "bytes": 32636
+    },
+    {
+      "path": "about/",
+      "status": 200,
+      "bytes": 3081
+    },
+    {
+      "path": "assets/qeva-logo.png",
+      "status": 200,
+      "bytes": 25814
+    },
+    {
+      "path": "assets/lab-records.js",
+      "status": 200,
+      "bytes": 9869
+    },
+    {
+      "path": "objects/one-plus-one/",
+      "status": 200,
+      "bytes": 6072
+    },
+    {
+      "path": "archive/index.json",
+      "status": 200,
+      "bytes": 103008
+    },
+    {
+      "path": "experiments/index.json",
+      "status": 200,
+      "bytes": 3507
+    },
+    {
+      "path": "404.html",
+      "status": 200,
+      "bytes": 1604
+    }
+  ]
+}

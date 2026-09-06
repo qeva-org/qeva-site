@@ -3,3 +3,19 @@ __pycache__/
 dist/corpus/runs/
 dist/corpus/demo-run/
 
+
+# Operational data and credentials must not enter public releases.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.db
+credentials.json
+private/
+quarantine/
+runtime/
+node_modules/
+.DS_Store

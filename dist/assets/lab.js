@@ -3,6 +3,7 @@
 
   const engine = window.QEVA_ENGINE;
   const payload = window.QEVA_EXPERIMENTS;
+  const records = window.QEVA_RECORDS;
   const byId = id => document.getElementById(id);
   const nodes = {
     select: byId('experiment-select'),
@@ -41,7 +42,11 @@
     related: byId('related-concepts'),
     importFile: byId('experiment-file'),
     exportExperiment: byId('export-experiment'),
-    exportRun: byId('export-run')
+    exportRun: byId('export-run'),
+    workspaceName: byId('workspace-name'),
+    workspaceNotes: byId('workspace-notes'),
+    workspaceSelect: byId('workspace-select'),
+    workspaceStatus: byId('workspace-status')
   };
 
   const modes = {
@@ -49,7 +54,7 @@
     diff: {label: 'MATHEMATICAL DIFF', title: 'What changed?', action: 'Compare with defaults'},
     observer: {label: 'OBSERVER SWITCH', title: 'What remains visible?', action: 'Compare observers'},
     sweep: {label: 'PARAMETER SWEEP', title: 'Where does behavior change?', action: 'Run bounded sweep'},
-    attack: {label: 'CONJECTURE ATTACK', title: 'Can a bounded claim survive?', action: 'Attack bounded claim'}
+    attack: {label: 'CONJECTURE ATTACK', title: 'Bounded claim test', action: 'Test bounded claim'}
   };
 
   const observerChoices = {
@@ -72,6 +77,9 @@
   let currentRun = null;
   let currentMode = 'run';
   let modeResult = null;
+  let modeOptions = {};
+  let importedSession = null;
+  let localStore = null;
 
   function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -120,6 +128,7 @@
     setError('');
     currentRun = null;
     modeResult = null;
+    importedSession = null;
     nodes.exportRun.disabled = true;
     setExecutionState('changed — run again');
   }
@@ -290,7 +299,10 @@
     nodes.related.replaceChildren();
     baseExperiment.related_objects.forEach(reference => {
       const match = /^qeva:1:([^@]+)@(\d+)$/.exec(reference);
-      const link = element('a', 'revision-chip', reference);
+      const catalog = window.QEVA_DATA && window.QEVA_DATA.objects || [];
+      const concept = catalog.find(item => item.ref === reference || (match && item.id === match[1]));
+      const link = element('a', 'revision-chip', concept ? concept.title : (match ? humanize(match[1]) : reference));
+      link.title = reference;
       link.href = match ? `../objects/${encodeURIComponent(match[1])}/r${match[2]}/index.html` : '../archive/index.html';
       nodes.related.append(link);
     });
@@ -322,7 +334,7 @@
     nodes.select.value = engine.exactRef(baseExperiment);
     nodes.title.textContent = baseExperiment.title;
     nodes.summary.textContent = baseExperiment.summary;
-    nodes.identity.textContent = `${engine.exactRef(baseExperiment)} · ${baseExperiment.family} · engine ${engine.VERSION}`;
+    nodes.identity.textContent = `${humanize(baseExperiment.family)} · ${baseExperiment.state_space.numeric_domain}`;
     nodes.experimentJson.textContent = engine.canonical(baseExperiment);
     renderParameterControls();
     populateSweepControls();
@@ -462,8 +474,8 @@
 
   function plotSweep(result) {
     drawSeries(
-      [{label: `${result.parameter} / family metric`, values: result.rows.map(row => row.metric), color: '#2864b8'}],
-      `${result.samples} bounded runs sampled ${result.parameter} from ${formatValue(result.range[0])} to ${formatValue(result.range[1])}. The vertical axis is the engine's declared family-default metric.`,
+      [{label: sweepMetricLabel(), values: result.rows.map(row => row.metric), color: '#2864b8'}],
+      `${result.rows.length} bounded runs sampled ${result.parameter} from ${formatValue(result.range[0])} to ${formatValue(result.range[1])}. Horizontal position is sample order; the vertical value is ${sweepMetricLabel().toLowerCase()}. See the table for exact parameter values.`,
       false
     );
   }
@@ -503,7 +515,7 @@
       const heading = element('div', 'observation-head');
       heading.append(element('h3', '', humanize(observation.kind)), element('span', 'status', observation.status));
       const evidence = element('p', 'micro', `${observation.evidence_class} · ${observation.proof_status}`);
-      const scope = element('p', '', observation.claim_scope);
+      const scope = element('p', '', observation.claim_scope.replaceAll(currentRun.experiment_ref, workingExperiment.title));
       const method = element('p', 'observation-method', observation.method);
       const details = document.createElement('details');
       details.append(element('summary', '', 'Exact observation record'));
@@ -528,8 +540,8 @@
 
   function renderRunMode() {
     const panel = element('section', 'mode-result');
-    panel.append(element('h3', '', 'Exactly what ran'));
-    panel.append(element('p', '', `${currentRun.engine} ${currentRun.engine_version} executed ${currentRun.experiment_ref} under the displayed parameters and recorded ${currentRun.observations.length} analyzer observations.`));
+    panel.append(element('h3', '', 'Run details'));
+    panel.append(element('p', '', `${workingExperiment.title} produced ${currentRun.observations.length} observations under the displayed parameters and resource limits. Executable and version details are retained in the exact record.`));
     panel.append(element('p', 'notice', 'A bounded computation establishes only the finite scope stated by each observation. A resource-bounded stop is evidence about that partial trace, not a completed run or an unbounded theorem.'));
     nodes.modeOutput.append(panel);
   }
@@ -579,15 +591,20 @@
     nodes.modeOutput.append(panel);
   }
 
+  function sweepMetricLabel() {
+    return {recurrence: 'Maximum separation', projection: 'Class count', signal: 'Discarded-detail mean squared error',
+      optimization: 'Best objective value', 'integer-map': 'Transitions', 'finite-state': 'Detected cycle length (0 = not detected)'}[workingExperiment.family] || 'Measured value';
+  }
+
   function renderSweep(result) {
     const panel = element('section', 'mode-result');
-    panel.append(element('p', 'notice', `This is a finite sample of ${result.samples} parameter values, not a proof that behavior between samples is unchanged.`));
+    panel.append(element('p', 'notice', `Requested ${result.requested_samples} samples; evaluated ${result.rows.length}. Stop: ${result.stopped_reason}. Intermediate parameter values are not covered by this finite sample.`));
     const scroll = element('div', 'table-scroll');
     const table = document.createElement('table');
     const caption = element('caption', '', `Sweep of ${result.parameter}`);
     const head = document.createElement('thead');
     const headRow = document.createElement('tr');
-    ['Parameter', 'Family metric', 'Run completed within bound'].forEach(label => headRow.append(element('th', '', label)));
+    ['Parameter', sweepMetricLabel(), 'Run completed within bound'].forEach(label => headRow.append(element('th', '', label)));
     head.append(headRow);
     const body = document.createElement('tbody');
     result.rows.forEach(item => {
@@ -673,21 +690,20 @@
       workingExperiment = experimentWithParameters(parameters);
       currentRun = engine.runExperiment(workingExperiment, parameters);
       modeResult = null;
+      modeOptions = {};
+      importedSession = null;
       if (currentMode === 'diff') {
+        modeOptions = {base_experiment: clone(baseExperiment)};
         modeResult = engine.compareRuns(baseExperiment, baseRun, workingExperiment, currentRun);
       } else if (currentMode === 'observer') {
-        modeResult = engine.observerSwitch(currentRun, observerSpec(nodes.observerLeft.value), observerSpec(nodes.observerRight.value));
+        modeOptions = {left: observerSpec(nodes.observerLeft.value), right: observerSpec(nodes.observerRight.value)};
+        modeResult = engine.observerSwitch(currentRun, modeOptions.left, modeOptions.right);
       } else if (currentMode === 'sweep') {
         const sweepOverrides = {...parameters};
         delete sweepOverrides[nodes.sweepParameter.value];
-        modeResult = engine.parameterSweep(
-          workingExperiment,
-          nodes.sweepParameter.value,
-          requiredNumber(nodes.sweepMin, 'Sweep minimum'),
-          requiredNumber(nodes.sweepMax, 'Sweep maximum'),
-          requiredNumber(nodes.sweepSamples, 'Sweep samples'),
-          sweepOverrides
-        );
+        modeOptions = {parameter: nodes.sweepParameter.value, minimum: requiredNumber(nodes.sweepMin, 'Sweep minimum'),
+          maximum: requiredNumber(nodes.sweepMax, 'Sweep maximum'), samples: requiredNumber(nodes.sweepSamples, 'Sweep samples'), overrides: sweepOverrides};
+        modeResult = engine.parameterSweep(workingExperiment, modeOptions.parameter, modeOptions.minimum, modeOptions.maximum, modeOptions.samples, modeOptions.overrides);
       } else if (currentMode === 'attack') {
         const attackOptions = {};
         if (!nodes.attackCases.disabled) attackOptions.max_cases = requiredNumber(nodes.attackCases, 'Attack cases');
@@ -696,18 +712,10 @@
           attackOptions.target = requiredNumber(nodes.attackTarget, 'Attack target');
           attackOptions.table = parameters.table;
         }
+        modeOptions = attackOptions;
         modeResult = engine.attack(workingExperiment, attackOptions);
       }
-      renderMetrics(currentRun.result.metrics);
-      renderTrace(currentRun);
-      renderObservations(currentMode === 'attack' ? [modeResult.observation] : currentRun.observations);
-      renderModeResult();
-      if (currentMode === 'sweep') plotSweep(modeResult);
-      else if (currentMode === 'observer') plotObserver(modeResult);
-      else plotRun(currentRun);
-      nodes.experimentJson.textContent = engine.canonical(workingExperiment);
-      setExecutionState(currentRun.result.complete ? 'complete' : `bounded stop · ${currentRun.result.stopped_reason || 'resource-bound'}`);
-      nodes.exportRun.disabled = false;
+      renderCurrentOutput();
       updateLocation();
     } catch (error) {
       currentRun = null;
@@ -715,6 +723,19 @@
       nodes.exportRun.disabled = true;
       setError(error instanceof Error ? error.message : String(error));
     }
+  }
+
+  function renderCurrentOutput() {
+    renderMetrics(currentRun.result.metrics);
+    renderTrace(currentRun);
+    renderObservations(currentMode === 'attack' ? [modeResult.observation] : currentRun.observations);
+    renderModeResult();
+    if (currentMode === 'sweep') plotSweep(modeResult);
+    else if (currentMode === 'observer') plotObserver(modeResult);
+    else plotRun(currentRun);
+    nodes.experimentJson.textContent = engine.canonical(workingExperiment);
+    setExecutionState(records.outcome(currentMode, currentRun, modeResult));
+    nodes.exportRun.disabled = false;
   }
 
   function activateMode(mode, shouldRun) {
@@ -728,6 +749,9 @@
     nodes.observerControls.classList.toggle('hidden', mode !== 'observer');
     nodes.sweepControls.classList.toggle('hidden', mode !== 'sweep');
     nodes.attackControls.classList.toggle('hidden', mode !== 'attack');
+    nodes.observerControls.disabled = mode !== 'observer';
+    nodes.sweepControls.disabled = mode !== 'sweep';
+    nodes.attackControls.disabled = mode !== 'attack';
     nodes.modeLabel.textContent = modes[mode].label;
     nodes.outputTitle.textContent = modes[mode].title;
     nodes.runButton.textContent = modes[mode].action;
@@ -749,64 +773,6 @@
 
   function safeFilename(value) {
     return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  }
-
-  function parseJsonStrict(source) {
-    let index = 0;
-    const text = String(source);
-    const fail = message => { throw new Error(`Invalid JSON at byte ${index}: ${message}`); };
-    const space = () => { while (text[index] === ' ' || text[index] === '\t' || text[index] === '\r' || text[index] === '\n') index += 1; };
-    const string = () => {
-      if (text[index] !== '"') fail('expected string');
-      const start = index++;
-      let escaped = false;
-      while (index < text.length) {
-        const char = text[index++];
-        if (!escaped && char === '"') return JSON.parse(text.slice(start, index));
-        if (!escaped && char === '\\') escaped = true;
-        else escaped = false;
-      }
-      fail('unterminated string');
-    };
-    const value = () => {
-      space();
-      if (text[index] === '"') return string();
-      if (text[index] === '[') {
-        index += 1; space();
-        const out = [];
-        if (text[index] === ']') { index += 1; return out; }
-        while (true) {
-          out.push(value()); space();
-          if (text[index] === ']') { index += 1; return out; }
-          if (text[index++] !== ',') fail('expected comma or closing bracket');
-        }
-      }
-      if (text[index] === '{') {
-        index += 1; space();
-        const out = Object.create(null), keys = new Set();
-        if (text[index] === '}') { index += 1; return out; }
-        while (true) {
-          space(); const key = string(); space();
-          if (keys.has(key)) fail(`duplicate object name ${key}`);
-          keys.add(key);
-          if (text[index++] !== ':') fail('expected colon');
-          out[key] = value(); space();
-          if (text[index] === '}') { index += 1; return out; }
-          if (text[index++] !== ',') fail('expected comma or closing brace');
-        }
-      }
-      const rest = text.slice(index);
-      if (rest.startsWith('true')) { index += 4; return true; }
-      if (rest.startsWith('false')) { index += 5; return false; }
-      if (rest.startsWith('null')) { index += 4; return null; }
-      const match = /^-?(?:0|[1-9][0-9]*)(?:\.[0-9]+)?(?:[eE][+-]?[0-9]+)?/.exec(rest);
-      if (!match) fail('expected JSON value');
-      index += match[0].length;
-      return Number(match[0]);
-    };
-    const result = value(); space();
-    if (index !== text.length) fail('trailing content');
-    return result;
   }
 
   function validateImportedShape(record) {
@@ -848,58 +814,110 @@
       runAnalysis();
       if (!currentRun) return;
     }
-    const record = {
-      local_export_version: '0.1',
-      mode: currentMode,
-      experiment: workingExperiment,
-      run: currentRun,
-      analysis: modeResult
-    };
-    download(`${safeFilename(currentRun.experiment_ref)}-${currentMode}-run.json`, record);
+    download(`${safeFilename(currentRun.experiment_ref)}-${currentMode}-run.json`, currentEnvelope());
     setExecutionState('run downloaded');
+  }
+
+  function currentEnvelope() {
+    if (!currentRun) throw new Error('Run the current experiment before saving.');
+    return importedSession || {local_export_version: '0.2', mode: currentMode, experiment: workingExperiment,
+      run: currentRun, analysis: modeResult, analysis_options: modeOptions};
+  }
+
+  function expectedEngineHash() { return payload.experiments[0].executable.artifact_sha256; }
+
+  function installRecord(source) {
+    const decoded = records.decode(source, engine, expectedEngineHash());
+    const record = decoded.experiment;
+    validateImportedShape(record);
+    const existing = experiments.find(experiment => engine.exactRef(experiment) === engine.exactRef(record));
+    if (existing && engine.digest(existing) !== engine.digest(record)) throw new Error('This exact experiment reference already has different content. Create a fork or change its identifier.');
+    engine.runExperiment(record, engine.parameterDefaults(record));
+    if (!existing) experiments = experiments.concat([clone(record)]).sort((left, right) => left.title.localeCompare(right.title));
+    renderExperimentOptions();
+    selectExperiment(engine.exactRef(record), false);
+    if (decoded.session) {
+      const session = decoded.session;
+      const options = session.analysis_options || {};
+      const mode = decoded.analysis_verified ? session.mode : 'run';
+      if (mode === 'observer') {
+        nodes.observerLeft.value = options.left.kind; nodes.observerRight.value = options.right.kind;
+        for (const spec of [options.left, options.right]) {
+          if (spec.parameters.threshold !== undefined) nodes.observerThreshold.value = spec.parameters.threshold;
+          if (spec.parameters.bins !== undefined) nodes.observerBins.value = spec.parameters.bins;
+          if (spec.parameters.modulus !== undefined) nodes.observerBins.value = spec.parameters.modulus;
+        }
+      } else if (mode === 'sweep') {
+        nodes.sweepParameter.value = options.parameter; updateSweepBounds();
+        nodes.sweepMin.value = options.minimum; nodes.sweepMax.value = options.maximum; nodes.sweepSamples.value = options.samples;
+      } else if (mode === 'attack') {
+        if (options.max_cases !== undefined) nodes.attackCases.value = options.max_cases;
+        if (options.steps !== undefined) nodes.attackSteps.value = options.steps;
+        if (options.target !== undefined) nodes.attackTarget.value = options.target;
+      } else if (mode === 'diff') {
+        baseExperiment = clone(options.base_experiment);
+        baseRun = engine.runExperiment(baseExperiment, engine.parameterDefaults(baseExperiment));
+      }
+      activateMode(mode, false);
+      workingExperiment = clone(record); currentRun = clone(session.run);
+      for (const parameter of record.parameters) {
+        const control = document.querySelector(`[data-parameter-id="${parameter.id}"]`);
+        const value = currentRun.parameters[parameter.id];
+        if (control && value !== undefined) control.value = Array.isArray(value) ? value.join(', ') : String(value);
+      }
+      modeResult = decoded.analysis_verified ? clone(session.analysis) : null;
+      modeOptions = clone(options); importedSession = clone(session);
+      renderCurrentOutput();
+      if (!decoded.analysis_verified) setExecutionState('run replayed; legacy attached analysis not replayed');
+    } else setExecutionState('experiment imported');
+    setError('');
   }
 
   function importExperiment(file) {
     if (!file) return;
-    if (file.size > 2 * 1024 * 1024) {
-      setError('Experiment files must be 2 MB or smaller.');
-      return;
-    }
+    if (file.size > records.MAX_BYTES) { setError('Files must be 2 MB or smaller.'); return; }
     const reader = new FileReader();
     reader.addEventListener('load', () => {
-      try {
-        const record = parseJsonStrict(reader.result);
-        const errors = engine.validateExperiment(record);
-        if (errors.length) throw new Error(errors.join(' '));
-        const expectedEngineArtifact = payload.experiments[0] && payload.experiments[0].executable.artifact_sha256;
-        if (!expectedEngineArtifact || record.executable.artifact_sha256 !== expectedEngineArtifact) {
-          throw new Error('This record is not bound to the exact Mechanism Engine artifact loaded by this release.');
-        }
-        ['experiment_version', 'id', 'revision', 'title', 'summary', 'family', 'state_space', 'entities', 'relations', 'operations', 'update', 'parameters', 'initial_conditions', 'boundary_conditions', 'observer', 'randomness', 'run_bounds', 'analyzers', 'outputs', 'executable', 'related_objects', 'provenance', 'stewardship', 'supersedes'].forEach(key => {
-          if (record[key] === undefined) throw new Error(`Imported experiment is missing ${key}.`);
-        });
-        validateImportedShape(record);
-        const existing = experiments.find(experiment => engine.exactRef(experiment) === engine.exactRef(record));
-        if (existing && engine.digest(existing) !== engine.digest(record)) {
-          throw new Error('That exact experiment reference already exists with different content. Change the identifier or create a fork.');
-        }
-        engine.canonical(record);
-        engine.runExperiment(record, engine.parameterDefaults(record));
-        if (!existing) {
-          const proposed = experiments.concat([clone(record)]).sort((left, right) => left.title.localeCompare(right.title));
-          experiments = proposed;
-        }
-        renderExperimentOptions();
-        selectExperiment(engine.exactRef(existing || record), false);
-        setExecutionState('local import ready');
-      } catch (error) {
-        setError(`Import rejected: ${error instanceof Error ? error.message : String(error)}`);
-      } finally {
-        nodes.importFile.value = '';
-      }
+      try { installRecord(reader.result); }
+      catch (error) { setError(`Import rejected: ${error instanceof Error ? error.message : String(error)}`); }
+      finally { nodes.importFile.value = ''; }
     });
     reader.addEventListener('error', () => setError('The selected file could not be read.'));
     reader.readAsText(file);
+  }
+
+  function workspaceMessage(message) { nodes.workspaceStatus.textContent = message; }
+  function refreshWorkspace(selected) {
+    nodes.workspaceSelect.replaceChildren();
+    for (const item of localStore.list()) {
+      const option = element('option', '', item.label); option.value = item.id; nodes.workspaceSelect.append(option);
+    }
+    if (selected) nodes.workspaceSelect.value = selected;
+    const empty = !nodes.workspaceSelect.options.length;
+    byId('workspace-load').disabled = empty; byId('workspace-delete').disabled = empty;
+  }
+  function workspaceAction(action) {
+    try {
+      if (!localStore) throw new Error('Browser storage is unavailable. Export a JSON file instead.');
+      action();
+    } catch (error) { workspaceMessage(error.message || String(error)); }
+  }
+  function initializeWorkspace() {
+    try { localStore = records.createStore(window.localStorage, engine, expectedEngineHash()); refreshWorkspace(); }
+    catch (error) { workspaceMessage('Local storage is unavailable or unreadable. Export JSON to retain your work.'); }
+    byId('workspace-save').addEventListener('click', () => workspaceAction(() => {
+      const id = localStore.save(currentEnvelope(), nodes.workspaceName.value, nodes.workspaceNotes.value);
+      refreshWorkspace(id); workspaceMessage('Saved in this browser.');
+    }));
+    byId('workspace-load').addEventListener('click', () => workspaceAction(() => {
+      const entry = localStore.load(nodes.workspaceSelect.value);
+      installRecord(entry.record); nodes.workspaceName.value = entry.label; nodes.workspaceNotes.value = entry.notes;
+      workspaceMessage('Saved record loaded and replayed.');
+    }));
+    byId('workspace-delete').addEventListener('click', () => workspaceAction(() => {
+      if (!window.confirm('Remove this saved entry from this browser? Export its run first to keep a copy.')) return;
+      localStore.remove(nodes.workspaceSelect.value); refreshWorkspace(); workspaceMessage('Entry removed from this browser.');
+    }));
   }
 
   function renderExperimentOptions() {
@@ -943,7 +961,7 @@
   }
 
   function initialize() {
-    if (!engine || !payload || !Array.isArray(payload.experiments)) {
+    if (!engine || !records || !payload || !Array.isArray(payload.experiments)) {
       setError('The local experiment catalog or Mechanism Engine did not load. The static JSON records remain available from the footer.');
       return;
     }
@@ -958,6 +976,7 @@
     const requestedMode = query.get('mode');
     if (requestedMode && Object.prototype.hasOwnProperty.call(modes, requestedMode)) currentMode = requestedMode;
     selectExperiment(query.get('experiment') || 'logistic-sensitivity', true);
+    initializeWorkspace();
   }
 
   initialize();

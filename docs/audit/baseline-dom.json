@@ -1,0 +1,281 @@
+{
+  "mode": "in-memory DOM; CSP/resource loading omitted for script injection; no deployed browser claim",
+  "pageerrors": [],
+  "cases": [
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Exactly what ran\n\nQEVA Mechanism Engine 0.1.0 executed qeva-experiment:1:collatz-orbit@1 under the displayed parameters and recorded 3 analyzer observations.\n\nA bounded computation establishes only the finite scope state"
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run 128fd894ba8b843a9ff6c22b900eae611f7c6799ef4e5bf376cbb8e085"
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: 128fd894ba8b843a9ff6c22b900eae611f7c6799ef4e5bf376cbb8e085f52035. Only the observer changed.\n\nFirst observer\nidentity; 112 visible states\nSecond observer\nparity; 2 visible states\nDif"
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "sweep",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "This is a finite sample of 20 parameter values, not a proof that behavior between samples is unchanged.\n\nSweep of start\nParameter\tFamily metric\tRun completed within bound\n1\t0\tyes\n52633\t78\tyes\n105264\t141\tyes\n157896\t77\tyes"
+    },
+    {
+      "experiment": "qeva-experiment:1:collatz-orbit@1",
+      "mode": "attack",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nFor every integer start in [1,256], the declared Collatz kernel reaches 1 within 250 transitions.\n\nbounded-exhaustive \u00b7 bounded-proof\n\nEnumerate every start in the finite interval and replay at "
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Exactly what ran\n\nQEVA Mechanism Engine 0.1.0 executed qeva-experiment:1:coarse-grained-signal@1 under the displayed parameters and recorded 2 analyzer observations.\n\nA bounded computation establishes only the finite sco"
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run 9b814d55873edee4b74170a4e5361c850ccad2ae5018bcf6fc8734331d"
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: 9b814d55873edee4b74170a4e5361c850ccad2ae5018bcf6fc8734331d60610b. Only the observer changed.\n\nFirst observer\nidentity; 240 visible states\nSecond observer\nthreshold; 2 visible states\n"
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "sweep",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "This is a finite sample of 20 parameter values, not a proof that behavior between samples is unchanged.\n\nSweep of block_size\nParameter\tFamily metric\tRun completed within bound\n1\t0\tyes\n3\t0.0014103608\tyes\n5\t0.0018610907\tye"
+    },
+    {
+      "experiment": "qeva-experiment:1:coarse-grained-signal@1",
+      "mode": "attack",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nThe finite primary output of qeva-experiment:1:coarse-grained-signal@1 contains only finite numeric values.\n\nnumerical-observation \u00b7 not-proof\n\nInspect every value emitted in one bounded, conten"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Exactly what ran\n\nQEVA Mechanism Engine 0.1.0 executed qeva-experiment:1:finite-map-cycles@1 under the displayed parameters and recorded 5 analyzer observations.\n\nA bounded computation establishes only the finite scope s"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run 5d9215c5670371870ba911ffccb9bab9a69663d3576ad78fa62cc7388e"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: 5d9215c5670371870ba911ffccb9bab9a69663d3576ad78fa62cc7388e052c43. Only the observer changed.\n\nFirst observer\nidentity; 3 visible states\nSecond observer\nparity; 2 visible states\nDiffe"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "sweep",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "This is a finite sample of 8 parameter values, not a proof that behavior between samples is unchanged.\n\nSweep of start\nParameter\tFamily metric\tRun completed within bound\n0\t3\tyes\n1\t3\tyes\n2\t3\tyes\n3\t1\tyes\n4\t1\tyes\n5\t2\tyes\n6\t"
+    },
+    {
+      "experiment": "qeva-experiment:1:finite-map-cycles@1",
+      "mode": "attack",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nCOUNTEREXAMPLE\n\nEvery state in the explicit 8-state map reaches target 0 within 24 transitions.\n\nbounded-exhaustive \u00b7 refutation-of-bounded-claim\n\nExhaust every state of the declared finite map.\n\n{\"effectiv"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Exactly what ran\n\nQEVA Mechanism Engine 0.1.0 executed qeva-experiment:1:local-global-search@1 under the displayed parameters and recorded 1 analyzer observations.\n\nA bounded computation establishes only the finite scope"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run fd4ae3e12f147b4f6de9f42cea531a2ea315d01244319cafa76e8d512c"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: fd4ae3e12f147b4f6de9f42cea531a2ea315d01244319cafa76e8d512cf648bc. Only the observer changed.\n\nFirst observer\nidentity; 26 visible states\nSecond observer\nthreshold; 1 visible states\nD"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "sweep",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "This is a finite sample of 10 parameter values, not a proof that behavior between samples is unchanged.\n\nSweep of start\nParameter\tFamily metric\tRun completed within bound\n0\t0.37966089\tyes\n0.11111111\t0.3796609\tyes\n0.22222"
+    },
+    {
+      "experiment": "qeva-experiment:1:local-global-search@1",
+      "mode": "attack",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nThe finite primary output of qeva-experiment:1:local-global-search@1 contains only finite numeric values.\n\nnumerical-observation \u00b7 not-proof\n\nInspect every value emitted in one bounded, content-"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Exactly what ran\n\nQEVA Mechanism Engine 0.1.0 executed qeva-experiment:1:logistic-sensitivity@1 under the displayed parameters and recorded 4 analyzer observations.\n\nA bounded computation establishes only the finite scop"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run d80950441dd84d161735c7134a3395586734fe7f2ff8710e1d64e647b1"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: d80950441dd84d161735c7134a3395586734fe7f2ff8710e1d64e647b17bd0c6. Only the observer changed.\n\nFirst observer\nidentity; 71 visible states\nSecond observer\nthreshold; 2 visible states\nD"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "sweep",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "This is a finite sample of 20 parameter values, not a proof that behavior between samples is unchanged.\n\nSweep of r\nParameter\tFamily metric\tRun completed within bound\n2.5\t0.0001\tyes\n2.5789474\t0.0001\tyes\n2.6578947\t0.0001\t"
+    },
+    {
+      "experiment": "qeva-experiment:1:logistic-sensitivity@1",
+      "mode": "attack",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\n256 evenly spaced binary64 initial samples under r=3.9 for 70 steps remain in [0,1].\n\nnumerical-observation \u00b7 not-proof\n\nTest a finite grid of binary64 samples; this is not exhaustive over the c"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "run",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Exactly what ran\n\nQEVA Mechanism Engine 0.1.0 executed qeva-experiment:1:modular-equivalence@1 under the displayed parameters and recorded 2 analyzer observations.\n\nA bounded computation establishes only the finite scope"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "diff",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Baseline: the selected public experiment at its declared defaults. Current: the same experiment with only the displayed parameter defaults changed.\n\nBaseline run d7201565ee29b104cd48506c6a021d9c628736054f25e637a300b64ef0"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "observer",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "The underlying run hash is unchanged: d7201565ee29b104cd48506c6a021d9c628736054f25e637a300b64ef0f70de7. Only the observer changed.\n\nFirst observer\nidentity; 5 visible states\nSecond observer\nparity; 2 visible states\nDiffe"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "sweep",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "This is a finite sample of 20 parameter values, not a proof that behavior between samples is unchanged.\n\nSweep of modulus\nParameter\tFamily metric\tRun completed within bound\n2\t2\tyes\n3\t3\tyes\n4\t4\tyes\n5\t5\tyes\n7\t7\tyes\n8\t8\tyes"
+    },
+    {
+      "experiment": "qeva-experiment:1:modular-equivalence@1",
+      "mode": "attack",
+      "status": "COMPLETE",
+      "error": "",
+      "summary": "Bounded claim\nNONE-FOUND\n\nThe finite primary output of qeva-experiment:1:modular-equivalence@1 contains only finite numeric values.\n\nbounded-exhaustive \u00b7 bounded-proof\n\nInspect every value emitted in one bounded, content"
+    }
+  ],
+  "routes": [
+    {
+      "path": "index.html",
+      "overflow": false
+    },
+    {
+      "path": "lab/index.html",
+      "overflow": false
+    },
+    {
+      "path": "map/index.html",
+      "overflow": false
+    },
+    {
+      "path": "history/index.html",
+      "overflow": false
+    },
+    {
+      "path": "search/index.html",
+      "overflow": false
+    },
+    {
+      "path": "about/index.html",
+      "overflow": false
+    },
+    {
+      "path": "index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "lab/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "map/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "history/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "path": "search/index.html",
+      "mobile": true,
+      "overflow": false,
+      "width": 390
+    }
+  ],
+  "sweep_requested_vs_status": {
+    "requested": "20",
+    "status": "COMPLETE",
+    "text": "This is a finite sample of 20 parameter values, not a proof that behavior between samples is unchanged.\n\nSweep of r\nParameter\tFamily metric\tRun completed within bound\n2.5\t0.0001\tyes\n2.5789474\t0.0001\tyes\n2.6578947\t0.0001\tyes\n2.7368421\t0.0001\tyes\n2.8157895\t0.0001\tyes\n2.8947368\t0.0001\tyes\n2.9736842\t0.0001\tyes\n3.0526316\t0.0001\tyes\n3.1315789\t0.0001\tyes\n3.2105263\t0.00011149523\tyes\n3.2894737\t0.00012524317\tyes\n3.3684211\t0.00013992231\tyes\n3.4473684\t0.00015556098\tyes\n3.5263158\t0.00025642994\tyes\n3.6052632\t0.22497789\tyes\n3.6842105\t0.62488259\tyes\n3.7631579\t0.72242826\tyes\n3.8421053\t0.81446452\tyes\n3.9210526\t0.9011132\tyes\n4\t0.95761188\tyes"
+  },
+  "run_export_reimport": {
+    "error": "Import rejected: Missing required field experiment_version. Missing required field id. Missing required field revision. Missing required field title. Missing required field summary. Missing required field family. Missing required field state_space. Missing required field entities. Missing required field relations. Missing required field operations. Missing required field update. Missing required field parameters. Missing required field initial_conditions. Missing required field boundary_conditions. Missing required field observer. Missing required field randomness. Missing required field run_bounds. Missing required field analyzers. Missing required field outputs. Missing required field executable. Missing required field related_objects. Missing required field provenance. Missing required field stewardship. Missing required field supersedes. Unknown top-level field analysis. Unknown top-level field experiment. Unknown top-level field local_export_version. Unknown top-level field mode. Unknown top-level field run. Unsupported experiment_version. Invalid experiment id. Invalid revision. Unsupported engine version. Unknown bounded kernel. Unsupported kernel version. Engine artifact SHA-256 is missing or invalid. Executable representation must be bounded-declarative-json. Numeric semantics do not match the selected kernel. Unsupported experiment family. Title and summary must be non-empty strings. entities must be an array. relations must be an array. operations must be an array. boundary_conditions must be an array. analyzers must be an array. outputs must be an array. related_objects must be an array. state_space must be a plain object. update must be a plain object. initial_conditions must be a plain object. observer must be a plain object. randomness must be a plain object. run_bounds must be a plain object. executable must be a plain object. provenance must be a plain object. stewardship must be a plain object. entities must contain at least one object. relations must contain only objects. operations must contain at least one object. outputs must contain at least one object. boundary_conditions must contain only strings. state_space has missing or unknown fields. Parameters must be an array. run_bounds has missing or unknown fields. Invalid or unsafe run bounds. Unknown analyzer revision. randomness has missing or unknown fields. Unsupported randomness declaration. Observer must contain exactly id, version, kind, description, and parameters. Provenance must contain exactly created, creator, license, parent, and source_refs. Stewardship must contain exactly steward, visibility, and publication_state. executable has missing or unknown fields. related_objects must contain unique exact object references. supersedes must be an exact experiment revision or null."
+  },
+  "mobile_overflow_elements": []
+}

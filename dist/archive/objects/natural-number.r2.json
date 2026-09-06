@@ -1,0 +1,56 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:natural-number",
+  "revision": 2,
+  "kind": "framework",
+  "title": "Natural number",
+  "summary": "This orientation record describes one first-order Peano-arithmetic presentation of natural numbers.",
+  "domains": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "context": {
+    "framework": "first-order Peano arithmetic",
+    "framework_ref": "qeva:1:first-order-logic@1",
+    "note": "Revision 2 selects a first-order presentation instead of conflating it with second-order categoricity."
+  },
+  "assumptions": [
+    {
+      "text": "Classical first-order logic with equality is fixed.",
+      "ref": "qeva:1:first-order-logic@1"
+    },
+    {
+      "text": "Induction is an axiom schema over formulas in the declared arithmetic language.",
+      "ref": "qeva:1:induction@1"
+    }
+  ],
+  "content": {
+    "plain": "First-order Peano arithmetic describes zero, successor, addition, multiplication, and induction through explicit axioms and schemas.",
+    "exact": "One first-order presentation uses the language {0,S,+,·,=} with axioms S(x)≠0, S(x)=S(y)→x=y, recursive equations for + and ·, and for each formula φ(n,p̄) the induction instance [φ(0,p̄)∧∀n(φ(n,p̄)→φ(S(n),p̄))]→∀nφ(n,p̄).",
+    "example": "0, S(0), S(S(0)), … denote the standard numerals inside every model of the theory.",
+    "caveat": "First-order Peano arithmetic has nonstandard models. Categoricity of second-order Peano axioms under full semantics is a different metatheoretic statement."
+  },
+  "dependencies": [
+    "qeva:1:first-order-logic@1",
+    "qeva:1:zero@1",
+    "qeva:1:successor@1",
+    "qeva:1:axiom@1",
+    "qeva:1:induction@1",
+    "qeva:1:addition@1",
+    "qeva:1:multiplication@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Separates first-order arithmetic from second-order categoricity and exposes the induction dependency. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:natural-number@1",
+  "legacy_ids": []
+}

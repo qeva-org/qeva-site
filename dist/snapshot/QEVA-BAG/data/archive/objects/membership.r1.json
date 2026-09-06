@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:membership",
+  "revision": 1,
+  "kind": "primitive",
+  "title": "Membership",
+  "summary": "Membership records that an object is one of the elements of a set.",
+  "domains": [
+    "set-theory",
+    "foundations"
+  ],
+  "context": {
+    "framework": "set-like mathematics",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared set-like mathematics context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Membership records that an object is one of the elements of a set.",
+    "exact": "x∈A is a primitive binary relation in common axiomatic set theories; its behavior is constrained by axioms rather than defined circularly as ‘is inside’.",
+    "example": "2∈{1,2,3}.",
+    "caveat": "Membership is not the same as subset inclusion."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:relation@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

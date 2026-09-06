@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/observation.schema.json",
+  "title": "QEVA Observation 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "observation_version", "id", "subject", "subject_sha256", "analyzer", "analyzer_artifact_sha256", "run_sha256",
+    "kind", "evidence_class", "status", "claim_scope", "method",
+    "parameters", "result", "proof_status", "reproducibility"
+  ],
+  "properties": {
+    "observation_version": {"const": "0.1"},
+    "id": {"type": "string", "pattern": "^qeva-observation:sha256:[0-9a-f]{64}$"},
+    "subject": {"type": "string", "pattern": "^qeva-experiment:1:[a-z0-9][a-z0-9._-]*@[1-9][0-9]*$"},
+    "subject_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "analyzer": {"type": "string", "pattern": "^qeva-analyzer:1:[a-z0-9][a-z0-9._-]*@[1-9][0-9]*$"},
+    "analyzer_artifact_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "run_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "kind": {"type": "string", "minLength": 1},
+    "evidence_class": {"enum": ["exact-execution", "bounded-exhaustive", "numerical-observation", "heuristic-candidate", "formal-certificate"]},
+    "status": {"enum": ["observed", "candidate", "counterexample", "none-found", "inconclusive", "error"]},
+    "claim_scope": {"type": "string", "minLength": 1},
+    "method": {"type": "string", "minLength": 1},
+    "parameters": {"type": "object"},
+    "result": {"type": "object"},
+    "proof_status": {"enum": ["not-proof", "bounded-proof", "formal-proof", "refutation-of-bounded-claim"]},
+    "reproducibility": {
+      "type": "object", "additionalProperties": false,
+      "required": ["engine", "engine_version", "engine_artifact_sha256", "numeric_semantics", "seed", "bounds"],
+      "properties": {
+        "engine": {"type": "string", "minLength": 1},
+        "engine_version": {"type": "string", "minLength": 1},
+        "engine_artifact_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "numeric_semantics": {"type": "string", "minLength": 1},
+        "seed": {"type": ["integer", "string", "null"]},
+        "bounds": {"type": "object"}
+      }
+    }
+  }
+}

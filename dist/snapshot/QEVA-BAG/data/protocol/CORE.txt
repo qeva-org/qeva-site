@@ -1,0 +1,139 @@
+QEVA RECOVERY CORE 0.5
+======================
+
+PURPOSE
+QEVA preserves explicit mathematical objects, executable mechanisms, scoped
+evidence, provenance, history, and source records. This is a low-complexity
+recovery description. The domain, website, database, and present institution
+are replaceable.
+
+EVIDENCE DOMAINS
+1. LOGICAL: exact definitions, axioms, statements, conjectures, proofs,
+   counterexamples, algorithms, frameworks, and typed relations.
+2. HISTORICAL: works, people, traditions, dates, transmission, correction,
+   independent discovery, uncertainty, and dispute.
+3. CORPUS: provider identifiers, retrieval events, raw-byte fixity, rights,
+   normalized works, citations, and source-located extraction candidates.
+4. QUALIFICATION: append-only reviews, replays, refutations, replications, and
+   certificates bound to exact subjects, methods, actors, dates, and artifacts.
+5. VIEWS: HTML, maps, plots, search, catalogs, and other replaceable software.
+
+PERMANENT SEPARATIONS
+  syntax            is not semantics
+  derivation        is not model-independent truth
+  citation          is not logical dependence
+  co-occurrence     is not mechanism
+  analogy           is not equivalence
+  simulation        is not proof
+  extraction        is not qualification
+  publication       is not truth
+  accessibility     is not redistribution permission
+
+FOUNDATIONAL STANCE
+QEVA does not claim that all mathematics has one uncontested absolute root.
+It records explicit languages, rules, models, and interpretations. Classical
+set-theoretic, constructive/type-theoretic, categorical, and other foundations
+may coexist. A bridge must name the translation or interpretation supporting it.
+
+IDENTITY AND REVISION
+  qeva:1:sequence@2                    exact logical object
+  qeva-experiment:1:collatz-orbit@1    exact experiment
+  qeva-analyzer:1:cycle-detector@1     exact analyzer contract
+
+The namespace number is part of identity, not a release number. Released bytes
+never change. Later revisions form contiguous supersedes chains. Current streams
+contain exactly one numeric-latest revision per stable ID; all streams preserve
+every revision. A readable ID aids citation; a digest detects content change.
+Neither proves authorship or mathematical truth.
+
+OBJECTS, EXPERIMENTS, AND OBSERVATIONS
+Object fields are described by qeva-object.schema.json. Experiment 0.1 records
+name a bounded engine kernel, numeric semantics, parameters, randomness,
+observer, analyzers, resource limits, provenance, and exact engine artifact
+SHA-256. No experiment executes user-supplied code.
+
+A run conforming to run.schema.json records normalized parameters, result, completion, stopped_reason,
+states_emitted, operations_used, and run_sha256. The run hash covers the exact
+experiment, declared engine artifact digest, parameters, and result. The engine
+cannot attest its own bytes from a caller-supplied record; mirrors must compare
+the declaration with the shipped file before claiming replay. An observation names
+its exact subject, run (or null for aggregate attacks), analyzer revision, exact
+analyzer artifact SHA-256, evidence class, finite claim scope, method, result,
+and proof status. Partial output never becomes proof.
+
+validateRun checks structure, bounds, digests, and analyzer contracts. It does
+not establish analyzer truth. Before attributing a run or observation to the
+official implementation, validateRunAgainstExperiment must replay the named
+kernel and require canonical equality. analyzeRun performs that semantic replay
+before producing an official observation. Schema conformance alone is not
+execution provenance.
+
+PROOF AND TRUTH
+  Gamma |-_{S} P   means a permitted finite S-derivation of P from Gamma.
+  M |= P           means P is satisfied in model M under declared semantics.
+
+Neither has a complete meaning until the language, S or M, assumptions, and
+interpretation are recoverable. Strong qualifications bind the exact subject
+canonical digest, statement text/hash, dependency digests, certificate bytes,
+checker bytes, rule set, and environment.
+
+RELATIONS
+Logical, pedagogical, computational, historical, and citation edges remain
+different types. The inherited dependency field lacked formal proof roles, so
+QEVA 0.5 publishes migrated edges as CANDIDATE. A qualification may later
+promote an exact edge. Visualization direction is never semantic direction.
+
+ENCODING AND CANONICALIZATION
+Text is UTF-8 without BOM; generated lines end LF (0x0A). JSON follows RFC 8259
+and must not contain duplicate member names, lone Unicode surrogates, sparse
+arrays, non-plain values, NaN, or infinities. Canonical JSON emits Unicode
+directly, sorts object names by UTF-16 code units, preserves array order, uses
+ECMAScript shortest finite-number serialization, has no insignificant
+whitespace, and appends one LF. Integer-valued numbers outside
+[-(2^53-1), 2^53-1] are forbidden; larger exact integers are decimal strings.
+JSONL contains one canonical record per line.
+
+NUMERIC BOUNDARY
+Integer kernels use exact BigInt values serialized as decimal strings. Binary64
+kernels pin operation order and engine bytes. QEVA 0.5 signal/optimization
+examples use host Math.sin/Math.exp; their hashes are regression evidence for
+the pinned implementation, not a claim of cross-engine transcendental identity.
+timeout_ms is declarative; synchronous v0.5 enforces state/operation bounds and
+does not claim timer preemption.
+
+FIXITY AND AUTHENTICITY
+SHA-256 and SHA-512 manifests provide present-day byte fixity. They do not prove
+authorship, truth, provenance, or timeless security, and both are SHA-2. Future
+releases must add algorithm agility and multi-party signatures while retaining
+the old bytes and manifests.
+
+RECOVERY ORDER
+1. Verify outer MANIFEST.sha256 and/or MANIFEST.sha512.
+2. Read RELEASE.json, README.md, and this CORE.txt.
+3. Read archive/CATALOG.tsv, archive/current.jsonl, then archive/all.jsonl.
+4. Read experiments/current.jsonl and analyzers/current.jsonl; consult their
+   all.jsonl streams for history.
+5. Read archive/qualifications/index.jsonl and the named artifacts/checkers.
+6. Read corpus/source-registry.json and rights records before third-party data.
+7. Verify snapshot/QEVA-BAG tag and payload manifests. Its payload is data-only;
+   regenerate views rather than trusting partial archived HTML.
+8. For the complete outer release only, run from its site root:
+     python3 -B scripts/verify.py
+     python3 -B scripts/verify_runtime.py
+     python3 -B scripts/verify_preservation.py
+     node scripts/test_engine.mjs
+     python3 -B scripts/test_harvester.py
+9. The QEVA-BAG payload is deliberately data-and-engine only; it cannot verify
+   or recreate the full presentation layer. From QEVA-BAG/data run only:
+     python3 -B scripts/verify.py --tier a
+     node scripts/test_engine.mjs
+   Read BAG-RECOVERY.txt before attempting a migration.
+
+MIRRORS AND SUCCESSION
+Anyone may mirror QEVA-native material. A migration preserves source bytes,
+writes a new representation, documents the transformation, and keeps both.
+A successor may continue from a complete mirror but must not impersonate an
+earlier release. Long survival requires independent custody, repeated recovery,
+media/cryptography migration, transparent governance, and the right to fork.
+
+END QEVA RECOVERY CORE 0.5

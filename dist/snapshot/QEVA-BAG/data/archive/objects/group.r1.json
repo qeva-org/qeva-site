@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:group",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Group",
+  "summary": "A group captures reversible composition with an identity.",
+  "domains": [
+    "algebra",
+    "symmetry"
+  ],
+  "context": {
+    "framework": "abstract algebra",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared abstract algebra context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A group captures reversible composition with an identity.",
+    "exact": "A group (G,·) has associativity, an identity e, and for every g an inverse g⁻¹; closure is part of ·:G×G→G.",
+    "example": "Integers under addition form a group.",
+    "caveat": "Commutativity is an extra condition, not part of the group definition."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:operation@1",
+    "qeva:1:composition@1",
+    "qeva:1:identity@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

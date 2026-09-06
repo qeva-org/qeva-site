@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:axiom-power-set",
+  "revision": 1,
+  "kind": "axiom",
+  "title": "Axiom of power set",
+  "summary": "For every set, there is a set containing exactly all of its subsets.",
+  "domains": [
+    "set-theory",
+    "foundations"
+  ],
+  "context": {
+    "framework": "first-order set theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared first-order set theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "For every set, there is a set containing exactly all of its subsets.",
+    "exact": "∀A∃P∀x[x∈P↔x⊆A].",
+    "example": "The power set of {a,b} is {∅,{a},{b},{a,b}}.",
+    "caveat": "Power-set formation causes rapid growth and interacts deeply with sizes of infinity."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:subset@1",
+    "qeva:1:membership@1",
+    "qeva:1:axiom@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

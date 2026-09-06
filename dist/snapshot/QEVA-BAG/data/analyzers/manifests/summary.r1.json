@@ -1,0 +1,16 @@
+{
+  "analyzer_version": "0.1",
+  "id": "qeva-analyzer:1:summary",
+  "revision": 1,
+  "title": "Bounded run summary",
+  "purpose": "Describe completion state, bounds, extrema, and output size for every supported experiment family.",
+  "accepts": ["projection", "recurrence", "signal", "optimization", "integer-map", "finite-state"],
+  "emits": ["run-summary"],
+  "evidence_classes": ["exact-execution", "numerical-observation"],
+  "determinism": "Deterministic for a canonical experiment and parameter set.",
+  "resource_limits": {"max_states": 100000, "max_operations": 1000000},
+  "implementation": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "function": "analyzeRun"},
+  "tests": ["tests/fixtures/engine-fixtures.json"],
+  "license": "MIT",
+  "supersedes": null
+}

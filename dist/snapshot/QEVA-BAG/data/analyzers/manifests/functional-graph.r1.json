@@ -1,0 +1,16 @@
+{
+  "analyzer_version": "0.1",
+  "id": "qeva-analyzer:1:functional-graph",
+  "revision": 1,
+  "title": "Finite functional-graph analyzer",
+  "purpose": "Exhaustively compute cycles, weak components, and basin assignments for a finite total map.",
+  "accepts": ["finite-state"],
+  "emits": ["functional-graph", "cycle", "fixed-point", "component", "basin"],
+  "evidence_classes": ["bounded-exhaustive"],
+  "determinism": "Exact and deterministic for a valid finite transition table.",
+  "resource_limits": {"max_states": 4096, "max_operations": 1000000},
+  "implementation": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "function": "analyzeRun"},
+  "tests": ["tests/fixtures/engine-fixtures.json"],
+  "license": "MIT",
+  "supersedes": null
+}

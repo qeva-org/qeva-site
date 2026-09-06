@@ -1,0 +1,27 @@
+{
+  "qualification_version": "0.2",
+  "id": "qeva-qualification:1:one-plus-one:peano-rewrite-1",
+  "revision": 1,
+  "subject": "qeva:1:one-plus-one@2",
+  "subject_sha256": "0b6c705226401f1a5bc69dd86687bf5c34f83dd760d84e74be651502d10f1fdf",
+  "dimension": "machine-replay",
+  "outcome": "pass",
+  "scope": {
+    "field": "content.exact",
+    "statement_sha256": "1505335a5475513336a8e83b89dbf7b2a69788213c683577a8a9c7527f092f33",
+    "claim_relation": "normalizes-to"
+  },
+  "method": "Replay every structured rewrite step, verify the resulting normal form, and bind the subject, statement, dependencies, rules, artifact, and checker by SHA-256.",
+  "artifact": "certificates/peano-kernel-0/one-plus-one.r2.json",
+  "artifact_sha256": "378fc2fe78eeaac766b7147d2f64b6cd7f71d3b1639464738b0e0fb61afa2880",
+  "asserted_by": "QEVA reference checker 0.5",
+  "asserted": "2026-09-05",
+  "environment": {
+    "checker": "scripts/publish_v05.py",
+    "checker_sha256": "c77a5dc1366a4015a351f031b45f95d333c5cb14cc94f6e8076502fa1f56fc94",
+    "kernel": "QEVA-Peano-Rewrite-Kernel@1",
+    "language": "Python 3 standard-library semantics",
+    "network_required": false
+  },
+  "supersedes": null
+}

@@ -1,0 +1,154 @@
+{
+  "certificate_version": "0.2",
+  "id": "qeva-certificate:1:one-plus-one:peano-rewrite-1",
+  "subject_ref": "qeva:1:one-plus-one@2",
+  "subject_canonical_sha256": "0b6c705226401f1a5bc69dd86687bf5c34f83dd760d84e74be651502d10f1fdf",
+  "subject_statement": "With 1:=S(0), 2:=S(S(0)), add(a,0)→a, and add(a,S(b))→S(add(a,b)), the closed term add(1,1) normalizes by two certified rewrites to 2.",
+  "subject_statement_sha256": "1505335a5475513336a8e83b89dbf7b2a69788213c683577a8a9c7527f092f33",
+  "claim": {
+    "relation": "normalizes-to",
+    "lhs": [
+      "add",
+      [
+        "S",
+        "0"
+      ],
+      [
+        "S",
+        "0"
+      ]
+    ],
+    "rhs": [
+      "S",
+      [
+        "S",
+        "0"
+      ]
+    ]
+  },
+  "dependency_bindings": [
+    {
+      "ref": "qeva:1:addition@1",
+      "role": "rewrite-definition",
+      "canonical_sha256": "2b3f570e370952b9914f957032c2900d8e1ca51f797de1dd6ae2be26699e1626"
+    },
+    {
+      "ref": "qeva:1:natural-number@2",
+      "role": "theory-context",
+      "canonical_sha256": "a79345a546a19eb6329e11f0c801f879ab6c2241485a0df8fcaf792070d71e78"
+    },
+    {
+      "ref": "qeva:1:zero@1",
+      "role": "constant",
+      "canonical_sha256": "6c49efdebc0ab5f2efee2ce15b2009458ba3cd82bdffd670aefbc1be8c172e5d"
+    },
+    {
+      "ref": "qeva:1:successor@1",
+      "role": "constructor",
+      "canonical_sha256": "a6cc40732e7b38aee37b6a21bece18f7feb5efd6a84e8eee40f3fd0aefa3a3be"
+    },
+    {
+      "ref": "qeva:1:proof@1",
+      "role": "proof-concept",
+      "canonical_sha256": "ba935803fbb0f74df52379bfb048f232202b3e54c4c1707fefa6c4913ba989b9"
+    }
+  ],
+  "kernel": {
+    "id": "QEVA-Peano-Rewrite-Kernel",
+    "version": "1",
+    "term_encoding": "JSON arrays; operator at index 0; metavariables are strings beginning with ?",
+    "rules": [
+      {
+        "id": "add-zero",
+        "pattern": [
+          "add",
+          "?a",
+          "0"
+        ],
+        "replacement": "?a"
+      },
+      {
+        "id": "add-successor",
+        "pattern": [
+          "add",
+          "?a",
+          [
+            "S",
+            "?b"
+          ]
+        ],
+        "replacement": [
+          "S",
+          [
+            "add",
+            "?a",
+            "?b"
+          ]
+        ]
+      }
+    ]
+  },
+  "derivation": [
+    {
+      "rule": "add-successor",
+      "path": [],
+      "before": [
+        "add",
+        [
+          "S",
+          "0"
+        ],
+        [
+          "S",
+          "0"
+        ]
+      ],
+      "after": [
+        "S",
+        [
+          "add",
+          [
+            "S",
+            "0"
+          ],
+          "0"
+        ]
+      ]
+    },
+    {
+      "rule": "add-zero",
+      "path": [
+        1
+      ],
+      "before": [
+        "S",
+        [
+          "add",
+          [
+            "S",
+            "0"
+          ],
+          "0"
+        ]
+      ],
+      "after": [
+        "S",
+        [
+          "S",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "result": {
+    "outcome": "pass",
+    "normal_form": [
+      "S",
+      [
+        "S",
+        "0"
+      ]
+    ]
+  },
+  "created": "2026-09-05"
+}

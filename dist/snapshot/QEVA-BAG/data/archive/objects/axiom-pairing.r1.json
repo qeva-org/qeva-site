@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:axiom-pairing",
+  "revision": 1,
+  "kind": "axiom",
+  "title": "Axiom of pairing",
+  "summary": "For any two sets, a set exists whose members are exactly those two sets.",
+  "domains": [
+    "set-theory",
+    "foundations"
+  ],
+  "context": {
+    "framework": "first-order set theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared first-order set theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "For any two sets, a set exists whose members are exactly those two sets.",
+    "exact": "∀a∀b∃p∀x[x∈p↔(x=a∨x=b)].",
+    "example": "Pairing a with itself yields the singleton {a}.",
+    "caveat": "The axiom guarantees an unordered pair; ordered pairs require an additional encoding."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:membership@1",
+    "qeva:1:disjunction@1",
+    "qeva:1:axiom@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

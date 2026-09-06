@@ -1,0 +1,16 @@
+{
+  "analyzer_version": "0.1",
+  "id": "qeva-analyzer:1:fixed-point",
+  "revision": 1,
+  "title": "Fixed-point detector",
+  "purpose": "Report exact fixed states for finite maps and declared analytic candidates for supported numeric kernels.",
+  "accepts": ["recurrence", "finite-state"],
+  "emits": ["fixed-point", "candidate-fixed-point"],
+  "evidence_classes": ["bounded-exhaustive", "numerical-observation"],
+  "determinism": "Deterministic for a canonical experiment and parameter set.",
+  "resource_limits": {"max_states": 4096, "max_operations": 100000},
+  "implementation": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "function": "analyzeRun"},
+  "tests": ["tests/fixtures/engine-fixtures.json"],
+  "license": "MIT",
+  "supersedes": null
+}

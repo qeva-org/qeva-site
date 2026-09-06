@@ -1,0 +1,56 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:parity",
+  "revision": 3,
+  "kind": "definition",
+  "title": "Parity",
+  "summary": "Integer parity defines the predicates even and odd by divisibility by two.",
+  "domains": [
+    "number",
+    "arithmetic"
+  ],
+  "context": {
+    "framework": "integers with ordinary addition and multiplication",
+    "framework_ref": "qeva:1:integer@1",
+    "note": "Revision 3 separates the definitions from the distinct classification theorem that every integer has exactly one parity."
+  },
+  "assumptions": [
+    {
+      "text": "The integer structure with its ordinary arithmetic is fixed.",
+      "ref": "qeva:1:integer@1"
+    }
+  ],
+  "content": {
+    "plain": "An integer is even when it is twice an integer and odd when it is one more than twice an integer.",
+    "exact": "For n∈Z, Even(n) iff there exists k∈Z with n=2·k; Odd(n) iff there exists k∈Z with n=2·k+1. Exhaustiveness and exclusivity are separate theorems, not part of these definitions.",
+    "example": "18 is even because 18=2·9. 19 is odd because 19=2·9+1.",
+    "caveat": "The theorem that every integer is exactly one of even or odd requires the division algorithm or an equivalent arithmetic argument."
+  },
+  "dependencies": [
+    "qeva:1:integer@1",
+    "qeva:1:operation@2",
+    "qeva:1:existential-quantifier@1"
+  ],
+  "relations": [
+    {
+      "kind": "induces",
+      "target": "qeva:1:equivalence@2",
+      "note": "Congruence modulo two induces the two parity classes after the classification theorem is established."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Stops an unproved classification theorem from being smuggled into a definition record. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:parity@2",
+  "legacy_ids": [
+    "qeva:1:definition:parity"
+  ]
+}

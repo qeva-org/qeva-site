@@ -1,0 +1,16 @@
+{
+  "analyzer_version": "0.1",
+  "id": "qeva-analyzer:1:conjecture-attack",
+  "revision": 1,
+  "title": "Bounded conjecture attacker",
+  "purpose": "Search one explicitly finite domain for a counterexample and preserve the exact scope even when none is found.",
+  "accepts": ["projection", "recurrence", "signal", "optimization", "integer-map", "finite-state"],
+  "emits": ["conjecture-attack"],
+  "evidence_classes": ["bounded-exhaustive", "exact-execution", "numerical-observation"],
+  "determinism": "Deterministic for a canonical experiment and normalized attack configuration; none-found is never promoted beyond its stated finite scope.",
+  "resource_limits": {"max_states": 10000, "max_operations": 100000},
+  "implementation": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "function": "attack"},
+  "tests": ["tests/fixtures/engine-fixtures.json"],
+  "license": "MIT",
+  "supersedes": null
+}

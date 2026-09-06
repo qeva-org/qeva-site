@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:information",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Self-information",
+  "summary": "Self-information assigns a logarithmic surprise to an event of positive probability.",
+  "domains": [
+    "information-theory",
+    "probability"
+  ],
+  "context": {
+    "framework": "discrete probability and information theory",
+    "framework_ref": "qeva:1:probability-space@1",
+    "note": "Revision 2 narrows the broad title and supplies the missing logarithm-base condition."
+  },
+  "assumptions": [
+    {
+      "text": "A probability space and an event E of positive probability are fixed.",
+      "ref": "qeva:1:probability-space@1"
+    }
+  ],
+  "content": {
+    "plain": "Within a probability model, a less probable event carries more self-information when surprise is measured logarithmically.",
+    "exact": "For an event E with 0<P(E)≤1 and a real base b>1, its self-information is I_b(E):=−log_b(P(E)). The unit is the bit when b=2 and the nat when b=e.",
+    "example": "Either result of a fair coin toss has self-information 1 bit.",
+    "caveat": "Self-information is model-relative and is not identical to meaning, knowledge, usefulness, evidence, or truth."
+  },
+  "dependencies": [
+    "qeva:1:probability-space@1",
+    "qeva:1:real-number@1",
+    "qeva:1:order@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Adds b>1 and disambiguates self-information from the much broader word information. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:information@1",
+  "legacy_ids": []
+}

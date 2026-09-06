@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:limit",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Limit",
+  "summary": "A limit states that values eventually remain arbitrarily close to a target.",
+  "domains": [
+    "analysis",
+    "topology"
+  ],
+  "context": {
+    "framework": "metric or topological spaces",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared metric or topological spaces context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A limit states that values eventually remain arbitrarily close to a target.",
+    "exact": "In a metric space, xₙ→L iff for every ε>0 there exists N such that n≥N implies d(xₙ,L)<ε.",
+    "example": "The sequence 1/n converges to 0 in ℝ.",
+    "caveat": "Limits depend on the ambient topology and on the indexing notion."
+  },
+  "dependencies": [
+    "qeva:1:sequence@2",
+    "qeva:1:metric-space@1",
+    "qeva:1:universal-quantifier@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

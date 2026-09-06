@@ -1,0 +1,42 @@
+{
+  "release": "0.5.0",
+  "released": "2026-09-05",
+  "title": "Mechanism Engine Alpha",
+  "protocol": "QEVA Object 0.2; Experiment 0.1; Run 0.1; Observation 0.1; Typed Relation 0.2; Release Envelope 0.5",
+  "current_objects": 116,
+  "all_revisions": 159,
+  "qualification_assertions": 2,
+  "history_milestones": 37,
+  "field_nodes": 25,
+  "current_experiments": 6,
+  "analyzers": 7,
+  "typed_relations": 366,
+  "verification": {
+    "editorial": 115,
+    "machine-checked": 1
+  },
+  "claims": {
+    "complete_map_of_mathematics": false,
+    "internet_scrape_bundled": false,
+    "production_harvester": false,
+    "bounded_harvester_prototype": true,
+    "mechanism_engine": true,
+    "mathematical_diff": true,
+    "observer_switch": true,
+    "parameter_sweep": true,
+    "conjecture_attack": true,
+    "accounts_groups_agents": false,
+    "offline_runtime_dependencies": 0
+  },
+  "legacy": {
+    "release": "0.4.0",
+    "zip_path": "legacy/qeva-site-v0.4-source.zip",
+    "zip_sha256": "d724991ecca54dbe011abc396d165dd047d5ffe6f7ea20bcbad0d3cba8e0db78",
+    "known_issue": "The supplied 0.4 outer ZIP omitted manifest-listed dotfiles and does not self-verify after extraction.",
+    "earlier_release": {
+      "release": "0.3",
+      "zip_path": "legacy/qeva-site-v0.3-world-map.zip",
+      "zip_sha256": "9a93bb6239933b135c784a725ed6b0f59e10850d53019d85d39e485aeedd4cf1"
+    }
+  }
+}

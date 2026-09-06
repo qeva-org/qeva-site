@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:algorithm",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Algorithm",
+  "summary": "An algorithm is a finite description of an effective step-by-step procedure for a class of inputs.",
+  "domains": [
+    "computation",
+    "logic"
+  ],
+  "context": {
+    "framework": "effective procedures",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared effective procedures context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "An algorithm is a finite description of an effective step-by-step procedure for a class of inputs.",
+    "exact": "A precise algorithm fixes an input representation, transition rules, output condition, and halting behavior; formal models include Turing machines and recursive functions.",
+    "example": "Euclid's algorithm repeatedly replaces (a,b) by (b,a mod b) until b=0.",
+    "caveat": "An informal recipe is not automatically an algorithm until its steps and representations are unambiguous."
+  },
+  "dependencies": [
+    "qeva:1:expression@1",
+    "qeva:1:operation@1",
+    "qeva:1:recurrence@2"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

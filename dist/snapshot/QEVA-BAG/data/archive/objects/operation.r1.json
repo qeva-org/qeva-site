@@ -1,0 +1,46 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:operation",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Operation",
+  "summary": "An operation combines permitted inputs according to a single-valued rule.",
+  "domains": [
+    "foundations",
+    "algebra"
+  ],
+  "context": {
+    "framework": "structural mathematics",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared structural mathematics context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "An operation combines permitted inputs according to a single-valued rule.",
+    "exact": "An n-ary operation on X is a function ω:Xⁿ→X. Partial and multi-valued operations require different declarations.",
+    "example": "Integer addition is a binary operation +:ℤ×ℤ→ℤ.",
+    "caveat": "Closure, arity, and domain are part of the operation; they are not decoration."
+  },
+  "dependencies": [
+    "qeva:1:relation@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/artifact.schema.json",
+  "title": "QEVA Durable Artifact Envelope 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_version", "id", "revision", "type", "title", "created", "created_by", "stewarded_by", "visibility", "publication_state", "license", "content_sha256", "dependencies", "parent", "supersedes"],
+  "properties": {
+    "artifact_version": {"const": "0.1"},
+    "id": {"type": "string", "pattern": "^qeva-artifact:1:[a-z0-9][a-z0-9._-]*$"},
+    "revision": {"type": "integer", "minimum": 1},
+    "type": {"enum": ["experiment", "mathematical-system", "conjecture", "claim", "proof", "counterexample", "dataset", "visualization", "notebook", "collection", "learning-path", "challenge", "tool", "analyzer", "agent", "workflow", "project", "historical-annotation", "translation", "reproduction", "negative-result"]},
+    "title": {"type": "string", "minLength": 1},
+    "created": {"type": "string"},
+    "created_by": {"type": "string", "minLength": 1},
+    "stewarded_by": {"type": "string", "minLength": 1},
+    "visibility": {"enum": ["private", "shared", "public"]},
+    "publication_state": {"enum": ["draft", "public", "reproduced", "reviewed", "qualified", "superseded", "refuted", "withdrawn"]},
+    "license": {"type": "string", "minLength": 1},
+    "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "dependencies": {"type": "array", "items": {"type": "string"}},
+    "parent": {"type": ["string", "null"]},
+    "supersedes": {"type": ["string", "null"]}
+  }
+}
+

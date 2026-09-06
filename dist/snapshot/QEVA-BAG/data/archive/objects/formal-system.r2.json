@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:formal-system",
+  "revision": 2,
+  "kind": "formal-system",
+  "title": "Formal system",
+  "summary": "A declared language together with axioms and inference rules used to determine which expressions count as derivable.",
+  "domains": [
+    "logic",
+    "foundations"
+  ],
+  "context": {
+    "framework": "metalogic",
+    "framework_ref": "qeva:1:statement@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [],
+  "content": {
+    "plain": "A formal system fixes the symbols you may write, the starting statements you accept, and the rules by which new statements may be derived.",
+    "exact": "For QEVA seed purposes, a formal system S is specified by at least a formal language L, a designated set or scheme of axioms A, and inference rules R. A complete record must also state any syntax and proof conventions required to determine valid derivations.",
+    "example": "A presentation of propositional logic may specify formulas, axiom schemes, and modus ponens.",
+    "caveat": "Different foundations package syntax, axioms, rules, semantics, and definitions differently; QEVA must record the chosen presentation rather than force one universal encoding."
+  },
+  "dependencies": [
+    "qeva:1:axiom@1",
+    "qeva:1:expression@1",
+    "qeva:1:inference-rule@1"
+  ],
+  "relations": [
+    {
+      "kind": "supports",
+      "target": "qeva:1:derivability@2",
+      "note": "Derivability is defined only after a proof system is fixed."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:formal-system@1",
+  "legacy_ids": []
+}

@@ -1,0 +1,72 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:stability",
+  "revision": 3,
+  "kind": "definition",
+  "title": "Stability",
+  "summary": "Lyapunov stability of a fixed point means every sufficiently small initial perturbation remains small for all future iterates.",
+  "domains": [
+    "dynamics",
+    "analysis",
+    "control"
+  ],
+  "context": {
+    "framework": "discrete-time metric dynamical systems",
+    "framework_ref": "qeva:1:metric-space@1",
+    "note": "Revision 3 makes the map and fixed-point prerequisites explicit."
+  },
+  "assumptions": [
+    {
+      "text": "A metric space (X,d) is fixed.",
+      "ref": "qeva:1:metric-space@1"
+    },
+    {
+      "text": "A self-map F:X→X and one of its fixed points x* are fixed.",
+      "ref": "qeva:1:fixed-point@2"
+    }
+  ],
+  "content": {
+    "plain": "A fixed point is Lyapunov-stable when starting close enough guarantees staying as close as requested forever.",
+    "exact": "Let (X,d) be a metric space, F:X→X, and F(x*)=x*. The fixed point x* is Lyapunov-stable iff for every ε>0 there exists δ>0 such that d(x₀,x*)<δ implies d(Fⁿ(x₀),x*)<ε for every n∈N.",
+    "example": "For F(x)=x/2 on R, the fixed point 0 is Lyapunov-stable and attracting.",
+    "caveat": "Lyapunov, asymptotic, orbital, structural, input-output, and stochastic stability are inequivalent notions requiring separate formulations."
+  },
+  "dependencies": [
+    "qeva:1:metric-space@1",
+    "qeva:1:function@1",
+    "qeva:1:fixed-point@2",
+    "qeva:1:recurrence@2",
+    "qeva:1:universal-quantifier@1",
+    "qeva:1:existential-quantifier@1"
+  ],
+  "relations": [
+    {
+      "kind": "classifies",
+      "target": "qeva:1:fixed-point@2",
+      "note": "This revision defines one stability predicate for fixed points."
+    },
+    {
+      "kind": "related-to",
+      "target": "qeva:1:attractor@2",
+      "note": "Attraction and Lyapunov stability are distinct properties."
+    },
+    {
+      "kind": "contrasts-with",
+      "target": "qeva:1:sensitivity@2",
+      "note": "They quantify perturbation behavior differently and are not simple logical negations."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Adds the previously omitted fixed-point and function dependencies and fixes the dynamical scope. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:stability@2",
+  "legacy_ids": []
+}

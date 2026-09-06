@@ -1,0 +1,53 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:integral",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Riemann integral",
+  "summary": "The Riemann integral is the common limit approached by every sufficiently fine tagged sum.",
+  "domains": [
+    "analysis",
+    "calculus"
+  ],
+  "context": {
+    "framework": "Riemann integration on compact real intervals",
+    "framework_ref": "qeva:1:real-number@1",
+    "note": "Revision 2 gives one precise Riemann formulation; other integration theories require separate formulation objects."
+  },
+  "assumptions": [
+    {
+      "text": "The domain is a compact interval [a,b] in the real numbers.",
+      "ref": "qeva:1:real-number@1"
+    },
+    {
+      "text": "The function f:[a,b]→R is bounded.",
+      "ref": "qeva:1:function@1"
+    }
+  ],
+  "content": {
+    "plain": "Cut an interval into sufficiently short pieces, sample the function in each piece, and add height times width; one stable limiting value is the Riemann integral.",
+    "exact": "A bounded f:[a,b]→R is Riemann-integrable with integral I iff for every ε>0 there exists δ>0 such that every tagged partition a=x₀<⋯<xₙ=b with tᵢ∈[xᵢ₋₁,xᵢ] and mesh maxᵢ(xᵢ−xᵢ₋₁)<δ satisfies |Σᵢ f(tᵢ)(xᵢ−xᵢ₋₁)−I|<ε.",
+    "example": "For f(x)=x on [0,1], the Riemann integral is 1/2.",
+    "caveat": "Lebesgue, stochastic, contour, and path integrals are distinct constructions and must not be folded into this exact formulation."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:limit@1",
+    "qeva:1:real-number@1",
+    "qeva:1:order@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Replaces a mixed Riemann/Lebesgue synopsis with one scoped exact formulation. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:integral@1",
+  "legacy_ids": []
+}

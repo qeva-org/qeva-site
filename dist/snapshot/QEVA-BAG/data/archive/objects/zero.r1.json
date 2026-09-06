@@ -1,0 +1,46 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:zero",
+  "revision": 1,
+  "kind": "primitive",
+  "title": "Zero",
+  "summary": "Zero is the distinguished starting value for one common construction of the natural numbers.",
+  "domains": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "context": {
+    "framework": "natural-number arithmetic",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared natural-number arithmetic context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Zero is the distinguished starting value for one common construction of the natural numbers.",
+    "exact": "In a Peano-style structure (N,0,S), 0∈N and 0 is not the successor of any element.",
+    "example": "Counting no selected objects gives 0.",
+    "caveat": "Some conventions start the natural numbers at 1; the index convention must be stated."
+  },
+  "dependencies": [
+    "qeva:1:object@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

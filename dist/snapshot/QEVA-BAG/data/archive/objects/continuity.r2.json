@@ -1,0 +1,59 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:continuity",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Continuity",
+  "summary": "Continuity formalizes preservation of nearness or open-set structure under a map.",
+  "domains": [
+    "analysis",
+    "topology",
+    "dynamics"
+  ],
+  "context": {
+    "framework": "topology",
+    "framework_ref": "qeva:1:topological-space@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "Topological spaces X and Y and a function f:X→Y are specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A continuous map does not tear apart the chosen topology: inverse images of observable open regions remain open.",
+    "exact": "f:X→Y is continuous iff for every open V⊆Y, f^{-1}(V) is open in X. In metric spaces this is equivalent to the ε-δ definition.",
+    "example": "f(x)=x^2 is continuous on R with its usual topology.",
+    "caveat": "Continuity is relative to the chosen topologies; a function can be continuous under one topology and not another."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:topological-space@1"
+  ],
+  "relations": [
+    {
+      "kind": "used-in",
+      "target": "qeva:1:stability@2",
+      "note": "Many stability notions are formulated using neighborhoods or metrics."
+    },
+    {
+      "kind": "contrasts",
+      "target": "qeva:1:discreteness@2",
+      "note": "Discrete spaces make every function out of them continuous."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:continuity@1",
+  "legacy_ids": []
+}

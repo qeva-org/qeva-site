@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/run.schema.json",
+  "title": "QEVA Mechanism Run Envelope 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_sha256",
+    "run_version",
+    "experiment_ref",
+    "experiment_sha256",
+    "engine",
+    "engine_version",
+    "engine_artifact_sha256",
+    "engine_artifact_binding",
+    "parameters",
+    "result",
+    "observations"
+  ],
+  "properties": {
+    "run_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "run_version": {
+      "const": "0.1"
+    },
+    "experiment_ref": {
+      "type": "string",
+      "pattern": "^qeva-experiment:1:[a-z0-9][a-z0-9._-]*@[1-9][0-9]*$"
+    },
+    "experiment_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "engine": {
+      "const": "QEVA Mechanism Engine"
+    },
+    "engine_version": {
+      "const": "0.1.0"
+    },
+    "engine_artifact_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "engine_artifact_binding": {
+      "const": "declared-by-experiment; external-byte-verification-required"
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "result": {
+      "type": "object",
+      "required": ["complete", "stopped_reason", "primary", "metrics"],
+      "properties": {
+        "complete": {"type": "boolean"},
+        "stopped_reason": {"type": "string", "minLength": 1},
+        "primary": {"type": "array", "maxItems": 10000},
+        "secondary": {"type": "array", "maxItems": 10000},
+        "separation": {"type": "array", "maxItems": 10000},
+        "transcript": {"type": "array", "maxItems": 10000},
+        "macro": {"type": "array", "maxItems": 10000},
+        "track": {"type": "array", "maxItems": 10000},
+        "curve": {"type": "array", "maxItems": 10000},
+        "orbit": {"type": "array", "maxItems": 10000},
+        "parity": {"type": "array", "maxItems": 10000},
+        "table": {"type": "array", "maxItems": 10000},
+        "assignments": {"type": "array", "maxItems": 10000},
+        "cycles": {"type": "array", "maxItems": 10000},
+        "metrics": {
+          "type": "object",
+          "required": ["states_emitted", "operations_used"],
+          "properties": {
+            "states_emitted": {"type": "integer", "minimum": 0, "maximum": 10000},
+            "operations_used": {"type": "integer", "minimum": 0, "maximum": 100000}
+          }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "maxItems": 7,
+      "items": {"$ref": "observation.schema.json"}
+    }
+  }
+}

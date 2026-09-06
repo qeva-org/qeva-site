@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:excluded-middle",
+  "revision": 1,
+  "kind": "axiom",
+  "title": "Law of excluded middle",
+  "summary": "For every statement P, classical logic admits P or not-P.",
+  "domains": [
+    "logic",
+    "foundations"
+  ],
+  "context": {
+    "framework": "classical logic",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared classical logic context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "For every statement P, classical logic admits P or not-P.",
+    "exact": "The schema P∨¬P is derivable or postulated in classical systems. It is not generally derivable in intuitionistic logic.",
+    "example": "Applied to a proposition about an integer, it permits case analysis into P and ¬P even without a decision procedure.",
+    "caveat": "Logical acceptance is framework-relative; QEVA records the branch instead of calling alternative logics defective."
+  },
+  "dependencies": [
+    "qeva:1:statement@1",
+    "qeva:1:negation@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

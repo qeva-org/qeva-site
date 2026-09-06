@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:model",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Model",
+  "summary": "A model gives symbols a domain and interpretation so statements can be evaluated.",
+  "domains": [
+    "logic",
+    "semantics"
+  ],
+  "context": {
+    "framework": "model theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared model theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A model gives symbols a domain and interpretation so statements can be evaluated.",
+    "exact": "An L-structure M consists of a nonempty domain together with interpretations of L's constant, function, and relation symbols of matching arities.",
+    "example": "The integers with ordinary + and < form a structure for a language containing those symbols.",
+    "caveat": "Syntax and interpretation are separate: one language can have many non-isomorphic models."
+  },
+  "dependencies": [
+    "qeva:1:symbol@1",
+    "qeva:1:relation@1",
+    "qeva:1:operation@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

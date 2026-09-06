@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/relation.schema.json",
+  "title": "QEVA Typed Relation 0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["relation_version", "id", "source", "target", "layer", "kind", "direction", "context", "basis", "status", "asserted_by", "asserted"],
+  "properties": {
+    "relation_version": {"const": "0.2"},
+    "id": {"type": "string", "pattern": "^qeva-relation:sha256:[0-9a-f]{64}$"},
+    "source": {"type": "string"},
+    "target": {"type": "string"},
+    "layer": {"enum": ["logical", "historical", "pedagogical", "computational", "corpus", "editorial"]},
+    "kind": {"enum": ["formally-requires", "definition-uses", "proof-uses", "derives", "equivalent-to", "isomorphic-to", "generalizes", "specializes", "contradicts", "refutes", "conceptually-explains", "pedagogical-prerequisite", "historically-influenced", "independently-discovered", "analogous-to", "often-studied-with", "computationally-suggests", "hypothesized-connection", "implemented-by", "instantiated-by-experiment"]},
+    "direction": {"enum": ["directed", "symmetric"]},
+    "context": {"type": ["string", "null"]},
+    "basis": {"type": "string", "minLength": 1},
+    "status": {"enum": ["asserted", "candidate", "disputed", "refuted"]},
+    "asserted_by": {"type": "string", "minLength": 1},
+    "asserted": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+  }
+}
+

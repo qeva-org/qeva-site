@@ -1,0 +1,42 @@
+{
+  "experiment_version": "0.1",
+  "id": "qeva-experiment:1:collatz-orbit",
+  "revision": 1,
+  "title": "Bounded Collatz orbit",
+  "summary": "Generate an exact finite Collatz trace and keep its limited evidential scope visible.",
+  "family": "integer-map",
+  "state_space": {
+    "kind": "positive integers",
+    "description": "Positive mathematical integers represented by BigInt during execution.",
+    "numeric_domain": "integer",
+    "bounds": ["1", "unbounded in definition; bounded by run limits"]
+  },
+  "entities": [
+    {"id": "n", "label": "current positive integer", "role": "state"}
+  ],
+  "relations": [],
+  "operations": [
+    {"id": "collatz-step", "kernel": "collatz", "kernel_version": "1", "formula": "T(n)=n/2 if n is even; 3n+1 if n is odd", "inputs": ["n"], "output": "n"}
+  ],
+  "update": {"operation": "collatz-step", "state": "n", "schedule": "repeat until n=1 or the step bound is reached"},
+  "parameters": [
+    {"id": "start", "label": "starting integer", "type": "integer", "min": 1, "max": 1000000, "step": 1, "default": 27, "description": "Positive starting value."},
+    {"id": "steps", "label": "step bound", "type": "integer", "min": 1, "max": 2000, "step": 1, "default": 250, "description": "Maximum number of update operations."}
+  ],
+  "initial_conditions": {"n": "start"},
+  "boundary_conditions": ["start is a positive integer", "execution halts explicitly at the run bound"],
+  "observer": {"id": "parity-observer", "version": "1", "kind": "parity", "description": "Observe the exact value and whether it is even or odd.", "parameters": {}},
+  "randomness": {"algorithm": "none", "version": "1", "seed_parameter": null, "deterministic": true},
+  "run_bounds": {"steps": 2000, "max_states": 2001, "max_operations": 2000, "timeout_ms": 500},
+  "analyzers": ["qeva-analyzer:1:cycle-detector@1", "qeva-analyzer:1:candidate-invariant@1", "qeva-analyzer:1:summary@1", "qeva-analyzer:1:conjecture-attack@1"],
+  "outputs": [
+    {"id": "orbit", "label": "exact finite orbit", "kind": "integer sequence"},
+    {"id": "parity", "label": "parity trace", "kind": "binary sequence"},
+    {"id": "peak", "label": "largest visited integer", "kind": "integer"}
+  ],
+  "executable": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "artifact_sha256": "416c020a616a2b56258ecb63d6c1764b392746d73c01b13702be4d2562074423", "kernel": "collatz", "kernel_version": "1", "representation": "bounded-declarative-json", "numeric_semantics": "integer-bigint-v0.1"},
+  "related_objects": ["qeva:1:collatz-map@2", "qeva:1:collatz-conjecture@2", "qeva:1:parity@2", "qeva:1:recurrence@2"],
+  "provenance": {"created": "2026-09-05", "creator": "QEVA mechanism seed", "license": "CC0-1.0", "parent": null, "source_refs": []},
+  "stewardship": {"steward": "QEVA project", "visibility": "public", "publication_state": "public"},
+  "supersedes": null
+}

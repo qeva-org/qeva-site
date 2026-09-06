@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:axiom-union",
+  "revision": 1,
+  "kind": "axiom",
+  "title": "Axiom of union",
+  "summary": "The members of members of a set can be gathered into one set.",
+  "domains": [
+    "set-theory",
+    "foundations"
+  ],
+  "context": {
+    "framework": "first-order set theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared first-order set theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "The members of members of a set can be gathered into one set.",
+    "exact": "∀A∃U∀x[x∈U↔∃B(B∈A∧x∈B)].",
+    "example": "If A={{1,2},{2,3}}, then ⋃A={1,2,3}.",
+    "caveat": "Union flattens one membership level; it is not intersection or disjoint union."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:membership@1",
+    "qeva:1:conjunction@1",
+    "qeva:1:axiom@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

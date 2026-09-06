@@ -1,0 +1,48 @@
+{
+  "experiment_version": "0.1",
+  "id": "qeva-experiment:1:local-global-search",
+  "revision": 1,
+  "title": "Local and exploratory search",
+  "summary": "Compare local improvement with seeded exploration on a fixed multi-peak landscape.",
+  "family": "optimization",
+  "state_space": {
+    "kind": "closed interval",
+    "description": "A binary64 position p in [0,1].",
+    "numeric_domain": "binary64",
+    "bounds": [0, 1]
+  },
+  "entities": [
+    {"id": "position", "label": "candidate position", "role": "state"},
+    {"id": "objective", "label": "landscape value", "role": "measurement"}
+  ],
+  "relations": [
+    {"kind": "evaluated-by", "source": "position", "target": "objective", "note": "Each position has one deterministic objective value."}
+  ],
+  "operations": [
+    {"id": "objective", "kernel": "local-global-search", "kernel_version": "1", "formula": "f(t)=0.11+0.31 exp(-((t-0.21)/0.09)^2)+0.70 exp(-((t-0.73)/0.115)^2)+0.06 sin(19t)", "inputs": ["position"], "output": "objective"},
+    {"id": "search-step", "kernel": "local-global-search", "kernel_version": "1", "formula": "g_k=(f(min(1,p+0.006))−f(max(0,p−0.006)))/0.012; a_k=exploration(1−k/steps); candidate=clamp(p+0.012 sign(g_k)+(2u_k−1)a_k); accept if improved or u'_k<0.07+0.8 exploration", "inputs": ["position", "exploration", "seed", "steps"], "output": "position"}
+  ],
+  "update": {"operation": "search-step", "state": "position", "schedule": "steps sequential proposals"},
+  "parameters": [
+    {"id": "start", "label": "start position", "type": "number", "min": 0, "max": 1, "step": 0.001, "default": 0.18, "description": "Initial candidate position."},
+    {"id": "exploration", "label": "exploration amplitude", "type": "number", "min": 0, "max": 0.2, "step": 0.001, "default": 0.04, "description": "Maximum seeded exploratory displacement."},
+    {"id": "seed", "label": "seed", "type": "integer", "min": 1, "max": 4294967295, "step": 1, "default": 137, "description": "Seed for the pinned LCG."},
+    {"id": "steps", "label": "steps", "type": "integer", "min": 10, "max": 240, "step": 1, "default": 80, "description": "Number of proposals."}
+  ],
+  "initial_conditions": {"position": "start"},
+  "boundary_conditions": ["candidate positions are clamped to [0,1]", "acceptance includes a stated seeded exploratory probability"],
+  "observer": {"id": "objective-observer", "version": "1", "kind": "objective", "description": "Observe position and objective value.", "parameters": {}},
+  "randomness": {"algorithm": "lcg32-numerical-recipes", "version": "1", "seed_parameter": "seed", "deterministic": true},
+  "run_bounds": {"steps": 240, "max_states": 512, "max_operations": 10000, "timeout_ms": 250},
+  "analyzers": ["qeva-analyzer:1:summary@1", "qeva-analyzer:1:conjecture-attack@1"],
+  "outputs": [
+    {"id": "landscape", "label": "objective landscape", "kind": "binary64 sample"},
+    {"id": "track", "label": "search path", "kind": "binary64 sequence"},
+    {"id": "best", "label": "best observed candidate", "kind": "record"}
+  ],
+  "executable": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "artifact_sha256": "416c020a616a2b56258ecb63d6c1764b392746d73c01b13702be4d2562074423", "kernel": "local-global-search", "kernel_version": "1", "representation": "bounded-declarative-json", "numeric_semantics": "ecmascript-binary64-host-transcendentals-v0.1+lcg32-v1"},
+  "related_objects": ["qeva:1:optimization@2", "qeva:1:local-global@2", "qeva:1:exploration-exploitation@2"],
+  "provenance": {"created": "2026-09-05", "creator": "QEVA mechanism seed", "license": "CC0-1.0", "parent": null, "source_refs": []},
+  "stewardship": {"steward": "QEVA project", "visibility": "public", "publication_state": "public"},
+  "supersedes": null
+}

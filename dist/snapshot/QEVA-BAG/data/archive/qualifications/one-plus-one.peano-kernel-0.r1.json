@@ -1,0 +1,19 @@
+{
+  "qualification_version": "0.1",
+  "id": "qeva-qualification:1:one-plus-one:peano-kernel-0",
+  "revision": 1,
+  "subject": "qeva:1:one-plus-one@1",
+  "dimension": "machine-replay",
+  "outcome": "pass",
+  "method": "Replay the two declared term-rewrite steps with the independent reference verifier and compare the final syntax tree to the expected tree.",
+  "artifact": "certificates/peano-kernel-0/one-plus-one.json",
+  "asserted_by": "QEVA reference verifier 0.4",
+  "asserted": "2026-09-04",
+  "environment": {
+    "checker": "scripts/verify.py",
+    "kernel": "QEVA-Peano-Kernel-0",
+    "trusted_rules": ["add-zero", "add-successor"],
+    "external_runtime_dependencies": 0
+  },
+  "supersedes": null
+}

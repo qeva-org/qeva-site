@@ -1,0 +1,45 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:implication",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Implication",
+  "summary": "Implication connects a condition to what follows from it.",
+  "domains": [
+    "logic"
+  ],
+  "context": {
+    "framework": "propositional language",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared propositional language context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Implication connects a condition to what follows from it.",
+    "exact": "P→Q is a binary connective. Classical material implication, constructive implication, and entailment are related but distinct notions.",
+    "example": "‘If n is divisible by 4, then n is even.’",
+    "caveat": "P→Q inside a language is not the same object as Γ⊢Q or Γ⊨Q."
+  },
+  "dependencies": [
+    "qeva:1:statement@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

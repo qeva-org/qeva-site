@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'">
+  <meta name="description" content="Build and compare bounded mathematical systems with reproducible analyzers and explicit evidence limits.">
+  <title>Mechanism Lab — QEVA</title>
+  <link rel="icon" href="../assets/q.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast shell">
+  <a class="brand" href="../index.html" aria-label="QEVA home"><img src="../assets/q.svg" width="34" height="34" alt=""><span>QEVA</span></a>
+  <nav aria-label="Primary"><a href="../index.html">Explore</a><a href="./index.html" aria-current="page">Lab</a><a href="../history/index.html">History</a><a href="../search/index.html">Search</a></nav>
+</header>
+<main id="main">
+  <section class="lab-command shell" aria-labelledby="lab-title">
+    <div>
+      <p class="kicker">MECHANISM ENGINE</p>
+      <h1 id="lab-title">Change one thing. See what follows.</h1>
+      <p>Select a bounded rule, change its assumptions, and inspect the trace and evidence. Every result states what ran and what it does not prove.</p>
+    </div>
+    <div class="lab-file-actions">
+      <label class="file-button">Import experiment<input id="experiment-file" type="file" accept="application/json,.json"></label>
+      <button class="button ghost" id="export-experiment" type="button">Fork as JSON</button>
+      <button class="button ghost" id="export-run" type="button">Export run</button>
+    </div>
+  </section>
+
+  <section class="mechanism-shell shell" aria-label="Experiment workspace">
+    <aside class="mechanism-controls">
+      <label class="field-label" for="experiment-select">Mechanism</label>
+      <select id="experiment-select" class="mechanism-select"></select>
+      <div class="mechanism-intro">
+        <h2 id="experiment-title">Loading experiment</h2>
+        <p id="experiment-summary"></p>
+        <p class="micro" id="experiment-identity"></p>
+      </div>
+
+      <div class="mode-tabs" role="radiogroup" aria-label="Analysis mode">
+        <button type="button" role="radio" aria-checked="true" data-mode="run">Run</button>
+        <button type="button" role="radio" aria-checked="false" data-mode="diff">Diff</button>
+        <button type="button" role="radio" aria-checked="false" data-mode="observer">Observer</button>
+        <button type="button" role="radio" aria-checked="false" data-mode="sweep">Sweep</button>
+        <button type="button" role="radio" aria-checked="false" data-mode="attack">Attack</button>
+      </div>
+
+      <form id="parameter-form">
+        <fieldset>
+          <legend>Rule and initial conditions</legend>
+          <div id="parameter-controls" class="parameter-controls"></div>
+        </fieldset>
+
+        <fieldset id="observer-controls" class="mode-controls hidden">
+          <legend>Compare observers</legend>
+          <label>First observer<select id="observer-left"><option value="identity">Identity</option><option value="threshold">Threshold</option><option value="bins">Bins</option><option value="parity">Parity</option><option value="remainder">Remainder</option></select></label>
+          <label>Second observer<select id="observer-right"><option value="threshold">Threshold</option><option value="bins">Bins</option><option value="identity">Identity</option><option value="parity">Parity</option><option value="remainder">Remainder</option></select></label>
+          <label>Threshold<input id="observer-threshold" type="number" min="0" max="1" step="0.01" value="0.5" required></label>
+          <label>Bins / modulus<input id="observer-bins" type="number" min="2" max="32" step="1" value="4" required></label>
+        </fieldset>
+
+        <fieldset id="sweep-controls" class="mode-controls hidden">
+          <legend>Parameter sweep</legend>
+          <label>Parameter<select id="sweep-parameter"></select></label>
+          <div class="control-pair"><label>Minimum<input id="sweep-min" type="number" step="any" required></label><label>Maximum<input id="sweep-max" type="number" step="any" required></label></div>
+          <label>Samples<input id="sweep-samples" type="number" min="2" max="64" step="1" value="20" required></label>
+        </fieldset>
+
+        <fieldset id="attack-controls" class="mode-controls hidden">
+          <legend>Bounded claim attack</legend>
+          <label>Cases to inspect<input id="attack-cases" type="number" min="2" max="4096" step="1" value="256" required></label>
+          <label>Step bound<input id="attack-steps" type="number" min="1" max="2000" step="1" value="250" required></label>
+          <label>Target state<input id="attack-target" type="number" min="0" max="32" step="1" value="0" required></label>
+        </fieldset>
+
+        <button class="button run-button" id="run-button" type="submit">Run analysis</button>
+      </form>
+      <p id="lab-error" class="error-message hidden" role="alert"></p>
+    </aside>
+
+    <div class="mechanism-output">
+      <header class="output-head">
+        <div><p class="kicker" id="mode-label">BOUNDED RUN</p><h2 id="output-title">Result</h2></div>
+        <span id="execution-state" class="status" role="status" aria-live="polite">ready</span>
+      </header>
+      <div class="metric-grid" id="metric-grid" aria-label="Run metrics"></div>
+      <figure class="plot-frame">
+        <canvas id="lab-canvas" width="960" height="420" aria-describedby="plot-summary"></canvas>
+        <figcaption id="plot-summary">The visualization will be described here after the experiment runs.</figcaption>
+      </figure>
+      <div id="mode-output" class="mode-output"></div>
+      <section aria-labelledby="evidence-title" class="evidence-panel">
+        <div class="section-title-row"><h2 id="evidence-title">Evidence produced</h2><a href="../protocol/EVIDENCE.md">Evidence classes</a></div>
+        <div id="observation-list" class="observation-list"></div>
+      </section>
+      <details class="trace-details">
+        <summary>Accessible trace and exact records</summary>
+        <div class="trace-grid">
+          <section><h3>Trace</h3><div class="table-scroll"><table><thead><tr><th>Step</th><th>Primary</th><th>Secondary / observed</th></tr></thead><tbody id="trace-body"></tbody></table></div></section>
+          <section><h3>Canonical experiment</h3><pre id="experiment-json"></pre></section>
+        </div>
+      </details>
+      <div class="related-row"><span>Related concepts</span><div id="related-concepts"></div></div>
+    </div>
+  </section>
+
+  <section class="lab-boundary shell">
+    <h2>What this release deliberately does not fake</h2>
+    <p>Local forks and run records can be downloaded now. Accounts, shared workspaces, publication, groups, and AI agents belong to the future live layer and are not simulated by placeholder buttons. Public mathematics remains usable without them.</p>
+  </section>
+</main>
+<footer class="footer shell"><div><strong>QEVA</strong><span>Experiment ≠ proof. Finite search ≠ unbounded theorem.</span></div><nav aria-label="Project"><a href="../experiments/index.json">Experiments</a><a href="../analyzers/index.json">Analyzers</a><a href="../protocol/experiment.schema.json">Schema</a><a href="../about/index.html">About</a></nav></footer>
+<script src="../assets/qeva-data.js"></script>
+<script src="../assets/experiment-data.js"></script>
+<script src="../assets/mechanism-engine.js"></script>
+<script src="../assets/lab.js"></script>
+</body>
+</html>

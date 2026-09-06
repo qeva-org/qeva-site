@@ -1,0 +1,18 @@
+QEVA DATA-AND-ENGINE BAG 0.5
+================================
+
+This BagIt payload preserves canonical mathematical records, protocol files,
+the bounded engine, fixtures, source-rights metadata, and recovery verifiers.
+It intentionally omits the v0.5 HTML/CSS/presentation layer and is not a full
+website source tree. Do not run scripts/release.py or the Runtime/Preservation
+verification tiers here; those belong to the complete outer release.
+
+From this data/ directory, the supported recovery checks are:
+
+  python3 -B scripts/verify.py --tier a
+  node scripts/test_engine.mjs
+
+Tier A verifies canonical records, schemas, revision chains, references,
+relations, qualifications, and proof bindings. The Node fixture suite verifies
+the exact pinned Mechanism Engine behavior. A future presentation should be a
+new, explicitly versioned projection over these recovered records.

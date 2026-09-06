@@ -1,0 +1,53 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:prime",
+  "revision": 3,
+  "kind": "definition",
+  "title": "Prime number",
+  "summary": "A prime is a natural number greater than one whose only positive divisors are one and itself.",
+  "domains": [
+    "number",
+    "arithmetic"
+  ],
+  "context": {
+    "framework": "positive natural numbers with ordinary multiplication and order",
+    "framework_ref": "qeva:1:natural-number@2",
+    "note": "Revision 3 keeps the integer and natural-number scopes consistent and expands divisibility inside the statement."
+  },
+  "assumptions": [
+    {
+      "text": "The natural-number structure and its ordinary multiplication are fixed.",
+      "ref": "qeva:1:natural-number@2"
+    }
+  ],
+  "content": {
+    "plain": "A prime is greater than one and cannot be written as a product except using one or itself.",
+    "exact": "Let 1:=S(0). For p∈N, Prime(p) iff p>1 and for every d∈N, if there exists k∈N with p=d·k, then d=1 or d=p.",
+    "example": "7 is prime. 12 is not prime because 12=3·4 and 3 is neither 1 nor 12.",
+    "caveat": "This is the positive-natural-number definition. Prime elements in general rings require units and associates to be specified."
+  },
+  "dependencies": [
+    "qeva:1:natural-number@2",
+    "qeva:1:multiplication@1",
+    "qeva:1:order@1",
+    "qeva:1:existential-quantifier@1",
+    "qeva:1:universal-quantifier@1",
+    "qeva:1:disjunction@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Corrects the former Z-versus-positive-natural scope mismatch and makes the divisibility predicate explicit. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:prime@2",
+  "legacy_ids": [
+    "qeva:1:definition:prime"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:sequence",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Sequence",
+  "summary": "An ordered family of values indexed by a specified set, usually the natural numbers.",
+  "domains": [
+    "structure",
+    "number",
+    "dynamics"
+  ],
+  "context": {
+    "framework": "standard functions",
+    "framework_ref": "qeva:1:function@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "An index set I and codomain X are specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A sequence is not merely a written list; mathematically it is a function whose input is an index.",
+    "exact": "A sequence in X indexed by I is a function a:I→X. When I=N, the value at n is written a_n.",
+    "example": "The sequence 1,2,4,8,... can be represented by a_n=2^n for n=0,1,2,...",
+    "caveat": "Indexing and order are part of a sequence; the same collection of values can define different sequences, and an infinite sequence is not established by a finite prefix."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:natural-number@1"
+  ],
+  "relations": [
+    {
+      "kind": "supports",
+      "target": "qeva:1:recurrence@2",
+      "note": "Recurrence relations constrain indexed values of sequences."
+    },
+    {
+      "kind": "supports",
+      "target": "qeva:1:periodicity@2",
+      "note": "Sequence periodicity compares values at shifted indices."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:sequence@1",
+  "legacy_ids": [
+    "qeva:1:definition:sequence"
+  ]
+}

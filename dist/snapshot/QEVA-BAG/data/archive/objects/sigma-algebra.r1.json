@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:sigma-algebra",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Sigma-algebra",
+  "summary": "A sigma-algebra is a collection of events stable under complementation and countable combination.",
+  "domains": [
+    "measure-theory",
+    "probability"
+  ],
+  "context": {
+    "framework": "set theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared set theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A sigma-algebra is a collection of events stable under complementation and countable combination.",
+    "exact": "A σ-algebra 𝓕 on Ω is a family of subsets with Ω∈𝓕, A∈𝓕⇒Ω\\A∈𝓕, and A₁,A₂,…∈𝓕⇒⋃ₙAₙ∈𝓕.",
+    "example": "The power set of a finite sample space is a sigma-algebra.",
+    "caveat": "The sigma-algebra specifies which subsets are measurable; not every subset must be admitted in every model."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:subset@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

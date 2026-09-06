@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/corpus/schemas/work.schema.json",
+  "title": "QEVA Reconciled Work 0.2",
+  "description": "One stable work identity containing every immutable provider assertion used to form it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["corpus_version", "id", "identity_basis", "identifiers", "assertions"],
+  "properties": {
+    "corpus_version": {"const": "0.2"},
+    "id": {
+      "type": "string",
+      "pattern": "^qeva-work:sha256:[0-9a-f]{64}$"
+    },
+    "identity_basis": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Normalized exact identifier used for this bounded automatic grouping; not a claim that fuzzy matches are identical."
+    },
+    "identifiers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {"type": "string", "minLength": 1}
+      }
+    },
+    "assertions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/source_assertion"}
+    }
+  },
+  "$defs": {
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class", "basis", "full_text_mirroring", "text_extraction"],
+      "properties": {
+        "class": {
+          "enum": ["metadata-only", "open-license", "public-domain", "restricted", "unknown"]
+        },
+        "basis": {"type": "string", "minLength": 1},
+        "full_text_mirroring": {"type": "boolean"},
+        "text_extraction": {"type": "boolean"}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "class": {"enum": ["metadata-only", "restricted", "unknown"]}
+            },
+            "required": ["class"]
+          },
+          "then": {
+            "properties": {
+              "full_text_mirroring": {"const": false},
+              "text_extraction": {"const": false}
+            }
+          }
+        }
+      ]
+    },
+    "source_assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "provider",
+        "provider_id",
+        "title",
+        "authors",
+        "identifiers",
+        "dates",
+        "retrieved",
+        "raw_sha256",
+        "source_locator",
+        "rights"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^qeva-source-assertion:sha256:[0-9a-f]{64}$"
+        },
+        "provider": {"type": "string", "minLength": 1},
+        "provider_id": {"type": ["string", "null"]},
+        "title": {"type": ["string", "null"]},
+        "authors": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "identifiers": {
+          "type": "object",
+          "additionalProperties": {"type": "string", "minLength": 1}
+        },
+        "dates": {
+          "type": "object",
+          "additionalProperties": {"type": "string", "minLength": 1}
+        },
+        "retrieved": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+        },
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "value"],
+          "properties": {
+            "kind": {"type": "string", "minLength": 1},
+            "value": {"type": "string", "minLength": 1}
+          }
+        },
+        "rights": {"$ref": "#/$defs/rights"},
+        "abstract": {"type": "string", "minLength": 1},
+        "subjects": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "provider_data": {"type": "object"}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "rights": {
+                "properties": {"text_extraction": {"const": false}},
+                "required": ["text_extraction"]
+              }
+            },
+            "required": ["rights"]
+          },
+          "then": {
+            "not": {"required": ["abstract"]}
+          }
+        }
+      ]
+    }
+  }
+}

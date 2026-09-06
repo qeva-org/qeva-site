@@ -1,0 +1,45 @@
+{
+  "experiment_version": "0.1",
+  "id": "qeva-experiment:1:finite-map-cycles",
+  "revision": 1,
+  "title": "Finite map cycles",
+  "summary": "Edit a finite transition rule and exhaustively expose its cycles, fixed points, and basins.",
+  "family": "finite-state",
+  "state_space": {
+    "kind": "finite enumeration",
+    "description": "N named states 0 through N−1 with one outgoing transition each; N is the effective transition-table length.",
+    "numeric_domain": "finite-enumeration",
+    "bounds": [0, "N−1"]
+  },
+  "entities": [
+    {"id": "state", "label": "finite state", "role": "state"}
+  ],
+  "relations": [
+    {"kind": "maps-to", "source": "state", "target": "state", "note": "The transition table assigns exactly one next state."}
+  ],
+  "operations": [
+    {"id": "table-step", "kernel": "finite-map", "kernel_version": "1", "formula": "x_(n+1)=table[x_n]", "inputs": ["state", "table"], "output": "state"}
+  ],
+  "update": {"operation": "table-step", "state": "state", "schedule": "synchronous discrete steps"},
+  "parameters": [
+    {"id": "start", "label": "starting state", "type": "integer", "min": 0, "max": 43, "step": 1, "default": 0, "description": "Initial state for the displayed orbit; the effective table length supplies the tighter upper bound."},
+    {"id": "table", "label": "transition table", "type": "integer-list", "default": "1,2,0,4,4,6,7,6", "description": "N comma-separated next states, each between 0 and N−1; the default has eight states."},
+    {"id": "steps", "label": "step bound", "type": "integer", "min": 1, "max": 128, "step": 1, "default": 24, "description": "Maximum displayed transitions."}
+  ],
+  "initial_conditions": {"state": "start"},
+  "boundary_conditions": ["table has N ≥ 1 entries within the declared run bounds", "every entry is an integer in [0,N−1]"],
+  "observer": {"id": "identity-observer", "version": "1", "kind": "identity", "description": "Retain the exact state label.", "parameters": {}},
+  "randomness": {"algorithm": "none", "version": "1", "seed_parameter": null, "deterministic": true},
+  "run_bounds": {"steps": 128, "max_states": 129, "max_operations": 2048, "timeout_ms": 250},
+  "analyzers": ["qeva-analyzer:1:fixed-point@1", "qeva-analyzer:1:cycle-detector@1", "qeva-analyzer:1:functional-graph@1", "qeva-analyzer:1:candidate-invariant@1", "qeva-analyzer:1:summary@1", "qeva-analyzer:1:conjecture-attack@1"],
+  "outputs": [
+    {"id": "orbit", "label": "displayed orbit", "kind": "finite-state sequence"},
+    {"id": "cycles", "label": "all cycles", "kind": "finite set"},
+    {"id": "basins", "label": "basin assignments", "kind": "finite map"}
+  ],
+  "executable": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "artifact_sha256": "416c020a616a2b56258ecb63d6c1764b392746d73c01b13702be4d2562074423", "kernel": "finite-map", "kernel_version": "1", "representation": "bounded-declarative-json", "numeric_semantics": "finite-enumeration-v0.1"},
+  "related_objects": ["qeva:1:recurrence@2", "qeva:1:periodicity@2", "qeva:1:fixed-point@2", "qeva:1:attractor@2", "qeva:1:graph@1"],
+  "provenance": {"created": "2026-09-05", "creator": "QEVA mechanism seed", "license": "CC0-1.0", "parent": null, "source_refs": []},
+  "stewardship": {"steward": "QEVA project", "visibility": "public", "publication_state": "public"},
+  "supersedes": null
+}

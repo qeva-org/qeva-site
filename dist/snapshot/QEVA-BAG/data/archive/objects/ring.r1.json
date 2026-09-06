@@ -1,0 +1,46 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:ring",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Ring",
+  "summary": "A ring supports addition, multiplication, and additive inverses under compatible laws.",
+  "domains": [
+    "algebra"
+  ],
+  "context": {
+    "framework": "abstract algebra",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared abstract algebra context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A ring supports addition, multiplication, and additive inverses under compatible laws.",
+    "exact": "A ring (R,+,·) has an abelian group under +, associative multiplication, and left/right distributivity; identity and commutativity conventions must be stated.",
+    "example": "Integers form a commutative ring with identity.",
+    "caveat": "Authors differ on whether a ring must have 1."
+  },
+  "dependencies": [
+    "qeva:1:group@1",
+    "qeva:1:operation@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

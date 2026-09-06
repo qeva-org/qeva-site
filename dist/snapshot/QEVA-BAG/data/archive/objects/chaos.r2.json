@@ -1,0 +1,44 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:chaos",
+  "revision": 2,
+  "kind": "terminology",
+  "title": "Chaos",
+  "summary": "A family of precise but non-equivalent dynamical notions rather than one universal predicate.",
+  "domains": [
+    "dynamics",
+    "chaos"
+  ],
+  "context": {
+    "framework": null,
+    "framework_ref": "qeva:1:recurrence@2",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [],
+  "content": {
+    "plain": "“Chaos” has several rigorous definitions. QEVA should name the definition being used instead of treating the word as self-explanatory.",
+    "exact": "QEVA Protocol 0.2 assigns no universal predicate Chaos(T). A record claiming chaos must identify a contextual criterion (for example a named topological, measure-theoretic, symbolic, or metric definition) and state its hypotheses.",
+    "example": "A map may satisfy sensitive dependence while failing some stronger named chaos criterion.",
+    "caveat": "Popular descriptions such as “random-looking” or “small errors grow” are not by themselves mathematical definitions of chaos."
+  },
+  "dependencies": [
+    "qeva:1:recurrence@2",
+    "qeva:1:sensitivity@2"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:chaos@1",
+  "legacy_ids": [
+    "qeva:1:terminology:chaos"
+  ]
+}

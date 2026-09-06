@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:operation",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Operation",
+  "summary": "An operation is a typed map from declared input sorts to a declared output sort.",
+  "domains": [
+    "foundations",
+    "algebra"
+  ],
+  "context": {
+    "framework": "typed structural mathematics",
+    "framework_ref": "qeva:1:function@1",
+    "note": "Revision 2 admits heterogeneous and external operations while retaining internal n-ary operations as a special case."
+  },
+  "assumptions": [
+    {
+      "text": "Every input and output sort is declared.",
+      "ref": "qeva:1:function@1"
+    }
+  ],
+  "content": {
+    "plain": "An operation takes inputs of declared kinds and returns an output of a declared kind; not every useful operation is closed on one set.",
+    "exact": "An n-ary typed operation is a function ω:X₁×⋯×Xₙ→Y. It is internal on X when X₁=⋯=Xₙ=Y=X. An external operation, such as scalar multiplication F×V→V, may have different input and output sorts.",
+    "example": "Integer addition Z×Z→Z is internal; scalar multiplication F×V→V is heterogeneous.",
+    "caveat": "Partial, relational, multivalued, stochastic, and higher operations require additional structure beyond this total-function formulation."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:ordered-pair@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Repairs the single-sorted definition that could not support scalar actions used elsewhere in the graph. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:operation@1",
+  "legacy_ids": []
+}

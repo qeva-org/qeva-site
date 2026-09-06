@@ -1,0 +1,48 @@
+{
+  "experiment_version": "0.1",
+  "id": "qeva-experiment:1:coarse-grained-signal",
+  "revision": 1,
+  "title": "Coarse-grained signal",
+  "summary": "Hold a deterministic signal fixed while changing how many fine samples each observation combines.",
+  "family": "signal",
+  "state_space": {
+    "kind": "finite real-valued signal",
+    "description": "A bounded binary64 sequence indexed by a finite sample position.",
+    "numeric_domain": "binary64",
+    "bounds": [0, 1]
+  },
+  "entities": [
+    {"id": "sample", "label": "fine sample", "role": "state"},
+    {"id": "block", "label": "observed block", "role": "macrostate"}
+  ],
+  "relations": [
+    {"kind": "observed-as", "source": "sample", "target": "block", "note": "A block is represented by its arithmetic mean."}
+  ],
+  "operations": [
+    {"id": "make-signal", "kernel": "coarse-signal", "kernel_version": "1", "formula": "t_i=i/(count−1) for count>1, else 0; u_i=LCG32(seed)_i/2^32; s_i=clamp(0.5+0.23 sin(4πt_i)+0.10 sin(1.3πt_i)+0.18 noise (2u_i−1))", "inputs": ["i", "count", "noise", "seed"], "output": "sample"},
+    {"id": "block-mean", "kernel": "coarse-signal", "kernel_version": "1", "formula": "C_k(s)=mean of each consecutive k-sample block", "inputs": ["sample", "block_size"], "output": "block"}
+  ],
+  "update": {"operation": "make-signal then block-mean", "state": "sample", "schedule": "generate finite signal, then observe blocks"},
+  "parameters": [
+    {"id": "block_size", "label": "block size", "type": "integer", "min": 1, "max": 40, "step": 1, "default": 8, "description": "Fine samples combined into one macro-observation."},
+    {"id": "noise", "label": "fine variation", "type": "number", "min": 0, "max": 1, "step": 0.01, "default": 0.45, "description": "Amplitude of deterministic pseudo-random fine variation."},
+    {"id": "count", "label": "sample count", "type": "integer", "min": 60, "max": 480, "step": 1, "default": 240, "description": "Number of fine samples."},
+    {"id": "seed", "label": "seed", "type": "integer", "min": 1, "max": 4294967295, "step": 1, "default": 137, "description": "Seed for the pinned LCG."}
+  ],
+  "initial_conditions": {"phase": 0},
+  "boundary_conditions": ["signal values are clamped to [0,1]", "incomplete final blocks use their available samples"],
+  "observer": {"id": "block-mean-observer", "version": "1", "kind": "block-mean", "description": "Replace each consecutive block by its arithmetic mean.", "parameters": {"size_parameter": "block_size"}},
+  "randomness": {"algorithm": "lcg32-numerical-recipes", "version": "1", "seed_parameter": "seed", "deterministic": true},
+  "run_bounds": {"steps": 480, "max_states": 960, "max_operations": 4000, "timeout_ms": 250},
+  "analyzers": ["qeva-analyzer:1:candidate-invariant@1", "qeva-analyzer:1:summary@1", "qeva-analyzer:1:conjecture-attack@1"],
+  "outputs": [
+    {"id": "fine", "label": "fine signal", "kind": "binary64 sequence"},
+    {"id": "coarse", "label": "coarse signal", "kind": "binary64 sequence"},
+    {"id": "discarded_mse", "label": "mean squared discarded detail", "kind": "binary64 scalar"}
+  ],
+  "executable": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "artifact_sha256": "416c020a616a2b56258ecb63d6c1764b392746d73c01b13702be4d2562074423", "kernel": "coarse-signal", "kernel_version": "1", "representation": "bounded-declarative-json", "numeric_semantics": "ecmascript-binary64-host-transcendentals-v0.1+lcg32-v1"},
+  "related_objects": ["qeva:1:coarse-graining@2", "qeva:1:signal-noise@2", "qeva:1:information@1", "qeva:1:hierarchy@2"],
+  "provenance": {"created": "2026-09-05", "creator": "QEVA mechanism seed", "license": "CC0-1.0", "parent": null, "source_refs": []},
+  "stewardship": {"steward": "QEVA project", "visibility": "public", "publication_state": "public"},
+  "supersedes": null
+}

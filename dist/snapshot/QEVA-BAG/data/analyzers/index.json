@@ -1,0 +1,65 @@
+[
+  {
+    "ref": "qeva-analyzer:1:candidate-invariant@1",
+    "current": true,
+    "title": "Candidate invariant summarizer",
+    "purpose": "Propose repeated class, parity, range, or aggregate properties for later proof or attack.",
+    "path": "manifests/candidate-invariant.r1.json",
+    "canonical_sha256": "b1386bd57cb143cf992e4e6c21d8c020b1dea4fdb0ab1404e34f001c5ede8733",
+    "artifact_sha256": "f7f27918306dcb620f948187a0fb2cbfef509a3609f1a2bca1329304f0bd8268"
+  },
+  {
+    "ref": "qeva-analyzer:1:conjecture-attack@1",
+    "current": true,
+    "title": "Bounded conjecture attacker",
+    "purpose": "Search one explicitly finite domain for a counterexample and preserve the exact scope even when none is found.",
+    "path": "manifests/conjecture-attack.r1.json",
+    "canonical_sha256": "e35d838f039cd7e64c17eb5e9a9610dc34f03c223b4acc8fb437894f2f0c5141",
+    "artifact_sha256": "128401b4bf9630ce6e5366fc2127d76143788875b352812abf7befc961f60b8c"
+  },
+  {
+    "ref": "qeva-analyzer:1:cycle-detector@1",
+    "current": true,
+    "title": "Cycle detector",
+    "purpose": "Detect exact repeated states in finite/integer traces and tolerance-dependent candidate periods in binary64 traces.",
+    "path": "manifests/cycle-detector.r1.json",
+    "canonical_sha256": "e37e6d12f8aca9da22306f6a11bf85dd1ca044e336fb3cdd5734638d094eb1d8",
+    "artifact_sha256": "1cbf4560197d8839b443d89733d51f762bfffc403cc23ce31336b2a36fa5c46b"
+  },
+  {
+    "ref": "qeva-analyzer:1:fixed-point@1",
+    "current": true,
+    "title": "Fixed-point detector",
+    "purpose": "Report exact fixed states for finite maps and declared analytic candidates for supported numeric kernels.",
+    "path": "manifests/fixed-point.r1.json",
+    "canonical_sha256": "1aae28026af4d41815666f008adb9d604dcd715f2c6be177a20cd0301a096714",
+    "artifact_sha256": "fcaddac846bed8c254734fea32d07f16f18faac3dc9933c2fa0c49c9355fec0d"
+  },
+  {
+    "ref": "qeva-analyzer:1:functional-graph@1",
+    "current": true,
+    "title": "Finite functional-graph analyzer",
+    "purpose": "Exhaustively compute cycles, weak components, and basin assignments for a finite total map.",
+    "path": "manifests/functional-graph.r1.json",
+    "canonical_sha256": "4c746116557f93a0246b67c1be1bf1de5b557e3360cb4c374cdbbe0660d5e843",
+    "artifact_sha256": "742c62cdf32da914e398bd45c04a23e1dbd23615302d7bfc72ec23c8f69d4be0"
+  },
+  {
+    "ref": "qeva-analyzer:1:perturbation-growth@1",
+    "current": true,
+    "title": "Perturbation growth summary",
+    "purpose": "Measure finite binary64 separation between two recorded trajectories without declaring chaos.",
+    "path": "manifests/perturbation-growth.r1.json",
+    "canonical_sha256": "dcb5462b1b900ad80f3a1da236ca1790ab274f4a95d97e2b7cf31bb7cf2d60e5",
+    "artifact_sha256": "ab28e0285d1abd07c83891a1fddd02c38f868ab95d6e34703fb3e10ee896271b"
+  },
+  {
+    "ref": "qeva-analyzer:1:summary@1",
+    "current": true,
+    "title": "Bounded run summary",
+    "purpose": "Describe completion state, bounds, extrema, and output size for every supported experiment family.",
+    "path": "manifests/summary.r1.json",
+    "canonical_sha256": "f1cda9cfb93cc6d575e2a0ade5eaefffd96c3276148bf391642a9b98c18f3653",
+    "artifact_sha256": "c66af9c51ec305ed58b38c65df769a96214281039472a3c55a6b2689ea6b7e29"
+  }
+]

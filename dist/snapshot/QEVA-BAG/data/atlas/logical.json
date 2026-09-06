@@ -1,0 +1,4665 @@
+{
+  "release": "0.5.0",
+  "scope": "current exact revisions; legacy logical edges remain visibly candidate until qualified",
+  "concepts": [
+    {
+      "id": "addition",
+      "title": "Addition",
+      "kind": "definition",
+      "lane": "number",
+      "stage": 2,
+      "qeva": "qeva:1:addition@1",
+      "plain": "Addition combines counts by repeated successor.",
+      "question": "What does repeated next do to a count?",
+      "dependencies": [
+        "qeva:1:natural-number@1",
+        "qeva:1:recurrence@2",
+        "qeva:1:operation@1"
+      ],
+      "used_by": [
+        "qeva:1:entropy@1",
+        "qeva:1:halving@2",
+        "qeva:1:integer@1",
+        "qeva:1:multiplication@1",
+        "qeva:1:natural-number@2",
+        "qeva:1:one-plus-one@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "algorithm",
+      "title": "Algorithm",
+      "kind": "definition",
+      "lane": "computation",
+      "stage": 3,
+      "qeva": "qeva:1:algorithm@1",
+      "plain": "An algorithm is a finite description of an effective step-by-step procedure for a class of inputs.",
+      "question": "Can every step be executed mechanically?",
+      "dependencies": [
+        "qeva:1:expression@1",
+        "qeva:1:operation@1",
+        "qeva:1:recurrence@2"
+      ],
+      "used_by": [
+        "qeva:1:computability@1",
+        "qeva:1:decidability@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "attractor",
+      "title": "Attractor",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 7,
+      "qeva": "qeva:1:attractor@2",
+      "plain": "An attractor is long-run structure toward which many permitted starting states move.",
+      "question": "An attractor is an invariant set approached by trajectories from a nontrivial basin, under a specified definition.",
+      "dependencies": [
+        "qeva:1:invariant@2",
+        "qeva:1:metric-space@1",
+        "qeva:1:recurrence@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom",
+      "title": "Axiom",
+      "kind": "axiom",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:axiom@1",
+      "plain": "An axiom is a declared starting statement or statement scheme of a formal theory.",
+      "question": "What is being granted before proof begins?",
+      "dependencies": [
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-choice@1",
+        "qeva:1:axiom-empty-set@1",
+        "qeva:1:axiom-extensionality@1",
+        "qeva:1:axiom-foundation@1",
+        "qeva:1:axiom-infinity@1",
+        "qeva:1:axiom-pairing@1",
+        "qeva:1:axiom-power-set@1",
+        "qeva:1:axiom-union@1",
+        "qeva:1:formal-system@2",
+        "qeva:1:natural-number@2",
+        "qeva:1:proof@1",
+        "qeva:1:schema-replacement@1",
+        "qeva:1:schema-separation@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-choice",
+      "title": "Axiom of choice",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-choice@1",
+      "plain": "A simultaneous choice can be made from every member of a family of nonempty sets.",
+      "question": "May arbitrary nonempty families be selected from simultaneously?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-empty-set",
+      "title": "Axiom of empty set",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-empty-set@1",
+      "plain": "There exists a set with no members.",
+      "question": "Does a memberless set exist?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:empty-set@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-infinity@1",
+        "qeva:1:empty-set@2",
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-extensionality",
+      "title": "Axiom of extensionality",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-extensionality@1",
+      "plain": "Two sets are equal when they have exactly the same members.",
+      "question": "When do membership patterns force equality?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:identity@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:empty-set@2",
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-foundation",
+      "title": "Axiom of foundation",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-foundation@1",
+      "plain": "Every nonempty set has a member disjoint from it, blocking ordinary descending membership loops.",
+      "question": "Must membership descend to a base?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:empty-set@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-infinity",
+      "title": "Axiom of infinity",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-infinity@1",
+      "plain": "At least one inductive set exists, supplying enough sets to model the natural numbers.",
+      "question": "Does an inductively closed set exist?",
+      "dependencies": [
+        "qeva:1:axiom-empty-set@1",
+        "qeva:1:axiom-pairing@1",
+        "qeva:1:axiom-union@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-pairing",
+      "title": "Axiom of pairing",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-pairing@1",
+      "plain": "For any two sets, a set exists whose members are exactly those two sets.",
+      "question": "Can two available sets be collected together?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:disjunction@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-infinity@1",
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-power-set",
+      "title": "Axiom of power set",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-power-set@1",
+      "plain": "For every set, there is a set containing exactly all of its subsets.",
+      "question": "Can every subcollection be collected as an object?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:subset@1",
+        "qeva:1:membership@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "axiom-union",
+      "title": "Axiom of union",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:axiom-union@1",
+      "plain": "The members of members of a set can be gathered into one set.",
+      "question": "Can one membership layer be flattened?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:conjunction@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-infinity@1",
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "bijection",
+      "title": "Bijection",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 3,
+      "qeva": "qeva:1:bijection@1",
+      "plain": "A bijection pairs two collections without omission or collision.",
+      "question": "Can every element be paired exactly once?",
+      "dependencies": [
+        "qeva:1:injective-function@1",
+        "qeva:1:surjective-function@1"
+      ],
+      "used_by": [
+        "qeva:1:cardinality@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "cardinality",
+      "title": "Cardinality",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 4,
+      "qeva": "qeva:1:cardinality@1",
+      "plain": "Cardinality compares collections by whether their elements can be paired exactly.",
+      "question": "Can these collections be paired without loss?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:bijection@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "category-theoretic-foundations",
+      "title": "Category-theoretic foundations",
+      "kind": "framework",
+      "lane": "categories",
+      "stage": 2,
+      "qeva": "qeva:1:category-theoretic-foundations@1",
+      "plain": "Category-theoretic foundations emphasize objects, composable arrows, and invariance under structure-preserving equivalence.",
+      "question": "Which structure is visible through maps and composition?",
+      "dependencies": [
+        "qeva:1:object@1",
+        "qeva:1:function@1",
+        "qeva:1:composition@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "chaos",
+      "title": "Chaos",
+      "kind": "terminology",
+      "lane": "dynamics",
+      "stage": 7,
+      "qeva": "qeva:1:chaos@2",
+      "plain": "“Chaos” has several rigorous definitions. QEVA should name the definition being used instead of treating the word as self-explanatory.",
+      "question": "A family of precise but non-equivalent dynamical notions rather than one universal predicate.",
+      "dependencies": [
+        "qeva:1:recurrence@2",
+        "qeva:1:sensitivity@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "chirality",
+      "title": "Chirality",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 6,
+      "qeva": "qeva:1:chirality@2",
+      "plain": "A chiral object has a handedness: mirroring changes it in a way that allowed orientation-preserving motions cannot undo.",
+      "question": "Failure of an object to be superimposable on its mirror image using only orientation-preserving transformations.",
+      "dependencies": [
+        "qeva:1:group-action@1",
+        "qeva:1:symmetry@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "classical-logic",
+      "title": "Classical logic",
+      "kind": "framework",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:classical-logic@1",
+      "plain": "Classical logic is the branch that validates principles such as excluded middle and double-negation elimination.",
+      "question": "Which classically valid moves are admitted?",
+      "dependencies": [
+        "qeva:1:first-order-logic@1",
+        "qeva:1:excluded-middle@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "closed-form",
+      "title": "Closed form",
+      "kind": "terminology",
+      "lane": "analysis",
+      "stage": 5,
+      "qeva": "qeva:1:closed-form@2",
+      "plain": "“Closed form” usually means an explicit formula, but what operations are allowed differs by field and author.",
+      "question": "A widely used but non-universal label for formulas considered explicit relative to an allowed vocabulary of operations/functions.",
+      "dependencies": [
+        "qeva:1:expression@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "coarse-graining",
+      "title": "Coarse-graining",
+      "kind": "definition",
+      "lane": "information",
+      "stage": 6,
+      "qeva": "qeva:1:coarse-graining@2",
+      "plain": "Coarse-graining keeps distinctions relevant at one scale or task and merges others.",
+      "question": "A many-to-one map from fine states to a smaller set of macro-descriptions, intentionally discarding distinctions.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:grouping@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "collatz-conjecture",
+      "title": "Collatz conjecture",
+      "kind": "conjecture",
+      "lane": "frontier",
+      "stage": 8,
+      "qeva": "qeva:1:collatz-conjecture@2",
+      "plain": "Every tested starting value appears eventually to enter the 1→4→2→1 cycle, but no proof is known for all positive integers.",
+      "question": "The open claim that every positive integer orbit under the Collatz map eventually reaches 1.",
+      "dependencies": [
+        "qeva:1:collatz-map@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "collatz-map",
+      "title": "Collatz map",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 5,
+      "qeva": "qeva:1:collatz-map@2",
+      "plain": "Collatz dynamics repeatedly applies one of two arithmetic rules depending on parity.",
+      "question": "A piecewise integer map sending even n to n/2 and odd n to 3n+1.",
+      "dependencies": [
+        "qeva:1:natural-number@1",
+        "qeva:1:parity@2",
+        "qeva:1:recurrence@2"
+      ],
+      "used_by": [
+        "qeva:1:collatz-conjecture@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "completeness",
+      "title": "Completeness",
+      "kind": "terminology",
+      "lane": "logic",
+      "stage": 3,
+      "qeva": "qeva:1:completeness@1",
+      "plain": "Completeness can mean that every semantic consequence is provable, or that a space has no missing limits; the meanings must be named.",
+      "question": "Complete with respect to which missing possibility?",
+      "dependencies": [
+        "qeva:1:derivability@2",
+        "qeva:1:satisfaction@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "complex-number",
+      "title": "Complex number",
+      "kind": "definition",
+      "lane": "number",
+      "stage": 4,
+      "qeva": "qeva:1:complex-number@2",
+      "plain": "Represent a complex number by a pair of real coordinates and define arithmetic so that the second coordinate behaves like a square root of minus one.",
+      "question": "What changes when rotation and magnitude share one number system?",
+      "dependencies": [
+        "qeva:1:real-number@1",
+        "qeva:1:ordered-pair@1",
+        "qeva:1:operation@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "composition",
+      "title": "Composition",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:composition@1",
+      "plain": "Composition feeds the output of one map into the input of another.",
+      "question": "What happens when transformations are chained?",
+      "dependencies": [
+        "qeva:1:function@1"
+      ],
+      "used_by": [
+        "qeva:1:category-theoretic-foundations@1",
+        "qeva:1:group-action@1",
+        "qeva:1:group@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "computability",
+      "title": "Computability",
+      "kind": "definition",
+      "lane": "computation",
+      "stage": 4,
+      "qeva": "qeva:1:computability@1",
+      "plain": "Computability asks which input-output tasks can be carried out by an idealized finite procedure.",
+      "question": "Which transformations admit an effective procedure?",
+      "dependencies": [
+        "qeva:1:algorithm@1",
+        "qeva:1:function@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "conjunction",
+      "title": "Conjunction",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:conjunction@1",
+      "plain": "Conjunction joins requirements that must hold together.",
+      "question": "Which conditions must hold together?",
+      "dependencies": [
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-union@1",
+        "qeva:1:schema-separation@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "consistency",
+      "title": "Consistency",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 3,
+      "qeva": "qeva:1:consistency@1",
+      "plain": "A theory is consistent when its rules do not derive an explicit contradiction.",
+      "question": "Can this system derive a contradiction?",
+      "dependencies": [
+        "qeva:1:proof@1",
+        "qeva:1:negation@1",
+        "qeva:1:formal-system@2"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "constructive-logic",
+      "title": "Constructive logic",
+      "kind": "framework",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:constructive-logic@1",
+      "plain": "Constructive logic treats a proof as information and does not accept every classical principle without a construction.",
+      "question": "What computational content must a proof carry?",
+      "dependencies": [
+        "qeva:1:first-order-logic@1",
+        "qeva:1:proof@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "continuity",
+      "title": "Continuity",
+      "kind": "definition",
+      "lane": "analysis",
+      "stage": 4,
+      "qeva": "qeva:1:continuity@2",
+      "plain": "A continuous map does not tear apart the chosen topology: inverse images of observable open regions remain open.",
+      "question": "Continuity formalizes preservation of nearness or open-set structure under a map.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:topological-space@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "decidability",
+      "title": "Decidability",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 3,
+      "qeva": "qeva:1:decidability@1",
+      "plain": "A decision problem is decidable when one algorithm always halts and returns the correct yes/no answer.",
+      "question": "Is there a terminating correct procedure for every input?",
+      "dependencies": [
+        "qeva:1:algorithm@1",
+        "qeva:1:statement@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "definition",
+      "title": "Definition",
+      "kind": "definition",
+      "lane": "meta",
+      "stage": 1,
+      "qeva": "qeva:1:definition@1",
+      "plain": "A definition fixes how a new expression is to be used in terms of already available structure.",
+      "question": "Which old structure fixes the new term?",
+      "dependencies": [
+        "qeva:1:expression@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "dependent-type-theory",
+      "title": "Dependent type theory",
+      "kind": "framework",
+      "lane": "types",
+      "stage": 2,
+      "qeva": "qeva:1:dependent-type-theory@1",
+      "plain": "Dependent types may vary with terms, letting statements and proofs live in one typed language.",
+      "question": "Can the specification depend on the value?",
+      "dependencies": [
+        "qeva:1:type@1",
+        "qeva:1:proof@1",
+        "qeva:1:function@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "derivability",
+      "title": "Derivability",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 3,
+      "qeva": "qeva:1:derivability@2",
+      "plain": "Writing Gamma |- P means that P can be reached by a finite sequence of allowed proof steps from the declared axioms and premises.",
+      "question": "The existence of a finite proof of a statement from declared assumptions under declared inference rules.",
+      "dependencies": [
+        "qeva:1:formal-system@2",
+        "qeva:1:proof@1"
+      ],
+      "used_by": [
+        "qeva:1:completeness@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "derivative",
+      "title": "Derivative",
+      "kind": "definition",
+      "lane": "analysis",
+      "stage": 5,
+      "qeva": "qeva:1:derivative@1",
+      "plain": "A derivative is the best local linear rate of change when the relevant limit exists.",
+      "question": "Which rate of change survives the limiting process?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:limit@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "discreteness",
+      "title": "Discrete structure",
+      "kind": "definition",
+      "lane": "discrete",
+      "stage": 3,
+      "qeva": "qeva:1:discreteness@2",
+      "plain": "A discrete description treats states as individually separable rather than forcing arbitrarily close intermediate states.",
+      "question": "A precise notion of discreteness depends on the ambient structure; in topology, a discrete space has every singleton open.",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:topological-space@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "disjunction",
+      "title": "Disjunction",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:disjunction@1",
+      "plain": "Disjunction joins alternatives and says that at least one is admitted under the chosen logic.",
+      "question": "Which alternative can be established?",
+      "dependencies": [
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-pairing@1",
+        "qeva:1:prime@3"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "distinction",
+      "title": "Distinction",
+      "kind": "primitive",
+      "lane": "meta",
+      "stage": 0,
+      "qeva": "qeva:1:distinction@1",
+      "plain": "Reasoning begins by allowing one state, mark, or object to be told apart from another.",
+      "question": "What difference is observable, and by which test?",
+      "dependencies": [],
+      "used_by": [
+        "qeva:1:object@1",
+        "qeva:1:symbol@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "empty-set",
+      "title": "Empty set",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:empty-set@2",
+      "plain": "The empty set has no members. Its existence is theory-relative, and extensionality makes it unique when it exists.",
+      "question": "What remains when no element qualifies?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:axiom-empty-set@1",
+        "qeva:1:axiom-extensionality@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "equivalence",
+      "title": "Equivalence relation",
+      "kind": "definition",
+      "lane": "meta",
+      "stage": 2,
+      "qeva": "qeva:1:equivalence@2",
+      "plain": "A relation is an equivalence relation when it behaves like equality with respect to reflexivity, symmetry, and transitivity.",
+      "question": "A precise way to declare when two elements are treated as the same for a specified purpose.",
+      "dependencies": [
+        "qeva:1:identity@1",
+        "qeva:1:relation@1",
+        "qeva:1:set@1"
+      ],
+      "used_by": [
+        "qeva:1:grouping@2",
+        "qeva:1:integer@1",
+        "qeva:1:rational@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "existential-quantifier",
+      "title": "Existential quantifier",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:existential-quantifier@1",
+      "plain": "Existential quantification asserts that at least one permitted witness satisfies a condition.",
+      "question": "What witness makes the claim hold?",
+      "dependencies": [
+        "qeva:1:statement@1",
+        "qeva:1:model@1"
+      ],
+      "used_by": [
+        "qeva:1:first-order-logic@1",
+        "qeva:1:parity@3",
+        "qeva:1:prime@3",
+        "qeva:1:stability@3",
+        "qeva:1:surjective-function@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "exploration-exploitation",
+      "title": "Exploration–exploitation tradeoff",
+      "kind": "definition",
+      "lane": "computation",
+      "stage": 7,
+      "qeva": "qeva:1:exploration-exploitation@2",
+      "plain": "Exploitation uses what currently looks best; exploration spends effort learning whether something else is better.",
+      "question": "Sequential decision systems often trade using current best information against actions that improve information about alternatives.",
+      "dependencies": [
+        "qeva:1:optimization@2",
+        "qeva:1:probability-space@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "expression",
+      "title": "Expression",
+      "kind": "definition",
+      "lane": "meta",
+      "stage": 1,
+      "qeva": "qeva:1:expression@1",
+      "plain": "An expression is a finite arrangement of symbols built by explicit formation rules.",
+      "question": "Which strings are well formed?",
+      "dependencies": [
+        "qeva:1:symbol@1"
+      ],
+      "used_by": [
+        "qeva:1:algorithm@1",
+        "qeva:1:closed-form@2",
+        "qeva:1:definition@1",
+        "qeva:1:formal-system@2",
+        "qeva:1:statement@1",
+        "qeva:1:type@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "field",
+      "title": "Field",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 3,
+      "qeva": "qeva:1:field@1",
+      "plain": "A field is a commutative arithmetic system where every nonzero element has a multiplicative inverse.",
+      "question": "Where is division by every nonzero element possible?",
+      "dependencies": [
+        "qeva:1:ring@1",
+        "qeva:1:group@1"
+      ],
+      "used_by": [
+        "qeva:1:real-number@1",
+        "qeva:1:vector-space@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "first-order-logic",
+      "title": "First-order logic",
+      "kind": "framework",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:first-order-logic@1",
+      "plain": "First-order logic quantifies over objects while keeping predicates and functions in a fixed signature.",
+      "question": "What follows when quantification ranges only over objects?",
+      "dependencies": [
+        "qeva:1:universal-quantifier@1",
+        "qeva:1:existential-quantifier@1",
+        "qeva:1:formal-system@2",
+        "qeva:1:model@1"
+      ],
+      "used_by": [
+        "qeva:1:classical-logic@1",
+        "qeva:1:constructive-logic@1",
+        "qeva:1:natural-number@2",
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "fixed-point",
+      "title": "Fixed point",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 5,
+      "qeva": "qeva:1:fixed-point@2",
+      "plain": "A fixed point reproduces itself after one application of the update rule.",
+      "question": "A fixed point is a state left unchanged by a map.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:stability@3"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "formal-system",
+      "title": "Formal system",
+      "kind": "formal-system",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:formal-system@2",
+      "plain": "A formal system fixes the symbols you may write, the starting statements you accept, and the rules by which new statements may be derived.",
+      "question": "A declared language together with axioms and inference rules used to determine which expressions count as derivable.",
+      "dependencies": [
+        "qeva:1:axiom@1",
+        "qeva:1:expression@1",
+        "qeva:1:inference-rule@1"
+      ],
+      "used_by": [
+        "qeva:1:consistency@1",
+        "qeva:1:derivability@2",
+        "qeva:1:first-order-logic@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "function",
+      "title": "Function",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:function@1",
+      "plain": "A function assigns exactly one output to each permitted input.",
+      "question": "Does every input receive one output?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:relation@1",
+        "qeva:1:ordered-pair@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-choice@1",
+        "qeva:1:category-theoretic-foundations@1",
+        "qeva:1:coarse-graining@2",
+        "qeva:1:composition@1",
+        "qeva:1:computability@1",
+        "qeva:1:continuity@2",
+        "qeva:1:dependent-type-theory@1",
+        "qeva:1:derivative@1",
+        "qeva:1:fixed-point@2",
+        "qeva:1:group-action@1",
+        "qeva:1:injective-function@1",
+        "qeva:1:integral@2",
+        "qeva:1:invariant@2",
+        "qeva:1:linearity@1",
+        "qeva:1:metric-space@1",
+        "qeva:1:nonlinearity@2",
+        "qeva:1:operation@2",
+        "qeva:1:optimization@3",
+        "qeva:1:quasiperiodicity@2",
+        "qeva:1:random-variable@1",
+        "qeva:1:schema-replacement@1",
+        "qeva:1:sequence@2",
+        "qeva:1:stability@3",
+        "qeva:1:surjective-function@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "graph",
+      "title": "Graph",
+      "kind": "definition",
+      "lane": "discrete",
+      "stage": 3,
+      "qeva": "qeva:1:graph@1",
+      "plain": "A graph records objects and pairwise connections while discarding most other detail.",
+      "question": "Which connections survive the abstraction?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:relation@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "group",
+      "title": "Group",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 3,
+      "qeva": "qeva:1:group@1",
+      "plain": "A group captures reversible composition with an identity.",
+      "question": "Which transformations can be composed and undone?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:operation@1",
+        "qeva:1:composition@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:field@1",
+        "qeva:1:group-action@1",
+        "qeva:1:ring@1",
+        "qeva:1:vector-space@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "group-action",
+      "title": "Group action",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 4,
+      "qeva": "qeva:1:group-action@1",
+      "plain": "A group action describes how reversible transformations move objects while respecting composition.",
+      "question": "How does algebraic composition become transformation?",
+      "dependencies": [
+        "qeva:1:group@1",
+        "qeva:1:function@1",
+        "qeva:1:composition@1"
+      ],
+      "used_by": [
+        "qeva:1:chirality@2",
+        "qeva:1:invariant@2",
+        "qeva:1:symmetry@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "grouping",
+      "title": "Grouping / partition",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 4,
+      "qeva": "qeva:1:grouping@2",
+      "plain": "Grouping makes some distinctions irrelevant by assigning multiple objects to the same class.",
+      "question": "A precise grouping can be modeled as a partition or as a map assigning objects to classes.",
+      "dependencies": [
+        "qeva:1:equivalence@2",
+        "qeva:1:set@1"
+      ],
+      "used_by": [
+        "qeva:1:coarse-graining@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "halving",
+      "title": "Halving",
+      "kind": "concept",
+      "lane": "number",
+      "stage": 3,
+      "qeva": "qeva:1:halving@2",
+      "plain": "“Half of x” is not one universal operation. It depends on what x is and which operations exist in its mathematical structure.",
+      "question": "The inverse problem to doubling, defined only when the ambient structure makes division by 2 meaningful or solvable.",
+      "dependencies": [
+        "qeva:1:addition@1",
+        "qeva:1:operation@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "hierarchy",
+      "title": "Hierarchy and scale",
+      "kind": "definition",
+      "lane": "structure",
+      "stage": 5,
+      "qeva": "qeva:1:hierarchy@2",
+      "plain": "A hierarchical description says what belongs above, below, inside, or at a coarser scale—and how levels connect.",
+      "question": "A hierarchy organizes objects or descriptions across ordered or nested levels with explicit relations between levels.",
+      "dependencies": [
+        "qeva:1:order@1",
+        "qeva:1:relation@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "identity",
+      "title": "Identity",
+      "kind": "primitive",
+      "lane": "meta",
+      "stage": 0,
+      "qeva": "qeva:1:identity@1",
+      "plain": "Identity states that two references pick out the same object within a declared framework.",
+      "question": "What exactly counts as the same?",
+      "dependencies": [
+        "qeva:1:object@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-extensionality@1",
+        "qeva:1:category-theoretic-foundations@1",
+        "qeva:1:definition@1",
+        "qeva:1:equivalence@2",
+        "qeva:1:fixed-point@2",
+        "qeva:1:group@1",
+        "qeva:1:injective-function@1",
+        "qeva:1:metric-space@1",
+        "qeva:1:order@1",
+        "qeva:1:ordered-pair@1",
+        "qeva:1:relation@1",
+        "qeva:1:set@1",
+        "qeva:1:symmetry@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "implication",
+      "title": "Implication",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:implication@1",
+      "plain": "Implication connects a condition to what follows from it.",
+      "question": "Under what condition does the conclusion follow?",
+      "dependencies": [
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:subset@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "inference-rule",
+      "title": "Inference rule",
+      "kind": "inference-rule",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:inference-rule@1",
+      "plain": "An inference rule licenses a transition from specified premises to a conclusion.",
+      "question": "Which step is licensed, from which premises?",
+      "dependencies": [
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:formal-system@2",
+        "qeva:1:induction@1",
+        "qeva:1:proof@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "injective-function",
+      "title": "Injection",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 3,
+      "qeva": "qeva:1:injective-function@1",
+      "plain": "An injective function never sends two different inputs to the same output.",
+      "question": "Can the output recover the input uniquely?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:bijection@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "integer",
+      "title": "Integer",
+      "kind": "definition",
+      "lane": "number",
+      "stage": 3,
+      "qeva": "qeva:1:integer@1",
+      "plain": "Integers extend natural numbers with additive opposites.",
+      "question": "How can subtraction always be represented?",
+      "dependencies": [
+        "qeva:1:natural-number@1",
+        "qeva:1:equivalence@2",
+        "qeva:1:addition@1"
+      ],
+      "used_by": [
+        "qeva:1:parity@3",
+        "qeva:1:rational@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "invariant",
+      "title": "Invariant",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 5,
+      "qeva": "qeva:1:invariant@2",
+      "plain": "An invariant deliberately forgets changes that the chosen transformations are allowed to make.",
+      "question": "A quantity or property unchanged by a specified family of transformations.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:group-action@1",
+        "qeva:1:symmetry@2"
+      ],
+      "used_by": [
+        "qeva:1:attractor@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "excluded-middle",
+      "title": "Law of excluded middle",
+      "kind": "axiom",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:excluded-middle@1",
+      "plain": "For every statement P, classical logic admits P or not-P.",
+      "question": "May every proposition be split into P or not-P?",
+      "dependencies": [
+        "qeva:1:statement@1",
+        "qeva:1:negation@1"
+      ],
+      "used_by": [
+        "qeva:1:classical-logic@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "limit",
+      "title": "Limit",
+      "kind": "definition",
+      "lane": "analysis",
+      "stage": 4,
+      "qeva": "qeva:1:limit@1",
+      "plain": "A limit states that values eventually remain arbitrarily close to a target.",
+      "question": "What state captures all sufficiently late behavior?",
+      "dependencies": [
+        "qeva:1:sequence@2",
+        "qeva:1:metric-space@1",
+        "qeva:1:universal-quantifier@1"
+      ],
+      "used_by": [
+        "qeva:1:derivative@1",
+        "qeva:1:integral@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "linearity",
+      "title": "Linearity",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 4,
+      "qeva": "qeva:1:linearity@1",
+      "plain": "A linear map preserves addition and scalar multiplication.",
+      "question": "Which vector combinations pass unchanged through the map?",
+      "dependencies": [
+        "qeva:1:vector-space@1",
+        "qeva:1:function@1"
+      ],
+      "used_by": [
+        "qeva:1:nonlinearity@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "local-global",
+      "title": "Local versus global optimum",
+      "kind": "definition",
+      "lane": "computation",
+      "stage": 6,
+      "qeva": "qeva:1:local-global@2",
+      "plain": "Being unbeatable nearby does not mean being best everywhere.",
+      "question": "A local optimum is best in a neighborhood; a global optimum is best over the entire feasible domain.",
+      "dependencies": [
+        "qeva:1:optimization@2",
+        "qeva:1:topological-space@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "induction",
+      "title": "Mathematical induction",
+      "kind": "inference-rule",
+      "lane": "number",
+      "stage": 2,
+      "qeva": "qeva:1:induction@1",
+      "plain": "Induction proves a property of every natural number from a base case and a successor step.",
+      "question": "Does the base and next-step cover every natural number?",
+      "dependencies": [
+        "qeva:1:natural-number@1",
+        "qeva:1:inference-rule@1",
+        "qeva:1:universal-quantifier@1"
+      ],
+      "used_by": [
+        "qeva:1:natural-number@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "measure",
+      "title": "Measure",
+      "kind": "definition",
+      "lane": "probability",
+      "stage": 3,
+      "qeva": "qeva:1:measure@1",
+      "plain": "A measure assigns a nonnegative size to measurable sets while adding the sizes of disjoint pieces.",
+      "question": "Which size assignment is countably additive?",
+      "dependencies": [
+        "qeva:1:sigma-algebra@1",
+        "qeva:1:real-number@1",
+        "qeva:1:order@1"
+      ],
+      "used_by": [
+        "qeva:1:probability-space@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "membership",
+      "title": "Membership",
+      "kind": "primitive",
+      "lane": "sets",
+      "stage": 1,
+      "qeva": "qeva:1:membership@1",
+      "plain": "Membership records that an object is one of the elements of a set.",
+      "question": "Is x an element of A?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:relation@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-choice@1",
+        "qeva:1:axiom-empty-set@1",
+        "qeva:1:axiom-extensionality@1",
+        "qeva:1:axiom-foundation@1",
+        "qeva:1:axiom-pairing@1",
+        "qeva:1:axiom-power-set@1",
+        "qeva:1:axiom-union@1",
+        "qeva:1:empty-set@2",
+        "qeva:1:subset@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "metric-space",
+      "title": "Metric space",
+      "kind": "definition",
+      "lane": "analysis",
+      "stage": 3,
+      "qeva": "qeva:1:metric-space@1",
+      "plain": "A metric assigns a distance satisfying nonnegativity, identity, symmetry, and the triangle inequality.",
+      "question": "How is separation measured?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:real-number@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:attractor@2",
+        "qeva:1:limit@1",
+        "qeva:1:sensitivity@2",
+        "qeva:1:stability@3"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "model",
+      "title": "Model",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:model@1",
+      "plain": "A model gives symbols a domain and interpretation so statements can be evaluated.",
+      "question": "What do the symbols denote here?",
+      "dependencies": [
+        "qeva:1:symbol@1",
+        "qeva:1:relation@1",
+        "qeva:1:operation@1"
+      ],
+      "used_by": [
+        "qeva:1:existential-quantifier@1",
+        "qeva:1:first-order-logic@1",
+        "qeva:1:satisfaction@2",
+        "qeva:1:universal-quantifier@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "multiplication",
+      "title": "Multiplication",
+      "kind": "definition",
+      "lane": "number",
+      "stage": 2,
+      "qeva": "qeva:1:multiplication@1",
+      "plain": "Multiplication combines equal-sized groups by repeated addition.",
+      "question": "What does repeated addition produce?",
+      "dependencies": [
+        "qeva:1:addition@1",
+        "qeva:1:natural-number@1",
+        "qeva:1:operation@1"
+      ],
+      "used_by": [
+        "qeva:1:natural-number@2",
+        "qeva:1:prime@3",
+        "qeva:1:rational@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "natural-number",
+      "title": "Natural number",
+      "kind": "framework",
+      "lane": "number",
+      "stage": 2,
+      "qeva": "qeva:1:natural-number@2",
+      "plain": "First-order Peano arithmetic describes zero, successor, addition, multiplication, and induction through explicit axioms and schemas.",
+      "question": "How does finite counting arise from next?",
+      "dependencies": [
+        "qeva:1:first-order-logic@1",
+        "qeva:1:zero@1",
+        "qeva:1:successor@1",
+        "qeva:1:axiom@1",
+        "qeva:1:induction@1",
+        "qeva:1:addition@1",
+        "qeva:1:multiplication@1"
+      ],
+      "used_by": [
+        "qeva:1:one-plus-one@2",
+        "qeva:1:prime@3"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "negation",
+      "title": "Negation",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:negation@1",
+      "plain": "Negation forms a statement that denies another statement under the chosen semantics.",
+      "question": "What counts as refuting P?",
+      "dependencies": [
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:consistency@1",
+        "qeva:1:excluded-middle@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "nonlinearity",
+      "title": "Nonlinearity",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 5,
+      "qeva": "qeva:1:nonlinearity@2",
+      "plain": "In a nonlinear system, combining inputs need not combine outputs by simple superposition.",
+      "question": "A map is nonlinear when it fails the defining linearity conditions of additivity and scalar homogeneity.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:linearity@1",
+        "qeva:1:vector-space@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "object",
+      "title": "Object",
+      "kind": "primitive",
+      "lane": "meta",
+      "stage": 0,
+      "qeva": "qeva:1:object@1",
+      "plain": "An object is whatever a chosen mathematical discourse permits us to refer to as one thing.",
+      "question": "What kinds of things may this framework talk about?",
+      "dependencies": [
+        "qeva:1:distinction@1"
+      ],
+      "used_by": [
+        "qeva:1:category-theoretic-foundations@1",
+        "qeva:1:identity@1",
+        "qeva:1:ordered-pair@1",
+        "qeva:1:relation@1",
+        "qeva:1:set@1",
+        "qeva:1:symbol@1",
+        "qeva:1:zero@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "one-plus-one",
+      "title": "One plus one equals two",
+      "kind": "theorem",
+      "lane": "number",
+      "stage": 3,
+      "qeva": "qeva:1:one-plus-one@2",
+      "plain": "The kernel expands addition once, then removes addition by zero, leaving exactly the term used to define two.",
+      "question": "Can the exact claim be replayed by a tiny independent checker?",
+      "dependencies": [
+        "qeva:1:addition@1",
+        "qeva:1:natural-number@2",
+        "qeva:1:proof@1"
+      ],
+      "used_by": [],
+      "verification": "machine-checked"
+    },
+    {
+      "id": "operation",
+      "title": "Operation",
+      "kind": "definition",
+      "lane": "meta",
+      "stage": 1,
+      "qeva": "qeva:1:operation@2",
+      "plain": "An operation takes inputs of declared kinds and returns an output of a declared kind; not every useful operation is closed on one set.",
+      "question": "What inputs are allowed, and what output is determined?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:ordered-pair@1"
+      ],
+      "used_by": [
+        "qeva:1:complex-number@2",
+        "qeva:1:parity@3"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "optimization",
+      "title": "Optimization",
+      "kind": "definition",
+      "lane": "computation",
+      "stage": 5,
+      "qeva": "qeva:1:optimization@3",
+      "plain": "Optimization first specifies which choices are allowed and how they are scored; the best lower score may or may not be achieved by a choice.",
+      "question": "A minimization problem specifies a feasible set and objective; its infimum is the optimal value and may be unattained.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:order@1",
+        "qeva:1:universal-quantifier@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "order",
+      "title": "Order",
+      "kind": "definition",
+      "lane": "structure",
+      "stage": 2,
+      "qeva": "qeva:1:order@1",
+      "plain": "An order records a consistent notion of before, below, or no greater than.",
+      "question": "Which objects can be compared consistently?",
+      "dependencies": [
+        "qeva:1:relation@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:hierarchy@2",
+        "qeva:1:information@2",
+        "qeva:1:integral@2",
+        "qeva:1:measure@1",
+        "qeva:1:optimization@3",
+        "qeva:1:prime@3",
+        "qeva:1:real-number@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "ordered-pair",
+      "title": "Ordered pair",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:ordered-pair@1",
+      "plain": "An ordered pair stores two objects while preserving which is first and which is second.",
+      "question": "How is position preserved?",
+      "dependencies": [
+        "qeva:1:object@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:complex-number@2",
+        "qeva:1:function@1",
+        "qeva:1:operation@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "parity",
+      "title": "Parity",
+      "kind": "definition",
+      "lane": "number",
+      "stage": 4,
+      "qeva": "qeva:1:parity@3",
+      "plain": "An integer is even when it is twice an integer and odd when it is one more than twice an integer.",
+      "question": "Integer parity defines the predicates even and odd by divisibility by two.",
+      "dependencies": [
+        "qeva:1:integer@1",
+        "qeva:1:operation@2",
+        "qeva:1:existential-quantifier@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "periodicity",
+      "title": "Periodicity of a sequence",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 6,
+      "qeva": "qeva:1:periodicity@2",
+      "plain": "A periodic sequence repeats exactly after some fixed positive number of steps.",
+      "question": "Exact repetition after a fixed positive index shift.",
+      "dependencies": [
+        "qeva:1:natural-number@1",
+        "qeva:1:sequence@2"
+      ],
+      "used_by": [
+        "qeva:1:quasiperiodicity@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "prime",
+      "title": "Prime number",
+      "kind": "definition",
+      "lane": "number",
+      "stage": 4,
+      "qeva": "qeva:1:prime@3",
+      "plain": "A prime is greater than one and cannot be written as a product except using one or itself.",
+      "question": "A prime is a natural number greater than one whose only positive divisors are one and itself.",
+      "dependencies": [
+        "qeva:1:natural-number@2",
+        "qeva:1:multiplication@1",
+        "qeva:1:order@1",
+        "qeva:1:existential-quantifier@1",
+        "qeva:1:universal-quantifier@1",
+        "qeva:1:disjunction@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "probability-space",
+      "title": "Probability space",
+      "kind": "definition",
+      "lane": "probability",
+      "stage": 4,
+      "qeva": "qeva:1:probability-space@1",
+      "plain": "A probability space assigns normalized weight to measurable events.",
+      "question": "How is uncertainty distributed across measurable events?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:sigma-algebra@1",
+        "qeva:1:measure@1"
+      ],
+      "used_by": [
+        "qeva:1:exploration-exploitation@2",
+        "qeva:1:information@2",
+        "qeva:1:random-variable@1",
+        "qeva:1:signal-noise@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "proof",
+      "title": "Proof",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:proof@1",
+      "plain": "A proof is a finite, checkable chain from admitted premises to a conclusion under declared rules.",
+      "question": "Can every step be checked under the named rules?",
+      "dependencies": [
+        "qeva:1:axiom@1",
+        "qeva:1:inference-rule@1",
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:consistency@1",
+        "qeva:1:constructive-logic@1",
+        "qeva:1:dependent-type-theory@1",
+        "qeva:1:derivability@2",
+        "qeva:1:one-plus-one@2",
+        "qeva:1:theorem@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "quasiperiodicity",
+      "title": "Quasiperiodicity",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 6,
+      "qeva": "qeva:1:quasiperiodicity@2",
+      "plain": "A common quasiperiodic model combines several angular motions whose basic frequencies are rationally independent. The representation itself must be distinguished from the extra conditions needed to guarantee that the resulting function is nonperiodic.",
+      "question": "A context-dependent torus-frequency representation often used for recurrent behavior with several incommensurate frequencies.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:periodicity@2",
+        "qeva:1:real-number@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "random-variable",
+      "title": "Random variable",
+      "kind": "definition",
+      "lane": "probability",
+      "stage": 4,
+      "qeva": "qeva:1:random-variable@1",
+      "plain": "A random variable converts outcomes into measurable values.",
+      "question": "Which measurable observable is extracted from each outcome?",
+      "dependencies": [
+        "qeva:1:probability-space@1",
+        "qeva:1:function@1",
+        "qeva:1:sigma-algebra@1"
+      ],
+      "used_by": [
+        "qeva:1:entropy@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "rational",
+      "title": "Rational number",
+      "kind": "definition",
+      "lane": "number",
+      "stage": 3,
+      "qeva": "qeva:1:rational@1",
+      "plain": "Rational numbers represent ratios of integers with nonzero denominator.",
+      "question": "When do two ratios express the same quantity?",
+      "dependencies": [
+        "qeva:1:integer@1",
+        "qeva:1:equivalence@2",
+        "qeva:1:multiplication@1"
+      ],
+      "used_by": [
+        "qeva:1:real-number@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "real-number",
+      "title": "Real number",
+      "kind": "framework",
+      "lane": "number",
+      "stage": 4,
+      "qeva": "qeva:1:real-number@1",
+      "plain": "Real numbers complete the rationals so convergent measurement processes need not leave gaps.",
+      "question": "How are the gaps in rational magnitude completed?",
+      "dependencies": [
+        "qeva:1:rational@1",
+        "qeva:1:field@1",
+        "qeva:1:order@1"
+      ],
+      "used_by": [
+        "qeva:1:complex-number@2",
+        "qeva:1:information@2",
+        "qeva:1:integral@2",
+        "qeva:1:measure@1",
+        "qeva:1:metric-space@1",
+        "qeva:1:quasiperiodicity@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "recurrence",
+      "title": "Recurrence relation",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 5,
+      "qeva": "qeva:1:recurrence@2",
+      "plain": "A recurrence describes how values are linked across index steps. It need not always determine a unique sequence unless enough initial data and uniqueness conditions are supplied.",
+      "question": "A relation constraining indexed values using other indexed values, often earlier ones.",
+      "dependencies": [
+        "qeva:1:relation@1",
+        "qeva:1:sequence@2"
+      ],
+      "used_by": [
+        "qeva:1:addition@1",
+        "qeva:1:algorithm@1",
+        "qeva:1:attractor@2",
+        "qeva:1:chaos@2",
+        "qeva:1:collatz-map@2",
+        "qeva:1:sensitivity@2",
+        "qeva:1:stability@3"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "relation",
+      "title": "Relation",
+      "kind": "definition",
+      "lane": "meta",
+      "stage": 1,
+      "qeva": "qeva:1:relation@1",
+      "plain": "A relation records which tuples of objects stand in a chosen connection.",
+      "question": "Which tuples are connected, and by what criterion?",
+      "dependencies": [
+        "qeva:1:object@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:equivalence@2",
+        "qeva:1:function@1",
+        "qeva:1:graph@1",
+        "qeva:1:hierarchy@2",
+        "qeva:1:membership@1",
+        "qeva:1:model@1",
+        "qeva:1:order@1",
+        "qeva:1:recurrence@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "integral",
+      "title": "Riemann integral",
+      "kind": "definition",
+      "lane": "analysis",
+      "stage": 5,
+      "qeva": "qeva:1:integral@2",
+      "plain": "Cut an interval into sufficiently short pieces, sample the function in each piece, and add height times width; one stable limiting value is the Riemann integral.",
+      "question": "How is local contribution accumulated?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:limit@1",
+        "qeva:1:real-number@1",
+        "qeva:1:order@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "ring",
+      "title": "Ring",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 3,
+      "qeva": "qeva:1:ring@1",
+      "plain": "A ring supports addition, multiplication, and additive inverses under compatible laws.",
+      "question": "How do two operations distribute over each other?",
+      "dependencies": [
+        "qeva:1:group@1",
+        "qeva:1:operation@1"
+      ],
+      "used_by": [
+        "qeva:1:field@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "satisfaction",
+      "title": "Satisfaction",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 3,
+      "qeva": "qeva:1:satisfaction@2",
+      "plain": "A formula can be true in one mathematical structure and false in another. QEVA must name the semantics or model when it uses semantic truth.",
+      "question": "A semantic relation stating that a formula holds in a declared interpretation or model.",
+      "dependencies": [
+        "qeva:1:model@1",
+        "qeva:1:statement@1"
+      ],
+      "used_by": [
+        "qeva:1:completeness@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "schema-replacement",
+      "title": "Schema of replacement",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:schema-replacement@1",
+      "plain": "The image of a set under a definable single-valued correspondence is a set.",
+      "question": "Can every definable image of a set be collected?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:set@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "schema-separation",
+      "title": "Schema of separation",
+      "kind": "axiom",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:schema-separation@1",
+      "plain": "A definable condition can select a subset of an already existing set.",
+      "question": "Which definable subcollection of an existing set is admitted?",
+      "dependencies": [
+        "qeva:1:subset@1",
+        "qeva:1:conjunction@1",
+        "qeva:1:axiom@1"
+      ],
+      "used_by": [
+        "qeva:1:zfc-set-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "information",
+      "title": "Self-information",
+      "kind": "definition",
+      "lane": "information",
+      "stage": 5,
+      "qeva": "qeva:1:information@2",
+      "plain": "Within a probability model, a less probable event carries more self-information when surprise is measured logarithmically.",
+      "question": "How surprising is this event under the model?",
+      "dependencies": [
+        "qeva:1:probability-space@1",
+        "qeva:1:real-number@1",
+        "qeva:1:order@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "sensitivity",
+      "title": "Sensitive dependence on initial conditions",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 6,
+      "qeva": "qeva:1:sensitivity@2",
+      "plain": "Sensitivity formalizes one kind of error amplification: no matter how closely two starting states are chosen, some nearby state can eventually move a definite distance away.",
+      "question": "A metric dynamical property in which arbitrarily nearby starting states can eventually separate by a fixed positive amount.",
+      "dependencies": [
+        "qeva:1:metric-space@1",
+        "qeva:1:recurrence@2"
+      ],
+      "used_by": [
+        "qeva:1:chaos@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "sequence",
+      "title": "Sequence",
+      "kind": "definition",
+      "lane": "discrete",
+      "stage": 4,
+      "qeva": "qeva:1:sequence@2",
+      "plain": "A sequence is not merely a written list; mathematically it is a function whose input is an index.",
+      "question": "An ordered family of values indexed by a specified set, usually the natural numbers.",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:natural-number@1"
+      ],
+      "used_by": [
+        "qeva:1:limit@1",
+        "qeva:1:periodicity@2",
+        "qeva:1:recurrence@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "set",
+      "title": "Set",
+      "kind": "primitive",
+      "lane": "sets",
+      "stage": 1,
+      "qeva": "qeva:1:set@1",
+      "plain": "A set is a collection treated extensionally: its members determine it.",
+      "question": "Which objects count only by their members?",
+      "dependencies": [
+        "qeva:1:object@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-choice@1",
+        "qeva:1:axiom-empty-set@1",
+        "qeva:1:axiom-extensionality@1",
+        "qeva:1:axiom-foundation@1",
+        "qeva:1:axiom-pairing@1",
+        "qeva:1:axiom-power-set@1",
+        "qeva:1:axiom-union@1",
+        "qeva:1:cardinality@1",
+        "qeva:1:discreteness@2",
+        "qeva:1:empty-set@2",
+        "qeva:1:equivalence@2",
+        "qeva:1:function@1",
+        "qeva:1:graph@1",
+        "qeva:1:group@1",
+        "qeva:1:grouping@2",
+        "qeva:1:membership@1",
+        "qeva:1:probability-space@1",
+        "qeva:1:schema-replacement@1",
+        "qeva:1:sigma-algebra@1",
+        "qeva:1:subset@1",
+        "qeva:1:topological-space@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "entropy",
+      "title": "Shannon entropy",
+      "kind": "definition",
+      "lane": "information",
+      "stage": 5,
+      "qeva": "qeva:1:entropy@1",
+      "plain": "Entropy is the expected self-information of a random variable's distribution.",
+      "question": "How much uncertainty remains on average?",
+      "dependencies": [
+        "qeva:1:random-variable@1",
+        "qeva:1:information@1",
+        "qeva:1:addition@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "sigma-algebra",
+      "title": "Sigma-algebra",
+      "kind": "definition",
+      "lane": "probability",
+      "stage": 2,
+      "qeva": "qeva:1:sigma-algebra@1",
+      "plain": "A sigma-algebra is a collection of events stable under complementation and countable combination.",
+      "question": "Which events may consistently receive a size?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:subset@1"
+      ],
+      "used_by": [
+        "qeva:1:measure@1",
+        "qeva:1:probability-space@1",
+        "qeva:1:random-variable@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "signal-noise",
+      "title": "Signal and noise",
+      "kind": "definition",
+      "lane": "information",
+      "stage": 6,
+      "qeva": "qeva:1:signal-noise@2",
+      "plain": "Signal is the part treated as informative for a task; noise is the part treated as nuisance, uncertainty, or unresolved variation.",
+      "question": "Signal/noise is a task- and model-relative decomposition of observed variation.",
+      "dependencies": [
+        "qeva:1:information@1",
+        "qeva:1:probability-space@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "stability",
+      "title": "Stability",
+      "kind": "definition",
+      "lane": "dynamics",
+      "stage": 6,
+      "qeva": "qeva:1:stability@3",
+      "plain": "A fixed point is Lyapunov-stable when starting close enough guarantees staying as close as requested forever.",
+      "question": "Lyapunov stability of a fixed point means every sufficiently small initial perturbation remains small for all future iterates.",
+      "dependencies": [
+        "qeva:1:metric-space@1",
+        "qeva:1:function@1",
+        "qeva:1:fixed-point@2",
+        "qeva:1:recurrence@2",
+        "qeva:1:universal-quantifier@1",
+        "qeva:1:existential-quantifier@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "statement",
+      "title": "Statement",
+      "kind": "definition",
+      "lane": "meta",
+      "stage": 1,
+      "qeva": "qeva:1:statement@1",
+      "plain": "A statement is an expression eligible to be asserted, denied, proved, or evaluated in a model.",
+      "question": "What can this language assert?",
+      "dependencies": [
+        "qeva:1:expression@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom@1",
+        "qeva:1:conjunction@1",
+        "qeva:1:decidability@1",
+        "qeva:1:disjunction@1",
+        "qeva:1:excluded-middle@1",
+        "qeva:1:existential-quantifier@1",
+        "qeva:1:implication@1",
+        "qeva:1:inference-rule@1",
+        "qeva:1:negation@1",
+        "qeva:1:proof@1",
+        "qeva:1:satisfaction@2",
+        "qeva:1:theorem@1",
+        "qeva:1:universal-quantifier@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "subset",
+      "title": "Subset",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 2,
+      "qeva": "qeva:1:subset@1",
+      "plain": "A is a subset of B when every member of A is also a member of B.",
+      "question": "Does membership in A guarantee membership in B?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:membership@1",
+        "qeva:1:implication@1"
+      ],
+      "used_by": [
+        "qeva:1:axiom-power-set@1",
+        "qeva:1:schema-separation@1",
+        "qeva:1:sigma-algebra@1",
+        "qeva:1:topological-space@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "successor",
+      "title": "Successor",
+      "kind": "primitive",
+      "lane": "number",
+      "stage": 1,
+      "qeva": "qeva:1:successor@1",
+      "plain": "Successor moves from one natural number to the next.",
+      "question": "What is the next counting state?",
+      "dependencies": [
+        "qeva:1:operation@1",
+        "qeva:1:zero@1"
+      ],
+      "used_by": [
+        "qeva:1:natural-number@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "surjective-function",
+      "title": "Surjection",
+      "kind": "definition",
+      "lane": "sets",
+      "stage": 3,
+      "qeva": "qeva:1:surjective-function@1",
+      "plain": "A surjective function reaches every element of its declared codomain.",
+      "question": "Is every target value reached?",
+      "dependencies": [
+        "qeva:1:function@1",
+        "qeva:1:existential-quantifier@1"
+      ],
+      "used_by": [
+        "qeva:1:bijection@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "symbol",
+      "title": "Symbol",
+      "kind": "definition",
+      "lane": "meta",
+      "stage": 0,
+      "qeva": "qeva:1:symbol@1",
+      "plain": "A symbol is an atomic mark or token admitted by a formal language.",
+      "question": "Which marks are legal, and what role may each play?",
+      "dependencies": [
+        "qeva:1:distinction@1",
+        "qeva:1:object@1"
+      ],
+      "used_by": [
+        "qeva:1:expression@1",
+        "qeva:1:model@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "symmetry",
+      "title": "Symmetry",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 5,
+      "qeva": "qeva:1:symmetry@2",
+      "plain": "Symmetry is never just “looks the same”: one must specify which transformations are allowed and what counts as unchanged.",
+      "question": "A transformation that leaves a specified object unchanged relative to a specified action.",
+      "dependencies": [
+        "qeva:1:group-action@1",
+        "qeva:1:identity@1"
+      ],
+      "used_by": [
+        "qeva:1:chirality@2",
+        "qeva:1:invariant@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "theorem",
+      "title": "Theorem",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 2,
+      "qeva": "qeva:1:theorem@1",
+      "plain": "A theorem is a statement accompanied by a valid derivation from declared assumptions in a declared system.",
+      "question": "From exactly what does this result follow?",
+      "dependencies": [
+        "qeva:1:proof@1",
+        "qeva:1:statement@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    },
+    {
+      "id": "topological-space",
+      "title": "Topological space",
+      "kind": "definition",
+      "lane": "analysis",
+      "stage": 3,
+      "qeva": "qeva:1:topological-space@1",
+      "plain": "A topology declares which regions count as open, encoding nearness without requiring numerical distance.",
+      "question": "Which neighborhoods are observable?",
+      "dependencies": [
+        "qeva:1:set@1",
+        "qeva:1:subset@1"
+      ],
+      "used_by": [
+        "qeva:1:continuity@2",
+        "qeva:1:discreteness@2",
+        "qeva:1:local-global@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "type",
+      "title": "Type",
+      "kind": "primitive",
+      "lane": "types",
+      "stage": 1,
+      "qeva": "qeva:1:type@1",
+      "plain": "A type classifies expressions and states which constructions may be formed with them.",
+      "question": "What kind of term is this?",
+      "dependencies": [
+        "qeva:1:expression@1"
+      ],
+      "used_by": [
+        "qeva:1:dependent-type-theory@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "universal-quantifier",
+      "title": "Universal quantifier",
+      "kind": "definition",
+      "lane": "logic",
+      "stage": 1,
+      "qeva": "qeva:1:universal-quantifier@1",
+      "plain": "Universal quantification requires a statement to hold for every permitted value in a domain.",
+      "question": "Every object in which domain?",
+      "dependencies": [
+        "qeva:1:statement@1",
+        "qeva:1:model@1"
+      ],
+      "used_by": [
+        "qeva:1:first-order-logic@1",
+        "qeva:1:induction@1",
+        "qeva:1:limit@1",
+        "qeva:1:optimization@3",
+        "qeva:1:prime@3",
+        "qeva:1:stability@3"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "vector-space",
+      "title": "Vector space",
+      "kind": "definition",
+      "lane": "algebra",
+      "stage": 4,
+      "qeva": "qeva:1:vector-space@1",
+      "plain": "A vector space supports vector addition and scalar multiplication under compatibility laws.",
+      "question": "Which combinations of directions remain inside the space?",
+      "dependencies": [
+        "qeva:1:field@1",
+        "qeva:1:group@1",
+        "qeva:1:operation@1"
+      ],
+      "used_by": [
+        "qeva:1:linearity@1",
+        "qeva:1:nonlinearity@2"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "zero",
+      "title": "Zero",
+      "kind": "primitive",
+      "lane": "number",
+      "stage": 1,
+      "qeva": "qeva:1:zero@1",
+      "plain": "Zero is the distinguished starting value for one common construction of the natural numbers.",
+      "question": "What represents no counted instances?",
+      "dependencies": [
+        "qeva:1:object@1"
+      ],
+      "used_by": [
+        "qeva:1:natural-number@2",
+        "qeva:1:successor@1"
+      ],
+      "verification": "editorial"
+    },
+    {
+      "id": "zfc-set-theory",
+      "title": "ZFC set theory",
+      "kind": "framework",
+      "lane": "sets",
+      "stage": 3,
+      "qeva": "qeva:1:zfc-set-theory@1",
+      "plain": "ZFC is a major foundational theory whose objects are sets governed by explicit axiom schemes and axioms.",
+      "question": "How much mathematics follows from this set-theoretic branch?",
+      "dependencies": [
+        "qeva:1:first-order-logic@1",
+        "qeva:1:axiom-extensionality@1",
+        "qeva:1:axiom-empty-set@1",
+        "qeva:1:axiom-pairing@1",
+        "qeva:1:axiom-union@1",
+        "qeva:1:axiom-power-set@1",
+        "qeva:1:axiom-infinity@1",
+        "qeva:1:schema-separation@1",
+        "qeva:1:schema-replacement@1",
+        "qeva:1:axiom-foundation@1",
+        "qeva:1:axiom-choice@1"
+      ],
+      "used_by": [],
+      "verification": "editorial"
+    }
+  ],
+  "edges": [
+    {
+      "source": "addition",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "addition"
+    },
+    {
+      "source": "addition",
+      "target": "recurrence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "recurrence",
+      "layout_to": "addition"
+    },
+    {
+      "source": "addition",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "addition"
+    },
+    {
+      "source": "algorithm",
+      "target": "expression",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "expression",
+      "layout_to": "algorithm"
+    },
+    {
+      "source": "algorithm",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "algorithm"
+    },
+    {
+      "source": "algorithm",
+      "target": "recurrence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "recurrence",
+      "layout_to": "algorithm"
+    },
+    {
+      "source": "attractor",
+      "target": "invariant",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "invariant",
+      "layout_to": "attractor"
+    },
+    {
+      "source": "attractor",
+      "target": "metric-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "metric-space",
+      "layout_to": "attractor"
+    },
+    {
+      "source": "attractor",
+      "target": "recurrence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "recurrence",
+      "layout_to": "attractor"
+    },
+    {
+      "source": "axiom",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "axiom"
+    },
+    {
+      "source": "axiom-choice",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "axiom-choice"
+    },
+    {
+      "source": "axiom-choice",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "axiom-choice"
+    },
+    {
+      "source": "axiom-choice",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "axiom-choice"
+    },
+    {
+      "source": "axiom-choice",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-choice"
+    },
+    {
+      "source": "axiom-empty-set",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "axiom-empty-set"
+    },
+    {
+      "source": "axiom-empty-set",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "axiom-empty-set"
+    },
+    {
+      "source": "axiom-empty-set",
+      "target": "empty-set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "empty-set",
+      "layout_to": "axiom-empty-set"
+    },
+    {
+      "source": "axiom-empty-set",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-empty-set"
+    },
+    {
+      "source": "axiom-extensionality",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "axiom-extensionality"
+    },
+    {
+      "source": "axiom-extensionality",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "axiom-extensionality"
+    },
+    {
+      "source": "axiom-extensionality",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "axiom-extensionality"
+    },
+    {
+      "source": "axiom-extensionality",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-extensionality"
+    },
+    {
+      "source": "axiom-foundation",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "axiom-foundation"
+    },
+    {
+      "source": "axiom-foundation",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "axiom-foundation"
+    },
+    {
+      "source": "axiom-foundation",
+      "target": "empty-set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "empty-set",
+      "layout_to": "axiom-foundation"
+    },
+    {
+      "source": "axiom-foundation",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-foundation"
+    },
+    {
+      "source": "axiom-infinity",
+      "target": "axiom-empty-set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-empty-set",
+      "layout_to": "axiom-infinity"
+    },
+    {
+      "source": "axiom-infinity",
+      "target": "axiom-pairing",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-pairing",
+      "layout_to": "axiom-infinity"
+    },
+    {
+      "source": "axiom-infinity",
+      "target": "axiom-union",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-union",
+      "layout_to": "axiom-infinity"
+    },
+    {
+      "source": "axiom-infinity",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-infinity"
+    },
+    {
+      "source": "axiom-pairing",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "axiom-pairing"
+    },
+    {
+      "source": "axiom-pairing",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "axiom-pairing"
+    },
+    {
+      "source": "axiom-pairing",
+      "target": "disjunction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "disjunction",
+      "layout_to": "axiom-pairing"
+    },
+    {
+      "source": "axiom-pairing",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-pairing"
+    },
+    {
+      "source": "axiom-power-set",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "axiom-power-set"
+    },
+    {
+      "source": "axiom-power-set",
+      "target": "subset",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "subset",
+      "layout_to": "axiom-power-set"
+    },
+    {
+      "source": "axiom-power-set",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "axiom-power-set"
+    },
+    {
+      "source": "axiom-power-set",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-power-set"
+    },
+    {
+      "source": "axiom-union",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "axiom-union"
+    },
+    {
+      "source": "axiom-union",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "axiom-union"
+    },
+    {
+      "source": "axiom-union",
+      "target": "conjunction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "conjunction",
+      "layout_to": "axiom-union"
+    },
+    {
+      "source": "axiom-union",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "axiom-union"
+    },
+    {
+      "source": "bijection",
+      "target": "injective-function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "injective-function",
+      "layout_to": "bijection"
+    },
+    {
+      "source": "bijection",
+      "target": "surjective-function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "surjective-function",
+      "layout_to": "bijection"
+    },
+    {
+      "source": "cardinality",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "cardinality"
+    },
+    {
+      "source": "cardinality",
+      "target": "bijection",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "bijection",
+      "layout_to": "cardinality"
+    },
+    {
+      "source": "category-theoretic-foundations",
+      "target": "object",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "object",
+      "layout_to": "category-theoretic-foundations"
+    },
+    {
+      "source": "category-theoretic-foundations",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "category-theoretic-foundations"
+    },
+    {
+      "source": "category-theoretic-foundations",
+      "target": "composition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "composition",
+      "layout_to": "category-theoretic-foundations"
+    },
+    {
+      "source": "category-theoretic-foundations",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "category-theoretic-foundations"
+    },
+    {
+      "source": "chaos",
+      "target": "recurrence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "recurrence",
+      "layout_to": "chaos"
+    },
+    {
+      "source": "chaos",
+      "target": "sensitivity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "sensitivity",
+      "layout_to": "chaos"
+    },
+    {
+      "source": "chirality",
+      "target": "group-action",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "group-action",
+      "layout_to": "chirality"
+    },
+    {
+      "source": "chirality",
+      "target": "symmetry",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "symmetry",
+      "layout_to": "chirality"
+    },
+    {
+      "source": "classical-logic",
+      "target": "first-order-logic",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "first-order-logic",
+      "layout_to": "classical-logic"
+    },
+    {
+      "source": "classical-logic",
+      "target": "excluded-middle",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "excluded-middle",
+      "layout_to": "classical-logic"
+    },
+    {
+      "source": "closed-form",
+      "target": "expression",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "expression",
+      "layout_to": "closed-form"
+    },
+    {
+      "source": "coarse-graining",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "coarse-graining"
+    },
+    {
+      "source": "coarse-graining",
+      "target": "grouping",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "grouping",
+      "layout_to": "coarse-graining"
+    },
+    {
+      "source": "collatz-conjecture",
+      "target": "collatz-map",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "collatz-map",
+      "layout_to": "collatz-conjecture"
+    },
+    {
+      "source": "collatz-map",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "collatz-map"
+    },
+    {
+      "source": "collatz-map",
+      "target": "parity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "parity",
+      "layout_to": "collatz-map"
+    },
+    {
+      "source": "collatz-map",
+      "target": "recurrence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "recurrence",
+      "layout_to": "collatz-map"
+    },
+    {
+      "source": "completeness",
+      "target": "derivability",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "derivability",
+      "layout_to": "completeness"
+    },
+    {
+      "source": "completeness",
+      "target": "satisfaction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "satisfaction",
+      "layout_to": "completeness"
+    },
+    {
+      "source": "complex-number",
+      "target": "real-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "real-number",
+      "layout_to": "complex-number"
+    },
+    {
+      "source": "complex-number",
+      "target": "ordered-pair",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "ordered-pair",
+      "layout_to": "complex-number"
+    },
+    {
+      "source": "complex-number",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "complex-number"
+    },
+    {
+      "source": "composition",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "composition"
+    },
+    {
+      "source": "computability",
+      "target": "algorithm",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "algorithm",
+      "layout_to": "computability"
+    },
+    {
+      "source": "computability",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "computability"
+    },
+    {
+      "source": "conjunction",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "conjunction"
+    },
+    {
+      "source": "consistency",
+      "target": "proof",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "proof",
+      "layout_to": "consistency"
+    },
+    {
+      "source": "consistency",
+      "target": "negation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "negation",
+      "layout_to": "consistency"
+    },
+    {
+      "source": "consistency",
+      "target": "formal-system",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "formal-system",
+      "layout_to": "consistency"
+    },
+    {
+      "source": "constructive-logic",
+      "target": "first-order-logic",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "first-order-logic",
+      "layout_to": "constructive-logic"
+    },
+    {
+      "source": "constructive-logic",
+      "target": "proof",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "proof",
+      "layout_to": "constructive-logic"
+    },
+    {
+      "source": "continuity",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "continuity"
+    },
+    {
+      "source": "continuity",
+      "target": "topological-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "topological-space",
+      "layout_to": "continuity"
+    },
+    {
+      "source": "decidability",
+      "target": "algorithm",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "algorithm",
+      "layout_to": "decidability"
+    },
+    {
+      "source": "decidability",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "decidability"
+    },
+    {
+      "source": "definition",
+      "target": "expression",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "expression",
+      "layout_to": "definition"
+    },
+    {
+      "source": "definition",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "definition"
+    },
+    {
+      "source": "dependent-type-theory",
+      "target": "type",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "type",
+      "layout_to": "dependent-type-theory"
+    },
+    {
+      "source": "dependent-type-theory",
+      "target": "proof",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "proof",
+      "layout_to": "dependent-type-theory"
+    },
+    {
+      "source": "dependent-type-theory",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "dependent-type-theory"
+    },
+    {
+      "source": "derivability",
+      "target": "formal-system",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "formal-system",
+      "layout_to": "derivability"
+    },
+    {
+      "source": "derivability",
+      "target": "proof",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "proof",
+      "layout_to": "derivability"
+    },
+    {
+      "source": "derivative",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "derivative"
+    },
+    {
+      "source": "derivative",
+      "target": "limit",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "limit",
+      "layout_to": "derivative"
+    },
+    {
+      "source": "discreteness",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "discreteness"
+    },
+    {
+      "source": "discreteness",
+      "target": "topological-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "topological-space",
+      "layout_to": "discreteness"
+    },
+    {
+      "source": "disjunction",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "disjunction"
+    },
+    {
+      "source": "empty-set",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "empty-set"
+    },
+    {
+      "source": "empty-set",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "empty-set"
+    },
+    {
+      "source": "empty-set",
+      "target": "axiom-empty-set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-empty-set",
+      "layout_to": "empty-set"
+    },
+    {
+      "source": "empty-set",
+      "target": "axiom-extensionality",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-extensionality",
+      "layout_to": "empty-set"
+    },
+    {
+      "source": "equivalence",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "equivalence"
+    },
+    {
+      "source": "equivalence",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "equivalence"
+    },
+    {
+      "source": "equivalence",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "equivalence"
+    },
+    {
+      "source": "existential-quantifier",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "existential-quantifier"
+    },
+    {
+      "source": "existential-quantifier",
+      "target": "model",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "model",
+      "layout_to": "existential-quantifier"
+    },
+    {
+      "source": "exploration-exploitation",
+      "target": "optimization",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "optimization",
+      "layout_to": "exploration-exploitation"
+    },
+    {
+      "source": "exploration-exploitation",
+      "target": "probability-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "probability-space",
+      "layout_to": "exploration-exploitation"
+    },
+    {
+      "source": "expression",
+      "target": "symbol",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "symbol",
+      "layout_to": "expression"
+    },
+    {
+      "source": "field",
+      "target": "ring",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "ring",
+      "layout_to": "field"
+    },
+    {
+      "source": "field",
+      "target": "group",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "group",
+      "layout_to": "field"
+    },
+    {
+      "source": "first-order-logic",
+      "target": "universal-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "universal-quantifier",
+      "layout_to": "first-order-logic"
+    },
+    {
+      "source": "first-order-logic",
+      "target": "existential-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "existential-quantifier",
+      "layout_to": "first-order-logic"
+    },
+    {
+      "source": "first-order-logic",
+      "target": "formal-system",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "formal-system",
+      "layout_to": "first-order-logic"
+    },
+    {
+      "source": "first-order-logic",
+      "target": "model",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "model",
+      "layout_to": "first-order-logic"
+    },
+    {
+      "source": "fixed-point",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "fixed-point"
+    },
+    {
+      "source": "fixed-point",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "fixed-point"
+    },
+    {
+      "source": "formal-system",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "formal-system"
+    },
+    {
+      "source": "formal-system",
+      "target": "expression",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "expression",
+      "layout_to": "formal-system"
+    },
+    {
+      "source": "formal-system",
+      "target": "inference-rule",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "inference-rule",
+      "layout_to": "formal-system"
+    },
+    {
+      "source": "function",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "function"
+    },
+    {
+      "source": "function",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "function"
+    },
+    {
+      "source": "function",
+      "target": "ordered-pair",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "ordered-pair",
+      "layout_to": "function"
+    },
+    {
+      "source": "graph",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "graph"
+    },
+    {
+      "source": "graph",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "graph"
+    },
+    {
+      "source": "group",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "group"
+    },
+    {
+      "source": "group",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "group"
+    },
+    {
+      "source": "group",
+      "target": "composition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "composition",
+      "layout_to": "group"
+    },
+    {
+      "source": "group",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "group"
+    },
+    {
+      "source": "group-action",
+      "target": "group",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "group",
+      "layout_to": "group-action"
+    },
+    {
+      "source": "group-action",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "group-action"
+    },
+    {
+      "source": "group-action",
+      "target": "composition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "composition",
+      "layout_to": "group-action"
+    },
+    {
+      "source": "grouping",
+      "target": "equivalence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "equivalence",
+      "layout_to": "grouping"
+    },
+    {
+      "source": "grouping",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "grouping"
+    },
+    {
+      "source": "halving",
+      "target": "addition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "addition",
+      "layout_to": "halving"
+    },
+    {
+      "source": "halving",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "halving"
+    },
+    {
+      "source": "hierarchy",
+      "target": "order",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "order",
+      "layout_to": "hierarchy"
+    },
+    {
+      "source": "hierarchy",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "hierarchy"
+    },
+    {
+      "source": "identity",
+      "target": "object",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "object",
+      "layout_to": "identity"
+    },
+    {
+      "source": "implication",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "implication"
+    },
+    {
+      "source": "inference-rule",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "inference-rule"
+    },
+    {
+      "source": "injective-function",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "injective-function"
+    },
+    {
+      "source": "injective-function",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "injective-function"
+    },
+    {
+      "source": "integer",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "integer"
+    },
+    {
+      "source": "integer",
+      "target": "equivalence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "equivalence",
+      "layout_to": "integer"
+    },
+    {
+      "source": "integer",
+      "target": "addition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "addition",
+      "layout_to": "integer"
+    },
+    {
+      "source": "invariant",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "invariant"
+    },
+    {
+      "source": "invariant",
+      "target": "group-action",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "group-action",
+      "layout_to": "invariant"
+    },
+    {
+      "source": "invariant",
+      "target": "symmetry",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "symmetry",
+      "layout_to": "invariant"
+    },
+    {
+      "source": "excluded-middle",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "excluded-middle"
+    },
+    {
+      "source": "excluded-middle",
+      "target": "negation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "negation",
+      "layout_to": "excluded-middle"
+    },
+    {
+      "source": "limit",
+      "target": "sequence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "sequence",
+      "layout_to": "limit"
+    },
+    {
+      "source": "limit",
+      "target": "metric-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "metric-space",
+      "layout_to": "limit"
+    },
+    {
+      "source": "limit",
+      "target": "universal-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "universal-quantifier",
+      "layout_to": "limit"
+    },
+    {
+      "source": "linearity",
+      "target": "vector-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "vector-space",
+      "layout_to": "linearity"
+    },
+    {
+      "source": "linearity",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "linearity"
+    },
+    {
+      "source": "local-global",
+      "target": "optimization",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "optimization",
+      "layout_to": "local-global"
+    },
+    {
+      "source": "local-global",
+      "target": "topological-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "topological-space",
+      "layout_to": "local-global"
+    },
+    {
+      "source": "induction",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "induction"
+    },
+    {
+      "source": "induction",
+      "target": "inference-rule",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "inference-rule",
+      "layout_to": "induction"
+    },
+    {
+      "source": "induction",
+      "target": "universal-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "universal-quantifier",
+      "layout_to": "induction"
+    },
+    {
+      "source": "measure",
+      "target": "sigma-algebra",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "sigma-algebra",
+      "layout_to": "measure"
+    },
+    {
+      "source": "measure",
+      "target": "real-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "real-number",
+      "layout_to": "measure"
+    },
+    {
+      "source": "measure",
+      "target": "order",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "order",
+      "layout_to": "measure"
+    },
+    {
+      "source": "membership",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "membership"
+    },
+    {
+      "source": "membership",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "membership"
+    },
+    {
+      "source": "metric-space",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "metric-space"
+    },
+    {
+      "source": "metric-space",
+      "target": "real-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "real-number",
+      "layout_to": "metric-space"
+    },
+    {
+      "source": "metric-space",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "metric-space"
+    },
+    {
+      "source": "model",
+      "target": "symbol",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "symbol",
+      "layout_to": "model"
+    },
+    {
+      "source": "model",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "model"
+    },
+    {
+      "source": "model",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "model"
+    },
+    {
+      "source": "multiplication",
+      "target": "addition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "addition",
+      "layout_to": "multiplication"
+    },
+    {
+      "source": "multiplication",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "multiplication"
+    },
+    {
+      "source": "multiplication",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "multiplication"
+    },
+    {
+      "source": "natural-number",
+      "target": "first-order-logic",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "first-order-logic",
+      "layout_to": "natural-number"
+    },
+    {
+      "source": "natural-number",
+      "target": "zero",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "zero",
+      "layout_to": "natural-number"
+    },
+    {
+      "source": "natural-number",
+      "target": "successor",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "successor",
+      "layout_to": "natural-number"
+    },
+    {
+      "source": "natural-number",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "natural-number"
+    },
+    {
+      "source": "natural-number",
+      "target": "induction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "induction",
+      "layout_to": "natural-number"
+    },
+    {
+      "source": "natural-number",
+      "target": "addition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "addition",
+      "layout_to": "natural-number"
+    },
+    {
+      "source": "natural-number",
+      "target": "multiplication",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "multiplication",
+      "layout_to": "natural-number"
+    },
+    {
+      "source": "negation",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "negation"
+    },
+    {
+      "source": "nonlinearity",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "nonlinearity"
+    },
+    {
+      "source": "nonlinearity",
+      "target": "linearity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "linearity",
+      "layout_to": "nonlinearity"
+    },
+    {
+      "source": "nonlinearity",
+      "target": "vector-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "vector-space",
+      "layout_to": "nonlinearity"
+    },
+    {
+      "source": "object",
+      "target": "distinction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "distinction",
+      "layout_to": "object"
+    },
+    {
+      "source": "one-plus-one",
+      "target": "addition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "addition",
+      "layout_to": "one-plus-one"
+    },
+    {
+      "source": "one-plus-one",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "one-plus-one"
+    },
+    {
+      "source": "one-plus-one",
+      "target": "proof",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "proof",
+      "layout_to": "one-plus-one"
+    },
+    {
+      "source": "operation",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "operation"
+    },
+    {
+      "source": "operation",
+      "target": "ordered-pair",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "ordered-pair",
+      "layout_to": "operation"
+    },
+    {
+      "source": "optimization",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "optimization"
+    },
+    {
+      "source": "optimization",
+      "target": "order",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "order",
+      "layout_to": "optimization"
+    },
+    {
+      "source": "optimization",
+      "target": "universal-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "universal-quantifier",
+      "layout_to": "optimization"
+    },
+    {
+      "source": "order",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "order"
+    },
+    {
+      "source": "order",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "order"
+    },
+    {
+      "source": "ordered-pair",
+      "target": "object",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "object",
+      "layout_to": "ordered-pair"
+    },
+    {
+      "source": "ordered-pair",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "ordered-pair"
+    },
+    {
+      "source": "parity",
+      "target": "integer",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "integer",
+      "layout_to": "parity"
+    },
+    {
+      "source": "parity",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "parity"
+    },
+    {
+      "source": "parity",
+      "target": "existential-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "existential-quantifier",
+      "layout_to": "parity"
+    },
+    {
+      "source": "periodicity",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "periodicity"
+    },
+    {
+      "source": "periodicity",
+      "target": "sequence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "sequence",
+      "layout_to": "periodicity"
+    },
+    {
+      "source": "prime",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "prime"
+    },
+    {
+      "source": "prime",
+      "target": "multiplication",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "multiplication",
+      "layout_to": "prime"
+    },
+    {
+      "source": "prime",
+      "target": "order",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "order",
+      "layout_to": "prime"
+    },
+    {
+      "source": "prime",
+      "target": "existential-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "existential-quantifier",
+      "layout_to": "prime"
+    },
+    {
+      "source": "prime",
+      "target": "universal-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "universal-quantifier",
+      "layout_to": "prime"
+    },
+    {
+      "source": "prime",
+      "target": "disjunction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "disjunction",
+      "layout_to": "prime"
+    },
+    {
+      "source": "probability-space",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "probability-space"
+    },
+    {
+      "source": "probability-space",
+      "target": "sigma-algebra",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "sigma-algebra",
+      "layout_to": "probability-space"
+    },
+    {
+      "source": "probability-space",
+      "target": "measure",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "measure",
+      "layout_to": "probability-space"
+    },
+    {
+      "source": "proof",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "proof"
+    },
+    {
+      "source": "proof",
+      "target": "inference-rule",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "inference-rule",
+      "layout_to": "proof"
+    },
+    {
+      "source": "proof",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "proof"
+    },
+    {
+      "source": "quasiperiodicity",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "quasiperiodicity"
+    },
+    {
+      "source": "quasiperiodicity",
+      "target": "periodicity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "periodicity",
+      "layout_to": "quasiperiodicity"
+    },
+    {
+      "source": "quasiperiodicity",
+      "target": "real-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "real-number",
+      "layout_to": "quasiperiodicity"
+    },
+    {
+      "source": "random-variable",
+      "target": "probability-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "probability-space",
+      "layout_to": "random-variable"
+    },
+    {
+      "source": "random-variable",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "random-variable"
+    },
+    {
+      "source": "random-variable",
+      "target": "sigma-algebra",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "sigma-algebra",
+      "layout_to": "random-variable"
+    },
+    {
+      "source": "rational",
+      "target": "integer",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "integer",
+      "layout_to": "rational"
+    },
+    {
+      "source": "rational",
+      "target": "equivalence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "equivalence",
+      "layout_to": "rational"
+    },
+    {
+      "source": "rational",
+      "target": "multiplication",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "multiplication",
+      "layout_to": "rational"
+    },
+    {
+      "source": "real-number",
+      "target": "rational",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "rational",
+      "layout_to": "real-number"
+    },
+    {
+      "source": "real-number",
+      "target": "field",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "field",
+      "layout_to": "real-number"
+    },
+    {
+      "source": "real-number",
+      "target": "order",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "order",
+      "layout_to": "real-number"
+    },
+    {
+      "source": "recurrence",
+      "target": "relation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "relation",
+      "layout_to": "recurrence"
+    },
+    {
+      "source": "recurrence",
+      "target": "sequence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "sequence",
+      "layout_to": "recurrence"
+    },
+    {
+      "source": "relation",
+      "target": "object",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "object",
+      "layout_to": "relation"
+    },
+    {
+      "source": "relation",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "relation"
+    },
+    {
+      "source": "integral",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "integral"
+    },
+    {
+      "source": "integral",
+      "target": "limit",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "limit",
+      "layout_to": "integral"
+    },
+    {
+      "source": "integral",
+      "target": "real-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "real-number",
+      "layout_to": "integral"
+    },
+    {
+      "source": "integral",
+      "target": "order",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "order",
+      "layout_to": "integral"
+    },
+    {
+      "source": "ring",
+      "target": "group",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "group",
+      "layout_to": "ring"
+    },
+    {
+      "source": "ring",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "ring"
+    },
+    {
+      "source": "satisfaction",
+      "target": "model",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "model",
+      "layout_to": "satisfaction"
+    },
+    {
+      "source": "satisfaction",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "satisfaction"
+    },
+    {
+      "source": "schema-replacement",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "schema-replacement"
+    },
+    {
+      "source": "schema-replacement",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "schema-replacement"
+    },
+    {
+      "source": "schema-replacement",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "schema-replacement"
+    },
+    {
+      "source": "schema-separation",
+      "target": "subset",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "subset",
+      "layout_to": "schema-separation"
+    },
+    {
+      "source": "schema-separation",
+      "target": "conjunction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "conjunction",
+      "layout_to": "schema-separation"
+    },
+    {
+      "source": "schema-separation",
+      "target": "axiom",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom",
+      "layout_to": "schema-separation"
+    },
+    {
+      "source": "information",
+      "target": "probability-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "probability-space",
+      "layout_to": "information"
+    },
+    {
+      "source": "information",
+      "target": "real-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "real-number",
+      "layout_to": "information"
+    },
+    {
+      "source": "information",
+      "target": "order",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "order",
+      "layout_to": "information"
+    },
+    {
+      "source": "sensitivity",
+      "target": "metric-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "metric-space",
+      "layout_to": "sensitivity"
+    },
+    {
+      "source": "sensitivity",
+      "target": "recurrence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "recurrence",
+      "layout_to": "sensitivity"
+    },
+    {
+      "source": "sequence",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "sequence"
+    },
+    {
+      "source": "sequence",
+      "target": "natural-number",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "natural-number",
+      "layout_to": "sequence"
+    },
+    {
+      "source": "set",
+      "target": "object",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "object",
+      "layout_to": "set"
+    },
+    {
+      "source": "set",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "set"
+    },
+    {
+      "source": "entropy",
+      "target": "random-variable",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "random-variable",
+      "layout_to": "entropy"
+    },
+    {
+      "source": "entropy",
+      "target": "information",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "information",
+      "layout_to": "entropy"
+    },
+    {
+      "source": "entropy",
+      "target": "addition",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "addition",
+      "layout_to": "entropy"
+    },
+    {
+      "source": "sigma-algebra",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "sigma-algebra"
+    },
+    {
+      "source": "sigma-algebra",
+      "target": "subset",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "subset",
+      "layout_to": "sigma-algebra"
+    },
+    {
+      "source": "signal-noise",
+      "target": "information",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "information",
+      "layout_to": "signal-noise"
+    },
+    {
+      "source": "signal-noise",
+      "target": "probability-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "probability-space",
+      "layout_to": "signal-noise"
+    },
+    {
+      "source": "stability",
+      "target": "metric-space",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "metric-space",
+      "layout_to": "stability"
+    },
+    {
+      "source": "stability",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "stability"
+    },
+    {
+      "source": "stability",
+      "target": "fixed-point",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "fixed-point",
+      "layout_to": "stability"
+    },
+    {
+      "source": "stability",
+      "target": "recurrence",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "recurrence",
+      "layout_to": "stability"
+    },
+    {
+      "source": "stability",
+      "target": "universal-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "universal-quantifier",
+      "layout_to": "stability"
+    },
+    {
+      "source": "stability",
+      "target": "existential-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "existential-quantifier",
+      "layout_to": "stability"
+    },
+    {
+      "source": "statement",
+      "target": "expression",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "expression",
+      "layout_to": "statement"
+    },
+    {
+      "source": "subset",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "subset"
+    },
+    {
+      "source": "subset",
+      "target": "membership",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "membership",
+      "layout_to": "subset"
+    },
+    {
+      "source": "subset",
+      "target": "implication",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "implication",
+      "layout_to": "subset"
+    },
+    {
+      "source": "successor",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "successor"
+    },
+    {
+      "source": "successor",
+      "target": "zero",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "zero",
+      "layout_to": "successor"
+    },
+    {
+      "source": "surjective-function",
+      "target": "function",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "function",
+      "layout_to": "surjective-function"
+    },
+    {
+      "source": "surjective-function",
+      "target": "existential-quantifier",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "existential-quantifier",
+      "layout_to": "surjective-function"
+    },
+    {
+      "source": "symbol",
+      "target": "distinction",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "distinction",
+      "layout_to": "symbol"
+    },
+    {
+      "source": "symbol",
+      "target": "object",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "object",
+      "layout_to": "symbol"
+    },
+    {
+      "source": "symmetry",
+      "target": "group-action",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "group-action",
+      "layout_to": "symmetry"
+    },
+    {
+      "source": "symmetry",
+      "target": "identity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "identity",
+      "layout_to": "symmetry"
+    },
+    {
+      "source": "theorem",
+      "target": "proof",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "proof",
+      "layout_to": "theorem"
+    },
+    {
+      "source": "theorem",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "theorem"
+    },
+    {
+      "source": "topological-space",
+      "target": "set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "set",
+      "layout_to": "topological-space"
+    },
+    {
+      "source": "topological-space",
+      "target": "subset",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "subset",
+      "layout_to": "topological-space"
+    },
+    {
+      "source": "type",
+      "target": "expression",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "expression",
+      "layout_to": "type"
+    },
+    {
+      "source": "universal-quantifier",
+      "target": "statement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "statement",
+      "layout_to": "universal-quantifier"
+    },
+    {
+      "source": "universal-quantifier",
+      "target": "model",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "model",
+      "layout_to": "universal-quantifier"
+    },
+    {
+      "source": "vector-space",
+      "target": "field",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "field",
+      "layout_to": "vector-space"
+    },
+    {
+      "source": "vector-space",
+      "target": "group",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "group",
+      "layout_to": "vector-space"
+    },
+    {
+      "source": "vector-space",
+      "target": "operation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "operation",
+      "layout_to": "vector-space"
+    },
+    {
+      "source": "zero",
+      "target": "object",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "object",
+      "layout_to": "zero"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "first-order-logic",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "first-order-logic",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-extensionality",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-extensionality",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-empty-set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-empty-set",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-pairing",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-pairing",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-union",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-union",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-power-set",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-power-set",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-infinity",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-infinity",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "schema-separation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "schema-separation",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "schema-replacement",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "schema-replacement",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-foundation",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-foundation",
+      "layout_to": "zfc-set-theory"
+    },
+    {
+      "source": "zfc-set-theory",
+      "target": "axiom-choice",
+      "relation": "definition-uses",
+      "strength": "candidate",
+      "layout_from": "axiom-choice",
+      "layout_to": "zfc-set-theory"
+    }
+  ]
+}

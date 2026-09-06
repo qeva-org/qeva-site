@@ -1,0 +1,16 @@
+{
+  "analyzer_version": "0.1",
+  "id": "qeva-analyzer:1:cycle-detector",
+  "revision": 1,
+  "title": "Cycle detector",
+  "purpose": "Detect exact repeated states in finite/integer traces and tolerance-dependent candidate periods in binary64 traces.",
+  "accepts": ["recurrence", "integer-map", "finite-state"],
+  "emits": ["cycle", "candidate-period", "no-repeat-within-bound"],
+  "evidence_classes": ["exact-execution", "bounded-exhaustive", "numerical-observation"],
+  "determinism": "Deterministic; binary64 candidate periods pin the tolerance and inspected suffix.",
+  "resource_limits": {"max_states": 100000, "max_operations": 200000},
+  "implementation": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "function": "analyzeRun"},
+  "tests": ["tests/fixtures/engine-fixtures.json"],
+  "license": "MIT",
+  "supersedes": null
+}

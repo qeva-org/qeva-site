@@ -1,0 +1,58 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:collatz-conjecture",
+  "revision": 2,
+  "kind": "conjecture",
+  "title": "Collatz conjecture",
+  "summary": "The open claim that every positive integer orbit under the Collatz map eventually reaches 1.",
+  "domains": [
+    "number-theory",
+    "dynamics",
+    "open-problems"
+  ],
+  "context": {
+    "framework": "positive integers",
+    "framework_ref": "qeva:1:natural-number@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "The Collatz map T is as defined in qeva:1:collatz-map@2.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Every tested starting value appears eventually to enter the 1→4→2→1 cycle, but no proof is known for all positive integers.",
+    "exact": "For every n∈N_{>0}, there exists k≥0 such that T^k(n)=1.",
+    "example": "The orbit of 6 reaches 1 after eight steps if the starting value is counted as step 0.",
+    "caveat": "This is open. Error-amplification, chaos, hierarchy, or emergent-invariance descriptions are research hypotheses unless made precise and proved."
+  },
+  "dependencies": [
+    "qeva:1:collatz-map@2"
+  ],
+  "relations": [
+    {
+      "kind": "open-related-lens",
+      "target": "qeva:1:hierarchy@2",
+      "note": "One may search for multiscale structure, but none is asserted here."
+    },
+    {
+      "kind": "open-related-lens",
+      "target": "qeva:1:sensitivity@2",
+      "note": "Sensitivity-like comparisons can be studied after specifying a metric/embedding; they do not resolve the conjecture by themselves."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:collatz-conjecture@1",
+  "legacy_ids": []
+}

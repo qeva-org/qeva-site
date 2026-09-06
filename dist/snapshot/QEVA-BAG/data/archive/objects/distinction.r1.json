@@ -1,0 +1,44 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:distinction",
+  "revision": 1,
+  "kind": "primitive",
+  "title": "Distinction",
+  "summary": "Reasoning begins by allowing one state, mark, or object to be told apart from another.",
+  "domains": [
+    "foundations",
+    "logic"
+  ],
+  "context": {
+    "framework": "preformal metalanguage",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared preformal metalanguage context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Reasoning begins by allowing one state, mark, or object to be told apart from another.",
+    "exact": "QEVA treats distinction as a declared primitive relation D(a,b) for a chosen context; it does not assert that one metaphysical notion of difference is forced on every framework.",
+    "example": "The marks ○ and ● are distinguishable by fill in a visual encoding.",
+    "caveat": "A distinction always depends on what an observer, test, language, or structure can detect."
+  },
+  "dependencies": [],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

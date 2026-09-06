@@ -1,0 +1,4 @@
+Source-Organization: QEVA
+Bagging-Date: 2026-09-05
+External-Identifier: QEVA-0.5.0
+Payload-Oxum: 3863225.247

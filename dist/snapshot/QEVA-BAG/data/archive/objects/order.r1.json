@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:order",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Order",
+  "summary": "An order records a consistent notion of before, below, or no greater than.",
+  "domains": [
+    "order-theory",
+    "structure"
+  ],
+  "context": {
+    "framework": "relation theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared relation theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "An order records a consistent notion of before, below, or no greater than.",
+    "exact": "A partial order ≤ is reflexive, antisymmetric, and transitive. A total order additionally compares every pair.",
+    "example": "Subset inclusion partially orders the subsets of a set.",
+    "caveat": "Not every pair is comparable in a partial order."
+  },
+  "dependencies": [
+    "qeva:1:relation@1",
+    "qeva:1:identity@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:ordered-pair",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Ordered pair",
+  "summary": "An ordered pair stores two objects while preserving which is first and which is second.",
+  "domains": [
+    "set-theory",
+    "structure"
+  ],
+  "context": {
+    "framework": "structural mathematics",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared structural mathematics context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "An ordered pair stores two objects while preserving which is first and which is second.",
+    "exact": "A pairing operation (a,b) must satisfy (a,b)=(c,d) iff a=c and b=d; one set encoding is {{a},{a,b}}.",
+    "example": "(2,5) differs from (5,2) when 2≠5.",
+    "caveat": "The set encoding is one implementation; the structural property is what later constructions use."
+  },
+  "dependencies": [
+    "qeva:1:object@1",
+    "qeva:1:identity@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

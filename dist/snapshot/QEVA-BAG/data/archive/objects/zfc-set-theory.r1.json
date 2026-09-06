@@ -1,0 +1,56 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:zfc-set-theory",
+  "revision": 1,
+  "kind": "framework",
+  "title": "ZFC set theory",
+  "summary": "ZFC is a major foundational theory whose objects are sets governed by explicit axiom schemes and axioms.",
+  "domains": [
+    "set-theory",
+    "foundations"
+  ],
+  "context": {
+    "framework": "classical first-order set theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared classical first-order set theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "ZFC is a major foundational theory whose objects are sets governed by explicit axiom schemes and axioms.",
+    "exact": "A ZFC presentation includes extensionality, empty set, pairing, union, power set, infinity, separation and replacement schemes, foundation, and choice in first-order logic with ∈.",
+    "example": "Natural numbers, functions, spaces, and algebraic structures can be encoded as sets inside ZFC.",
+    "caveat": "ZFC is powerful and standard, but QEVA does not declare it the only legitimate foundation."
+  },
+  "dependencies": [
+    "qeva:1:first-order-logic@1",
+    "qeva:1:axiom-extensionality@1",
+    "qeva:1:axiom-empty-set@1",
+    "qeva:1:axiom-pairing@1",
+    "qeva:1:axiom-union@1",
+    "qeva:1:axiom-power-set@1",
+    "qeva:1:axiom-infinity@1",
+    "qeva:1:schema-separation@1",
+    "qeva:1:schema-replacement@1",
+    "qeva:1:axiom-foundation@1",
+    "qeva:1:axiom-choice@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

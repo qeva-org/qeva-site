@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:integral",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Integral",
+  "summary": "An integral aggregates local quantities according to a declared notion of size.",
+  "domains": [
+    "analysis",
+    "calculus"
+  ],
+  "context": {
+    "framework": "measure or Riemann integration",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared measure or Riemann integration context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "An integral aggregates local quantities according to a declared notion of size.",
+    "exact": "For a Riemann-integrable f on [a,b], ∫ₐᵇf is the common limit of refining upper/lower or tagged sums; Lebesgue integration uses measures and simple-function limits.",
+    "example": "∫₀¹ x dx = 1/2.",
+    "caveat": "Riemann, Lebesgue, stochastic, path, and other integrals are not one unqualified operation."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:limit@1",
+    "qeva:1:real-number@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

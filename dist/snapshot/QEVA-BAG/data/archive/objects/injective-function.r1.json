@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:injective-function",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Injection",
+  "summary": "An injective function never sends two different inputs to the same output.",
+  "domains": [
+    "set-theory",
+    "structure"
+  ],
+  "context": {
+    "framework": "functions",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared functions context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "An injective function never sends two different inputs to the same output.",
+    "exact": "f:X→Y is injective iff ∀x₁,x₂∈X, f(x₁)=f(x₂) implies x₁=x₂.",
+    "example": "n↦2n is injective from ℤ to ℤ.",
+    "caveat": "Injectivity does not require every codomain value to be hit."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:identity@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

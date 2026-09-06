@@ -1,0 +1,16 @@
+{
+  "analyzer_version": "0.1",
+  "id": "qeva-analyzer:1:perturbation-growth",
+  "revision": 1,
+  "title": "Perturbation growth summary",
+  "purpose": "Measure finite binary64 separation between two recorded trajectories without declaring chaos.",
+  "accepts": ["recurrence"],
+  "emits": ["first-threshold-crossing", "maximum-separation", "finite-growth-summary"],
+  "evidence_classes": ["numerical-observation"],
+  "determinism": "Deterministic for pinned binary64 operation order and inputs.",
+  "resource_limits": {"max_states": 10000, "max_operations": 20000},
+  "implementation": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "function": "analyzeRun"},
+  "tests": ["tests/fixtures/engine-fixtures.json"],
+  "license": "MIT",
+  "supersedes": null
+}

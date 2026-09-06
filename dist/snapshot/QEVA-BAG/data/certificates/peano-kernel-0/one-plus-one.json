@@ -1,0 +1,38 @@
+{
+  "kernel": "QEVA-Peano-Kernel-0",
+  "claim_ref": "qeva:1:one-plus-one@1",
+  "rules": {
+    "add-zero": "add(a, 0) -> a",
+    "add-successor": "add(a, S(b)) -> S(add(a, b))"
+  },
+  "start": [
+    "add",
+    [
+      "S",
+      "0"
+    ],
+    [
+      "S",
+      "0"
+    ]
+  ],
+  "steps": [
+    {
+      "rule": "add-successor",
+      "path": []
+    },
+    {
+      "rule": "add-zero",
+      "path": [
+        1
+      ]
+    }
+  ],
+  "expected": [
+    "S",
+    [
+      "S",
+      "0"
+    ]
+  ]
+}

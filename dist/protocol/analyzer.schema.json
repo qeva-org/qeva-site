@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/analyzer.schema.json",
+  "title": "QEVA Analyzer Manifest 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["analyzer_version", "id", "revision", "title", "purpose", "accepts", "emits", "evidence_classes", "determinism", "resource_limits", "implementation", "tests", "license", "supersedes"],
+  "properties": {
+    "analyzer_version": {"const": "0.1"},
+    "id": {"type": "string", "pattern": "^qeva-analyzer:1:[a-z0-9][a-z0-9._-]*$"},
+    "revision": {"type": "integer", "minimum": 1},
+    "title": {"type": "string", "minLength": 1},
+    "purpose": {"type": "string", "minLength": 1},
+    "accepts": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "emits": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "evidence_classes": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "determinism": {"type": "string", "minLength": 1},
+    "resource_limits": {"type": "object"},
+    "implementation": {"type": "object"},
+    "tests": {"type": "array", "items": {"type": "string"}},
+    "license": {"type": "string", "minLength": 1},
+    "supersedes": {"type": ["string", "null"]}
+  }
+}
+

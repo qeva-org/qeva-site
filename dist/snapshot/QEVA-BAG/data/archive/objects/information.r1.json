@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:information",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Self-information",
+  "summary": "A less probable event carries more self-information under a logarithmic coding model.",
+  "domains": [
+    "information-theory",
+    "probability"
+  ],
+  "context": {
+    "framework": "information theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared information theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A less probable event carries more self-information under a logarithmic coding model.",
+    "exact": "For event E with 0<P(E)≤1, I(E)=−log_b P(E); the base b fixes units such as bits when b=2.",
+    "example": "A fair coin result carries 1 bit of self-information.",
+    "caveat": "This technical quantity is not identical to meaning, knowledge, usefulness, or truth."
+  },
+  "dependencies": [
+    "qeva:1:probability-space@1",
+    "qeva:1:real-number@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

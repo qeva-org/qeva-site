@@ -1,0 +1,57 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:chirality",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Chirality",
+  "summary": "Failure of an object to be superimposable on its mirror image using only orientation-preserving transformations.",
+  "domains": [
+    "symmetry",
+    "geometry"
+  ],
+  "context": {
+    "framework": "group actions with orientation class",
+    "framework_ref": "qeva:1:group-action@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "A group G acts on X.",
+      "ref": null
+    },
+    {
+      "text": "H is an index-2 subgroup of orientation-preserving transformations.",
+      "ref": null
+    },
+    {
+      "text": "r is any element of G\\H.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A chiral object has a handedness: mirroring changes it in a way that allowed orientation-preserving motions cannot undo.",
+    "exact": "For x in X, define the mirror image r·x. The object x is chiral relative to (G,H) iff r·x is not in the H-orbit H·x. Because H has index 2, the property is independent of which r in G\\H is chosen.",
+    "example": "Left and right hands are the usual physical analogy: a mirror swaps handedness, while rotations alone do not.",
+    "caveat": "Chirality is relative to a declared transformation group and an orientation-preserving subgroup; it is not an intrinsic word without that context."
+  },
+  "dependencies": [
+    "qeva:1:group-action@1",
+    "qeva:1:symmetry@2"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:chirality@1",
+  "legacy_ids": [
+    "qeva:1:definition:chirality"
+  ]
+}

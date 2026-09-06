@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:complex-number",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Complex number",
+  "summary": "Complex numbers can be constructed as ordered pairs of reals with explicit field operations.",
+  "domains": [
+    "analysis",
+    "algebra"
+  ],
+  "context": {
+    "framework": "ordered-pair construction over the real field",
+    "framework_ref": "qeva:1:real-number@1",
+    "note": "Revision 2 supplies equality, addition, multiplication, zero, one, and i rather than only multiplication."
+  },
+  "assumptions": [
+    {
+      "text": "The complete ordered field of real numbers is fixed.",
+      "ref": "qeva:1:real-number@1"
+    }
+  ],
+  "content": {
+    "plain": "Represent a complex number by a pair of real coordinates and define arithmetic so that the second coordinate behaves like a square root of minus one.",
+    "exact": "Let C=R×R with componentwise equality, (a,b)+(c,d)=(a+c,b+d), and (a,b)·(c,d)=(ac−bd,ad+bc). Define 0_C=(0,0), 1_C=(1,0), and i=(0,1). Then i²=(-1,0), identified with the embedded real number -1.",
+    "example": "3+2i corresponds to (3,2), and (0,1)·(0,1)=(-1,0).",
+    "caveat": "The displayed operations define the construction; the field laws and uniqueness up to suitable isomorphism are separate theorems."
+  },
+  "dependencies": [
+    "qeva:1:real-number@1",
+    "qeva:1:ordered-pair@1",
+    "qeva:1:operation@2"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Completes the pair construction enough to identify the operations and distinguished elements. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:complex-number@1",
+  "legacy_ids": []
+}

@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:definition",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Definition",
+  "summary": "A definition fixes how a new expression is to be used in terms of already available structure.",
+  "domains": [
+    "foundations",
+    "logic"
+  ],
+  "context": {
+    "framework": "formal or mathematical discourse",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared formal or mathematical discourse context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A definition fixes how a new expression is to be used in terms of already available structure.",
+    "exact": "A conservative explicit definition introduces a symbol d with a clause d(x) ↔ φ(x), where φ uses the prior language and uniqueness or admissibility conditions are stated when needed.",
+    "example": "‘n is even’ may be defined as ‘there exists k with n=2k’.",
+    "caveat": "Definitions can conceal existence, uniqueness, type, or context assumptions unless those are exposed."
+  },
+  "dependencies": [
+    "qeva:1:expression@1",
+    "qeva:1:identity@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

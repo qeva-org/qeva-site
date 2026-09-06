@@ -1,0 +1,64 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:stability",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Stability",
+  "summary": "Stability asks whether specified behavior persists under sufficiently small perturbations.",
+  "domains": [
+    "dynamics",
+    "analysis",
+    "control"
+  ],
+  "context": {
+    "framework": "metric dynamical systems",
+    "framework_ref": "qeva:1:metric-space@1",
+    "note": "Revision 2 exposes a QEVA foundation dependency instead of stopping only at a textual framework label."
+  },
+  "assumptions": [
+    {
+      "text": "A notion of perturbation, a reference behavior, and a time evolution are specified.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A stable behavior does not immediately lose its qualitative or quantitative character after a small perturbation.",
+    "exact": "For a fixed point x* of a map F on a metric space, Lyapunov stability means: for every ε>0 there exists δ>0 such that d(x0,x*)<δ implies d(F^n(x0),x*)<ε for all n≥0.",
+    "example": "For F(x)=x/2 on R, x*=0 is asymptotically stable.",
+    "caveat": "There are many inequivalent notions of stability: Lyapunov, asymptotic, structural, orbital, input-output, stochastic, and others."
+  },
+  "dependencies": [
+    "qeva:1:metric-space@1",
+    "qeva:1:recurrence@2"
+  ],
+  "relations": [
+    {
+      "kind": "classifies",
+      "target": "qeva:1:fixed-point@2",
+      "note": "Fixed points can be stable or unstable."
+    },
+    {
+      "kind": "related-to",
+      "target": "qeva:1:attractor@2",
+      "note": "Attraction is stronger/different from mere Lyapunov stability depending on definitions."
+    },
+    {
+      "kind": "opposes",
+      "target": "qeva:1:sensitivity@2",
+      "note": "Strong sensitivity and local stability express different perturbation behavior."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "Revision migration checked for exact-reference closure and editorial mathematical coherence; no external formal proof artifact is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation migration",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the preserved release-0.3 seed revision by connecting its previously textual framework boundary to the QEVA foundation switchboard."
+  },
+  "supersedes": "qeva:1:stability@1",
+  "legacy_ids": []
+}

@@ -1,0 +1,47 @@
+{
+  "experiment_version": "0.1",
+  "id": "qeva-experiment:1:logistic-sensitivity",
+  "revision": 1,
+  "title": "Logistic recurrence and sensitivity",
+  "summary": "Run two nearby initial values under one recurrence and compare their finite-precision separation.",
+  "family": "recurrence",
+  "state_space": {
+    "kind": "closed interval",
+    "description": "A binary64 state x intended to lie in [0,1].",
+    "numeric_domain": "binary64",
+    "bounds": [0, 1]
+  },
+  "entities": [
+    {"id": "x", "label": "primary trajectory", "role": "state"},
+    {"id": "y", "label": "perturbed trajectory", "role": "comparison state"}
+  ],
+  "relations": [
+    {"kind": "finite-perturbation", "source": "x", "target": "y", "note": "y starts delta above x, clamped below 1."}
+  ],
+  "operations": [
+    {"id": "logistic-step", "kernel": "logistic-map", "kernel_version": "1", "formula": "for z in {x,y}, z_(n+1)=r*z_n*(1-z_n), applied independently and synchronously", "inputs": ["x", "y", "r"], "output": "x,y"}
+  ],
+  "update": {"operation": "logistic-step", "state": "x,y", "schedule": "synchronous discrete steps"},
+  "parameters": [
+    {"id": "r", "label": "growth parameter r", "type": "number", "min": 2.5, "max": 4, "step": 0.001, "default": 3.9, "description": "Controls the map's finite observed regime."},
+    {"id": "x0", "label": "initial x", "type": "number", "min": 0.01, "max": 0.99, "step": 0.001, "default": 0.4, "description": "Initial state of the primary trajectory."},
+    {"id": "delta", "label": "initial separation", "type": "number", "min": 0.000001, "max": 0.01, "step": 0.000001, "default": 0.0001, "description": "Initial difference between the two trajectories."},
+    {"id": "steps", "label": "steps", "type": "integer", "min": 10, "max": 240, "step": 1, "default": 70, "description": "Finite run length."}
+  ],
+  "initial_conditions": {"x": "x0", "y": "min(0.999999, x0+delta)"},
+  "boundary_conditions": ["2.5 ≤ r ≤ 4", "0.01 ≤ x0 ≤ 0.99", "10 ≤ steps ≤ 240"],
+  "observer": {"id": "identity-observer", "version": "1", "kind": "identity", "description": "Retain the binary64 state value.", "parameters": {}},
+  "randomness": {"algorithm": "none", "version": "1", "seed_parameter": null, "deterministic": true},
+  "run_bounds": {"steps": 240, "max_states": 482, "max_operations": 480, "timeout_ms": 250},
+  "analyzers": ["qeva-analyzer:1:fixed-point@1", "qeva-analyzer:1:cycle-detector@1", "qeva-analyzer:1:perturbation-growth@1", "qeva-analyzer:1:summary@1", "qeva-analyzer:1:conjecture-attack@1"],
+  "outputs": [
+    {"id": "trajectory", "label": "primary trajectory", "kind": "binary64 sequence"},
+    {"id": "perturbed", "label": "perturbed trajectory", "kind": "binary64 sequence"},
+    {"id": "separation", "label": "absolute separation", "kind": "binary64 sequence"}
+  ],
+  "executable": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "artifact_sha256": "416c020a616a2b56258ecb63d6c1764b392746d73c01b13702be4d2562074423", "kernel": "logistic-map", "kernel_version": "1", "representation": "bounded-declarative-json", "numeric_semantics": "ecmascript-binary64-v0.1"},
+  "related_objects": ["qeva:1:recurrence@2", "qeva:1:fixed-point@2", "qeva:1:stability@2", "qeva:1:sensitivity@2", "qeva:1:chaos@2", "qeva:1:attractor@2"],
+  "provenance": {"created": "2026-09-05", "creator": "QEVA mechanism seed", "license": "CC0-1.0", "parent": null, "source_refs": []},
+  "stewardship": {"steward": "QEVA project", "visibility": "public", "publication_state": "public"},
+  "supersedes": null
+}

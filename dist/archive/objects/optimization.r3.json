@@ -1,0 +1,64 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:optimization",
+  "revision": 3,
+  "kind": "definition",
+  "title": "Optimization",
+  "summary": "A minimization problem specifies a feasible set and objective; its infimum is the optimal value and may be unattained.",
+  "domains": [
+    "optimization",
+    "analysis",
+    "algorithms"
+  ],
+  "context": {
+    "framework": "ordered optimization",
+    "framework_ref": "qeva:1:order@1",
+    "note": "Revision 3 distinguishes the optimization problem, its optimal value, and a minimizer."
+  },
+  "assumptions": [
+    {
+      "text": "A nonempty feasible set X and an objective f:X→Y are fixed.",
+      "ref": "qeva:1:function@1"
+    },
+    {
+      "text": "The codomain Y has enough order structure for the displayed comparisons and infimum.",
+      "ref": "qeva:1:order@1"
+    }
+  ],
+  "content": {
+    "plain": "Optimization first specifies which choices are allowed and how they are scored; the best lower score may or may not be achieved by a choice.",
+    "exact": "A minimization problem is specified by a feasible set X and objective f:X→Y into an ordered codomain. When it exists, inf f(X) is the optimal value. A global minimizer is x*∈X satisfying f(x*)≤f(x) for every x∈X; a finite infimum need not be attained.",
+    "example": "For f(x)=(x−3)² on R, the optimal value is 0 and the unique global minimizer is x=3.",
+    "caveat": "Mathematical optimality is relative to the chosen feasible set, objective, and order; it does not certify that those choices are appropriate."
+  },
+  "dependencies": [
+    "qeva:1:function@1",
+    "qeva:1:order@1",
+    "qeva:1:universal-quantifier@1"
+  ],
+  "relations": [
+    {
+      "kind": "distinguishes",
+      "target": "qeva:1:local-global@2",
+      "note": "Local and global minimizers quantify over different neighborhoods."
+    },
+    {
+      "kind": "paired-with",
+      "target": "qeva:1:exploration-exploitation@2",
+      "note": "Search procedures may trade current objective value against information gathering."
+    }
+  ],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Corrects the former identification of a minimization problem with its infimum. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:optimization@2",
+  "legacy_ids": []
+}

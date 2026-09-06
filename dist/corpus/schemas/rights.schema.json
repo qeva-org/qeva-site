@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/corpus/schemas/rights.schema.json",
+  "title": "QEVA Source Rights Assertion 0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["class", "basis", "full_text_mirroring", "text_extraction"],
+  "properties": {
+    "class": {
+      "enum": ["metadata-only", "open-license", "public-domain", "restricted", "unknown"]
+    },
+    "basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "full_text_mirroring": {
+      "type": "boolean"
+    },
+    "text_extraction": {
+      "type": "boolean",
+      "description": "Whether a public extraction record may copy source wording. This is narrower than private analysis permission."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "class": {
+            "enum": ["metadata-only", "restricted", "unknown"]
+          }
+        },
+        "required": ["class"]
+      },
+      "then": {
+        "properties": {
+          "full_text_mirroring": {"const": false},
+          "text_extraction": {"const": false}
+        }
+      }
+    }
+  ]
+}

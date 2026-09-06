@@ -1,0 +1,80 @@
+[
+  {
+    "ref": "qeva-experiment:1:coarse-grained-signal@1",
+    "id": "qeva-experiment:1:coarse-grained-signal",
+    "revision": 1,
+    "current": true,
+    "title": "Coarse-grained signal",
+    "summary": "Hold a deterministic signal fixed while changing how many fine samples each observation combines.",
+    "family": "signal",
+    "path": "records/coarse-grained-signal.r1.json",
+    "canonical_sha256": "f96976cbc603a143b7a02c0445f7a12780af223ecd5d34d026b95ab0ee7b7ed8",
+    "artifact_sha256": "470d8c3504680174aac1f7f58a4ee61b5be668ee24b4663514ce20a6bfd3abc7",
+    "engine": "0.1.0"
+  },
+  {
+    "ref": "qeva-experiment:1:collatz-orbit@1",
+    "id": "qeva-experiment:1:collatz-orbit",
+    "revision": 1,
+    "current": true,
+    "title": "Bounded Collatz orbit",
+    "summary": "Generate an exact finite Collatz trace and keep its limited evidential scope visible.",
+    "family": "integer-map",
+    "path": "records/collatz-orbit.r1.json",
+    "canonical_sha256": "e59b61dde095997ef52cdaac461172360b903dae0697abb6be21fa6d2a23d8f6",
+    "artifact_sha256": "834d888a3f0b8c8ce449df7c78bcd8b4c62b89bb929fa47e61d39d31528e7cb7",
+    "engine": "0.1.0"
+  },
+  {
+    "ref": "qeva-experiment:1:finite-map-cycles@1",
+    "id": "qeva-experiment:1:finite-map-cycles",
+    "revision": 1,
+    "current": true,
+    "title": "Finite map cycles",
+    "summary": "Edit a finite transition rule and exhaustively expose its cycles, fixed points, and basins.",
+    "family": "finite-state",
+    "path": "records/finite-map-cycles.r1.json",
+    "canonical_sha256": "737111e4d2023f6f321b150f77222022b8d40ea3d8c0b762186a759365c2a6a5",
+    "artifact_sha256": "1e1dbb6e377cdcebb039dd1cfc7d8dc1712b4ae5a6dafb73fad3f60f7d623929",
+    "engine": "0.1.0"
+  },
+  {
+    "ref": "qeva-experiment:1:local-global-search@1",
+    "id": "qeva-experiment:1:local-global-search",
+    "revision": 1,
+    "current": true,
+    "title": "Local and exploratory search",
+    "summary": "Compare local improvement with seeded exploration on a fixed multi-peak landscape.",
+    "family": "optimization",
+    "path": "records/local-global-search.r1.json",
+    "canonical_sha256": "26afd397b7140816e0bbd82c75f3e02859e51995f49089435f85538079334f15",
+    "artifact_sha256": "013253904264487069c78172b0baf63c1c15c1a043a214041da9737430646dda",
+    "engine": "0.1.0"
+  },
+  {
+    "ref": "qeva-experiment:1:logistic-sensitivity@1",
+    "id": "qeva-experiment:1:logistic-sensitivity",
+    "revision": 1,
+    "current": true,
+    "title": "Logistic recurrence and sensitivity",
+    "summary": "Run two nearby initial values under one recurrence and compare their finite-precision separation.",
+    "family": "recurrence",
+    "path": "records/logistic-sensitivity.r1.json",
+    "canonical_sha256": "96718078056609c7f075b0cd23ccfde54c4be38102c769a9332091ce06a8955c",
+    "artifact_sha256": "bb09450f3b162dc2e0f4d8e5dfb221bf04a0f2a1fccf4975479916fe4254c0dc",
+    "engine": "0.1.0"
+  },
+  {
+    "ref": "qeva-experiment:1:modular-equivalence@1",
+    "id": "qeva-experiment:1:modular-equivalence",
+    "revision": 1,
+    "current": true,
+    "title": "Modular equivalence classes",
+    "summary": "Change the modulus and inspect which integer distinctions remain visible.",
+    "family": "projection",
+    "path": "records/modular-equivalence.r1.json",
+    "canonical_sha256": "8b754731181a28d2f3406b32e8b6d3edf706d4250c2ca630972de5ed21490a16",
+    "artifact_sha256": "263502eb3e0d5a10b0c5753688a7c921ad64dde290ef593d0b70f6cd3a74bae8",
+    "engine": "0.1.0"
+  }
+]

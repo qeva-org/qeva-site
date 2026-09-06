@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:measure",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Measure",
+  "summary": "A measure assigns a nonnegative size to measurable sets while adding the sizes of disjoint pieces.",
+  "domains": [
+    "measure-theory",
+    "analysis"
+  ],
+  "context": {
+    "framework": "measure theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared measure theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A measure assigns a nonnegative size to measurable sets while adding the sizes of disjoint pieces.",
+    "exact": "For a measurable space (Ω,𝓕), μ:𝓕→[0,∞] is a measure when μ(∅)=0 and μ(⋃ₙAₙ)=Σₙμ(Aₙ) for every pairwise-disjoint sequence (Aₙ).",
+    "example": "Length on intervals extends to Lebesgue measure on a sigma-algebra of subsets of the real line.",
+    "caveat": "A measure needs a declared measurable space; assigning a size to every conceivable subset may be impossible or undesirable."
+  },
+  "dependencies": [
+    "qeva:1:sigma-algebra@1",
+    "qeva:1:real-number@1",
+    "qeva:1:order@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

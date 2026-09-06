@@ -1,0 +1,43 @@
+{
+  "experiment_version": "0.1",
+  "id": "qeva-experiment:1:modular-equivalence",
+  "revision": 1,
+  "title": "Modular equivalence classes",
+  "summary": "Change the modulus and inspect which integer distinctions remain visible.",
+  "family": "projection",
+  "state_space": {
+    "kind": "bounded integer sample",
+    "description": "The integers n with 0 ≤ n < count.",
+    "numeric_domain": "integer",
+    "bounds": [0, 239]
+  },
+  "entities": [
+    {"id": "n", "label": "integer", "role": "observed object"}
+  ],
+  "relations": [
+    {"kind": "equivalent-under-observer", "source": "n", "target": "n", "note": "Two values are equivalent when their remainders agree."}
+  ],
+  "operations": [
+    {"id": "remainder", "kernel": "modular-projection", "kernel_version": "1", "formula": "C_m(n)=n mod m", "inputs": ["n", "modulus"], "output": "class"}
+  ],
+  "update": {"operation": "remainder", "state": "n", "schedule": "evaluate each sampled integer once"},
+  "parameters": [
+    {"id": "modulus", "label": "modulus", "type": "integer", "min": 2, "max": 24, "step": 1, "default": 5, "description": "Number of observable congruence classes."},
+    {"id": "count", "label": "sample size", "type": "integer", "min": 12, "max": 240, "step": 1, "default": 60, "description": "Number of consecutive integers shown."}
+  ],
+  "initial_conditions": {"first_integer": 0},
+  "boundary_conditions": ["2 ≤ modulus ≤ 24", "12 ≤ count ≤ 240"],
+  "observer": {"id": "remainder-observer", "version": "1", "kind": "remainder", "description": "Retain only n modulo m.", "parameters": {"modulus_parameter": "modulus"}},
+  "randomness": {"algorithm": "none", "version": "1", "seed_parameter": null, "deterministic": true},
+  "run_bounds": {"steps": 240, "max_states": 240, "max_operations": 240, "timeout_ms": 250},
+  "analyzers": ["qeva-analyzer:1:candidate-invariant@1", "qeva-analyzer:1:summary@1", "qeva-analyzer:1:conjecture-attack@1"],
+  "outputs": [
+    {"id": "classes", "label": "observed equivalence classes", "kind": "finite partition"},
+    {"id": "assignments", "label": "integer-to-class assignments", "kind": "table"}
+  ],
+  "executable": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "artifact_sha256": "416c020a616a2b56258ecb63d6c1764b392746d73c01b13702be4d2562074423", "kernel": "modular-projection", "kernel_version": "1", "representation": "bounded-declarative-json", "numeric_semantics": "integer-v0.1"},
+  "related_objects": ["qeva:1:distinction@1", "qeva:1:grouping@2", "qeva:1:equivalence@2", "qeva:1:parity@2"],
+  "provenance": {"created": "2026-09-05", "creator": "QEVA mechanism seed", "license": "CC0-1.0", "parent": null, "source_refs": []},
+  "stewardship": {"steward": "QEVA project", "visibility": "public", "publication_state": "public"},
+  "supersedes": null
+}

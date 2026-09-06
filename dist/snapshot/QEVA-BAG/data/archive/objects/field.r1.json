@@ -1,0 +1,46 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:field",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Field",
+  "summary": "A field is a commutative arithmetic system where every nonzero element has a multiplicative inverse.",
+  "domains": [
+    "algebra"
+  ],
+  "context": {
+    "framework": "abstract algebra",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared abstract algebra context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A field is a commutative arithmetic system where every nonzero element has a multiplicative inverse.",
+    "exact": "A field (F,+,·) is a commutative ring with 1≠0 such that F\\{0} is an abelian group under multiplication.",
+    "example": "ℚ and ℝ are fields; ℤ is not.",
+    "caveat": "Finite and infinite fields can behave very differently."
+  },
+  "dependencies": [
+    "qeva:1:ring@1",
+    "qeva:1:group@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

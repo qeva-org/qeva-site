@@ -1,0 +1,52 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:one-plus-one",
+  "revision": 2,
+  "kind": "theorem",
+  "title": "One plus one equals two",
+  "summary": "In the declared Peano rewrite kernel, the closed term adding one to one normalizes to two.",
+  "domains": [
+    "arithmetic",
+    "proof"
+  ],
+  "context": {
+    "framework": "QEVA Peano Rewrite Kernel 1",
+    "framework_ref": "qeva:1:natural-number@2",
+    "note": "Revision 2 binds its exact statement and structured derivation to a deterministic certificate and pinned dependencies."
+  },
+  "assumptions": [
+    {
+      "text": "The two recursive addition equations are used as oriented rewrite rules.",
+      "ref": "qeva:1:addition@1"
+    },
+    {
+      "text": "The symbols 0 and S belong to the declared natural-number presentation.",
+      "ref": "qeva:1:natural-number@2"
+    }
+  ],
+  "content": {
+    "plain": "The kernel expands addition once, then removes addition by zero, leaving exactly the term used to define two.",
+    "exact": "With 1:=S(0), 2:=S(S(0)), add(a,0)→a, and add(a,S(b))→S(add(a,b)), the closed term add(1,1) normalizes by two certified rewrites to 2.",
+    "example": "add(S(0),S(0)) → S(add(S(0),0)) → S(S(0)).",
+    "caveat": "This establishes syntactic normalization in the declared rewrite kernel. It does not by itself prove soundness of a broader arithmetic theory."
+  },
+  "dependencies": [
+    "qeva:1:addition@1",
+    "qeva:1:natural-number@2",
+    "qeva:1:proof@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "machine-checked",
+    "method": "Structured rewrite replay bound to the exact subject, exact statement, dependency digests, kernel rules, and checker bytes.",
+    "artifact": "certificates/peano-kernel-0/one-plus-one.r2.json"
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Supersedes the demonstration whose certificate was not cryptographically or semantically bound to its subject. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:one-plus-one@1",
+  "legacy_ids": []
+}

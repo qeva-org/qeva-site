@@ -1,0 +1,16 @@
+{
+  "analyzer_version": "0.1",
+  "id": "qeva-analyzer:1:candidate-invariant",
+  "revision": 1,
+  "title": "Candidate invariant summarizer",
+  "purpose": "Propose repeated class, parity, range, or aggregate properties for later proof or attack.",
+  "accepts": ["projection", "signal", "integer-map", "finite-state"],
+  "emits": ["candidate-invariant", "class-count", "range-summary"],
+  "evidence_classes": ["exact-execution", "bounded-exhaustive", "heuristic-candidate", "numerical-observation"],
+  "determinism": "Deterministic; candidates carry the inspected finite scope.",
+  "resource_limits": {"max_states": 100000, "max_operations": 500000},
+  "implementation": {"engine": "QEVA Mechanism Engine", "engine_version": "0.1.0", "function": "analyzeRun"},
+  "tests": ["tests/fixtures/engine-fixtures.json"],
+  "license": "MIT",
+  "supersedes": null
+}

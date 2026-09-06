@@ -1,0 +1,49 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:category-theoretic-foundations",
+  "revision": 1,
+  "kind": "framework",
+  "title": "Category-theoretic foundations",
+  "summary": "Category-theoretic foundations emphasize objects, composable arrows, and invariance under structure-preserving equivalence.",
+  "domains": [
+    "category-theory",
+    "foundations"
+  ],
+  "context": {
+    "framework": "category theory",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared category theory context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "Category-theoretic foundations emphasize objects, composable arrows, and invariance under structure-preserving equivalence.",
+    "exact": "A category has objects, hom-sets or hom-types, associative composition, and identity arrows; foundational programs add size and logical structure in different ways.",
+    "example": "Sets and functions form a category; groups and homomorphisms form another.",
+    "caveat": "Category theory is not literally derivable from ‘arrows alone’ without a surrounding formal language or metatheory."
+  },
+  "dependencies": [
+    "qeva:1:object@1",
+    "qeva:1:function@1",
+    "qeva:1:composition@1",
+    "qeva:1:identity@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

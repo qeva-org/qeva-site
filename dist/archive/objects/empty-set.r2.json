@@ -1,0 +1,52 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:empty-set",
+  "revision": 2,
+  "kind": "definition",
+  "title": "Empty set",
+  "summary": "An empty set is a set with no members; existence and uniqueness come from the declared set theory.",
+  "domains": [
+    "set-theory"
+  ],
+  "context": {
+    "framework": "the displayed ZFC-style set-theory presentation",
+    "framework_ref": "qeva:1:zfc-set-theory@1",
+    "note": "Revision 2 distinguishes the defining property from the axioms used to establish existence and uniqueness."
+  },
+  "assumptions": [
+    {
+      "text": "The ambient theory proves existence of a memberless set.",
+      "ref": "qeva:1:axiom-empty-set@1"
+    },
+    {
+      "text": "Extensionality is available to prove uniqueness.",
+      "ref": "qeva:1:axiom-extensionality@1"
+    }
+  ],
+  "content": {
+    "plain": "The empty set has no members. Its existence is theory-relative, and extensionality makes it unique when it exists.",
+    "exact": "Empty(E) iff E is a set and ∀x ¬(x∈E). In the declared presentation, empty-set existence gives some E with Empty(E), and extensionality proves ∀E∀F[(Empty(E)∧Empty(F))→E=F].",
+    "example": "The solution set of x²=-1 over the real numbers is empty.",
+    "caveat": "Some set-theory axiom lists derive existence from separation and another existence axiom instead of naming a separate empty-set axiom."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:membership@1",
+    "qeva:1:axiom-empty-set@1",
+    "qeva:1:axiom-extensionality@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA 0.5 protocol audit corrected scope, assumptions, and dependency semantics; no formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-05",
+    "creator": "QEVA 0.5 mathematical protocol audit",
+    "license": "CC0-1.0",
+    "source_note": "Adds the missing extensionality dependency and separates definition, existence, and uniqueness. This is an original QEVA formulation and remains subject to independent review."
+  },
+  "supersedes": "qeva:1:empty-set@1",
+  "legacy_ids": []
+}

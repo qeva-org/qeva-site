@@ -1,0 +1,1991 @@
+[
+  {
+    "ref": "qeva:1:addition@1",
+    "id": "qeva:1:addition",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Addition",
+    "summary": "Addition combines counts by repeated successor.",
+    "domains": [
+      "number-theory",
+      "arithmetic"
+    ],
+    "verification": "editorial",
+    "path": "objects/addition.r1.json",
+    "sha256": "2b3f570e370952b9914f957032c2900d8e1ca51f797de1dd6ae2be26699e1626",
+    "sha512": "2ce6073629877b7164a61ea72ec0a7c5cce798a45f71175af57e09d6872f2b7cdd8c7b8ed99846c4c1eee5ac76ed6310e0efd671f81a9ba9c8c84a2c63bac357"
+  },
+  {
+    "ref": "qeva:1:algorithm@1",
+    "id": "qeva:1:algorithm",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Algorithm",
+    "summary": "An algorithm is a finite description of an effective step-by-step procedure for a class of inputs.",
+    "domains": [
+      "computation",
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/algorithm.r1.json",
+    "sha256": "f46d4a0aeec5fb5d1610a5cab56fab2680854c806507b310890371fb987f511b",
+    "sha512": "264c083fcba9d9bfb6e3b1274d0f09f6ac5368da05e4b26a39f00a512d75a075c5ed91b3c84de9835928342eac3d7cfcb6e25b797ba8aceeee3a19b0ee4eddfb"
+  },
+  {
+    "ref": "qeva:1:attractor@2",
+    "id": "qeva:1:attractor",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Attractor",
+    "summary": "An attractor is an invariant set approached by trajectories from a nontrivial basin, under a specified definition.",
+    "domains": [
+      "dynamics",
+      "systems"
+    ],
+    "verification": "editorial",
+    "path": "objects/attractor.r2.json",
+    "sha256": "282a4c5e897cb2ce18da67f1c8ee6bd536cd9e5ca15a68a224ff315d9ede5b1c",
+    "sha512": "024863d4e994b8725e8bcff2bd9743efaff1d3c088be3bf0491241e0742d5d65c3c99bfeda772d8fadadd6b3c74deb9d7a654fb686eb662aeaf47b8499545ce5"
+  },
+  {
+    "ref": "qeva:1:axiom-choice@1",
+    "id": "qeva:1:axiom-choice",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of choice",
+    "summary": "A simultaneous choice can be made from every member of a family of nonempty sets.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-choice.r1.json",
+    "sha256": "7d227687e1910ace9b7adb4711dcb3d270627b5c73cb557f3525764b2e52ea09",
+    "sha512": "e56dd138a84c3d075566bd4760c531303fd3c7ef3e3aefbe2ba359422499a8aa011d01522530bfb7530060307012904694db05b53ac96c68c4cfb724ad1c975b"
+  },
+  {
+    "ref": "qeva:1:axiom-empty-set@1",
+    "id": "qeva:1:axiom-empty-set",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of empty set",
+    "summary": "There exists a set with no members.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-empty-set.r1.json",
+    "sha256": "20512bec1067639174605abd2acfbcc8b8eefb8a9f78cbe1f9c20180ddb44c3c",
+    "sha512": "ad546cc29a91c903c434261b461df4aac800783db51cfcc8ed0572ab61729410ec83e524005e515d080e5c7c7071eb520238d5b5925a881ed46f8881660b3cca"
+  },
+  {
+    "ref": "qeva:1:axiom-extensionality@1",
+    "id": "qeva:1:axiom-extensionality",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of extensionality",
+    "summary": "Two sets are equal when they have exactly the same members.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-extensionality.r1.json",
+    "sha256": "acf11f5f232a4c9fc2ee82f4124fd77d32d843baf9bfe6a1425139bcf7cf531c",
+    "sha512": "6e2aa64fae679de77e6b2a4d049349870d59c539942c07ddf2eecbce822fbc1be360a2970a7397ae6dd3724961fa2ae7f13281fa2276effa53859d51e6562d22"
+  },
+  {
+    "ref": "qeva:1:axiom-foundation@1",
+    "id": "qeva:1:axiom-foundation",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of foundation",
+    "summary": "Every nonempty set has a member disjoint from it, blocking ordinary descending membership loops.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-foundation.r1.json",
+    "sha256": "dabd2b0d3d32583deab956e28b3effd9c621ab90702e934ea64511d775c5f5a2",
+    "sha512": "a6f20c574d05731c42561a8019d99c0ff6d031f596e7183c39d7240c044dd7961cb59ea5d9407a0b48d2e4761e689aa7f7f457b2245267f9fc4becd819ec3b33"
+  },
+  {
+    "ref": "qeva:1:axiom-infinity@1",
+    "id": "qeva:1:axiom-infinity",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of infinity",
+    "summary": "At least one inductive set exists, supplying enough sets to model the natural numbers.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-infinity.r1.json",
+    "sha256": "f94efb83ece84f84f96e654a47ef6c68f35a78fe98786f31fd413345911fed3e",
+    "sha512": "54fbbbb0c25e24fd4c8ff62cf26d90b8dad4262c0c10a0ed3057b34ea177f2c87896e84873e48255f7f6f3d64b8d5475003dc8bc3a5037bf3fa0cff1164c7eb8"
+  },
+  {
+    "ref": "qeva:1:axiom-pairing@1",
+    "id": "qeva:1:axiom-pairing",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of pairing",
+    "summary": "For any two sets, a set exists whose members are exactly those two sets.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-pairing.r1.json",
+    "sha256": "aba5057ff63e985ee642d1b52c296a2976481ddb09b07807ff4ba732e3d89497",
+    "sha512": "f3767fd7346d98cad42040b4264fd31d56c492bedda4799c8fb958d543756f83fc034e9d5680b0f3d9e56e5e1a5277815090726f0a60b6efbe5a3069a67ab9e5"
+  },
+  {
+    "ref": "qeva:1:axiom-power-set@1",
+    "id": "qeva:1:axiom-power-set",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of power set",
+    "summary": "For every set, there is a set containing exactly all of its subsets.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-power-set.r1.json",
+    "sha256": "73719d96ed02cc7c0db287361f6768e59902dee7831edc92b9c2f5b8933da961",
+    "sha512": "d09c7e74e0a12f4defca45c1aacdc9b0a70764c2244fcb97ce4cce8992239e41f1ba923b873b4741754e03f9ce30157d6d6359b0b8161058ebc5e1454cdc339f"
+  },
+  {
+    "ref": "qeva:1:axiom-union@1",
+    "id": "qeva:1:axiom-union",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom of union",
+    "summary": "The members of members of a set can be gathered into one set.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom-union.r1.json",
+    "sha256": "16a272adfb7f43ab600590d7599835e88264bc5c039b232cbe64dae0885c0c5a",
+    "sha512": "c6c5b62e26e1d424ac3e2756cd1a217a6c00b9418dd87f0448e6bb9d3fde8e3900fd5624865132cda8dbc1f9a2a57af4d5353f07f7856a1107ce3fc218cc8866"
+  },
+  {
+    "ref": "qeva:1:axiom@1",
+    "id": "qeva:1:axiom",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Axiom",
+    "summary": "An axiom is a declared starting statement or statement scheme of a formal theory.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/axiom.r1.json",
+    "sha256": "71886cb3885a5847ee0f49b3fb3769426d14a092f2b4e76923ff9956b31adef5",
+    "sha512": "049dec3691c340e22e2088a81e8d96372a2de8b613a3a4d9f042b2fbed5b554a259ba24a899aaa7ef3599774ea62a00bb972e64e4f9c485286d96fcc077e6849"
+  },
+  {
+    "ref": "qeva:1:bijection@1",
+    "id": "qeva:1:bijection",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Bijection",
+    "summary": "A bijection pairs two collections without omission or collision.",
+    "domains": [
+      "set-theory",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/bijection.r1.json",
+    "sha256": "7d236bf9621fa3c4782482e7bc0e7e2d26d720182eba4c94e3429305d6c78e94",
+    "sha512": "53ad27e5ab75e51465167bfdfe53d0ee8c9792a99ffd8ebb1ff8839f56ecc51bca2c58d15624eaac2fb01d0b391f99627a5957f45b8fb4aac626fe8fc9d3668f"
+  },
+  {
+    "ref": "qeva:1:cardinality@1",
+    "id": "qeva:1:cardinality",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Cardinality",
+    "summary": "Cardinality compares collections by whether their elements can be paired exactly.",
+    "domains": [
+      "set-theory",
+      "combinatorics"
+    ],
+    "verification": "editorial",
+    "path": "objects/cardinality.r1.json",
+    "sha256": "1b5167921e18798b8aea088fdf12252759ee74415f789bc91977780061350b39",
+    "sha512": "8ee3f2dacaee65473ace4100ffe8f4edd9074b92f76111edf1604c37c3e27d8efeb13f3686b6a02f695238a50d6c451750588911285a3d74e0f85ee98f3df08e"
+  },
+  {
+    "ref": "qeva:1:category-theoretic-foundations@1",
+    "id": "qeva:1:category-theoretic-foundations",
+    "revision": 1,
+    "current": true,
+    "kind": "framework",
+    "title": "Category-theoretic foundations",
+    "summary": "Category-theoretic foundations emphasize objects, composable arrows, and invariance under structure-preserving equivalence.",
+    "domains": [
+      "category-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/category-theoretic-foundations.r1.json",
+    "sha256": "f6d2eb5f57582129ff1bc7d98066e2a724dd5efb5d6a57428537c1533f186ad5",
+    "sha512": "5ca44f6511fc8474b9b75b3565d161929ce7c615f8ac2997f4aa1a10965ace4aa6532a9265262c1dd09e88c8ce40af152c2cfe494559a1d38e11e3f0b2dff103"
+  },
+  {
+    "ref": "qeva:1:chaos@2",
+    "id": "qeva:1:chaos",
+    "revision": 2,
+    "current": true,
+    "kind": "terminology",
+    "title": "Chaos",
+    "summary": "A family of precise but non-equivalent dynamical notions rather than one universal predicate.",
+    "domains": [
+      "dynamics",
+      "chaos"
+    ],
+    "verification": "editorial",
+    "path": "objects/chaos.r2.json",
+    "sha256": "f9a45f947f04942e96af27081e96b1b579cecf166305617e2ddb2e43d61eb7d8",
+    "sha512": "a6712e0e3e5ee3bfe23aa8d75d649edfcd52d86451e2021b7e3005527ddcd5c288788d35dbb3def7a2c2be58e4e223dc2be59480b73e6681d67c6fb5d83efe1b"
+  },
+  {
+    "ref": "qeva:1:chirality@2",
+    "id": "qeva:1:chirality",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Chirality",
+    "summary": "Failure of an object to be superimposable on its mirror image using only orientation-preserving transformations.",
+    "domains": [
+      "symmetry",
+      "geometry"
+    ],
+    "verification": "editorial",
+    "path": "objects/chirality.r2.json",
+    "sha256": "1c1897c5a5770b6915e5bed25b5f76b050d47b40f279c92bb704d3f76d2fd75d",
+    "sha512": "4593ab033c7f37721d5619bbe2f8f409492e3955106c42814dead3404639c7fce2d2ac62b0367908732d4d8bb97f975871b84c9c74d35cd393ca3733201a7f6b"
+  },
+  {
+    "ref": "qeva:1:classical-logic@1",
+    "id": "qeva:1:classical-logic",
+    "revision": 1,
+    "current": true,
+    "kind": "framework",
+    "title": "Classical logic",
+    "summary": "Classical logic is the branch that validates principles such as excluded middle and double-negation elimination.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/classical-logic.r1.json",
+    "sha256": "432364850e5727f11aad2ead2f6da74c558ff02aede39c7a6fc694ada75a10a6",
+    "sha512": "e94611f29c8113723a488f749810057e0606565b0913ae4a7951c62f7ed31e0cefa99d5054c210bc761e7e01f91fd59b90534b26e42deda1d84915dc64d9b3d7"
+  },
+  {
+    "ref": "qeva:1:closed-form@2",
+    "id": "qeva:1:closed-form",
+    "revision": 2,
+    "current": true,
+    "kind": "terminology",
+    "title": "Closed form",
+    "summary": "A widely used but non-universal label for formulas considered explicit relative to an allowed vocabulary of operations/functions.",
+    "domains": [
+      "representation",
+      "algebra",
+      "analysis"
+    ],
+    "verification": "editorial",
+    "path": "objects/closed-form.r2.json",
+    "sha256": "331df027e92415d22709c0b123f29bcd3807a39feba1a9c7b5ad17bb64590feb",
+    "sha512": "299dffa4654d50003a030e6782395fa68f11df88ecdbed916eaedd688204c76a5d37e690ec0c11ea86c4554b975a6ab1a5b912850e4616b69e19ba29667cce93"
+  },
+  {
+    "ref": "qeva:1:coarse-graining@2",
+    "id": "qeva:1:coarse-graining",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Coarse-graining",
+    "summary": "A many-to-one map from fine states to a smaller set of macro-descriptions, intentionally discarding distinctions.",
+    "domains": [
+      "information",
+      "statistical-mechanics",
+      "learning",
+      "systems"
+    ],
+    "verification": "editorial",
+    "path": "objects/coarse-graining.r2.json",
+    "sha256": "9a320b349d37f24a322d8f750bdc3c52d13fe6b5c84c61d72d3dcd146daf4e31",
+    "sha512": "6a32febf01523ef39272333d09fb92bbd2a880a830af240e262df7e03bab6d977c31888cde13bf74e9e7407ce92b317d165647b67bf925e1fd40612b2333aecf"
+  },
+  {
+    "ref": "qeva:1:collatz-conjecture@2",
+    "id": "qeva:1:collatz-conjecture",
+    "revision": 2,
+    "current": true,
+    "kind": "conjecture",
+    "title": "Collatz conjecture",
+    "summary": "The open claim that every positive integer orbit under the Collatz map eventually reaches 1.",
+    "domains": [
+      "number-theory",
+      "dynamics",
+      "open-problems"
+    ],
+    "verification": "editorial",
+    "path": "objects/collatz-conjecture.r2.json",
+    "sha256": "a0e9acd706ad7122a30c534c9f6bcd71e2bb5f0f31f241eb87eeff1405e9c0fe",
+    "sha512": "d94d94f14857173b34724bb899f8afd9a07547dd62566d2b42e368d383c49b6588685cb9962b5aee7e7b70247b7b792500d34cfd7caa8da6ab50e98a88df91e3"
+  },
+  {
+    "ref": "qeva:1:collatz-map@2",
+    "id": "qeva:1:collatz-map",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Collatz map",
+    "summary": "A piecewise integer map sending even n to n/2 and odd n to 3n+1.",
+    "domains": [
+      "number-theory",
+      "dynamics",
+      "computation"
+    ],
+    "verification": "editorial",
+    "path": "objects/collatz-map.r2.json",
+    "sha256": "dd5723e414d9c4e73163b82f1b4939d26883cbc70425b4c55a9f12fddd16ceb1",
+    "sha512": "96b5cead3b5e140a629b79c51c01aaf8e05bfc3e4132fb88e93bf510a86d27860d2f68d71af3ff5262b7ce431cf1039b48dcc3b14bf1e3e320a35a07d09ea8f5"
+  },
+  {
+    "ref": "qeva:1:completeness@1",
+    "id": "qeva:1:completeness",
+    "revision": 1,
+    "current": true,
+    "kind": "terminology",
+    "title": "Completeness",
+    "summary": "Completeness can mean that every semantic consequence is provable, or that a space has no missing limits; the meanings must be named.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/completeness.r1.json",
+    "sha256": "78dbf268a3f7705598c3b68176306aa0199ae55ce716f77ab25a52d9c898c6ad",
+    "sha512": "92da7e82e38c927d13d6dc58083e3ac366c1e216c11da31ff412ee1b5ec8b6560e82af5566028117939c8565a0f1a613f83464464808f8443f820ba6c79bf1dd"
+  },
+  {
+    "ref": "qeva:1:complex-number@2",
+    "id": "qeva:1:complex-number",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Complex number",
+    "summary": "Complex numbers can be constructed as ordered pairs of reals with explicit field operations.",
+    "domains": [
+      "analysis",
+      "algebra"
+    ],
+    "verification": "editorial",
+    "path": "objects/complex-number.r2.json",
+    "sha256": "a5f38b6636928928df55201f88a9dc1bd946c9567a336dafc578d47d13009e9e",
+    "sha512": "8a7ad205f754e4f80ac37e196a8f1c10f26723d2e3fda30eb1b3bd293edcff7f9d1695a27682c164188d8a2cc09efadf7c3b66628363b21d027a5dfb08d46610"
+  },
+  {
+    "ref": "qeva:1:composition@1",
+    "id": "qeva:1:composition",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Composition",
+    "summary": "Composition feeds the output of one map into the input of another.",
+    "domains": [
+      "structure",
+      "algebra"
+    ],
+    "verification": "editorial",
+    "path": "objects/composition.r1.json",
+    "sha256": "bf71c7ab8ffdc7209230f0e6149585fefed84eee89bd954c708abe57ca7e2f2c",
+    "sha512": "8a20110ab07579f776a71684c1bb73fb2f29e72eb1bc82ca84e23d216e92e028f79abcf0aeb73b04052922620f6af1f13cdf6f92f2ce6e25fa7f53d2e5f8950b"
+  },
+  {
+    "ref": "qeva:1:computability@1",
+    "id": "qeva:1:computability",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Computability",
+    "summary": "Computability asks which input-output tasks can be carried out by an idealized finite procedure.",
+    "domains": [
+      "computation",
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/computability.r1.json",
+    "sha256": "978d9aa1faf02e79f2c97ccb5b3ad00eebfec39fe913bf101e01c94e6e160897",
+    "sha512": "a06bd4c7b133d437fda5b158c16b3ea9f964bdf53c4b58a0d2226503df3536f297e50aa5a7ae48c0341c4ef8039af8025864af585de36253db5065821abf8f93"
+  },
+  {
+    "ref": "qeva:1:conjunction@1",
+    "id": "qeva:1:conjunction",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Conjunction",
+    "summary": "Conjunction joins requirements that must hold together.",
+    "domains": [
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/conjunction.r1.json",
+    "sha256": "4d604f6f8095c4066ebceee0905867709a7db8897173fedbb393910d2d10cd55",
+    "sha512": "60752de4ceaae35efd93b363807777ce9f135e2567af1f755096141a06621f05a3778856c39e6d2d91091f5b2470379e2bd1b39dd51e348e65b1bd5bb5b19f1c"
+  },
+  {
+    "ref": "qeva:1:consistency@1",
+    "id": "qeva:1:consistency",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Consistency",
+    "summary": "A theory is consistent when its rules do not derive an explicit contradiction.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/consistency.r1.json",
+    "sha256": "6aab430fb4d647d9078d6f6d43f732e35fedc10ec5fd04c02eec7ea9a71fa40f",
+    "sha512": "b2f20576cfc6a4b9a775496dc130a0fc9fbdefbbfb5dc4c64fe5b0b79a16b9515c32880c986e021c7cf0167909417f232e876cda44a8571a6cfc1bd855981d26"
+  },
+  {
+    "ref": "qeva:1:constructive-logic@1",
+    "id": "qeva:1:constructive-logic",
+    "revision": 1,
+    "current": true,
+    "kind": "framework",
+    "title": "Constructive logic",
+    "summary": "Constructive logic treats a proof as information and does not accept every classical principle without a construction.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/constructive-logic.r1.json",
+    "sha256": "d61ef87dea98f12a4a1790c245be723cb4338321868124a423e6bc8ecc50e8dd",
+    "sha512": "405453564b08bffdb36acc9e9f885cf29b3b203ba5e5cd47e0f472f0c09f33dc3f18ae3b063062784c312c4cf887091a628c074c61d54f05f6dfccf665fe57bf"
+  },
+  {
+    "ref": "qeva:1:continuity@2",
+    "id": "qeva:1:continuity",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Continuity",
+    "summary": "Continuity formalizes preservation of nearness or open-set structure under a map.",
+    "domains": [
+      "analysis",
+      "topology",
+      "dynamics"
+    ],
+    "verification": "editorial",
+    "path": "objects/continuity.r2.json",
+    "sha256": "cd90d36a117d7db88df3feb26d34796592df9f6a148882f08b51dff72a6684e1",
+    "sha512": "8b80a5ea04ea4bb3287ef00db4d85576a7361b4a4857a39edafbcc5ffaf2b9ae489ecbe9cdbcffdbbef9cc5ce3495fbdfdf4eaf726c45e03fd7e5783c9d3c663"
+  },
+  {
+    "ref": "qeva:1:decidability@1",
+    "id": "qeva:1:decidability",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Decidability",
+    "summary": "A decision problem is decidable when one algorithm always halts and returns the correct yes/no answer.",
+    "domains": [
+      "logic",
+      "computation"
+    ],
+    "verification": "editorial",
+    "path": "objects/decidability.r1.json",
+    "sha256": "662b1ed5661b03e9c06508722da0f3581dfbe0191b6b910c386746e34750857b",
+    "sha512": "d46df595a75d9c7fd639be2d619a18af7e77d77a5361e5069648ac628f5299fe50febcbf10764e1ffde844f2209d692c23f333f0447665957fe894a1dac5c9d6"
+  },
+  {
+    "ref": "qeva:1:definition@1",
+    "id": "qeva:1:definition",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Definition",
+    "summary": "A definition fixes how a new expression is to be used in terms of already available structure.",
+    "domains": [
+      "foundations",
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/definition.r1.json",
+    "sha256": "4dd44da501903357a9c0e5fcfcb09edbefa02f759e7831e05cb9410a3416411b",
+    "sha512": "f9e7f5caf58362c2d6e28d32302b4e13a810a875346a170038d4e3b19a11e69596db3418b47fdf9e0b666435e475677f62cf4e6e81d2ea0526d292ebdbba23e8"
+  },
+  {
+    "ref": "qeva:1:dependent-type-theory@1",
+    "id": "qeva:1:dependent-type-theory",
+    "revision": 1,
+    "current": true,
+    "kind": "framework",
+    "title": "Dependent type theory",
+    "summary": "Dependent types may vary with terms, letting statements and proofs live in one typed language.",
+    "domains": [
+      "type-theory",
+      "foundations",
+      "proof"
+    ],
+    "verification": "editorial",
+    "path": "objects/dependent-type-theory.r1.json",
+    "sha256": "d717a42b4b33f033794734ff4cc349483beb07238183892356d5cd9c8dd43d74",
+    "sha512": "7d59c695c3fffb2c536c89a452bd338a59040c73dc348f33cf3ba6b4116b58c3d25d01103e09c676ddea3372d1c9d0d39601b2257db2f73c58a91a6328dc3fff"
+  },
+  {
+    "ref": "qeva:1:derivability@2",
+    "id": "qeva:1:derivability",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Derivability",
+    "summary": "The existence of a finite proof of a statement from declared assumptions under declared inference rules.",
+    "domains": [
+      "logic",
+      "proof",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/derivability.r2.json",
+    "sha256": "b404eeb91c30f4f663b10a4e444471dcca457396255b763a3ebe4d9222091a3e",
+    "sha512": "1c7a8b9d3b099bf39e435a71c666e630a903f291351896c7619923e1b572fb6ca5cd8321c496ff52f332dc2a5f9c1b821e3f60ae1cb13ef0582c12827de37b21"
+  },
+  {
+    "ref": "qeva:1:derivative@1",
+    "id": "qeva:1:derivative",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Derivative",
+    "summary": "A derivative is the best local linear rate of change when the relevant limit exists.",
+    "domains": [
+      "analysis",
+      "calculus"
+    ],
+    "verification": "editorial",
+    "path": "objects/derivative.r1.json",
+    "sha256": "06703cbaa850e83890cfaf0cb4f565087fdb9ce88c919033a4be3c64296f3f9a",
+    "sha512": "923447ef8823bc9bae8201ec4e54f396326400aa53c10ce9574a972568abf1b5d8b43894e68cb2f9c4135fa4e2bd9ea8d3a757e19b70390039ab17e9588c9426"
+  },
+  {
+    "ref": "qeva:1:discreteness@2",
+    "id": "qeva:1:discreteness",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Discrete structure",
+    "summary": "A precise notion of discreteness depends on the ambient structure; in topology, a discrete space has every singleton open.",
+    "domains": [
+      "topology",
+      "discrete-math",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/discreteness.r2.json",
+    "sha256": "ee6c14c564dc28c64468a15854055c95a3d62d98fc020a4f01ea0558af973347",
+    "sha512": "f01501418ae891a2411f80aaf2e0224f7c23760b02dbac747474e47f612a89ba21572632ee388e8b6c264dfda15d728a818de2de1c86da1dbd70b4a1cbcfac6e"
+  },
+  {
+    "ref": "qeva:1:disjunction@1",
+    "id": "qeva:1:disjunction",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Disjunction",
+    "summary": "Disjunction joins alternatives and says that at least one is admitted under the chosen logic.",
+    "domains": [
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/disjunction.r1.json",
+    "sha256": "942cb69efbdbd4c96bc3578fa3502c40864ee84c429c96457821237efe7e1974",
+    "sha512": "29388b352b621fe940d0c15d44c32f58798c0184bb3ae272b01672e8d70f66cabbf9ee89e8e92e622b8941e873a0fde3fff6275542837252c89da97323ef7061"
+  },
+  {
+    "ref": "qeva:1:distinction@1",
+    "id": "qeva:1:distinction",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Distinction",
+    "summary": "Reasoning begins by allowing one state, mark, or object to be told apart from another.",
+    "domains": [
+      "foundations",
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/distinction.r1.json",
+    "sha256": "3a6a50128b50c4d70ee02a553474579e61e642672490a8b6aadd8e4a0f5a7117",
+    "sha512": "a4343179f4436fc88b2c0ef3f564fe7141bac3403cb0d46458e4b8589884dc915f0da5d4ff6c929641159c7cae2161d88b55ad7b1682eca842fed2e6de8542fe"
+  },
+  {
+    "ref": "qeva:1:empty-set@2",
+    "id": "qeva:1:empty-set",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Empty set",
+    "summary": "An empty set is a set with no members; existence and uniqueness come from the declared set theory.",
+    "domains": [
+      "set-theory"
+    ],
+    "verification": "editorial",
+    "path": "objects/empty-set.r2.json",
+    "sha256": "e2f8bee3c286d9d319415c78b416c15b4f24cac53e000100319c51b1a108133b",
+    "sha512": "cc927057ea7a817f0099cc8fce428064c54aab934df2ed9858822d3ef8a075bcd5bf1f02312d5de3f15170f6e4bb41fbbe89b69971edc9b32556df691b868e7f"
+  },
+  {
+    "ref": "qeva:1:entropy@1",
+    "id": "qeva:1:entropy",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Shannon entropy",
+    "summary": "Entropy is the expected self-information of a random variable's distribution.",
+    "domains": [
+      "information-theory",
+      "probability"
+    ],
+    "verification": "editorial",
+    "path": "objects/entropy.r1.json",
+    "sha256": "9bc880d578c7d289e6dfe48f12900bbaa5d6664d317f8b5a8c73e351c044f3c5",
+    "sha512": "a0da50ed4109250fe74767963eef5f3985693e32f2499975607b5c13fed80a0c3e4594b56ae67fc105f614a69cc5827fbe4baf3315a9b00becdfd2fb7a3765b7"
+  },
+  {
+    "ref": "qeva:1:equivalence@2",
+    "id": "qeva:1:equivalence",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Equivalence relation",
+    "summary": "A precise way to declare when two elements are treated as the same for a specified purpose.",
+    "domains": [
+      "logic",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/equivalence.r2.json",
+    "sha256": "9779f90b605434076cf881cce10302f2b81dc31cf89a58195585632e903557d8",
+    "sha512": "ab1e773167af92368f55722ba6a424fd202bb4695db447b7d754c38c0020640e8ae02c7cb14738e038e1aa2c327a68dfe40f45f1775034e1670c6505db5ca887"
+  },
+  {
+    "ref": "qeva:1:excluded-middle@1",
+    "id": "qeva:1:excluded-middle",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Law of excluded middle",
+    "summary": "For every statement P, classical logic admits P or not-P.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/excluded-middle.r1.json",
+    "sha256": "4135ac2dbd7efd80840a9e196e2dd2bb45b50e6e6c7a54b1ab05c0133ee56cf8",
+    "sha512": "d221dffb9a3b09b2ed639e0c000d7cc4bd9f4110238ce738b77542de2f62d99da3d57353650846840cafd6c4c2b1f60f859983d296207a95e8db744a8524912e"
+  },
+  {
+    "ref": "qeva:1:existential-quantifier@1",
+    "id": "qeva:1:existential-quantifier",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Existential quantifier",
+    "summary": "Existential quantification asserts that at least one permitted witness satisfies a condition.",
+    "domains": [
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/existential-quantifier.r1.json",
+    "sha256": "3ecc19f016130a3834062f62c4a4623e72118cda5d34e3641177c93cb700b530",
+    "sha512": "5f681e904a0f4a125dc3fd1cb671b3ff703e4923e2eec7241501d47df63f3c71865f64ed95e33f35b33a67a1dc28a55523ba019b9f2762721bc6db417c7f3d05"
+  },
+  {
+    "ref": "qeva:1:exploration-exploitation@2",
+    "id": "qeva:1:exploration-exploitation",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Exploration–exploitation tradeoff",
+    "summary": "Sequential decision systems often trade using current best information against actions that improve information about alternatives.",
+    "domains": [
+      "optimization",
+      "learning",
+      "decision-theory"
+    ],
+    "verification": "editorial",
+    "path": "objects/exploration-exploitation.r2.json",
+    "sha256": "ffff2bbc8258dfe92ca189d541b2f140b357e11e9a466763bd6019269e54f8c6",
+    "sha512": "c8c6b971c66b97f0f209ee8e6cf84d2bfea324a427880bdd061276d5dd08cff07daadeab4bb318882eba777c27dda975e552ae623fec20c67f294d2564ce6680"
+  },
+  {
+    "ref": "qeva:1:expression@1",
+    "id": "qeva:1:expression",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Expression",
+    "summary": "An expression is a finite arrangement of symbols built by explicit formation rules.",
+    "domains": [
+      "foundations",
+      "language"
+    ],
+    "verification": "editorial",
+    "path": "objects/expression.r1.json",
+    "sha256": "5c52bddfc965c04bc758d0324d801ca49e709e1a328e40d120bde2b7834938d1",
+    "sha512": "4713702b87153ca9becb406b520177ca3515dbcee6bb3d9b77cf400e98511524dbcbeaf283929eff220ebe540906a21680634d19dc24d2f58bad594e71433080"
+  },
+  {
+    "ref": "qeva:1:field@1",
+    "id": "qeva:1:field",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Field",
+    "summary": "A field is a commutative arithmetic system where every nonzero element has a multiplicative inverse.",
+    "domains": [
+      "algebra"
+    ],
+    "verification": "editorial",
+    "path": "objects/field.r1.json",
+    "sha256": "7b3625d1ce96d986fdc7f5b821f530ba02c1df5b4b042a8d930f2f71e861a70a",
+    "sha512": "c5c24c5854da22f172067d7d9799ae0b66ecee13738b6e069892e7ad9f57f24c1657252926c4958b2d5bb4b82c19e66052bd383cb21edc31ade999919ab70dba"
+  },
+  {
+    "ref": "qeva:1:first-order-logic@1",
+    "id": "qeva:1:first-order-logic",
+    "revision": 1,
+    "current": true,
+    "kind": "framework",
+    "title": "First-order logic",
+    "summary": "First-order logic quantifies over objects while keeping predicates and functions in a fixed signature.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/first-order-logic.r1.json",
+    "sha256": "f7a1066d11355f36d48048bec8f53961d98335d1153b9a3adf36d39ed771cb31",
+    "sha512": "158a55e36f5270ea361ab7ff357ce8cabf4e58dc2f6a792fbd0db2f7fb68720028f28d8308fd810f11bdba3b64887c1673219c3fa51bc315360f5b9e34cc0e41"
+  },
+  {
+    "ref": "qeva:1:fixed-point@2",
+    "id": "qeva:1:fixed-point",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Fixed point",
+    "summary": "A fixed point is a state left unchanged by a map.",
+    "domains": [
+      "dynamics",
+      "analysis",
+      "computation"
+    ],
+    "verification": "editorial",
+    "path": "objects/fixed-point.r2.json",
+    "sha256": "689ceb8d7a9725cf3a9466ed73ed32b44849baf553fe862bbc4b489f7c5f5ec4",
+    "sha512": "d7d574ca2a44575ea8072ce3d530db68e14a767671dd615ceb16205a0b64784c0ea6a2aab26001bc961fe81d08608f442b3aadeacbf8fdc4e51ca4f7b48a2e8d"
+  },
+  {
+    "ref": "qeva:1:formal-system@2",
+    "id": "qeva:1:formal-system",
+    "revision": 2,
+    "current": true,
+    "kind": "formal-system",
+    "title": "Formal system",
+    "summary": "A declared language together with axioms and inference rules used to determine which expressions count as derivable.",
+    "domains": [
+      "logic",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/formal-system.r2.json",
+    "sha256": "2be8600b59d4a40ec96334663eb9423d53840dd6e02b057e7993d822bfae2961",
+    "sha512": "ca062da9f3197abc1be21d134f1215e2eda6007052fd76d75122dff4c91ffa3f32f37417e17d108dbb1e01ac1d5c37d4f739e9520bbbe248e9778151f34d010e"
+  },
+  {
+    "ref": "qeva:1:function@1",
+    "id": "qeva:1:function",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Function",
+    "summary": "A function assigns exactly one output to each permitted input.",
+    "domains": [
+      "foundations",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/function.r1.json",
+    "sha256": "d4645dc20d6c61cb1dc2a5e92a5e724b87c257f31082c2743509ece852384331",
+    "sha512": "3d5a56c7c59e2376c96cd6cf95a4646e7f6c2373d79171ba1b26d7e747c4c86a5fdc7d4ea94cdc952ce2905b4aa2491b3c7556e4370ebe1004d64761e669d546"
+  },
+  {
+    "ref": "qeva:1:graph@1",
+    "id": "qeva:1:graph",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Graph",
+    "summary": "A graph records objects and pairwise connections while discarding most other detail.",
+    "domains": [
+      "graph-theory",
+      "combinatorics"
+    ],
+    "verification": "editorial",
+    "path": "objects/graph.r1.json",
+    "sha256": "ec07eee66ee92bc81c04494beec5b4a80041e5aafeee37866ae0e403ff777a02",
+    "sha512": "09e1104098bb2c7410f42cf53f7d1ea37477ad2680926a4f3ca1b5079ec8f15b8315f854fa2dd7cbae0b5c6a3c11b8ec9c796ebde245e4ff564a8e4fd31822ad"
+  },
+  {
+    "ref": "qeva:1:group-action@1",
+    "id": "qeva:1:group-action",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Group action",
+    "summary": "A group action describes how reversible transformations move objects while respecting composition.",
+    "domains": [
+      "algebra",
+      "symmetry",
+      "geometry"
+    ],
+    "verification": "editorial",
+    "path": "objects/group-action.r1.json",
+    "sha256": "75242155e81b91f2b00778d7b527c62d6d6182865a991c8192ba1456afbd7d00",
+    "sha512": "1aeba358e3a3a5e7f546cde23faa0f0c9c4b23340e5c193777076b1f3d0d8e7c1ff8b18da26f7fe82f636aaf94708c5076e06cc9ed7c1083a9e5bc583544d029"
+  },
+  {
+    "ref": "qeva:1:group@1",
+    "id": "qeva:1:group",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Group",
+    "summary": "A group captures reversible composition with an identity.",
+    "domains": [
+      "algebra",
+      "symmetry"
+    ],
+    "verification": "editorial",
+    "path": "objects/group.r1.json",
+    "sha256": "1ae2f0d33e25124b228ffb2d6b259249938129124096207388671251c8b2b177",
+    "sha512": "3a1861c12496e7d6bd60f6d1d53b881b43fc29edce0ddbace5031389b1d2246b5c1180f390b99b276f94acf98e619626f6417b8578cc2c7374680b712a781d8a"
+  },
+  {
+    "ref": "qeva:1:grouping@2",
+    "id": "qeva:1:grouping",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Grouping / partition",
+    "summary": "A precise grouping can be modeled as a partition or as a map assigning objects to classes.",
+    "domains": [
+      "foundations",
+      "set-theory",
+      "information"
+    ],
+    "verification": "editorial",
+    "path": "objects/grouping.r2.json",
+    "sha256": "85723a63657bf75a875fc13926b46cff07099dcadef27277875a7c346a0d31fd",
+    "sha512": "e6b5f11d084a8a0b7803eca290d6eee49493831c6720f279e3634c214461631c6d61c3004013aa29b6dc36c08a48b8cb3f264195b562ba97b4a3fb56a8c018d7"
+  },
+  {
+    "ref": "qeva:1:halving@2",
+    "id": "qeva:1:halving",
+    "revision": 2,
+    "current": true,
+    "kind": "concept",
+    "title": "Halving",
+    "summary": "The inverse problem to doubling, defined only when the ambient structure makes division by 2 meaningful or solvable.",
+    "domains": [
+      "number",
+      "algebra",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/halving.r2.json",
+    "sha256": "83fd204a6bc96a10cd2e6db53b76773c2d084aea22680ac6eb38a5b5fb958715",
+    "sha512": "75737d1db7445994f29c6819f67806d5063565de908c632498209ccf400902a4e130ce951b57086df74673b1ec1a1150dbac7f5d4946e6f804ebf9594bc869c5"
+  },
+  {
+    "ref": "qeva:1:hierarchy@2",
+    "id": "qeva:1:hierarchy",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Hierarchy and scale",
+    "summary": "A hierarchy organizes objects or descriptions across ordered or nested levels with explicit relations between levels.",
+    "domains": [
+      "systems",
+      "order",
+      "information"
+    ],
+    "verification": "editorial",
+    "path": "objects/hierarchy.r2.json",
+    "sha256": "bc6ef6c2d6d3377655604cd6051aefc971a52257d6f16a0e0b1fe0c9db997046",
+    "sha512": "2b4a8778eafeebd101f8fd956cbeb8e9eefc1040908ee40a180f45c73d722ebeeaf42b8c40d807b23527caa006b5d07bdcbf53f3d9abcefde9474d98021ace23"
+  },
+  {
+    "ref": "qeva:1:identity@1",
+    "id": "qeva:1:identity",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Identity",
+    "summary": "Identity states that two references pick out the same object within a declared framework.",
+    "domains": [
+      "foundations",
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/identity.r1.json",
+    "sha256": "c425eacfada48af67adb4f5a3655cd895eb5d94d6a53d24c61bb83c169bffe51",
+    "sha512": "67ab5d1064010a829f7d20b8d69e25708bec1309bc0657cef7355a8730e4c7e6556a8350a6f6ce56d97b117d69667307c00a2e964fe6077790e6594f4973f9bc"
+  },
+  {
+    "ref": "qeva:1:implication@1",
+    "id": "qeva:1:implication",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Implication",
+    "summary": "Implication connects a condition to what follows from it.",
+    "domains": [
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/implication.r1.json",
+    "sha256": "2c70680d0c6f218c0ad55989148fb0cd43e48dca037db9dc13d09a95337216ed",
+    "sha512": "25373bc67a3bea8256a6b39f5b53cd9ee9e81a02863f94fe477002bd05e7870a6f3fcd4ba7657f9d4c841e452fa13f432d3d055a755741ff88d9e184c37c372f"
+  },
+  {
+    "ref": "qeva:1:induction@1",
+    "id": "qeva:1:induction",
+    "revision": 1,
+    "current": true,
+    "kind": "inference-rule",
+    "title": "Mathematical induction",
+    "summary": "Induction proves a property of every natural number from a base case and a successor step.",
+    "domains": [
+      "number-theory",
+      "proof"
+    ],
+    "verification": "editorial",
+    "path": "objects/induction.r1.json",
+    "sha256": "9f3c38169dd1d276e3959e1c583b461721ab6eb1060e0c8b95b9a265450d595f",
+    "sha512": "706047f6b29c8634a822eb49359fec086fba2e0bb5a812429dec240ce5508e7eefbf3808131a249d8b26acf9cb24b7000f6eb54e9ac8f9c225e3daa9d1eca49d"
+  },
+  {
+    "ref": "qeva:1:inference-rule@1",
+    "id": "qeva:1:inference-rule",
+    "revision": 1,
+    "current": true,
+    "kind": "inference-rule",
+    "title": "Inference rule",
+    "summary": "An inference rule licenses a transition from specified premises to a conclusion.",
+    "domains": [
+      "logic",
+      "proof"
+    ],
+    "verification": "editorial",
+    "path": "objects/inference-rule.r1.json",
+    "sha256": "b245c05717c03c9dea621fb681ed33ef95b1b979a67fca219db66aaa50754e33",
+    "sha512": "a159bb4e66420b75914dc9d2f04ef2c7627b8cf82e72a53c43dda2f0fee71c8de3f360de79db57064fd11f829e4ddcf56ac20ae3c7b884d24b0252b2ca939edc"
+  },
+  {
+    "ref": "qeva:1:information@2",
+    "id": "qeva:1:information",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Self-information",
+    "summary": "Self-information assigns a logarithmic surprise to an event of positive probability.",
+    "domains": [
+      "information-theory",
+      "probability"
+    ],
+    "verification": "editorial",
+    "path": "objects/information.r2.json",
+    "sha256": "12477bd6b7177769b94de7cfd7b0914027db665f32a132a8de03a438fc1a705f",
+    "sha512": "4cc246f19688d3869709004f7d4e238d144a4c58b8c27be14b5346e712f5acd3eb462b509966dd703fb770b917b42a5cb00802e93135edf404a1a4321f5a348c"
+  },
+  {
+    "ref": "qeva:1:injective-function@1",
+    "id": "qeva:1:injective-function",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Injection",
+    "summary": "An injective function never sends two different inputs to the same output.",
+    "domains": [
+      "set-theory",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/injective-function.r1.json",
+    "sha256": "b86b0a39339f170a3638f92dbbfea4efcfa9ebb37ddeab35969f1cdc25964ca6",
+    "sha512": "951af91f75a1d841bc58f13a97054e71883a69de3dc6ebfdc9bad8a75090f1bbdcd9a9893d01006e034828be7fe21b4bf4494835ccfa1bc035c0a3e33dd29739"
+  },
+  {
+    "ref": "qeva:1:integer@1",
+    "id": "qeva:1:integer",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Integer",
+    "summary": "Integers extend natural numbers with additive opposites.",
+    "domains": [
+      "number-theory",
+      "algebra"
+    ],
+    "verification": "editorial",
+    "path": "objects/integer.r1.json",
+    "sha256": "fa613b422102bb217bff5ad035bc1abaddb2df087996ab796d9a830507171e88",
+    "sha512": "621998ea1fe43a06fb205fbead5d22a8a4376a5a72e6d0351bd32c4d6b238ed09fbba0f738e42bdf2f7ac3d44c55440882f3151234e4d8b289a6ad9c4f32addf"
+  },
+  {
+    "ref": "qeva:1:integral@2",
+    "id": "qeva:1:integral",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Riemann integral",
+    "summary": "The Riemann integral is the common limit approached by every sufficiently fine tagged sum.",
+    "domains": [
+      "analysis",
+      "calculus"
+    ],
+    "verification": "editorial",
+    "path": "objects/integral.r2.json",
+    "sha256": "ccb734d56ef8c9fec609127a302d807589e0839096ab659de3e1a30079074e81",
+    "sha512": "be485a50c98ade59b614a0efcfe057f0fc1c2f493fccb91be4387000e2e1eb57f5a3bc7ea217186596ebbb00c97f8ecb4bf3053b8c8f6a47b00275067015b2b1"
+  },
+  {
+    "ref": "qeva:1:invariant@2",
+    "id": "qeva:1:invariant",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Invariant",
+    "summary": "A quantity or property unchanged by a specified family of transformations.",
+    "domains": [
+      "symmetry",
+      "structure",
+      "dynamics"
+    ],
+    "verification": "editorial",
+    "path": "objects/invariant.r2.json",
+    "sha256": "9bc55a8cabc9cecf22e7f5b90fed4c4cfed5dd338982fbbe4278f7df3f2e6442",
+    "sha512": "391908951730e1478de1b9ff33f763aeb15a2b5eab88d2d804b463ef47b1e35035c83e7e4d7f65b10354ae3d7e5a907bff1da8f19aa4fbfaa8d4574bced34a14"
+  },
+  {
+    "ref": "qeva:1:limit@1",
+    "id": "qeva:1:limit",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Limit",
+    "summary": "A limit states that values eventually remain arbitrarily close to a target.",
+    "domains": [
+      "analysis",
+      "topology"
+    ],
+    "verification": "editorial",
+    "path": "objects/limit.r1.json",
+    "sha256": "77b8efb806febe9f91a2cc3ee003e90f3e164f8e3cf2951f9075039848034aad",
+    "sha512": "a44259d6d18e6745e9ebde895e74e7ac4d72529cccdb9b348221604ec9078c7842983e07e7c3cd3150c0f427c478474dd2ec5a0bb49fa166a5efc54f1548ee07"
+  },
+  {
+    "ref": "qeva:1:linearity@1",
+    "id": "qeva:1:linearity",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Linearity",
+    "summary": "A linear map preserves addition and scalar multiplication.",
+    "domains": [
+      "linear-algebra",
+      "analysis"
+    ],
+    "verification": "editorial",
+    "path": "objects/linearity.r1.json",
+    "sha256": "6bc16ab1e166c6b844535ae7fa6b0bb8db4ea70f47ab8f00c0726fcd6f37fd88",
+    "sha512": "b145b6acebf096250bc03c738b0f158495240284545e6bcce2a143ffab22c9b749d46da132fdfa954072691006f94bf62a48c29f4d9c50c8e0a69906b799e343"
+  },
+  {
+    "ref": "qeva:1:local-global@2",
+    "id": "qeva:1:local-global",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Local versus global optimum",
+    "summary": "A local optimum is best in a neighborhood; a global optimum is best over the entire feasible domain.",
+    "domains": [
+      "optimization",
+      "dynamics"
+    ],
+    "verification": "editorial",
+    "path": "objects/local-global.r2.json",
+    "sha256": "52451b3648d0b279ea2cf2038bc6a36d71f200cd72e2f421bfa5284889c601f5",
+    "sha512": "9838680431568ecafbc35a3f362bfe7b94507fab834eac29daa379aa8878b84ea374eb0c10859759dfb5ce4f9097bf1fc9e0c897ad932b119eb099db3b25f1ad"
+  },
+  {
+    "ref": "qeva:1:measure@1",
+    "id": "qeva:1:measure",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Measure",
+    "summary": "A measure assigns a nonnegative size to measurable sets while adding the sizes of disjoint pieces.",
+    "domains": [
+      "measure-theory",
+      "analysis"
+    ],
+    "verification": "editorial",
+    "path": "objects/measure.r1.json",
+    "sha256": "b6fccb2cee7f7519cef0a78041aedff32664ce4744c811c4549620d77d295d14",
+    "sha512": "fa310dd833b4dc0b5682e4066da4ecf2dc88df17489f2175e43df1576a44b372d69b06b30b43786d118cef5eb8e25635cfdd913b2472fbb55527a924ad79e1ed"
+  },
+  {
+    "ref": "qeva:1:membership@1",
+    "id": "qeva:1:membership",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Membership",
+    "summary": "Membership records that an object is one of the elements of a set.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/membership.r1.json",
+    "sha256": "240466f9a7784ef9181b2776ae030f120ea263eb496bd3b9846d617c3ccb0160",
+    "sha512": "b67e3fa426893c3f79bf1ef1e9e9977ac81a3058a15d179466ec801255aca03c7269a432998fc01e6e6ac66b0e85e0cab65df5bafa083643cdb5b2f88323d434"
+  },
+  {
+    "ref": "qeva:1:metric-space@1",
+    "id": "qeva:1:metric-space",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Metric space",
+    "summary": "A metric assigns a distance satisfying nonnegativity, identity, symmetry, and the triangle inequality.",
+    "domains": [
+      "analysis",
+      "geometry",
+      "topology"
+    ],
+    "verification": "editorial",
+    "path": "objects/metric-space.r1.json",
+    "sha256": "0ea7e60a06d5cfbe91c2bfe59f06aa9a7b0e03feb43b708795681385ea70bf00",
+    "sha512": "be7c2c13b0388b38257e01be3c796226ed19d14d250eb566bc07bdcc1c14c67212ac9bcb6c575fa3e9495f57a54af66505865b7a0b5a9240ff457836fa93d9d4"
+  },
+  {
+    "ref": "qeva:1:model@1",
+    "id": "qeva:1:model",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Model",
+    "summary": "A model gives symbols a domain and interpretation so statements can be evaluated.",
+    "domains": [
+      "logic",
+      "semantics"
+    ],
+    "verification": "editorial",
+    "path": "objects/model.r1.json",
+    "sha256": "36e37ee4cc39b6d5b961b5498c36c7b752601802052019dc727047a3b52346f0",
+    "sha512": "9b8bb539b74c1b20c9fde884005862b0b587c97bdc213adcac4d1f66afa9928dd782bed07b8c19e5b1fea16736f7096fd2a4ae7f2efe509208b0f5abd152b9d1"
+  },
+  {
+    "ref": "qeva:1:multiplication@1",
+    "id": "qeva:1:multiplication",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Multiplication",
+    "summary": "Multiplication combines equal-sized groups by repeated addition.",
+    "domains": [
+      "number-theory",
+      "arithmetic"
+    ],
+    "verification": "editorial",
+    "path": "objects/multiplication.r1.json",
+    "sha256": "f2746e6716f262f43d28e75966169ba83d4c38bfde719a8d65e7f3d19c487a96",
+    "sha512": "54bede5dbcc6da46414cac2b2a9d5bd3a01c4323d6ee6d02cc81fd3fedb12162d2eedeaf294971a00af56cb047bca7dc78dc2e41772d727104a2c77dd7b86583"
+  },
+  {
+    "ref": "qeva:1:natural-number@2",
+    "id": "qeva:1:natural-number",
+    "revision": 2,
+    "current": true,
+    "kind": "framework",
+    "title": "Natural number",
+    "summary": "This orientation record describes one first-order Peano-arithmetic presentation of natural numbers.",
+    "domains": [
+      "number-theory",
+      "arithmetic"
+    ],
+    "verification": "editorial",
+    "path": "objects/natural-number.r2.json",
+    "sha256": "a79345a546a19eb6329e11f0c801f879ab6c2241485a0df8fcaf792070d71e78",
+    "sha512": "a0b6cf1c4697703103c84a25a94603ff1143fd9681dbded6b4af5c5602a456b060f64793be193751a7a08b45dff6e77acef546ad4960344ebedfa82959527245"
+  },
+  {
+    "ref": "qeva:1:negation@1",
+    "id": "qeva:1:negation",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Negation",
+    "summary": "Negation forms a statement that denies another statement under the chosen semantics.",
+    "domains": [
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/negation.r1.json",
+    "sha256": "57399dc7c4a9713abf31dab980a0e630f4e0d2322822b0f470eaa90c8c046a50",
+    "sha512": "466c7cbddf2a2496d25e242ee89d96be07f059482900397f6f990dbbbf98740edec01513ecd9215586ef956d048e26684d431d968c92dfc6eb46d1d682d4f0bd"
+  },
+  {
+    "ref": "qeva:1:nonlinearity@2",
+    "id": "qeva:1:nonlinearity",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Nonlinearity",
+    "summary": "A map is nonlinear when it fails the defining linearity conditions of additivity and scalar homogeneity.",
+    "domains": [
+      "algebra",
+      "dynamics",
+      "optimization"
+    ],
+    "verification": "editorial",
+    "path": "objects/nonlinearity.r2.json",
+    "sha256": "4b5ca2cbbfc6644c98eb75e68d46a015ae157159be22ec5b7758d26130c08eeb",
+    "sha512": "c089860b5001137ebae06355bde656b5ff949a780b61b434a170c4b69a408b2beabea226d6349d8521db61e8b31d5336899a6d9d10e95489e0c2863ebf38585a"
+  },
+  {
+    "ref": "qeva:1:object@1",
+    "id": "qeva:1:object",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Object",
+    "summary": "An object is whatever a chosen mathematical discourse permits us to refer to as one thing.",
+    "domains": [
+      "foundations",
+      "ontology"
+    ],
+    "verification": "editorial",
+    "path": "objects/object.r1.json",
+    "sha256": "17cc94c79a05cb2a4528e88553d58c1d538493dc37a83749dd37ece2fc81ac78",
+    "sha512": "e4bc6d37aa9e1f01c57b19015f0897d67dce0ade82f3b6ce437ab9f877df5479f2f2c4bf5bd2e23e3dc4a9a19843389d66ce306fbf78b417dd57169597300543"
+  },
+  {
+    "ref": "qeva:1:one-plus-one@2",
+    "id": "qeva:1:one-plus-one",
+    "revision": 2,
+    "current": true,
+    "kind": "theorem",
+    "title": "One plus one equals two",
+    "summary": "In the declared Peano rewrite kernel, the closed term adding one to one normalizes to two.",
+    "domains": [
+      "arithmetic",
+      "proof"
+    ],
+    "verification": "machine-checked",
+    "path": "objects/one-plus-one.r2.json",
+    "sha256": "0b6c705226401f1a5bc69dd86687bf5c34f83dd760d84e74be651502d10f1fdf",
+    "sha512": "8b28403616ba30fceb61a899f91f781dff7426f71bd550dcb73cb65b489000a9ad6606db1f3bc879e9885985c3932059a14c6bc1a254362d9e89dc6e34d2fb6f"
+  },
+  {
+    "ref": "qeva:1:operation@2",
+    "id": "qeva:1:operation",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Operation",
+    "summary": "An operation is a typed map from declared input sorts to a declared output sort.",
+    "domains": [
+      "foundations",
+      "algebra"
+    ],
+    "verification": "editorial",
+    "path": "objects/operation.r2.json",
+    "sha256": "84f99fe70c7d38e2395e7865fa44dc5a73982029feae30231b1e51f8985f5aca",
+    "sha512": "5a8783db5a1e53bd31f8045b79a5e3108741cab773cf945efe7b7b6b586165564c7f7adb44d79197334dfeef72d2f2a4b4773ebd2dc7576ccd75350c89395e04"
+  },
+  {
+    "ref": "qeva:1:optimization@3",
+    "id": "qeva:1:optimization",
+    "revision": 3,
+    "current": true,
+    "kind": "definition",
+    "title": "Optimization",
+    "summary": "A minimization problem specifies a feasible set and objective; its infimum is the optimal value and may be unattained.",
+    "domains": [
+      "optimization",
+      "analysis",
+      "algorithms"
+    ],
+    "verification": "editorial",
+    "path": "objects/optimization.r3.json",
+    "sha256": "2728e9d51c6acd28547eb868a5d536895bc03b4dba2ce177f141ef58634a446f",
+    "sha512": "29c25955347fd87537085e799e4ac2a2433ea0e0d42676a6560500103d82eec7ab1f736c1ab46f8d3c3fde8b4a609a6f0a870c0d7a191bf1f243be8b99ac0726"
+  },
+  {
+    "ref": "qeva:1:order@1",
+    "id": "qeva:1:order",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Order",
+    "summary": "An order records a consistent notion of before, below, or no greater than.",
+    "domains": [
+      "order-theory",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/order.r1.json",
+    "sha256": "f1841e774225b64100cb38a98e8a292cde7a637b3d53c3f5d2425363b83501cd",
+    "sha512": "d0684a19e5cc62b61a4f4630c127f02fc31595c275fccd408bc729b2e9382dfa29a3afc7c7b0dbc2fee3ee77039bf3a7612b9e93ed448d5231953611ddca12fd"
+  },
+  {
+    "ref": "qeva:1:ordered-pair@1",
+    "id": "qeva:1:ordered-pair",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Ordered pair",
+    "summary": "An ordered pair stores two objects while preserving which is first and which is second.",
+    "domains": [
+      "set-theory",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/ordered-pair.r1.json",
+    "sha256": "3fd011372f4b2bd02c39790f134a642a317e106787fdb77ba60737a889f6a681",
+    "sha512": "74dadadae0eeb46e2d3725f1695c1936504236ce92bf45d722cc9806cde531e3a4f06bcb93f11807faab13e8663ee7339ef1df5c42a817413e3269208ff0dcc6"
+  },
+  {
+    "ref": "qeva:1:parity@3",
+    "id": "qeva:1:parity",
+    "revision": 3,
+    "current": true,
+    "kind": "definition",
+    "title": "Parity",
+    "summary": "Integer parity defines the predicates even and odd by divisibility by two.",
+    "domains": [
+      "number",
+      "arithmetic"
+    ],
+    "verification": "editorial",
+    "path": "objects/parity.r3.json",
+    "sha256": "c62782aefe5dbdb84655dd3095dcb52f5a5e60ecd87936dc0fd86547e1d098c5",
+    "sha512": "3939d1f6b94d95d231b94dda6aaa3c1c29a58833e549718fb11d0163d41cc6d5bbe0a7fc52f0bb6155a54b753a41d75f3aa748476ee82458d84afaa7437aff92"
+  },
+  {
+    "ref": "qeva:1:periodicity@2",
+    "id": "qeva:1:periodicity",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Periodicity of a sequence",
+    "summary": "Exact repetition after a fixed positive index shift.",
+    "domains": [
+      "dynamics",
+      "sequence",
+      "recurrence"
+    ],
+    "verification": "editorial",
+    "path": "objects/periodicity.r2.json",
+    "sha256": "6c9c99738463584d749732c78f85d8ec0e4cfcfba2b1147dde8017bbbbac2efe",
+    "sha512": "70336657b78b72e1983e5c17b848bb4f54b29194577f5c4cd062ce6f7d0b728341a4157f05d916c03b5d46bc1064ffbf7a143cf86eb3cf554a210d85d1931f9a"
+  },
+  {
+    "ref": "qeva:1:prime@3",
+    "id": "qeva:1:prime",
+    "revision": 3,
+    "current": true,
+    "kind": "definition",
+    "title": "Prime number",
+    "summary": "A prime is a natural number greater than one whose only positive divisors are one and itself.",
+    "domains": [
+      "number",
+      "arithmetic"
+    ],
+    "verification": "editorial",
+    "path": "objects/prime.r3.json",
+    "sha256": "bd875649e8c675d6afef87cdccb6b53ccbbb432f0d834a9bb7e4551cf93baf38",
+    "sha512": "8dd63cbe366fdd00d062ccfe5badfa486c503bbd3cdc5835813df0857404dabc955df7abb55c85517c5aab3621b0bc4c96f7870df6dde3c930dbde2e383216ae"
+  },
+  {
+    "ref": "qeva:1:probability-space@1",
+    "id": "qeva:1:probability-space",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Probability space",
+    "summary": "A probability space assigns normalized weight to measurable events.",
+    "domains": [
+      "probability",
+      "measure-theory"
+    ],
+    "verification": "editorial",
+    "path": "objects/probability-space.r1.json",
+    "sha256": "74f4976eac5c3b287d02ea77678793c8cd95da14af8d7d7184594719ddcf149f",
+    "sha512": "1c12ea92606b37f509cbbd824fc0a67c1be4c2385a71c7e268b02337626d7e40829a9c5056e65d3c51dc8929d5e127324151bed1e0d082c61e1b64d697a00c1f"
+  },
+  {
+    "ref": "qeva:1:proof@1",
+    "id": "qeva:1:proof",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Proof",
+    "summary": "A proof is a finite, checkable chain from admitted premises to a conclusion under declared rules.",
+    "domains": [
+      "logic",
+      "proof"
+    ],
+    "verification": "editorial",
+    "path": "objects/proof.r1.json",
+    "sha256": "ba935803fbb0f74df52379bfb048f232202b3e54c4c1707fefa6c4913ba989b9",
+    "sha512": "a71c0f52dbff5a1879ed464e24a17980e521e57400cff6a51187d73df4f5b7edc77729a9b240a6249656bb43371c99acb968537fdd6542061aa35ad97ab42bc7"
+  },
+  {
+    "ref": "qeva:1:quasiperiodicity@2",
+    "id": "qeva:1:quasiperiodicity",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Quasiperiodicity",
+    "summary": "A context-dependent torus-frequency representation often used for recurrent behavior with several incommensurate frequencies.",
+    "domains": [
+      "dynamics",
+      "analysis",
+      "sequence"
+    ],
+    "verification": "editorial",
+    "path": "objects/quasiperiodicity.r2.json",
+    "sha256": "95f29b4f9884247397624f62fe23615f2b73dca6ccd93cc7aac6f1147aa774b4",
+    "sha512": "4cb65cf69af7e923133b9ffdefd1bf1d9f3cf530dfbe637d658684e896549ee82b26c3f82fb825cf41eaceb4b7c9bb6f6f81ab0f4c8ce6ec9ba25348e045a8b2"
+  },
+  {
+    "ref": "qeva:1:random-variable@1",
+    "id": "qeva:1:random-variable",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Random variable",
+    "summary": "A random variable converts outcomes into measurable values.",
+    "domains": [
+      "probability",
+      "statistics"
+    ],
+    "verification": "editorial",
+    "path": "objects/random-variable.r1.json",
+    "sha256": "7458b13000ec3b6beef1111d0c70bf0ca3e4f351995b4755170755f4cf5a97ba",
+    "sha512": "94189eefbfb400af4e3c847f46663ad33c00a33a2e5b08fc9a8b3be78912da82b898f9d8a03f957415cc653843e7b35039be82256967dfb8d64e4c1ce1d07053"
+  },
+  {
+    "ref": "qeva:1:rational@1",
+    "id": "qeva:1:rational",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Rational number",
+    "summary": "Rational numbers represent ratios of integers with nonzero denominator.",
+    "domains": [
+      "number-theory",
+      "algebra"
+    ],
+    "verification": "editorial",
+    "path": "objects/rational.r1.json",
+    "sha256": "9e98beca4311c1fc6b8b61919c7ce39b4672e1a22567c03ec5c7775fa60d71a6",
+    "sha512": "40f09c880d08bcfcfd83969a8e6f26ea28dfc16cd9009eb49607b5c8d97c875869d623f9fa0f64532e4ba4073f976055bc5d40762abca9fac680112baac3d11f"
+  },
+  {
+    "ref": "qeva:1:real-number@1",
+    "id": "qeva:1:real-number",
+    "revision": 1,
+    "current": true,
+    "kind": "framework",
+    "title": "Real number",
+    "summary": "Real numbers complete the rationals so convergent measurement processes need not leave gaps.",
+    "domains": [
+      "analysis",
+      "number-theory"
+    ],
+    "verification": "editorial",
+    "path": "objects/real-number.r1.json",
+    "sha256": "0a228676f3eb8c42c9a68c68bf2de25d35b8f2417a1e19a376805b8a248ab42f",
+    "sha512": "1574a3167449a07e6b7e54dfd0c5180af6e0d98baa72ef9374a5b088dabb8f7256aa7cc095c9835a31e9f20b9fb16a778b11efbebaaf30192b090077a0a45f8e"
+  },
+  {
+    "ref": "qeva:1:recurrence@2",
+    "id": "qeva:1:recurrence",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Recurrence relation",
+    "summary": "A relation constraining indexed values using other indexed values, often earlier ones.",
+    "domains": [
+      "dynamics",
+      "sequence",
+      "computation"
+    ],
+    "verification": "editorial",
+    "path": "objects/recurrence.r2.json",
+    "sha256": "1e12dd32fee686c84d87f2b5ca9dc843bea3e686736b28573118dd07cb0770ca",
+    "sha512": "9d64680e0fc7440af29c1f280e70fc58095e7b2192671680cf5fdeb215c47df997f40d887777dffe81b79c69b48368d0ba0624ba797ffc1958f168f61dbdcb26"
+  },
+  {
+    "ref": "qeva:1:relation@1",
+    "id": "qeva:1:relation",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Relation",
+    "summary": "A relation records which tuples of objects stand in a chosen connection.",
+    "domains": [
+      "foundations",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/relation.r1.json",
+    "sha256": "549f3fd887cee5def23b0be7be1521b24bd2bf5b1962df360343f3836fd74582",
+    "sha512": "2f19f446b39890ef6c909d148017de30107ab7ef7781148cb8d9e1a33a121871f58ff7364af661e176dcb6710b9993f5e0746499128ce7e1f75623e3a62e40ef"
+  },
+  {
+    "ref": "qeva:1:ring@1",
+    "id": "qeva:1:ring",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Ring",
+    "summary": "A ring supports addition, multiplication, and additive inverses under compatible laws.",
+    "domains": [
+      "algebra"
+    ],
+    "verification": "editorial",
+    "path": "objects/ring.r1.json",
+    "sha256": "b49f92091d6ce3fb1c969e9cf3312a1c74cb2feaa83577502bc1b2a85a12bdc5",
+    "sha512": "697fa614d223e52660390dbffb5ebf686c993a26f94132a44d91ea1d6f22903af8e211ef24b67e5b7e722c657fcbd22428469899296c767e3cf4f64307cc89b0"
+  },
+  {
+    "ref": "qeva:1:satisfaction@2",
+    "id": "qeva:1:satisfaction",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Satisfaction",
+    "summary": "A semantic relation stating that a formula holds in a declared interpretation or model.",
+    "domains": [
+      "logic",
+      "semantics",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/satisfaction.r2.json",
+    "sha256": "3785838c589714fff3b23695d59ee7b62579cedd6dc7383b36eab92a782a368a",
+    "sha512": "3e84ae7b08d36bb2334bb7dd74eaf39f94fb8a97422918656f3012318df0fd9e39a812d606c4cc59f1dc49b6063c4730b12987eb68fbf8982b0aa4cdf26674a1"
+  },
+  {
+    "ref": "qeva:1:schema-replacement@1",
+    "id": "qeva:1:schema-replacement",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Schema of replacement",
+    "summary": "The image of a set under a definable single-valued correspondence is a set.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/schema-replacement.r1.json",
+    "sha256": "1c5f14de0bbac9982f1178bd462f86f444424e5730e182e6bf60e5a23d5b0a92",
+    "sha512": "74dd8676ead00eb84158b551cc25adbaf2b92b989c11a1e802b514393f1aaf84f8aeae3148aa4fb772740a4c6feac71424f1051c89750b5651bb9702048f0943"
+  },
+  {
+    "ref": "qeva:1:schema-separation@1",
+    "id": "qeva:1:schema-separation",
+    "revision": 1,
+    "current": true,
+    "kind": "axiom",
+    "title": "Schema of separation",
+    "summary": "A definable condition can select a subset of an already existing set.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/schema-separation.r1.json",
+    "sha256": "49917c1ba9f13e541dabb39ecd599b038d4b5395aa9e3eaec7c7fe30f9fd36d9",
+    "sha512": "160b9ad73db18db387624f246d8c62c56b0cc3794c27b17c8180d17d4b88a24defc224a3f0a98b5eb0426a73684e5e5adeb16e18ab0f430ed846432403d9fba1"
+  },
+  {
+    "ref": "qeva:1:sensitivity@2",
+    "id": "qeva:1:sensitivity",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Sensitive dependence on initial conditions",
+    "summary": "A metric dynamical property in which arbitrarily nearby starting states can eventually separate by a fixed positive amount.",
+    "domains": [
+      "dynamics",
+      "chaos",
+      "analysis"
+    ],
+    "verification": "editorial",
+    "path": "objects/sensitivity.r2.json",
+    "sha256": "1f3df1821e7815cf3fddf1048674dceeaa61fc08a1d8bb5f09ea5151edc76e81",
+    "sha512": "80da1de87c7bbc9fdba08c4e473c84118ad6c8586e98906e7a1ec7ad579cdfb728a7dc4745821466ba3baa48f4a768f40e59fd52b1f150971cb616be90ed1796"
+  },
+  {
+    "ref": "qeva:1:sequence@2",
+    "id": "qeva:1:sequence",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Sequence",
+    "summary": "An ordered family of values indexed by a specified set, usually the natural numbers.",
+    "domains": [
+      "structure",
+      "number",
+      "dynamics"
+    ],
+    "verification": "editorial",
+    "path": "objects/sequence.r2.json",
+    "sha256": "f14be35ff8fd233612af03558babf893fc1fae08f0d195fee3c6a18f38733089",
+    "sha512": "23ad06eb4a602c9cab3b6e9d62b461e8922a873685a36e11c51c50fd3209bc891c15bc9fe1eb6de986283088fa0dfb1f9c653451efaa5b900a504509b9f29b03"
+  },
+  {
+    "ref": "qeva:1:set@1",
+    "id": "qeva:1:set",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Set",
+    "summary": "A set is a collection treated extensionally: its members determine it.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/set.r1.json",
+    "sha256": "52543d8c639433a7cf30ed559a806570467ea2f89acbf0db702392c319288f72",
+    "sha512": "98a5481916acf704e286781fdc7543fcfdc284c497c5c492b51f8725e8d1b25ff95722f97796c7978f76b42e13461c43ce01ad7bae87af46697136c226fca200"
+  },
+  {
+    "ref": "qeva:1:sigma-algebra@1",
+    "id": "qeva:1:sigma-algebra",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Sigma-algebra",
+    "summary": "A sigma-algebra is a collection of events stable under complementation and countable combination.",
+    "domains": [
+      "measure-theory",
+      "probability"
+    ],
+    "verification": "editorial",
+    "path": "objects/sigma-algebra.r1.json",
+    "sha256": "52542d62fe3b4456c8b8afefa8018de4ab9ffbc025106ca18a574b87d536205e",
+    "sha512": "b2f731e6718fa8fa78227abc61ab2273cdfd32147d790dd2a977df92ccd3483f986833671a0da3c45be897fccf15f413a3e44aa78cf5d6295afa989b6d32a9fb"
+  },
+  {
+    "ref": "qeva:1:signal-noise@2",
+    "id": "qeva:1:signal-noise",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Signal and noise",
+    "summary": "Signal/noise is a task- and model-relative decomposition of observed variation.",
+    "domains": [
+      "information",
+      "statistics",
+      "learning"
+    ],
+    "verification": "editorial",
+    "path": "objects/signal-noise.r2.json",
+    "sha256": "5fe95ff8ef68dba5683e4dbbd5864a47d91c2b520def94052e49289dbcedf63a",
+    "sha512": "4138daf190ea7aacc24e65d41d12f138bef04242af4d1ef914fe9dc0bea19d987948227fadc5f3ea77a9685ade2ecf1e4c996e3d83d06f0ca925978309e30cc8"
+  },
+  {
+    "ref": "qeva:1:stability@3",
+    "id": "qeva:1:stability",
+    "revision": 3,
+    "current": true,
+    "kind": "definition",
+    "title": "Stability",
+    "summary": "Lyapunov stability of a fixed point means every sufficiently small initial perturbation remains small for all future iterates.",
+    "domains": [
+      "dynamics",
+      "analysis",
+      "control"
+    ],
+    "verification": "editorial",
+    "path": "objects/stability.r3.json",
+    "sha256": "6b10f1fd94cd629f68531917aaf30683a41e2a213b755c0bee0edc2ae52113bf",
+    "sha512": "fac54be25d11bfbe155c04fbd3e4af2549bcbbf73bafe5509242c6a7f822c016ec6c86de07d8c56d1ce8bd7fb31efab1027fad55ffdfa31d6d841848abad8b04"
+  },
+  {
+    "ref": "qeva:1:statement@1",
+    "id": "qeva:1:statement",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Statement",
+    "summary": "A statement is an expression eligible to be asserted, denied, proved, or evaluated in a model.",
+    "domains": [
+      "logic",
+      "language"
+    ],
+    "verification": "editorial",
+    "path": "objects/statement.r1.json",
+    "sha256": "867f7b65b66b85e2373a8a634b378b102012f7696dd1c9562caad8374c5f0b5b",
+    "sha512": "fa510e7add9178dac006fca3473a4769028df943bd100379982eaf9601d4458e550fd4016b606bdfe8bc390c34e578e0feb849e81b1c5a036c4a9ade4229f6db"
+  },
+  {
+    "ref": "qeva:1:subset@1",
+    "id": "qeva:1:subset",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Subset",
+    "summary": "A is a subset of B when every member of A is also a member of B.",
+    "domains": [
+      "set-theory"
+    ],
+    "verification": "editorial",
+    "path": "objects/subset.r1.json",
+    "sha256": "04c002ca9d8f98757cab13ba839357fa5357b739034a64ee2fc5ed0fbbb0b4ed",
+    "sha512": "ab7adec4e19664e4ed8645c4a220afef801cf17b5e8b96ccdd5ac0fe70465a1add86780192fb45815393d554bdc643d6d3b91fa53c482c1c9f8acf0125f26b5c"
+  },
+  {
+    "ref": "qeva:1:successor@1",
+    "id": "qeva:1:successor",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Successor",
+    "summary": "Successor moves from one natural number to the next.",
+    "domains": [
+      "number-theory",
+      "arithmetic"
+    ],
+    "verification": "editorial",
+    "path": "objects/successor.r1.json",
+    "sha256": "a6cc40732e7b38aee37b6a21bece18f7feb5efd6a84e8eee40f3fd0aefa3a3be",
+    "sha512": "71e5a9f2dcef0e4cc2f114003ef34785e1d7ae3ac1fd2e708a905f3289a41eeda1251b2645c8bfe9e07b164e3ec43ce1ef3e7bd12564d6cc2061d490556bd9c6"
+  },
+  {
+    "ref": "qeva:1:surjective-function@1",
+    "id": "qeva:1:surjective-function",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Surjection",
+    "summary": "A surjective function reaches every element of its declared codomain.",
+    "domains": [
+      "set-theory",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/surjective-function.r1.json",
+    "sha256": "c05c0ce2e3ad86e7b6763129c9f9b21924343be1da3571447bde9591e0811833",
+    "sha512": "43cec651fed1e96e25362ba1b57ab7e3fc007b312e71cfe5585b0e00cb79e2ffd196a6b59ab61fef7e3098377d2ded9390d6fcdc05d92f6007adf98bfe1096eb"
+  },
+  {
+    "ref": "qeva:1:symbol@1",
+    "id": "qeva:1:symbol",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Symbol",
+    "summary": "A symbol is an atomic mark or token admitted by a formal language.",
+    "domains": [
+      "foundations",
+      "language"
+    ],
+    "verification": "editorial",
+    "path": "objects/symbol.r1.json",
+    "sha256": "1be6ea51018c25a1b9a06c337912372973e075d3e1693ef458efedc303a8b8c5",
+    "sha512": "cd5863aea623f1f67ab19eadc9ac7cf0a7e511596d37ec678319ccec8b61b0c3ade4b81c75a6d4ad03d351c8b3cb4683a4e3a5e5449ef591387e45ccfea9d8dc"
+  },
+  {
+    "ref": "qeva:1:symmetry@2",
+    "id": "qeva:1:symmetry",
+    "revision": 2,
+    "current": true,
+    "kind": "definition",
+    "title": "Symmetry",
+    "summary": "A transformation that leaves a specified object unchanged relative to a specified action.",
+    "domains": [
+      "symmetry",
+      "structure"
+    ],
+    "verification": "editorial",
+    "path": "objects/symmetry.r2.json",
+    "sha256": "7bd7d1f6fcd0f934cfe0c5187bf1a3645bc14d4aa9e81b93c460b52c3dd2eac0",
+    "sha512": "f57dcbb4084096893f9965103f4fa4df870e4a6358026e3178ff9af63c6c57381ea4868cda21164fa5fa9de2e2b6d0c47cf197bbcf1a370a1828cdb0214c5a56"
+  },
+  {
+    "ref": "qeva:1:theorem@1",
+    "id": "qeva:1:theorem",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Theorem",
+    "summary": "A theorem is a statement accompanied by a valid derivation from declared assumptions in a declared system.",
+    "domains": [
+      "logic",
+      "proof"
+    ],
+    "verification": "editorial",
+    "path": "objects/theorem.r1.json",
+    "sha256": "c270b6b098de7edba2b03d495817f2468e326d297db3338e532c24ae79e97f49",
+    "sha512": "cd848aac4a17928dc39c4a80197a18dafedc9efe28156d60fba0ebc036e0e50e42dcaedefcf777d5601b58ba0d03f42b76ccd390afabfb40440e11d093d4432c"
+  },
+  {
+    "ref": "qeva:1:topological-space@1",
+    "id": "qeva:1:topological-space",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Topological space",
+    "summary": "A topology declares which regions count as open, encoding nearness without requiring numerical distance.",
+    "domains": [
+      "topology",
+      "analysis"
+    ],
+    "verification": "editorial",
+    "path": "objects/topological-space.r1.json",
+    "sha256": "8ec3363b93d161bd39f460bc44950c033e56bcc1c45bf302f5c388adcb911013",
+    "sha512": "0cbde577858ccf96aa8ea0778c361511511036b625c9308a478aeb3514f8187bf3594ad473150a89e71f8f5232fb92fff6bb09f9238ef62a08181e1dd4ab2d16"
+  },
+  {
+    "ref": "qeva:1:type@1",
+    "id": "qeva:1:type",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Type",
+    "summary": "A type classifies expressions and states which constructions may be formed with them.",
+    "domains": [
+      "type-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/type.r1.json",
+    "sha256": "0f37c058dde2d7e298302aa932e8c774b3ac53c27ca64f869b41a4dcb707e1b2",
+    "sha512": "0ee6419da28f3e050c70ff52ee03f2a3bf7f4159b2838f74f4dcd25c3f360bcc9ab0fd34be89dbb7319260b58db5948dbcf9516700bb261a8c370fb73626959f"
+  },
+  {
+    "ref": "qeva:1:universal-quantifier@1",
+    "id": "qeva:1:universal-quantifier",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Universal quantifier",
+    "summary": "Universal quantification requires a statement to hold for every permitted value in a domain.",
+    "domains": [
+      "logic"
+    ],
+    "verification": "editorial",
+    "path": "objects/universal-quantifier.r1.json",
+    "sha256": "efadfeccf6f7382ff037a34d596f28523b87d1960f63d1bd2c18ce177df2b183",
+    "sha512": "1d3e67b3c2e7886115847407122d7186e960ce6e68d990455fdd0741b36430a3a7ec8477b5777125decbaa4c87978cbc46a6f58f1455b71a5a2925aa84429ac4"
+  },
+  {
+    "ref": "qeva:1:vector-space@1",
+    "id": "qeva:1:vector-space",
+    "revision": 1,
+    "current": true,
+    "kind": "definition",
+    "title": "Vector space",
+    "summary": "A vector space supports vector addition and scalar multiplication under compatibility laws.",
+    "domains": [
+      "linear-algebra",
+      "geometry"
+    ],
+    "verification": "editorial",
+    "path": "objects/vector-space.r1.json",
+    "sha256": "fb8f8efcb8552711ec433da74eccb9fc38654c63567c21ed9a84392529fccf3e",
+    "sha512": "2ead5ea2761669c66948a4cabc020a97ffeee12fe49c9f6f197f01d8aac52508838d3f2d911f7dcbeb5ff296334db3e74502eec6e804f539ba01de053bf96d7d"
+  },
+  {
+    "ref": "qeva:1:zero@1",
+    "id": "qeva:1:zero",
+    "revision": 1,
+    "current": true,
+    "kind": "primitive",
+    "title": "Zero",
+    "summary": "Zero is the distinguished starting value for one common construction of the natural numbers.",
+    "domains": [
+      "number-theory",
+      "arithmetic"
+    ],
+    "verification": "editorial",
+    "path": "objects/zero.r1.json",
+    "sha256": "6c49efdebc0ab5f2efee2ce15b2009458ba3cd82bdffd670aefbc1be8c172e5d",
+    "sha512": "ba10f7a343bc0302057a6df6bb5b9b81dfde2d8df7072e1fcd5455eef0983351d0551ccb0ed3cbcea3f6ea96b2d2d807c05585c9e97addb9c7293e3be89febed"
+  },
+  {
+    "ref": "qeva:1:zfc-set-theory@1",
+    "id": "qeva:1:zfc-set-theory",
+    "revision": 1,
+    "current": true,
+    "kind": "framework",
+    "title": "ZFC set theory",
+    "summary": "ZFC is a major foundational theory whose objects are sets governed by explicit axiom schemes and axioms.",
+    "domains": [
+      "set-theory",
+      "foundations"
+    ],
+    "verification": "editorial",
+    "path": "objects/zfc-set-theory.r1.json",
+    "sha256": "35149868e3e7b0640f9ef704cced54421c1fa0fbe3e649ac57f98266bf8af676",
+    "sha512": "45eedac55bc45461b57acf104788783655cab8e829e62ae4dbcfab95e95868f7c538e81e3a3f982114107eff8655d02281eb0a9c308e2a443036c25baf0fe53c"
+  }
+]

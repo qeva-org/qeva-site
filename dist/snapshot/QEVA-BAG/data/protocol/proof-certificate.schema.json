@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/proof-certificate.schema.json",
+  "title": "QEVA Bound Rewrite Certificate 0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "certificate_version",
+    "id",
+    "subject_ref",
+    "subject_canonical_sha256",
+    "subject_statement",
+    "subject_statement_sha256",
+    "claim",
+    "dependency_bindings",
+    "kernel",
+    "derivation",
+    "result",
+    "created"
+  ],
+  "properties": {
+    "certificate_version": {"const": "0.2"},
+    "id": {"type": "string", "pattern": "^qeva-certificate:1:[a-z0-9][a-z0-9._:-]*$"},
+    "subject_ref": {"$ref": "#/$defs/objectRef"},
+    "subject_canonical_sha256": {"$ref": "#/$defs/sha256"},
+    "subject_statement": {"type": "string", "minLength": 1},
+    "subject_statement_sha256": {"$ref": "#/$defs/sha256"},
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relation", "lhs", "rhs"],
+      "properties": {
+        "relation": {"const": "normalizes-to"},
+        "lhs": {"$ref": "#/$defs/term"},
+        "rhs": {"$ref": "#/$defs/term"}
+      }
+    },
+    "dependency_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ref", "role", "canonical_sha256"],
+        "properties": {
+          "ref": {"$ref": "#/$defs/objectRef"},
+          "role": {"enum": ["rewrite-definition", "theory-context", "constant", "constructor", "proof-concept", "lemma", "axiom"]},
+          "canonical_sha256": {"$ref": "#/$defs/sha256"}
+        }
+      }
+    },
+    "kernel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "term_encoding", "rules"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "term_encoding": {"type": "string", "minLength": 1},
+        "rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "pattern", "replacement"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+              "pattern": {"$ref": "#/$defs/term"},
+              "replacement": {"$ref": "#/$defs/term"}
+            }
+          }
+        }
+      }
+    },
+    "derivation": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rule", "path", "before", "after"],
+        "properties": {
+          "rule": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "path": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+          "before": {"$ref": "#/$defs/term"},
+          "after": {"$ref": "#/$defs/term"}
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["outcome", "normal_form"],
+      "properties": {
+        "outcome": {"const": "pass"},
+        "normal_form": {"$ref": "#/$defs/term"}
+      }
+    },
+    "created": {"type": "string", "format": "date"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "objectRef": {"type": "string", "pattern": "^qeva:1:[a-z0-9][a-z0-9._-]*@[1-9][0-9]*$"},
+    "term": {
+      "oneOf": [
+        {"type": "string", "minLength": 1},
+        {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/term"}}
+      ]
+    }
+  }
+}

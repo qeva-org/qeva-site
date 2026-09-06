@@ -1,0 +1,47 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:topological-space",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Topological space",
+  "summary": "A topology declares which regions count as open, encoding nearness without requiring numerical distance.",
+  "domains": [
+    "topology",
+    "analysis"
+  ],
+  "context": {
+    "framework": "topology",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared topology context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A topology declares which regions count as open, encoding nearness without requiring numerical distance.",
+    "exact": "A topology τ on X contains ∅ and X, is closed under arbitrary unions, and under finite intersections; (X,τ) is a topological space.",
+    "example": "Every metric induces a topology through open balls.",
+    "caveat": "Different topologies on the same set create different continuity and convergence behavior."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:subset@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

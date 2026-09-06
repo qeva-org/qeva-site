@@ -1,0 +1,46 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:empty-set",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Empty set",
+  "summary": "The empty set is the set with no members.",
+  "domains": [
+    "set-theory"
+  ],
+  "context": {
+    "framework": "set-like mathematics",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared set-like mathematics context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "The empty set is the set with no members.",
+    "exact": "∅ is characterized by ∀x(x∉∅); extensionality makes any two memberless sets identical.",
+    "example": "The solution set of x²=-1 over the real numbers is empty.",
+    "caveat": "Existence of an empty set is an axiom or construction depending on the foundation."
+  },
+  "dependencies": [
+    "qeva:1:set@1",
+    "qeva:1:membership@1"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

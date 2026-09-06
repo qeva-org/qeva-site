@@ -1,0 +1,48 @@
+{
+  "qeva_version": "0.2",
+  "id": "qeva:1:consistency",
+  "revision": 1,
+  "kind": "definition",
+  "title": "Consistency",
+  "summary": "A theory is consistent when its rules do not derive an explicit contradiction.",
+  "domains": [
+    "logic",
+    "foundations"
+  ],
+  "context": {
+    "framework": "formal proof systems",
+    "framework_ref": null,
+    "note": "This node belongs to one explicit foundational presentation; alternate foundations may encode it differently."
+  },
+  "assumptions": [
+    {
+      "text": "The declared formal proof systems context is fixed.",
+      "ref": null
+    }
+  ],
+  "content": {
+    "plain": "A theory is consistent when its rules do not derive an explicit contradiction.",
+    "exact": "A theory T is syntactically consistent when no formula P has both T⊢P and T⊢¬P; equivalent formulations require assumptions about the logic.",
+    "example": "A model of a sound classical theory witnesses consistency relative to the surrounding metatheory.",
+    "caveat": "Consistency is always relative to a formalization and often established only relative to a stronger background system."
+  },
+  "dependencies": [
+    "qeva:1:proof@1",
+    "qeva:1:negation@1",
+    "qeva:1:formal-system@2"
+  ],
+  "relations": [],
+  "verification": {
+    "level": "editorial",
+    "method": "QEVA seed formulation reviewed for internal mathematical coherence; no external formal proof is claimed.",
+    "artifact": null
+  },
+  "provenance": {
+    "created": "2026-09-04",
+    "creator": "QEVA foundation seed",
+    "license": "CC0-1.0",
+    "source_note": "Original QEVA orientation record. It is a compact map entry, not a substitute for a textbook or primary source."
+  },
+  "supersedes": null,
+  "legacy_ids": []
+}

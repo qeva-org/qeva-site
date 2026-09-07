@@ -17,7 +17,7 @@
       kind: 'link',
       label: 'Stripe',
       description: 'Card and local payment methods through Stripe.',
-      url: 'https://buy.stripe.com/7sYaEW9vsdgk8ES8JC2kw00'
+      url: 'https://buy.stripe.com/5kQbJ04b8ccg3kye3W2kw01'
     },
     {
       id: 'paypal',

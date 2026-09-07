@@ -17,10 +17,11 @@
       kind: 'link',
       label: 'Stripe',
       description: 'Card and local payment methods through Stripe.',
-      url: 'REPLACE_WITH_STRIPE_PAYMENT_LINK'
+      url: 'https://buy.stripe.com/7sYaEW9vsdgk8ES8JC2kw00'
     },
     {
       id: 'paypal',
+    enabled: false,
       kind: 'link',
       label: 'PayPal',
       description: 'Send a one-time contribution with PayPal.',
@@ -28,6 +29,7 @@
     },
     {
       id: 'buy-me-a-coffee',
+    enabled: false,
       kind: 'link',
       label: 'Buy Me a Coffee',
       description: 'A lightweight way to support small independent work.',
@@ -35,6 +37,7 @@
     },
     {
       id: 'kofi',
+    enabled: false,
       kind: 'link',
       label: 'Ko-fi',
       description: 'One-time support without a platform-heavy experience.',
@@ -42,6 +45,7 @@
     },
     {
       id: 'github-sponsors',
+    enabled: false,
       kind: 'link',
       label: 'GitHub Sponsors',
       description: 'Sponsor ongoing open research and tooling work.',
@@ -49,6 +53,7 @@
     },
     {
       id: 'promptpay',
+    enabled: false,
       kind: 'copy',
       label: 'PromptPay',
       description: 'PromptPay ID for Thai bank transfers.',
@@ -58,6 +63,7 @@
     },
     {
       id: 'bitcoin',
+      enabled: false,
       kind: 'copy',
       label: 'Bitcoin',
       description: 'BTC wallet address.',
@@ -67,6 +73,7 @@
     },
     {
       id: 'ethereum',
+      enabled: false,
       kind: 'copy',
       label: 'Ethereum',
       description: 'ETH wallet address.',
@@ -76,6 +83,7 @@
     },
     {
       id: 'solana',
+      enabled: false,
       kind: 'copy',
       label: 'Solana',
       description: 'SOL wallet address.',
@@ -85,6 +93,7 @@
     },
     {
       id: 'usdt',
+      enabled: false,
       kind: 'copy',
       label: 'USDT',
       description: 'USDT wallet address. Set the network before publishing.',
@@ -95,6 +104,7 @@
     },
     {
       id: 'usdc',
+      enabled: false,
       kind: 'copy',
       label: 'USDC',
       description: 'USDC wallet address. Set the network before publishing.',

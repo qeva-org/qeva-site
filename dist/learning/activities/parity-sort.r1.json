@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:parity-sort",
+  "revision": 1,
+  "concept_ref": "qeva:learning:parity@1",
+  "type": "choice",
+  "stage": "predict",
+  "title": "Two kinds of integer.",
+  "prompt": "Which integer is odd?",
+  "hint": "An odd integer has the form 2k + 1 for an integer k.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "18"
+      },
+      {
+        "id": "1",
+        "text": "19"
+      },
+      {
+        "id": "2",
+        "text": "20"
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "19 = 2 × 9 + 1. The classification can drive a piecewise update rule.",
+    "fail": "19 leaves one after taking out pairs; 18 and 20 are even."
+  },
+  "source_refs": [
+    "qeva:1:parity@1"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:nonlinearity-counterexample",
+  "revision": 1,
+  "concept_ref": "qeva:learning:nonlinearity@1",
+  "type": "number",
+  "stage": "predict",
+  "title": "Test superposition.",
+  "prompt": "Let f(x) = x² on ℝ. What is f(1 + 1) − [f(1) + f(1)]?",
+  "hint": "Compare 2² with 1² + 1².",
+  "config": {
+    "value": 2,
+    "tolerance": 0,
+    "display": []
+  },
+  "feedback": {
+    "pass": "4 − 2 = 2. One failed instance is enough to refute the universal superposition requirement for this map.",
+    "fail": "Square after adding in the first term, but square before adding in the second."
+  },
+  "source_refs": [
+    "qeva:1:nonlinearity@1"
+  ]
+}

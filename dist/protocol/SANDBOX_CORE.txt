@@ -1,0 +1,53 @@
+QEVA SANDBOX CORE 1 — portable experiment specifications
+
+A sandbox can reveal behavior. It cannot silently upgrade behavior into truth.
+DECLARE the rule, parameters and arithmetic.
+REPRODUCE from the exact declared interpreter revision and parameters.
+LABEL observations, conjectures, proofs and counterexamples distinctly.
+PRESERVE FAILURE: budget stops and negative results remain information.
+
+FORMAT
+UTF-8 JSON, schema_version qeva-sandbox/1. Required fields: id, revision, title,
+kernel_ref, parameters, concept_refs, claim, provenance, runs.
+Claim has label, text, verification. verification must be unreviewed in a personal lab.
+A user choosing theorem or proof is not verification.
+A run has id, at, result, note. Result has engine, kernel_ref, arithmetic, parameters,
+status, series, summary. Engine reference: qeva-kernels/1. Retain state at step zero.
+Each run freezes its own parameters even when the editor changes afterwards.
+
+REFERENCE INTERPRETERS
+qeva:kernel:affine@1
+  x[n+1] = a*x[n]+b, binary64 multiplication before addition, no fused multiply-add.
+  -4<=a<=4, -10<=b<=10, -10<=x0<=10, integer 1<=steps<=128.
+  Series entries [n,x]; result status complete or numeric-limit.
+
+qeva:kernel:logistic@1
+  x[n+1] = (r*x[n])*(1-x[n]); same for y. y0=x0+delta.
+  binary64, explicit operation order. No clamp or noise.
+  0<=r<=4, 0<=x0<=1, 0<=delta<=0.05, x0+delta<=1.
+  Integer 1<=steps<=512. Series entries [n,x,y].
+  Report maximum/final separation and first separation strictly greater than 0.1
+  (null when not reached). Finite trajectories are not a chaos theorem.
+
+qeva:kernel:collatz@1
+  T(n)=n/2 if even; 3*n+1 if odd. Exact positive integer arithmetic.
+  Start is a decimal STRING of at most 30 digits, no sign or leading zero.
+  Integer 1<=steps<=1024. States exported as decimal strings: [index,"integer"].
+  Stop at 1, the step budget or before storing an integer longer than 512 digits.
+  Status reached-one, step-budget or digit-budget. Peak is an exact decimal string.
+  The 512-digit guard is defensive; the current bounded positive-start/step range
+  may stop earlier. A finite budget stop is inconclusive, not a counterexample.
+  Approximate plot coordinates are presentation only; retain the exact state table.
+
+Import re-executes supported runs and compares full results. A mismatch is rejected
+for investigation, not repaired silently. Unknown versions need their own interpreter.
+Preserve source JSON and the full release to retain that interpreter.
+
+SHARING
+Full JSON includes all runs. The compact #lab=base64url specification link omits the
+run journal, includes declared text, is not encrypted and creates no server upload.
+A fork has a new ID and parent ID/revision; it retains the evidence journal.
+At most 50 runs, 20 local drafts; file import at most 2 MiB. Export before limits/reset.
+No arbitrary user code executes. No account is required. No automatic canonicalization.
+
+See sandbox.schema.json and ../docs/SANDBOX_FORMAT.md for field and implementation details.

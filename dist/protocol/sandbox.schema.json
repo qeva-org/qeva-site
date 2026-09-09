@@ -1,0 +1,356 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/sandbox.schema.json",
+  "title": "QEVA portable sandbox 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "revision",
+    "title",
+    "kernel_ref",
+    "parameters",
+    "concept_refs",
+    "claim",
+    "provenance",
+    "runs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "qeva-sandbox/1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 104,
+      "pattern": "^lab:[a-zA-Z0-9._-]{1,100}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000000000
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "kernel_ref": {
+      "enum": [
+        "qeva:kernel:affine@1",
+        "qeva:kernel:logistic@1",
+        "qeva:kernel:collatz@1"
+      ]
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "concept_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200,
+        "pattern": "^qeva:1:[a-z0-9][a-z0-9._-]*@[1-9][0-9]*$"
+      },
+      "minItems": 0,
+      "maxItems": 64
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "text",
+        "verification"
+      ],
+      "properties": {
+        "label": {
+          "enum": [
+            "experiment",
+            "observation",
+            "conjecture",
+            "theorem",
+            "proof",
+            "counterexample"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 4000
+        },
+        "verification": {
+          "const": "unreviewed"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "created_at",
+        "creator_label",
+        "parent"
+      ],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "creator_label": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 160
+        },
+        "parent": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "revision"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 104,
+                  "pattern": "^lab:[a-zA-Z0-9._-]{1,100}$"
+                },
+                "revision": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "at",
+          "result",
+          "note"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "result": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "engine",
+              "kernel_ref",
+              "arithmetic",
+              "parameters",
+              "status",
+              "series",
+              "summary"
+            ],
+            "properties": {
+              "engine": {
+                "const": "qeva-kernels/1"
+              },
+              "kernel_ref": {
+                "enum": [
+                  "qeva:kernel:affine@1",
+                  "qeva:kernel:logistic@1",
+                  "qeva:kernel:collatz@1"
+                ]
+              },
+              "arithmetic": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000
+              },
+              "parameters": {
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "complete",
+                  "numeric-limit",
+                  "reached-one",
+                  "step-budget",
+                  "digit-budget"
+                ]
+              },
+              "series": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "number",
+                      "string"
+                    ]
+                  },
+                  "minItems": 2,
+                  "maxItems": 3
+                },
+                "minItems": 1,
+                "maxItems": 1025
+              },
+              "summary": {
+                "type": "object"
+              }
+            }
+          },
+          "note": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 2000
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 50
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kernel_ref": {
+            "const": "qeva:kernel:affine@1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "parameters": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "a",
+              "b",
+              "x0",
+              "steps"
+            ],
+            "properties": {
+              "a": {
+                "type": "number",
+                "minimum": -4,
+                "maximum": 4
+              },
+              "b": {
+                "type": "number",
+                "minimum": -10,
+                "maximum": 10
+              },
+              "x0": {
+                "type": "number",
+                "minimum": -10,
+                "maximum": 10
+              },
+              "steps": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 128
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kernel_ref": {
+            "const": "qeva:kernel:logistic@1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "parameters": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "r",
+              "x0",
+              "delta",
+              "steps"
+            ],
+            "properties": {
+              "r": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "x0": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "delta": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 0.05
+              },
+              "steps": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 512
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kernel_ref": {
+            "const": "qeva:kernel:collatz@1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "parameters": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "start",
+              "steps"
+            ],
+            "properties": {
+              "start": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30,
+                "pattern": "^[1-9][0-9]*$"
+              },
+              "steps": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 1024
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Normative importer also bounds the file to 2 MiB, rejects unsafe keys, validates every historical run with its own kernel parameters, and reproduces all results before accepting them. No arbitrary code or network interpreter is permitted."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": "qeva-learning-route/1",
+  "id": "qeva:route:evidence-and-proof",
+  "revision": 1,
+  "title": "A simple rule. An unfinished question.",
+  "goal_ref": "qeva:learning:collatz-conjecture@1",
+  "description": "Follow integer recurrence into cycles, finite evidence, and the difference between a successful run and a universal proof.",
+  "ordering": "prerequisite-topological",
+  "authority": "editorial-guidance-not-logical-dependence"
+}

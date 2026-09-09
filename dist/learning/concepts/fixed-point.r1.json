@@ -1,0 +1,76 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:fixed-point",
+  "revision": 1,
+  "concept_ref": "qeva:1:fixed-point@1",
+  "title": "Fixed point",
+  "difficulty": "developing",
+  "prerequisites": [
+    {
+      "ref": "qeva:learning:recurrence@1",
+      "minimum_state": "understood",
+      "reason": "Iteration gives the context for a state that reproduces itself."
+    }
+  ],
+  "related": [
+    "qeva:1:stability@1",
+    "qeva:1:periodicity@1"
+  ],
+  "explanation": {
+    "intuition": "Some states go through the machine without changing.",
+    "manipulation": "Find a value whose output equals its input. Do not confuse it with a nearby state.",
+    "pattern": "For x ↦ x², both 0 and 1 stay fixed. Their surrounding behavior need not be the same.",
+    "mechanism": "The fixed-point equation F(x) = x converts a dynamical question into an equation. Stability requires additional analysis of neighbors.",
+    "vocabulary": [
+      {
+        "term": "fixed point",
+        "meaning": "A state left unchanged by one application of a map."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "F(x*) = x*",
+        "meaning": "The starred state is unchanged; the star is a label, not multiplication."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:fixed-point@1",
+      "text": "x*∈X is a fixed point of F iff F(x*)=x*.",
+      "context": "set/function theory",
+      "caveat": "A fixed point may be stable, unstable, attracting, repelling, or neutral depending on additional structure and the chosen stability notion."
+    },
+    "proof": {
+      "label": "worked-example",
+      "statement": "The real fixed points of F(x) = x² are exactly 0 and 1.",
+      "steps": [
+        "A fixed point satisfies x² = x.",
+        "Rearrangement gives x(x − 1) = 0.",
+        "The real zero-product property gives x = 0 or x = 1.",
+        "Substitution verifies both possibilities."
+      ],
+      "limitation": "This algebraic worked example is not machine-checked. It says nothing by itself about stability."
+    },
+    "frontier": "What happens to a state just beside a fixed point?"
+  },
+  "activities": [
+    "qeva:activity:fixed-point-find@1",
+    "qeva:activity:fixed-point-proof@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:fixed-point-find@1"
+    ],
+    "mastered": [
+      "qeva:activity:fixed-point-proof@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:fixed-point@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

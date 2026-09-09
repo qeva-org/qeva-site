@@ -1,0 +1,23 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:recurrence-step",
+  "revision": 1,
+  "concept_ref": "qeva:learning:recurrence@1",
+  "type": "number",
+  "stage": "predict",
+  "title": "Use the machine.",
+  "prompt": "The rule is x[n+1] = 3x[n] + 1 and x[0] = 2. What is x[1]?",
+  "hint": "Substitute the present state 2 into the rule.",
+  "config": {
+    "value": 7,
+    "tolerance": 0,
+    "display": []
+  },
+  "feedback": {
+    "pass": "3 × 2 + 1 = 7. The current state and the update rule determine this next state.",
+    "fail": "Apply the entire rule to 2: multiply by 3, then add 1."
+  },
+  "source_refs": [
+    "qeva:1:recurrence@1"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:parity",
+  "revision": 1,
+  "concept_ref": "qeva:1:parity@1",
+  "title": "Parity",
+  "difficulty": "entry",
+  "prerequisites": [],
+  "related": [
+    "qeva:1:collatz-map@1",
+    "qeva:1:equivalence@1"
+  ],
+  "explanation": {
+    "intuition": "Group integers according to whether they can be made entirely of pairs.",
+    "manipulation": "Supply an integer witness for an odd value: n = 2k + 1.",
+    "pattern": "Every integer belongs to the even or odd class under ordinary integer arithmetic.",
+    "mechanism": "The representation n = 2k or n = 2k + 1 makes a classification checkable and can choose a branch of an update rule.",
+    "vocabulary": [
+      {
+        "term": "even",
+        "meaning": "An integer of the form 2k for integer k."
+      },
+      {
+        "term": "odd",
+        "meaning": "An integer of the form 2k + 1 for integer k."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "n = 2k + 1",
+        "meaning": "An integer witness k exhibits oddness."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:parity@1",
+      "text": "For n in Z: n is even iff there exists k in Z with n=2k. n is odd iff there exists k in Z with n=2k+1.",
+      "context": "integers with ordinary arithmetic",
+      "caveat": null
+    },
+    "proof": {
+      "label": "worked-example",
+      "statement": "27 is odd.",
+      "steps": [
+        "Choose the integer k = 13.",
+        "Then 2k + 1 = 2 × 13 + 1 = 27."
+      ],
+      "limitation": "This exhibits oddness for one integer; it is not a general result about Collatz orbits."
+    },
+    "frontier": "What happens when parity decides which update rule to apply?"
+  },
+  "activities": [
+    "qeva:activity:parity-sort@1",
+    "qeva:activity:parity-witness@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:parity-sort@1"
+    ],
+    "mastered": [
+      "qeva:activity:parity-witness@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:parity@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

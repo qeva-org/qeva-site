@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:nonlinearity-scope",
+  "revision": 1,
+  "concept_ref": "qeva:learning:nonlinearity@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "Keep the claim small enough.",
+  "prompt": "What has the previous calculation established?",
+  "hint": "A counterexample refutes the particular universal property it targets.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "Every nonlinear map is chaotic."
+      },
+      {
+        "id": "1",
+        "text": "The map x ↦ x² is nonlinear on ℝ; nothing about chaos follows from that fact alone."
+      },
+      {
+        "id": "2",
+        "text": "Every recurrence is nonlinear."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "Nonlinearity is a structural property. It is not a certificate of complexity or chaos.",
+    "fail": "The calculation concerns superposition for x², not the long-run behavior of every nonlinear system."
+  },
+  "source_refs": [
+    "qeva:1:nonlinearity@1"
+  ]
+}

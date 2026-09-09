@@ -1,0 +1,51 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:chaos-label",
+  "revision": 1,
+  "concept_ref": "qeva:learning:chaos@1",
+  "type": "classification",
+  "stage": "verify",
+  "title": "Do not upgrade the evidence.",
+  "prompt": "Classify the actual support being described, rather than the confidence of its author.",
+  "hint": "Read what is supplied: a finite run, a proposed precise claim, or a missing definition.",
+  "config": {
+    "labels": [
+      {
+        "id": "observation",
+        "text": "Numerical observation"
+      },
+      {
+        "id": "conjecture",
+        "text": "Conjecture"
+      },
+      {
+        "id": "underspecified",
+        "text": "Underspecified claim"
+      }
+    ],
+    "items": [
+      {
+        "id": "0",
+        "text": "A pair of computed logistic trajectories separated by more than 0.1 during a declared 70-step run.",
+        "label": "observation"
+      },
+      {
+        "id": "1",
+        "text": "A researcher proposes that a specified map satisfies a named chaos criterion but supplies no proof.",
+        "label": "conjecture"
+      },
+      {
+        "id": "2",
+        "text": "The claim “this is chaos” omits the state space, criterion, and hypotheses.",
+        "label": "underspecified"
+      }
+    ]
+  },
+  "feedback": {
+    "pass": "Labels preserve the distance between seeing behavior, proposing a claim, and proving it.",
+    "fail": "A plot is an observation. A precise unsupported proposal is a conjecture. A missing criterion leaves the claim underspecified."
+  },
+  "source_refs": [
+    "qeva:1:chaos@1"
+  ]
+}

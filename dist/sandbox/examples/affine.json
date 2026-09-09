@@ -1,0 +1,104 @@
+{
+  "schema_version": "qeva-sandbox/1",
+  "id": "lab:example-affine",
+  "revision": 1,
+  "title": "Affine recurrence — personal experiment",
+  "kernel_ref": "qeva:kernel:affine@1",
+  "parameters": {
+    "a": 2,
+    "b": 0,
+    "x0": 1,
+    "steps": 12
+  },
+  "concept_refs": [
+    "qeva:1:recurrence@1"
+  ],
+  "claim": {
+    "label": "experiment",
+    "text": "This file records one bounded execution, not a universal claim.",
+    "verification": "unreviewed"
+  },
+  "provenance": {
+    "created_at": "2026-09-09T00:00:00.000Z",
+    "creator_label": "Local learner (self-described)",
+    "parent": null
+  },
+  "runs": [
+    {
+      "id": "example-run-1",
+      "at": "2026-09-09T00:00:00.000Z",
+      "result": {
+        "engine": "qeva-kernels/1",
+        "kernel_ref": "qeva:kernel:affine@1",
+        "arithmetic": "binary64; multiplication before addition; no fused multiply-add",
+        "parameters": {
+          "a": 2,
+          "b": 0,
+          "x0": 1,
+          "steps": 12
+        },
+        "status": "complete",
+        "series": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            16
+          ],
+          [
+            5,
+            32
+          ],
+          [
+            6,
+            64
+          ],
+          [
+            7,
+            128
+          ],
+          [
+            8,
+            256
+          ],
+          [
+            9,
+            512
+          ],
+          [
+            10,
+            1024
+          ],
+          [
+            11,
+            2048
+          ],
+          [
+            12,
+            4096
+          ]
+        ],
+        "summary": {
+          "iterations": 12,
+          "initial": 1,
+          "final": 4096
+        }
+      },
+      "note": "Reproduce from the declared parameters; preserve this baseline."
+    }
+  ]
+}

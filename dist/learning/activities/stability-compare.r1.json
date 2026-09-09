@@ -1,0 +1,47 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:stability-compare",
+  "revision": 1,
+  "concept_ref": "qeva:learning:stability@1",
+  "type": "experiment",
+  "stage": "experiment",
+  "title": "Perturb a fixed point.",
+  "prompt": "Run x[n+1] = a x[n] with x₀ = 0.01 for a = 0.5, then change a and run again. Compare contraction with amplification.",
+  "hint": "Try a = 2 on the second run. The fixed point 0 remains fixed in both models.",
+  "config": {
+    "kernel_ref": "qeva:kernel:affine@1",
+    "parameters": {
+      "a": 0.5,
+      "b": 0,
+      "x0": 0.01,
+      "steps": 12
+    },
+    "editable": [
+      "a"
+    ],
+    "minimum_runs": 2,
+    "vary": "a",
+    "conclusions": [
+      {
+        "id": "0",
+        "text": "A fixed point being unchanged guarantees that nearby states move toward it."
+      },
+      {
+        "id": "1",
+        "text": "Nearby behavior depends on the multiplier; being a fixed point alone is not enough."
+      },
+      {
+        "id": "2",
+        "text": "Any nonzero perturbation changes the mathematical rule."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "A fixed point and its neighborhood answer different questions. The finite plots motivate, but do not replace, an all-time stability argument.",
+    "fail": "Both rules fix zero. Compare what happens to the nearby state rather than to zero itself."
+  },
+  "source_refs": [
+    "qeva:1:stability@1"
+  ]
+}

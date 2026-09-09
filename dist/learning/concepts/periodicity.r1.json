@@ -1,0 +1,79 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:periodicity",
+  "revision": 1,
+  "concept_ref": "qeva:1:periodicity@1",
+  "title": "Periodicity of a sequence",
+  "difficulty": "developing",
+  "prerequisites": [
+    {
+      "ref": "qeva:learning:recurrence@1",
+      "minimum_state": "understood",
+      "reason": "Use a declared update or repetition rule, not a guessed finite pattern."
+    }
+  ],
+  "related": [
+    "qeva:1:collatz-conjecture@1",
+    "qeva:1:quasiperiodicity@1"
+  ],
+  "explanation": {
+    "intuition": "An entire pattern can return after a fixed number of steps.",
+    "manipulation": "Follow a declared repeating block and distinguish it from any transient prefix.",
+    "pattern": "The cycle 1 → 4 → 2 → 1 repeats every three updates under the Collatz rule.",
+    "mechanism": "Periodicity is an equality across all permitted shifted indices. Eventual periodicity only requires repetition after some finite prefix.",
+    "vocabulary": [
+      {
+        "term": "period",
+        "meaning": "A positive index shift preserving every term in the stated domain."
+      },
+      {
+        "term": "transient",
+        "meaning": "A prefix before a repeating part begins."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "a[n + p] = a[n]",
+        "meaning": "The same value appears p steps later for every stated index."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:periodicity@1",
+      "text": "A sequence (a_n) is periodic with period p>0 iff a_{n+p}=a_n for every index n for which both terms are in the domain. A least positive such p, when it exists, is called the fundamental period.",
+      "context": "sequences indexed by integers or natural numbers",
+      "caveat": "Continuous functions, group actions, tilings, and dynamical systems use related but context-specific notions of periodicity."
+    },
+    "proof": {
+      "label": "worked-example",
+      "statement": "Under T, the states 1, 4, 2 form a three-cycle.",
+      "steps": [
+        "The odd branch gives T(1) = 4.",
+        "The even branch gives T(4) = 2 and T(2) = 1.",
+        "The deterministic update returns to the initial state after three steps; the three states are distinct."
+      ],
+      "limitation": "This establishes a particular cycle. It does not show that all starting states enter it."
+    },
+    "frontier": "Does every positive integer reach this cycle? That is a different quantified statement."
+  },
+  "activities": [
+    "qeva:activity:periodicity-block@1",
+    "qeva:activity:periodicity-prefix@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:periodicity-block@1"
+    ],
+    "mastered": [
+      "qeva:activity:periodicity-prefix@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:periodicity@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

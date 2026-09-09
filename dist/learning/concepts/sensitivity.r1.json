@@ -1,0 +1,84 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:sensitivity",
+  "revision": 1,
+  "concept_ref": "qeva:1:sensitivity@1",
+  "title": "Sensitive dependence on initial conditions",
+  "difficulty": "developing",
+  "prerequisites": [
+    {
+      "ref": "qeva:learning:stability@1",
+      "minimum_state": "understood",
+      "reason": "First distinguish a reference state from a neighborhood of states."
+    },
+    {
+      "ref": "qeva:learning:nonlinearity@1",
+      "minimum_state": "understood",
+      "reason": "Separate structural nonlinearity from claims about error amplification."
+    }
+  ],
+  "related": [
+    "qeva:1:chaos@1",
+    "qeva:1:recurrence@1"
+  ],
+  "explanation": {
+    "intuition": "Two nearly identical beginnings can become visibly different. The word “can” needs careful quantifiers.",
+    "manipulation": "Run paired logistic trajectories and change the feedback parameter. Keep the initial separation and stopping time explicit.",
+    "pattern": "Different parameters can change the observed separation pattern. A finite pair explores particular states, not every neighborhood.",
+    "mechanism": "The archive’s definition requires a uniform positive threshold, every base point and radius, and some nearby witness and time. Binary64 rounding can also affect numerical trajectories.",
+    "vocabulary": [
+      {
+        "term": "sensitive dependence",
+        "meaning": "The particular quantified metric property quoted below."
+      },
+      {
+        "term": "metric",
+        "meaning": "The declared way of measuring distance."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "d(x, y)",
+        "meaning": "Distance between two states in the chosen metric."
+      },
+      {
+        "symbol": "Tⁿ(x)",
+        "meaning": "Apply the map T n times to x."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:sensitivity@1",
+      "text": "T has sensitive dependence on initial conditions iff there exists δ>0 such that for every x in X and every ε>0 there exist y in X and n>=0 with d(x,y)<ε and d(T^n(x),T^n(y))>δ.",
+      "context": "metric dynamical systems",
+      "caveat": "Sensitivity alone is not a universal definition of chaos."
+    },
+    "proof": {
+      "label": "scope-boundary",
+      "statement": "These numerical runs do not prove the archive’s universal sensitivity statement.",
+      "steps": [],
+      "limitation": "No sensitivity theorem for the displayed logistic parameters is claimed. The experiment addresses only its finite trajectories."
+    },
+    "frontier": "Which exact definition is intended when someone calls this chaos?"
+  },
+  "activities": [
+    "qeva:activity:sensitivity-compare@1",
+    "qeva:activity:sensitivity-quantifiers@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:sensitivity-compare@1"
+    ],
+    "mastered": [
+      "qeva:activity:sensitivity-quantifiers@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:sensitivity@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

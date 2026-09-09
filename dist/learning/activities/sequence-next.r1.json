@@ -1,0 +1,29 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:sequence-next",
+  "revision": 1,
+  "concept_ref": "qeva:learning:sequence@1",
+  "type": "number",
+  "stage": "predict",
+  "title": "Make the next move.",
+  "prompt": "Start at 1. The declared rule is to double the previous value. What comes after 8?",
+  "hint": "Use the stated doubling rule, not a guess about an unexplained finite list.",
+  "config": {
+    "value": 16,
+    "tolerance": 0,
+    "display": [
+      "1",
+      "2",
+      "4",
+      "8",
+      "?"
+    ]
+  },
+  "feedback": {
+    "pass": "16. A rule turns your prediction into something another person can check. You have begun tracing a sequence.",
+    "fail": "Try doubling 8. A finite list by itself does not determine a unique continuation."
+  },
+  "source_refs": [
+    "qeva:1:sequence@1"
+  ]
+}

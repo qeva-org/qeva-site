@@ -1,0 +1,31 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:periodicity-block",
+  "revision": 1,
+  "concept_ref": "qeva:learning:periodicity@1",
+  "type": "number",
+  "stage": "predict",
+  "title": "A declared repeating block.",
+  "prompt": "The infinite sequence is defined by repeating the block [1, 4, 2] forever. What is its least positive period?",
+  "hint": "The rule states that the entire block repeats. Its three entries are distinct.",
+  "config": {
+    "value": 3,
+    "tolerance": 0,
+    "display": [
+      "1",
+      "4",
+      "2",
+      "1",
+      "4",
+      "2",
+      "…"
+    ]
+  },
+  "feedback": {
+    "pass": "The least positive period is 3. This conclusion uses the declared infinite repetition, not just a finite prefix.",
+    "fail": "One or two steps does not return the first entry to 1. Three steps repeats the whole block."
+  },
+  "source_refs": [
+    "qeva:1:periodicity@1"
+  ]
+}

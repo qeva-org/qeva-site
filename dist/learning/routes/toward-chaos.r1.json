@@ -1,0 +1,10 @@
+{
+  "schema_version": "qeva-learning-route/1",
+  "id": "qeva:route:toward-chaos",
+  "revision": 1,
+  "title": "When a small difference grows",
+  "goal_ref": "qeva:learning:chaos@1",
+  "description": "Begin with a prediction. Follow recurrence, fixed points, stability and nonlinearity into the precise limits of a chaos claim.",
+  "ordering": "prerequisite-topological",
+  "authority": "editorial-guidance-not-logical-dependence"
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:sequence",
+  "revision": 1,
+  "concept_ref": "qeva:1:sequence@1",
+  "title": "Sequence",
+  "difficulty": "entry",
+  "prerequisites": [],
+  "related": [
+    "qeva:1:recurrence@1",
+    "qeva:1:periodicity@1"
+  ],
+  "explanation": {
+    "intuition": "Before symbols, there is a position and something at that position. Move one place along a declared rule.",
+    "manipulation": "Predict the next value, then pair the displayed values with the indices 0, 1, 2, 3.",
+    "pattern": "Doubling from 1 gives 1, 2, 4, 8, 16. This is one example, not the definition of every sequence.",
+    "mechanism": "The index is an input. The sequence assigns it one value. A finite prefix alone cannot uniquely determine an unstated infinite rule.",
+    "vocabulary": [
+      {
+        "term": "index",
+        "meaning": "The input specifying a position."
+      },
+      {
+        "term": "term",
+        "meaning": "The value assigned to one index."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "aₙ",
+        "meaning": "The value assigned to index n."
+      },
+      {
+        "symbol": "a : I → X",
+        "meaning": "A function from the declared index set to a value space."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:sequence@1",
+      "text": "A sequence in X indexed by I is a function a:I→X. When I=N, the value at n is written a_n.",
+      "context": "standard functions",
+      "caveat": null
+    },
+    "proof": {
+      "label": "worked-example",
+      "statement": "For the declared rule aₙ = 2ⁿ, aₙ₊₁ = 2aₙ.",
+      "steps": [
+        "For n ≥ 0, exponent laws give 2ⁿ⁺¹ = 2 × 2ⁿ.",
+        "Substitute aₙ = 2ⁿ to obtain aₙ₊₁ = 2aₙ."
+      ],
+      "limitation": "This checks this example; it does not infer a unique law from an unexplained list."
+    },
+    "frontier": "How much initial information is needed when a rule relates neighboring terms?"
+  },
+  "activities": [
+    "qeva:activity:sequence-next@1",
+    "qeva:activity:sequence-index@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:sequence-next@1"
+    ],
+    "mastered": [
+      "qeva:activity:sequence-index@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:sequence@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

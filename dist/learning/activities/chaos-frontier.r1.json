@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:chaos-frontier",
+  "revision": 1,
+  "concept_ref": "qeva:learning:chaos@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "What would verification require?",
+  "prompt": "Before promoting a sandbox claim of chaos into a candidate knowledge object, which package is necessary?",
+  "hint": "The archive deliberately does not define one universal Chaos(T) predicate.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "A compelling animation and many independent shares."
+      },
+      {
+        "id": "1",
+        "text": "A declared space and map, a named criterion with its hypotheses, exact dependencies, and an argument addressing that criterion for review."
+      },
+      {
+        "id": "2",
+        "text": "A sufficiently large r, because all nonlinear maps with large parameters are chaotic."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "That is a reviewable claim, not automatic acceptance. This route teaches how to state a chaos claim, not a general theorem proving the logistic map chaotic.",
+    "fail": "Name the criterion, its context, and the supporting argument. Popularity and appearance cannot substitute for these."
+  },
+  "source_refs": [
+    "qeva:1:chaos@1"
+  ]
+}

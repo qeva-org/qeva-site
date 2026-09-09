@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:periodicity-prefix",
+  "revision": 1,
+  "concept_ref": "qeva:learning:periodicity@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "When does the cycle begin?",
+  "prompt": "A Collatz orbit beginning at 6 reaches the repeating cycle 1 → 4 → 2 → 1. What is justified about that orbit?",
+  "hint": "Distinguish the initial transient from a cycle reached under a known deterministic map.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "It is periodic from the initial value 6."
+      },
+      {
+        "id": "1",
+        "text": "It is eventually periodic; the transient prefix beginning at 6 need not repeat."
+      },
+      {
+        "id": "2",
+        "text": "Any finite repeated pattern proves the entire future of any unknown process."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "Eventually periodic and periodic from the beginning are distinct statements.",
+    "fail": "The initial value 6 is not in the cycle. A transient can precede the repeating part."
+  },
+  "source_refs": [
+    "qeva:1:periodicity@1"
+  ]
+}

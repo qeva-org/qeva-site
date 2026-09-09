@@ -1,0 +1,46 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:collatz-run",
+  "revision": 1,
+  "concept_ref": "qeva:learning:collatz-map@1",
+  "type": "experiment",
+  "stage": "experiment",
+  "title": "Reproduce an orbit.",
+  "prompt": "Run the exact integer recurrence. Read the stopping reason, then select the only justified general interpretation.",
+  "hint": "Starting at 6 reaches 1 after eight updates. A low budget can stop before reaching 1.",
+  "config": {
+    "kernel_ref": "qeva:kernel:collatz@1",
+    "parameters": {
+      "start": "6",
+      "steps": 80
+    },
+    "editable": [
+      "start",
+      "steps"
+    ],
+    "minimum_runs": 1,
+    "vary": null,
+    "conclusions": [
+      {
+        "id": "0",
+        "text": "A finite run can establish what happened for its declared start within its budget, but not for every positive integer."
+      },
+      {
+        "id": "1",
+        "text": "A run that stops at its step budget is a counterexample to the conjecture."
+      },
+      {
+        "id": "2",
+        "text": "Every orbit decreases at every step."
+      }
+    ],
+    "correct": "0"
+  },
+  "feedback": {
+    "pass": "A finite orbit and a universal statement have different scopes. A budget stop is preserved as inconclusive.",
+    "fail": "The stopping budget is a computational limit, not a mathematical refutation."
+  },
+  "source_refs": [
+    "qeva:1:collatz-map@1"
+  ]
+}

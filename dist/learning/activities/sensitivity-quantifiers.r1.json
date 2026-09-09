@@ -1,0 +1,47 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:sensitivity-quantifiers",
+  "revision": 1,
+  "concept_ref": "qeva:learning:sensitivity@1",
+  "type": "classification",
+  "stage": "verify",
+  "title": "Which quantifier is doing the work?",
+  "prompt": "Match each role in the archive’s metric definition of sensitivity.",
+  "hint": "The order is: exists δ; for every x and ε; exists y and n.",
+  "config": {
+    "labels": [
+      {
+        "id": "exists",
+        "text": "There exists"
+      },
+      {
+        "id": "every",
+        "text": "For every"
+      }
+    ],
+    "items": [
+      {
+        "id": "0",
+        "text": "A positive separation threshold δ, chosen once for the system.",
+        "label": "exists"
+      },
+      {
+        "id": "1",
+        "text": "A base point x and a positive neighborhood radius ε.",
+        "label": "every"
+      },
+      {
+        "id": "2",
+        "text": "A nearby point y and a time n, allowed to depend on x and ε.",
+        "label": "exists"
+      }
+    ]
+  },
+  "feedback": {
+    "pass": "The quantifier order is essential. One impressive-looking trajectory cannot discharge it.",
+    "fail": "δ is uniform. The point x and radius ε are arbitrary. The witness y and time n may depend on them."
+  },
+  "source_refs": [
+    "qeva:1:sensitivity@1"
+  ]
+}

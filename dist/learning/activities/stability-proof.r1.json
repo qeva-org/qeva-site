@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:stability-proof",
+  "revision": 1,
+  "concept_ref": "qeva:learning:stability@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "From finite observation to all time.",
+  "prompt": "For F(x) = x/2 on ℝ and fixed point 0, which argument proves Lyapunov stability?",
+  "hint": "The definition needs every sufficiently close start and every nonnegative time.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "Twelve plotted points stayed nearby, so every future point must do so."
+      },
+      {
+        "id": "1",
+        "text": "For any ε > 0 choose δ = ε. If |x₀| < δ, then |Fⁿ(x₀)| = |x₀|/2ⁿ ≤ |x₀| < ε for every n ≥ 0."
+      },
+      {
+        "id": "2",
+        "text": "Zero never moves, so every map that fixes zero is stable."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "The bound covers every n ≥ 0, not only the displayed sample. Its assumptions and quantifiers are explicit.",
+    "fail": "A proof must cover all times and a neighborhood of starting states, not only the reference orbit."
+  },
+  "source_refs": [
+    "qeva:1:stability@1"
+  ]
+}

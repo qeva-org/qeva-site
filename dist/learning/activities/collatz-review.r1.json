@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:collatz-review",
+  "revision": 1,
+  "concept_ref": "qeva:learning:collatz-conjecture@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "Can this become a release?",
+  "prompt": "A shared notebook contains many successful runs. What should happen next?",
+  "hint": "The community pipeline is a review process, not a popularity threshold.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "Automatically mark the conjecture proved after enough team members approve."
+      },
+      {
+        "id": "1",
+        "text": "Preserve the parameters and failures, label the evidence, formulate a candidate claim, and seek explicit mathematical verification before a release."
+      },
+      {
+        "id": "2",
+        "text": "Delete runs that did not finish to make the result clearer."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "Preserve → formulate → review → verify → release. Account state cannot grant mathematical authority.",
+    "fail": "Neither popularity nor removing failures changes the scope of a finite experiment."
+  },
+  "source_refs": [
+    "qeva:1:collatz-conjecture@1"
+  ]
+}

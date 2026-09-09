@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/learner-state.schema.json",
+  "title": "QEVA portable local learner evidence 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "discoveries",
+    "attempts",
+    "preferences"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "qeva-learner/1"
+    },
+    "discoveries": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200,
+        "pattern": "^qeva:learning:[a-z0-9-]+@[1-9][0-9]*$"
+      },
+      "minItems": 0,
+      "maxItems": 10000,
+      "uniqueItems": true
+    },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "activity_ref",
+          "at",
+          "response"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "pattern": "^[a-zA-Z0-9._-]+$"
+          },
+          "activity_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^qeva:activity:[a-z0-9-]+@[1-9][0-9]*$"
+          },
+          "at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "response": {
+            "type": "object"
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 2000
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "goal"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "guided",
+            "formal"
+          ]
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[a-z0-9-]+$"
+        }
+      }
+    }
+  },
+  "$comment": "Importers additionally limit serialized size to 1 MiB, reject unsafe prototype keys and duplicate attempt IDs, and regrade known responses. Stored result labels are forbidden."
+}

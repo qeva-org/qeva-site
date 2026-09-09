@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:collatz-even-proof",
+  "revision": 1,
+  "concept_ref": "qeva:learning:collatz-map@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "A local fact that really can be proved.",
+  "prompt": "Let n = 2k + 1 be an odd integer. Which proves its next Collatz value is even?",
+  "hint": "Substitute the defining form of an odd integer.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "The graph seems to alternate between odd and even."
+      },
+      {
+        "id": "1",
+        "text": "3n + 1 = 3(2k + 1) + 1 = 6k + 4 = 2(3k + 2), and 3k + 2 is an integer."
+      },
+      {
+        "id": "2",
+        "text": "The next value is always smaller than n."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "This proves a particular parity property of the update, not eventual arrival at 1 for every start.",
+    "fail": "Use the integer witness in the definition of oddness. The odd branch often increases the value."
+  },
+  "source_refs": [
+    "qeva:1:collatz-map@1"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:sensitivity-compare",
+  "revision": 1,
+  "concept_ref": "qeva:learning:sensitivity@1",
+  "type": "experiment",
+  "stage": "experiment",
+  "title": "A tiny difference. The same rule.",
+  "prompt": "Run the paired logistic recurrence. Change r and run again. Observe how the separation changes before choosing an interpretation.",
+  "hint": "Compare r = 2.8 with r = 3.9. Read the exact definition below before making a universal claim.",
+  "config": {
+    "kernel_ref": "qeva:kernel:logistic@1",
+    "parameters": {
+      "r": 3.9,
+      "x0": 0.4,
+      "delta": 0.0001,
+      "steps": 70
+    },
+    "editable": [
+      "r",
+      "x0",
+      "delta",
+      "steps"
+    ],
+    "minimum_runs": 2,
+    "vary": "r",
+    "conclusions": [
+      {
+        "id": "0",
+        "text": "A separated pair proves the formal sensitivity condition for every point in the state space."
+      },
+      {
+        "id": "1",
+        "text": "These runs record finite numerical separation for declared parameters; they do not establish all quantifiers in the definition."
+      },
+      {
+        "id": "2",
+        "text": "Every small perturbation must grow at every step."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "You have reproducible observations. The universal sensitivity claim still requires a specified space, metric, and proof.",
+    "fail": "Two trajectories test particular starts and times. The definition quantifies over every base point and every neighborhood."
+  },
+  "source_refs": [
+    "qeva:1:sensitivity@1"
+  ]
+}

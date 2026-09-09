@@ -1,0 +1,49 @@
+QEVA LEARNING CORE 1 — independent teaching overlays
+Site release 0.4.0; archive protocol remains 0.2.
+
+The permanent mathematical record and its verification label are not a learner state.
+Teaching may refer to exact archive revisions, but cannot rewrite them.
+
+IDENTITY
+Profiles: qeva:learning:<slug>@<positive revision>
+Activities: qeva:activity:<slug>@<positive revision>
+Routes: qeva:route:<slug>@<positive revision>
+Archive targets: qeva:1:<slug>@<positive revision>
+JSON schema_version identifies the interpretation rules, not the current website.
+
+A profile declares archive target, difficulty, pedagogical prerequisites and reasons,
+related archive concepts, layered explanations, activity refs and two sets of required
+activities: understood and mastered. A prerequisite names an exact profile and a
+minimum state of understood or mastered. The prerequisite graph must have no cycle.
+Routes declare goals; the interpreter computes the prerequisite closure.
+
+STATES
+locked: a prerequisite is unmet; reading and experiments are still permitted.
+available: prerequisites met, no discovery/attempt yet.
+discovered: visited, no attempt.
+learning: response evidence exists but core checks incomplete.
+understood: every core activity has a passing response under its exact revision.
+mastered: core and transfer requirements met; not a credential or external assessment.
+Earlier failures remain. Later failures do not erase earlier evidence in format 1.
+
+EVIDENCE
+qeva-learner/1 stores discoveries, attempts and preferences, not authoritative states.
+An attempt contains id, activity_ref, at (ISO timestamp), response.
+Known responses are rechecked; unknown revisions are retained without awarding credit.
+Merge deduplicates identical IDs and rejects conflicting content under one ID.
+Imported progress is untrusted self-report, never archive verification.
+
+ACTIVITIES
+number: finite decimal within declared tolerance.
+choice: selected option ID.
+classification: label ID per item.
+order: exact ordered step IDs.
+experiment: declared versioned kernel, valid run parameters, fixed values unchanged,
+required distinct comparisons and an interpretation response.
+Static HTML includes prompts, hints and answer scopes. JavaScript is an enhancement.
+
+PRESERVATION
+Use independent UTF-8 JSON records and exact refs; publish changed content as a new
+revision. A bundle is replaceable transport. Do not depend on accounts for reading.
+See learning-*.schema.json, activity.schema.json, learner-state.schema.json and
+../docs/LEARNING_ENGINE.md for full fields and local implementation limits.

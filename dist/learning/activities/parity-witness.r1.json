@@ -1,0 +1,23 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:parity-witness",
+  "revision": 1,
+  "concept_ref": "qeva:learning:parity@1",
+  "type": "number",
+  "stage": "transfer",
+  "title": "Supply the witness.",
+  "prompt": "For 27 = 2k + 1, what integer k witnesses that 27 is odd?",
+  "hint": "Subtract one, then divide by two.",
+  "config": {
+    "value": 13,
+    "tolerance": 0,
+    "display": []
+  },
+  "feedback": {
+    "pass": "27 = 2 × 13 + 1. The definition becomes a checkable arithmetic witness.",
+    "fail": "Solve 2k = 26, not 27."
+  },
+  "source_refs": [
+    "qeva:1:parity@1"
+  ]
+}

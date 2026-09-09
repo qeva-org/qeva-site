@@ -1,0 +1,80 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:collatz-conjecture",
+  "revision": 1,
+  "concept_ref": "qeva:1:collatz-conjecture@1",
+  "title": "Collatz conjecture",
+  "difficulty": "advanced",
+  "prerequisites": [
+    {
+      "ref": "qeva:learning:collatz-map@1",
+      "minimum_state": "understood",
+      "reason": "State the exact map before a claim about all its orbits."
+    },
+    {
+      "ref": "qeva:learning:periodicity@1",
+      "minimum_state": "understood",
+      "reason": "Distinguish reaching a particular cycle from universal eventual behavior."
+    }
+  ],
+  "related": [
+    "qeva:1:collatz-map@1",
+    "qeva:1:hierarchy@1"
+  ],
+  "explanation": {
+    "intuition": "A small rule can generate a question much larger than any finite run.",
+    "manipulation": "Compare a completed orbit with a run that stops at its budget. Retain both in a notebook.",
+    "pattern": "Successful tested cases and unfinished runs do not settle a claim quantified over every positive integer.",
+    "mechanism": "The pinned seed archive classifies the universal claim as a conjecture. This learning layer neither changes that record nor asserts a resolution.",
+    "vocabulary": [
+      {
+        "term": "universal claim",
+        "meaning": "A proposition about every member of a declared domain."
+      },
+      {
+        "term": "counterexample",
+        "meaning": "A case that actually refutes the stated claim; a time limit alone does not."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "∀n > 0, ∃k ≥ 0 : Tᵏ(n) = 1",
+        "meaning": "For every positive starting integer there is a finite number of updates reaching 1."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:collatz-conjecture@1",
+      "text": "For every n∈N_{>0}, there exists k≥0 such that T^k(n)=1.",
+      "context": "positive integers",
+      "caveat": "This is open. Error-amplification, chaos, hierarchy, or emergent-invariance descriptions are research hypotheses unless made precise and proved."
+    },
+    "proof": {
+      "label": "scope-boundary",
+      "statement": "No proof or refutation of the universal conjecture is supplied here.",
+      "steps": [],
+      "limitation": "Finite computations can establish finite orbit facts. Running out of iterations does not prove that an orbit never reaches 1."
+    },
+    "frontier": "A personal lab can become a reviewable candidate. Review and explicit verification, not team approval counts, control entry into a QEVA release."
+  },
+  "activities": [
+    "qeva:activity:collatz-evidence@1",
+    "qeva:activity:collatz-review@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:collatz-evidence@1"
+    ],
+    "mastered": [
+      "qeva:activity:collatz-review@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:collatz-conjecture@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

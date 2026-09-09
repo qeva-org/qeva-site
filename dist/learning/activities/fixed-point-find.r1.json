@@ -1,0 +1,23 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:fixed-point-find",
+  "revision": 1,
+  "concept_ref": "qeva:learning:fixed-point@1",
+  "type": "number",
+  "stage": "predict",
+  "title": "Find the state that stays.",
+  "prompt": "For F(x) = 2x + 1 on the real numbers, which x satisfies F(x) = x?",
+  "hint": "Solve 2x + 1 = x. Negative real values are allowed.",
+  "config": {
+    "value": -1,
+    "tolerance": 0,
+    "display": []
+  },
+  "feedback": {
+    "pass": "F(−1) = −1. A fixed point is a state left unchanged, not necessarily an attracting state.",
+    "fail": "Set the output equal to the input: 2x + 1 = x, so x = −1."
+  },
+  "source_refs": [
+    "qeva:1:fixed-point@1"
+  ]
+}

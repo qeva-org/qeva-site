@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:recurrence-unique",
+  "revision": 1,
+  "concept_ref": "qeva:learning:recurrence@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "What is missing?",
+  "prompt": "Someone gives only a[n+1] = 2a[n]. What additional information selects one sequence in this setting?",
+  "hint": "Compare the sequences beginning at 1 and at 3.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "A starting value, such as a[0] = 1."
+      },
+      {
+        "id": "1",
+        "text": "A graph that looks smooth."
+      },
+      {
+        "id": "2",
+        "text": "A sufficiently large number of likes."
+      }
+    ],
+    "correct": "0"
+  },
+  "feedback": {
+    "pass": "With an initial value and this single-valued update, each later value is determined. Not every general recurrence guarantees uniqueness.",
+    "fail": "For this recurrence, the starting value is the missing information."
+  },
+  "source_refs": [
+    "qeva:1:recurrence@1"
+  ]
+}

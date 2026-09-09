@@ -1,0 +1,228 @@
+{
+  "schema_version": "qeva-learning-index/1",
+  "release": "0.4.0",
+  "entries": [
+    {
+      "family": "activities",
+      "ref": "qeva:activity:chaos-frontier@1",
+      "path": "activities/chaos-frontier.r1.json",
+      "sha256": "7b54d422c92f1afce643db1b7696ed6940e9feab1ded7991afc3f2c591658190"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:chaos-label@1",
+      "path": "activities/chaos-label.r1.json",
+      "sha256": "c44607ecbae10a38cd990c3080a4126c5f716f63e26efbc908f7843d57148b51"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:collatz-even-proof@1",
+      "path": "activities/collatz-even-proof.r1.json",
+      "sha256": "01d146a2ca49ce672432d6ca2402ae9b2e042d8c27a6fc6f099639bb9f35929d"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:collatz-evidence@1",
+      "path": "activities/collatz-evidence.r1.json",
+      "sha256": "5f6a9b9c0a2a091900f97734cda2f9766559a8d7dac4a38779cfd02079ffbd6b"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:collatz-review@1",
+      "path": "activities/collatz-review.r1.json",
+      "sha256": "6949cde44d41db1c9505cf6b9c7f7175d473f50fedc8f488515ab323b2e274ab"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:collatz-run@1",
+      "path": "activities/collatz-run.r1.json",
+      "sha256": "f7a2a011dde45c2c698d4c31f0856248e2bb70d6450b33adcbae322501cd6425"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:collatz-step@1",
+      "path": "activities/collatz-step.r1.json",
+      "sha256": "573c504b74ce459c2c74f1ebc09591182127ae535631310938c3da0c3be93ffe"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:fixed-point-find@1",
+      "path": "activities/fixed-point-find.r1.json",
+      "sha256": "261a4bc4087054182f1ccfe2c7c261a3a390930215441128e1c0589825579ae0"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:fixed-point-proof@1",
+      "path": "activities/fixed-point-proof.r1.json",
+      "sha256": "42d1e7b1f2f27c03a478662e7301d2cd6a39d49c78d1f96662e8a36e63fa8ea5"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:nonlinearity-counterexample@1",
+      "path": "activities/nonlinearity-counterexample.r1.json",
+      "sha256": "4c2c7ba7e350ee21dbcd2fd3e53ac2aa58f38c6b107cbb1607595854391ebce5"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:nonlinearity-scope@1",
+      "path": "activities/nonlinearity-scope.r1.json",
+      "sha256": "a4d860549ed2350f538c0956ed62503ff42834ea867355f95069a859b541ae6a"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:parity-sort@1",
+      "path": "activities/parity-sort.r1.json",
+      "sha256": "2a80e32d664f4116726ce36462b327d1c01b67d89804fc4cfdf4c01f136774b9"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:parity-witness@1",
+      "path": "activities/parity-witness.r1.json",
+      "sha256": "81a7121b16ff36181a3b051d7b72ed9b53c71852a8f3c4e4e31800c4266990d5"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:periodicity-block@1",
+      "path": "activities/periodicity-block.r1.json",
+      "sha256": "2a0d6499a51abd7440a8321f86f7e38d47543441b7c6189af09b573714d8284b"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:periodicity-prefix@1",
+      "path": "activities/periodicity-prefix.r1.json",
+      "sha256": "2ceee788f1f19a09bfe277b4119e64b29102063089b4efb6ed97040807b1a7f2"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:recurrence-build@1",
+      "path": "activities/recurrence-build.r1.json",
+      "sha256": "1fc85e9315920d76220ab75f7a559995a1c79b6d86378cad2bce90040cfab658"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:recurrence-step@1",
+      "path": "activities/recurrence-step.r1.json",
+      "sha256": "01aba368a45a25f0acf70110012acbea6cb8f63ff5c5f9ef5880eee12a15eb89"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:recurrence-unique@1",
+      "path": "activities/recurrence-unique.r1.json",
+      "sha256": "c58aa53b69ccd6aaf348abbded77db38e4c59e53779ac2c05c04bb9dd3abd14f"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:sensitivity-compare@1",
+      "path": "activities/sensitivity-compare.r1.json",
+      "sha256": "d8b19521f1c68e449554fd6c5693a2cd9fd95df26d7e04f05b9683743f22a54f"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:sensitivity-quantifiers@1",
+      "path": "activities/sensitivity-quantifiers.r1.json",
+      "sha256": "a7532e73e21a17d28a43d9fcba8ac6c5308e6d896e71065a1650ac080e6d862d"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:sequence-index@1",
+      "path": "activities/sequence-index.r1.json",
+      "sha256": "376b529945118b606c4cb00a28c3146cd2638ec3604b79e1286f43200798cb6f"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:sequence-next@1",
+      "path": "activities/sequence-next.r1.json",
+      "sha256": "dc1c292f3062f505ec722bb0888670c5f6b15db7e8313476c6b587db14dd0207"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:stability-compare@1",
+      "path": "activities/stability-compare.r1.json",
+      "sha256": "2b38c143410c791692df58ddbd3d37af70d55b657d427ce34b3995d99bcfedb0"
+    },
+    {
+      "family": "activities",
+      "ref": "qeva:activity:stability-proof@1",
+      "path": "activities/stability-proof.r1.json",
+      "sha256": "e17a4e9622bc83e0ed693d0a8d907e1218f44a076f697b75375d675237613505"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:chaos@1",
+      "path": "concepts/chaos.r1.json",
+      "sha256": "11d3fa090bbf01d6ad741a6fc8ad7a450dfc0a973be2f6dd5040cd93af9a3435"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:collatz-conjecture@1",
+      "path": "concepts/collatz-conjecture.r1.json",
+      "sha256": "32a4cd3453f3de969ef62317707a307e9e93f43e9bcab4e8bb38d83e6ef92c85"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:collatz-map@1",
+      "path": "concepts/collatz-map.r1.json",
+      "sha256": "ae197872dfd1ee24bb1915213449b2894286ffb6abd6a5001d0e8f3a77f8b1bd"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:fixed-point@1",
+      "path": "concepts/fixed-point.r1.json",
+      "sha256": "ebf2f3f74016d7eaaac214c7919c04edc1cde2a2cb70132e579daeeb9faaddfb"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:nonlinearity@1",
+      "path": "concepts/nonlinearity.r1.json",
+      "sha256": "5b80c036050336ac1481db4c0759a1ec52097f6f711800ea90656659618a83c6"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:parity@1",
+      "path": "concepts/parity.r1.json",
+      "sha256": "e3a988087216c6ec600254504f3eab5a17d874bae861bd0ce8837eac1502ace4"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:periodicity@1",
+      "path": "concepts/periodicity.r1.json",
+      "sha256": "8342280f44cd61c8107248e0a1338812b84e88046557eb6a7596e1840da024ce"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:recurrence@1",
+      "path": "concepts/recurrence.r1.json",
+      "sha256": "0a92c86a9d13cbb4b45f08f33eb197128553c306678c76a5450a3933711ca31b"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:sensitivity@1",
+      "path": "concepts/sensitivity.r1.json",
+      "sha256": "1e76140d47401ac314f45b81d9fcb7acf5b2741221820a6739dc9eed3c817eee"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:sequence@1",
+      "path": "concepts/sequence.r1.json",
+      "sha256": "5ef0e76e1eaa831a8f235035fcd3f4c7f18e359f5021eebaf6c4ac4c1f9af84d"
+    },
+    {
+      "family": "concepts",
+      "ref": "qeva:learning:stability@1",
+      "path": "concepts/stability.r1.json",
+      "sha256": "8d868d94123e0526599687c0097381cf8dc1c4b72060e025a87ea41cd4545b6a"
+    },
+    {
+      "family": "routes",
+      "ref": "qeva:route:evidence-and-proof@1",
+      "path": "routes/evidence-and-proof.r1.json",
+      "sha256": "bea097f5997b500c387a8bc0b463f9103f45324e24514196c950bb3ecf46d168"
+    },
+    {
+      "family": "routes",
+      "ref": "qeva:route:toward-chaos@1",
+      "path": "routes/toward-chaos.r1.json",
+      "sha256": "95fc61271f6e3a21e555adddf19bfc92fa74de2f5625c021fb3773ac54fb4c6c"
+    }
+  ]
+}

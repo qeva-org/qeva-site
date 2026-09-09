@@ -1,0 +1,51 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:collatz-evidence",
+  "revision": 1,
+  "concept_ref": "qeva:learning:collatz-conjecture@1",
+  "type": "classification",
+  "stage": "verify",
+  "title": "Where does the evidence stop?",
+  "prompt": "Label each statement about this experiment or proposed extension.",
+  "hint": "A statement about all positive integers is not a statement about one tested start.",
+  "config": {
+    "labels": [
+      {
+        "id": "finite",
+        "text": "Checked finite orbit"
+      },
+      {
+        "id": "inconclusive",
+        "text": "Inconclusive budget stop"
+      },
+      {
+        "id": "universal",
+        "text": "Universal conjecture in the seed archive"
+      }
+    ],
+    "items": [
+      {
+        "id": "0",
+        "text": "An exact integer run from 6 reaches 1 after eight updates.",
+        "label": "finite"
+      },
+      {
+        "id": "1",
+        "text": "A run from 27 is stopped after two updates without reaching 1.",
+        "label": "inconclusive"
+      },
+      {
+        "id": "2",
+        "text": "Every positive integer eventually reaches 1 under T.",
+        "label": "universal"
+      }
+    ]
+  },
+  "feedback": {
+    "pass": "The failed-to-finish run is useful evidence about a budget, not a counterexample. The universal claim remains separate.",
+    "fail": "Keep the quantifier “every” separate from a finite computation; preserve the run’s stopping reason."
+  },
+  "source_refs": [
+    "qeva:1:collatz-conjecture@1"
+  ]
+}

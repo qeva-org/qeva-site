@@ -1,0 +1,23 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:collatz-step",
+  "revision": 1,
+  "concept_ref": "qeva:learning:collatz-map@1",
+  "type": "number",
+  "stage": "predict",
+  "title": "Take the correct branch.",
+  "prompt": "Under the declared Collatz map, what is T(7)?",
+  "hint": "7 is odd, so use 3n + 1, not n/2.",
+  "config": {
+    "value": 22,
+    "tolerance": 0,
+    "display": []
+  },
+  "feedback": {
+    "pass": "T(7) = 22. A simple piecewise rule can move upward as well as downward.",
+    "fail": "Because 7 is odd, compute 3 × 7 + 1."
+  },
+  "source_refs": [
+    "qeva:1:collatz-map@1"
+  ]
+}

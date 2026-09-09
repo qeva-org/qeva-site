@@ -1,0 +1,75 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:chaos",
+  "revision": 1,
+  "concept_ref": "qeva:1:chaos@1",
+  "title": "Chaos",
+  "difficulty": "advanced",
+  "prerequisites": [
+    {
+      "ref": "qeva:learning:sensitivity@1",
+      "minimum_state": "understood",
+      "reason": "Understand finite separation versus the quantified sensitivity property."
+    }
+  ],
+  "related": [
+    "qeva:1:sensitivity@1",
+    "qeva:1:nonlinearity@1"
+  ],
+  "explanation": {
+    "intuition": "A surprising picture is the beginning of a question, not the end of an argument.",
+    "manipulation": "Label the evidence from a run, then identify what a precise claim would have to declare.",
+    "pattern": "Random-looking behavior, sensitivity, and a named chaos criterion are not interchangeable labels.",
+    "mechanism": "QEVA’s seed record treats chaos as a family of contextual notions. A claim needs a specified space, map, criterion, hypotheses, and supporting argument.",
+    "vocabulary": [
+      {
+        "term": "criterion",
+        "meaning": "The exact property a claim asserts."
+      },
+      {
+        "term": "conjecture",
+        "meaning": "A stated proposition whose required proof is not supplied here."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "Chaos(T)",
+        "meaning": "Not a universal predicate assigned by this archive; its meaning must be declared."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:chaos@1",
+      "text": "QEVA Protocol 0.1 assigns no universal predicate Chaos(T). A record claiming chaos must identify a contextual criterion (for example a named topological, measure-theoretic, symbolic, or metric definition) and state its hypotheses.",
+      "context": "No single formal framework is asserted for this context-dependent seed record.",
+      "caveat": "Popular descriptions such as “random-looking” or “small errors grow” are not by themselves mathematical definitions of chaos."
+    },
+    "proof": {
+      "label": "scope-boundary",
+      "statement": "This route does not prove a general theorem about chaos or the logistic map.",
+      "steps": [],
+      "limitation": "The terminal task is claim formulation and evidence literacy. A named chaos definition and its theorem-specific prerequisites belong in a separately reviewed route."
+    },
+    "frontier": "Formulate a precise candidate, make dependencies explicit, and seek review. Do not promote this local learning result to archive verification."
+  },
+  "activities": [
+    "qeva:activity:chaos-label@1",
+    "qeva:activity:chaos-frontier@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:chaos-label@1"
+    ],
+    "mastered": [
+      "qeva:activity:chaos-frontier@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:chaos@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'">
   <meta name="description" content="Explore bounded mathematical systems, change their assumptions, and inspect exactly what the resulting evidence establishes.">
-  <title>Explore — QEVA</title>
+  <title>Explore â€” QEVA</title>
   <link rel="icon" href="assets/qeva-logo.png" type="image/png">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -14,7 +14,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast shell">
   <a class="brand" href="./index.html" aria-label="QEVA home"><img src="assets/qeva-logo.png" width="34" height="34" alt=""><span>QEVA</span></a>
-  <nav aria-label="Primary"><a href="./index.html" aria-current="page">Explore</a><a href="lab/index.html">Lab</a><a href="history/index.html">History</a><a href="search/index.html">Search</a><a href="donate/index.html">Support</a></nav>
+  <nav aria-label="Primary"><a href="./index.html" aria-current="page">Explore</a><a href="learn/index.html">Learn</a><a href="map/index.html">Map</a><a href="sandbox/index.html">Sandbox</a><a href="lab/index.html">Lab</a><a href="history/index.html">History</a><a href="archive/index.html">Archive</a><a href="protocol/index.html">Protocol</a><a href="search/index.html">Search</a><a href="donate/index.html">Support</a></nav>
 </header>
 <main id="main">
   <section class="explore-command shell" aria-labelledby="explore-title">
@@ -31,15 +31,15 @@
       </div>
       <article class="quick-record">
         <div><p class="kicker">RULE AND DEFAULTS</p><h2 id="quick-title">Loading experiment catalog</h2><p id="quick-summary">Choose a system to see its rule and starting values.</p></div>
-        <code id="quick-formula" class="experiment-formula">—</code>
+        <code id="quick-formula" class="experiment-formula">â€”</code>
         <ul id="quick-parameters" class="quick-parameters" aria-label="Default parameters"></ul>
       </article>
     </div>
 
     <div class="command-stats" aria-label="Instrument inventory">
-      <div><strong data-experiment-stat="experiments">—</strong><span>examples</span></div>
-      <div><strong data-experiment-stat="families">—</strong><span>system families</span></div>
-      <div><strong data-experiment-stat="analyzers">—</strong><span>ways to inspect results</span></div>
+      <div><strong data-experiment-stat="experiments">â€”</strong><span>examples</span></div>
+      <div><strong data-experiment-stat="families">â€”</strong><span>system families</span></div>
+      <div><strong data-experiment-stat="analyzers">â€”</strong><span>ways to inspect results</span></div>
       <div><strong data-experiment-stat="modes">4</strong><span>comparison modes</span></div>
     </div>
   </section>
@@ -47,17 +47,17 @@
   <section class="home-section shell" aria-labelledby="mode-title">
     <div class="section-lead"><p class="kicker">ANALYSIS MODES</p><div><h2 id="mode-title">Compare results</h2><p>Each mode changes one part of the investigation while keeping the experiment, engine version, parameters, and evidence limits visible.</p></div></div>
     <div class="mode-card-grid">
-      <article><p class="kicker">01 · MATHEMATICAL DIFF</p><h3>Which assumption changed?</h3><p>Compare the declared defaults with your modified parameters, then inspect which output metrics differ.</p><a data-mode-link="diff" href="lab/index.html?mode=diff">Compare a system</a></article>
-      <article><p class="kicker">02 · OBSERVER SWITCH</p><h3>What remains distinguishable?</h3><p>Hold one run fixed while changing the observer: exact values, thresholds, bins, parity, or remainders.</p><a data-mode-link="observer" href="lab/index.html?mode=observer">Switch observer</a></article>
-      <article><p class="kicker">03 · PARAMETER SWEEP</p><h3>Where might behavior change?</h3><p>Sample a bounded parameter range and preserve every tested value. Unsampled intervals remain unknown.</p><a data-mode-link="sweep" href="lab/index.html?mode=sweep">Sweep a parameter</a></article>
-      <article><p class="kicker">04 · CONJECTURE ATTACK</p><h3>Test a bounded claim</h3><p>Search a stated bounded domain for a witness. No witness found is never presented as an unbounded proof.</p><a data-mode-link="attack" href="lab/index.html?mode=attack">Test a claim</a></article>
+      <article><p class="kicker">01 Â· MATHEMATICAL DIFF</p><h3>Which assumption changed?</h3><p>Compare the declared defaults with your modified parameters, then inspect which output metrics differ.</p><a data-mode-link="diff" href="lab/index.html?mode=diff">Compare a system</a></article>
+      <article><p class="kicker">02 Â· OBSERVER SWITCH</p><h3>What remains distinguishable?</h3><p>Hold one run fixed while changing the observer: exact values, thresholds, bins, parity, or remainders.</p><a data-mode-link="observer" href="lab/index.html?mode=observer">Switch observer</a></article>
+      <article><p class="kicker">03 Â· PARAMETER SWEEP</p><h3>Where might behavior change?</h3><p>Sample a bounded parameter range and preserve every tested value. Unsampled intervals remain unknown.</p><a data-mode-link="sweep" href="lab/index.html?mode=sweep">Sweep a parameter</a></article>
+      <article><p class="kicker">04 Â· CONJECTURE ATTACK</p><h3>Test a bounded claim</h3><p>Search a stated bounded domain for a witness. No witness found is never presented as an unbounded proof.</p><a data-mode-link="attack" href="lab/index.html?mode=attack">Test a claim</a></article>
     </div>
   </section>
 
   <section class="home-section shell" aria-labelledby="catalog-title">
     <div class="section-lead"><p class="kicker">CHOOSE A SYSTEM</p><div><h2 id="catalog-title">Available systems</h2><p>Each system shows what can change, what stays fixed, how long it runs, and what its results can establish.</p></div></div>
     <div class="experiment-tools">
-      <label><span>Search experiments</span><input id="experiment-search" type="search" placeholder="recurrence, parity, coarse-graining…" autocomplete="off"></label>
+      <label><span>Search experiments</span><input id="experiment-search" type="search" placeholder="recurrence, parity, coarse-grainingâ€¦" autocomplete="off"></label>
       <label><span>Family</span><select id="family-filter"><option value="">All families</option></select></label>
       <p id="experiment-count" aria-live="polite">Loading experiments</p>
     </div>
@@ -66,7 +66,7 @@
   </section>
 
   <section class="artifact-loop shell" aria-labelledby="loop-title">
-    <div><p class="kicker">EXPERIMENT WORKFLOW</p><h2 id="loop-title">Select → run → modify → inspect → fork.</h2></div>
+    <div><p class="kicker">EXPERIMENT WORKFLOW</p><h2 id="loop-title">Select â†’ run â†’ modify â†’ inspect â†’ fork.</h2></div>
     <ol>
       <li><b>Select</b><span>Choose a starting system.</span></li>
       <li><b>Run</b><span>Follow its rule within stated limits.</span></li>
@@ -76,7 +76,7 @@
     </ol>
   </section>
 </main>
-<footer class="footer shell"><div><strong>QEVA</strong><span>A finite experiment is evidence about the cases it actually tested.</span></div><nav aria-label="Footer"><a href="./index.html">Explore</a><a href="lab/index.html">Lab</a><a href="history/index.html">History</a><a href="search/index.html">Search</a><a href="donate/index.html">Support</a></nav></footer>
+<footer class="footer shell"><div><strong>QEVA</strong><span>A finite experiment is evidence about the cases it actually tested.</span></div><nav aria-label="Footer"><a href="./index.html">Explore</a><a href="learn/index.html">Learn</a><a href="map/index.html">Map</a><a href="sandbox/index.html">Sandbox</a><a href="lab/index.html">Lab</a><a href="history/index.html">History</a><a href="archive/index.html">Archive</a><a href="protocol/index.html">Protocol</a><a href="search/index.html">Search</a><a href="sources/index.html">Sources</a><a href="preservation/index.html">Preservation</a><a href="institution/index.html">Institution</a><a href="notebook/index.html">Notebook</a><a href="community/index.html">Community</a><a href="donate/index.html">Support</a></nav></footer>
 <script src="assets/experiment-data.js"></script>
 <script src="assets/explore.js"></script>
 <script src="assets/donate.js"></script>

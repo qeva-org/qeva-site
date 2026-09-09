@@ -1,0 +1,35 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:sequence-index",
+  "revision": 1,
+  "concept_ref": "qeva:learning:sequence@1",
+  "type": "choice",
+  "stage": "transfer",
+  "title": "Name a position, not a pile.",
+  "prompt": "For the rule aₙ = 2ⁿ with indexing beginning at n = 0, which statement is correct?",
+  "hint": "Write the indices 0, 1, 2, 3 underneath 1, 2, 4, 8.",
+  "config": {
+    "options": [
+      {
+        "id": "0",
+        "text": "a₃ = 8, because the fourth displayed term has index 3."
+      },
+      {
+        "id": "1",
+        "text": "a₃ = 4, because every sequence must begin at index 1."
+      },
+      {
+        "id": "2",
+        "text": "The index is irrelevant; only the set of values matters."
+      }
+    ],
+    "correct": "0"
+  },
+  "feedback": {
+    "pass": "An index selects a value. Changing the indexing convention changes what a₃ refers to.",
+    "fail": "The indexing convention was declared as starting at zero. Match positions to values."
+  },
+  "source_refs": [
+    "qeva:1:sequence@1"
+  ]
+}

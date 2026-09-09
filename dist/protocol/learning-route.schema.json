@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qeva.org/protocol/learning-route.schema.json",
+  "title": "QEVA learning route 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "revision",
+    "title",
+    "goal_ref",
+    "description",
+    "ordering",
+    "authority"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "qeva-learning-route/1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 180,
+      "pattern": "^qeva:route:[a-z0-9-]+$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "goal_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "^qeva:learning:[a-z0-9-]+@[1-9][0-9]*$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10000
+    },
+    "ordering": {
+      "const": "prerequisite-topological"
+    },
+    "authority": {
+      "const": "editorial-guidance-not-logical-dependence"
+    }
+  }
+}

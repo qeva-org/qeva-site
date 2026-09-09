@@ -1,0 +1,47 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:recurrence-build",
+  "revision": 1,
+  "concept_ref": "qeva:learning:recurrence@1",
+  "type": "experiment",
+  "stage": "experiment",
+  "title": "One rule, different beginnings.",
+  "prompt": "Run the affine recurrence twice with different initial values. Then interpret what changed.",
+  "hint": "Change x₀ between the two runs. Keep the same multiplier and offset.",
+  "config": {
+    "kernel_ref": "qeva:kernel:affine@1",
+    "parameters": {
+      "a": 2,
+      "b": 0,
+      "x0": 1,
+      "steps": 8
+    },
+    "editable": [
+      "x0"
+    ],
+    "minimum_runs": 2,
+    "vary": "x0",
+    "conclusions": [
+      {
+        "id": "0",
+        "text": "The recurrence alone selected a unique orbit, regardless of its initial value."
+      },
+      {
+        "id": "1",
+        "text": "The same update rule can produce different sequences when initial values differ."
+      },
+      {
+        "id": "2",
+        "text": "Two different orbits disprove the recurrence."
+      }
+    ],
+    "correct": "1"
+  },
+  "feedback": {
+    "pass": "Initial data is part of the experiment, not an optional footnote.",
+    "fail": "Compare the initial states. The rule is the same; its orbit also depends on the starting value."
+  },
+  "source_refs": [
+    "qeva:1:recurrence@1"
+  ]
+}

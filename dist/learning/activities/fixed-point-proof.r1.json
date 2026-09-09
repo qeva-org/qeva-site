@@ -1,0 +1,44 @@
+{
+  "schema_version": "qeva-activity/1",
+  "id": "qeva:activity:fixed-point-proof",
+  "revision": 1,
+  "concept_ref": "qeva:learning:fixed-point@1",
+  "type": "order",
+  "stage": "verify",
+  "title": "Make the reasoning explicit.",
+  "prompt": "Arrange this complete elementary argument for all fixed points of F(x) = x² on ℝ.",
+  "hint": "Start from the definition; finish by checking both candidates.",
+  "config": {
+    "steps": [
+      {
+        "id": "1",
+        "text": "Subtract x and factor: x(x − 1) = 0."
+      },
+      {
+        "id": "2",
+        "text": "Over the real numbers, a product is zero only if at least one factor is zero, so x = 0 or x = 1."
+      },
+      {
+        "id": "3",
+        "text": "Substitution confirms F(0) = 0 and F(1) = 1, so both candidates work and there are no others."
+      },
+      {
+        "id": "0",
+        "text": "A fixed point x must satisfy x² = x."
+      }
+    ],
+    "correct": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "feedback": {
+    "pass": "The argument finds every candidate and checks it. This is a worked algebraic proof, not a claim of machine-checked verification.",
+    "fail": "Definition → algebra → zero-product reasoning → substitution. A few plotted points would not establish exhaustiveness."
+  },
+  "source_refs": [
+    "qeva:1:fixed-point@1"
+  ]
+}

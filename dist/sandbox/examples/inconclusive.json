@@ -1,0 +1,59 @@
+{
+  "schema_version": "qeva-sandbox/1",
+  "id": "lab:example-inconclusive",
+  "revision": 1,
+  "title": "A budget stop is not a counterexample",
+  "kernel_ref": "qeva:kernel:collatz@1",
+  "parameters": {
+    "start": "27",
+    "steps": 2
+  },
+  "concept_refs": [],
+  "claim": {
+    "label": "observation",
+    "text": "This two-step run did not reach 1. It is inconclusive about all subsequent iterates.",
+    "verification": "unreviewed"
+  },
+  "provenance": {
+    "created_at": "2026-09-09T00:00:00.000Z",
+    "creator_label": "Local learner (self-described)",
+    "parent": null
+  },
+  "runs": [
+    {
+      "id": "example-budget-stop",
+      "at": "2026-09-09T00:00:00.000Z",
+      "result": {
+        "engine": "qeva-kernels/1",
+        "kernel_ref": "qeva:kernel:collatz@1",
+        "arithmetic": "exact BigInt integer operations; exported values are decimal strings",
+        "parameters": {
+          "start": "27",
+          "steps": 2
+        },
+        "status": "step-budget",
+        "series": [
+          [
+            0,
+            "27"
+          ],
+          [
+            1,
+            "82"
+          ],
+          [
+            2,
+            "41"
+          ]
+        ],
+        "summary": {
+          "iterations": 2,
+          "peak": "82",
+          "final": "41",
+          "reached_one": false
+        }
+      },
+      "note": "Preserve this failed reach-one search. Do not relabel the budget limit as a counterexample."
+    }
+  ]
+}

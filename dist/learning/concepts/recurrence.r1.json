@@ -1,0 +1,86 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:recurrence",
+  "revision": 1,
+  "concept_ref": "qeva:1:recurrence@1",
+  "title": "Recurrence relation",
+  "difficulty": "entry",
+  "prerequisites": [
+    {
+      "ref": "qeva:learning:sequence@1",
+      "minimum_state": "understood",
+      "reason": "A recurrence relates indexed values of a sequence."
+    }
+  ],
+  "related": [
+    "qeva:1:fixed-point@1",
+    "qeva:1:sensitivity@1",
+    "qeva:1:closed-form@1"
+  ],
+  "explanation": {
+    "intuition": "Build a machine whose output can become its next input.",
+    "manipulation": "Change the initial value while keeping the update rule fixed. Compare the resulting sequences.",
+    "pattern": "The same machine can produce different orbits from different beginnings.",
+    "mechanism": "An explicit single-valued update and a starting state determine successive states. More general recurrence relations can need additional data or uniqueness conditions.",
+    "vocabulary": [
+      {
+        "term": "recurrence",
+        "meaning": "A relation constraining values across index steps."
+      },
+      {
+        "term": "initial condition",
+        "meaning": "The stated value or values from which an update begins."
+      },
+      {
+        "term": "orbit",
+        "meaning": "The successive states obtained by iterating a map."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "x[n+1] = F(x[n])",
+        "meaning": "Apply F to the current value to obtain the next value."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:recurrence@1",
+      "text": "A recurrence relation for a sequence (a_n) is a relation R(n,a_n,a_{n-1},...,a_{n-k}) that is required to hold for specified n. A recurrence plus initial conditions may determine the sequence.",
+      "context": "standard discrete mathematics",
+      "caveat": null
+    },
+    "proof": {
+      "label": "worked-example",
+      "statement": "For x[n+1] = 2x[n] and x[0] = c, x[n] = 2ⁿc for all n ≥ 0.",
+      "steps": [
+        "At n = 0, 2⁰c = c, so the initial condition holds.",
+        "Assume x[n] = 2ⁿc. The rule gives x[n+1] = 2 × 2ⁿc = 2ⁿ⁺¹c.",
+        "Induction establishes the formula for every nonnegative integer n."
+      ],
+      "limitation": "Ordinary real arithmetic and induction are external framework assumptions, not fully expanded archive dependencies."
+    },
+    "frontier": "Can a state reproduce itself? Can nearby states behave differently?"
+  },
+  "activities": [
+    "qeva:activity:recurrence-step@1",
+    "qeva:activity:recurrence-build@1",
+    "qeva:activity:recurrence-unique@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:recurrence-step@1",
+      "qeva:activity:recurrence-build@1"
+    ],
+    "mastered": [
+      "qeva:activity:recurrence-unique@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:recurrence@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

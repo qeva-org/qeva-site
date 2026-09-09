@@ -1,0 +1,83 @@
+{
+  "schema_version": "qeva-learning-concept/1",
+  "id": "qeva:learning:stability",
+  "revision": 1,
+  "concept_ref": "qeva:1:stability@1",
+  "title": "Stability",
+  "difficulty": "developing",
+  "prerequisites": [
+    {
+      "ref": "qeva:learning:fixed-point@1",
+      "minimum_state": "understood",
+      "reason": "Compare perturbations around an identified fixed point."
+    }
+  ],
+  "related": [
+    "qeva:1:attractor@1",
+    "qeva:1:sensitivity@1"
+  ],
+  "explanation": {
+    "intuition": "A resting state and a robust resting state are not the same thing.",
+    "manipulation": "Perturb zero slightly, then change the multiplier in the update x ↦ ax.",
+    "pattern": "Halving contracts the perturbation; doubling amplifies a nonzero perturbation. Both maps fix zero.",
+    "mechanism": "Lyapunov stability asks whether an appropriately small initial neighborhood stays inside each requested neighborhood for all future times.",
+    "vocabulary": [
+      {
+        "term": "perturbation",
+        "meaning": "A specified change in a starting state."
+      },
+      {
+        "term": "Lyapunov stability",
+        "meaning": "An all-time neighborhood condition around a reference fixed point."
+      }
+    ],
+    "notation": [
+      {
+        "symbol": "ε",
+        "meaning": "A requested bound on the distance from the fixed point."
+      },
+      {
+        "symbol": "δ",
+        "meaning": "A sufficient bound on the initial distance."
+      }
+    ],
+    "formal": {
+      "source_ref": "qeva:1:stability@1",
+      "text": "For a fixed point x* of a map F on a metric space, Lyapunov stability means: for every ε>0 there exists δ>0 such that d(x0,x*)<δ implies d(F^n(x0),x*)<ε for all n≥0.",
+      "context": "metric dynamical systems",
+      "caveat": "There are many inequivalent notions of stability: Lyapunov, asymptotic, structural, orbital, input-output, stochastic, and others."
+    },
+    "proof": {
+      "label": "worked-example",
+      "statement": "Zero is Lyapunov stable for F(x) = x/2 on ℝ.",
+      "steps": [
+        "Let ε > 0 and choose δ = ε.",
+        "If |x₀| < δ, then the iterated rule gives |Fⁿ(x₀)| = |x₀|/2ⁿ.",
+        "For all n ≥ 0 this is at most |x₀|, which is less than ε."
+      ],
+      "limitation": "This is one declared stability notion and one map. A finite trajectory is not the all-time argument."
+    },
+    "frontier": "Can a simple rule amplify some nearby starts in every neighborhood?"
+  },
+  "activities": [
+    "qeva:activity:stability-compare@1",
+    "qeva:activity:stability-proof@1"
+  ],
+  "mastery": {
+    "understood": [
+      "qeva:activity:stability-compare@1"
+    ],
+    "mastered": [
+      "qeva:activity:stability-proof@1"
+    ]
+  },
+  "provenance": {
+    "kind": "editorial-learning-overlay",
+    "source_refs": [
+      "qeva:1:stability@1"
+    ],
+    "created": "2026-09-09",
+    "license": "CC0-1.0",
+    "review_status": "draft-for-mathematical-review"
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "qeva-community-service/1",
+  "status": "design-contract-not-implemented",
+  "capabilities": {
+    "accounts": false,
+    "teams": false,
+    "sync": false,
+    "publication": false,
+    "review": false
+  },
+  "core_rule": "No account, team role, popularity signal or service action can automatically change durable archive verification.",
+  "adapter": {
+    "file": "assets/services.js",
+    "session_when_unavailable": null,
+    "error_code": "SERVICE_UNAVAILABLE"
+  },
+  "identity": {
+    "actor": "server-derived authenticated account ID",
+    "session": "opaque revocable secure session; never a local learner ID",
+    "creator_label": "self-described text, not authenticated identity"
+  },
+  "common": {
+    "transport": "Proposed HTTPS JSON API; no endpoint deployed in this release.",
+    "write_headers": [
+      "Idempotency-Key",
+      "If-Match (for replacing a known service revision)"
+    ],
+    "pagination": {
+      "cursor": "opaque optional string",
+      "limit": "positive bounded integer",
+      "response": "items and next_cursor"
+    },
+    "error": {
+      "code": "stable machine-readable code",
+      "message": "safe display text",
+      "request_id": "opaque trace identifier"
+    },
+    "errors": [
+      "SERVICE_UNAVAILABLE",
+      "UNAUTHENTICATED",
+      "FORBIDDEN",
+      "NOT_FOUND",
+      "REVISION_CONFLICT",
+      "INVALID_DOCUMENT",
+      "RATE_LIMITED"
+    ]
+  },
+  "operations": [
+    {
+      "name": "capabilities",
+      "method": "GET",
+      "path": "/v1/capabilities",
+      "authorization": "public",
+      "response": "capabilities and contract version"
+    },
+    {
+      "name": "getSession",
+      "method": "GET",
+      "path": "/v1/session",
+      "authorization": "optional session",
+      "response": "null or account ID/session expiry; never fabricated offline"
+    },
+    {
+      "name": "signIn",
+      "method": "POST",
+      "path": "/v1/identity/start",
+      "authorization": "real identity provider transaction",
+      "request": "provider-specific verified challenge; backend implementation required"
+    },
+    {
+      "name": "signOut",
+      "method": "DELETE",
+      "path": "/v1/session",
+      "authorization": "session; server-side revocation"
+    },
+    {
+      "name": "syncProgress",
+      "method": "PUT",
+      "path": "/v1/me/progress",
+      "authorization": "owner",
+      "request": "qeva-learner/1 plus known service version",
+      "response": "merged untrusted evidence and new service version; no trusted mastery flag"
+    },
+    {
+      "name": "saveDraft",
+      "method": "PUT",
+      "path": "/v1/me/labs/{id}",
+      "authorization": "owner",
+      "request": "qeva-sandbox/1 and version precondition",
+      "response": "private draft revision, independent from archive"
+    },
+    {
+      "name": "publishSandbox",
+      "method": "POST",
+      "path": "/v1/published-labs",
+      "authorization": "authenticated owner; moderation policy",
+      "request": "portable lab revision, explicit visibility and publication consent",
+      "response": "immutable shared service revision; unreviewed claim"
+    },
+    {
+      "name": "listTeams",
+      "method": "GET",
+      "path": "/v1/me/teams",
+      "authorization": "member",
+      "response": "paginated memberships"
+    },
+    {
+      "name": "createTeam",
+      "method": "POST",
+      "path": "/v1/teams",
+      "authorization": "authenticated actor",
+      "request": "name and visibility; server assigns initial owner",
+      "response": "team service record"
+    },
+    {
+      "name": "changeMembership",
+      "method": "PUT",
+      "path": "/v1/teams/{team}/members/{account}",
+      "authorization": "owner/authorized maintainer; prevent last-owner loss",
+      "request": "role and precondition"
+    },
+    {
+      "name": "requestReview",
+      "method": "POST",
+      "path": "/v1/teams/{team}/reviews",
+      "authorization": "team member",
+      "request": "exact service lab revision, scope, evidence and objections",
+      "response": "review queue item; not verification"
+    },
+    {
+      "name": "submitCandidate",
+      "method": "POST",
+      "path": "/v1/candidates",
+      "authorization": "authenticated contributor with rights",
+      "request": "exact lab revision, proposed archive-shaped record, context, assumptions, provenance, review evidence",
+      "response": "candidate service ID; NOT an archive object"
+    },
+    {
+      "name": "exportAccount",
+      "method": "GET",
+      "path": "/v1/me/export",
+      "authorization": "owner with appropriate reauthentication",
+      "response": "portable user/service data, no mandatory backend-only format"
+    },
+    {
+      "name": "deleteAccount",
+      "method": "DELETE",
+      "path": "/v1/me",
+      "authorization": "owner with reauthentication and explicit confirmation",
+      "response": "documented deletion/retention receipt"
+    }
+  ],
+  "account_resources": [
+    "knowledge_progress",
+    "saved_concepts",
+    "sandbox_drafts",
+    "published_sandboxes",
+    "collections",
+    "contributions",
+    "reviews"
+  ],
+  "entities": {
+    "account": [
+      "id",
+      "display_name",
+      "created_at",
+      "privacy_settings"
+    ],
+    "team": [
+      "id",
+      "name",
+      "visibility",
+      "service_revision"
+    ],
+    "membership": [
+      "team_id",
+      "account_id",
+      "role",
+      "joined_at"
+    ],
+    "team_lab": [
+      "team_id",
+      "portable_lab",
+      "service_revision",
+      "visibility"
+    ],
+    "collection": [
+      "owner_id",
+      "exact_object_refs",
+      "annotation",
+      "service_revision"
+    ],
+    "challenge_set": [
+      "team_id",
+      "exact_activity_refs",
+      "scope"
+    ],
+    "expedition": [
+      "team_id",
+      "goal_refs",
+      "lab_revision_refs",
+      "status"
+    ],
+    "review": [
+      "subject_revision_ref",
+      "reviewer_account_id",
+      "scope",
+      "decision",
+      "evidence_refs",
+      "objections"
+    ],
+    "discussion": [
+      "subject_service_ref",
+      "author_account_id",
+      "body",
+      "moderation_state"
+    ],
+    "audit_event": [
+      "actor_account_id",
+      "action",
+      "exact_subject_revision",
+      "timestamp",
+      "request_id"
+    ]
+  },
+  "roles": {
+    "owner": [
+      "manage_team",
+      "manage_members",
+      "assign_roles",
+      "manage_visibility"
+    ],
+    "maintainer": [
+      "manage_shared_labs",
+      "manage_challenges",
+      "manage_expeditions"
+    ],
+    "member": [
+      "contribute_labs",
+      "request_review",
+      "discuss"
+    ],
+    "reviewer": [
+      "review_scoped_submissions",
+      "record_objections"
+    ],
+    "viewer": [
+      "read_permitted_team_content"
+    ]
+  },
+  "promotion": {
+    "stages": [
+      "personal-sandbox",
+      "shared-sandbox",
+      "team-experiment",
+      "community-review",
+      "candidate",
+      "verification",
+      "release",
+      "archive"
+    ],
+    "admission": "Separate durable release authority, not implemented by a community API operation.",
+    "required": [
+      "exact source revision",
+      "context and assumptions",
+      "dependency closure",
+      "rights and provenance",
+      "explicit verification scope",
+      "review evidence and objections",
+      "release validation"
+    ]
+  },
+  "implementation_requirements": [
+    "server-side authorization tests",
+    "transactional conditional writes",
+    "identity/session recovery",
+    "safe untrusted content rendering",
+    "resource limits",
+    "abuse reporting and moderation",
+    "privacy export/deletion",
+    "backups and backend-loss drill",
+    "separate canonical admission authority"
+  ]
+}

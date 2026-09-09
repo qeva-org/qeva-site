@@ -1,0 +1,5 @@
+QEVA LOGO STATUS
+
+The exact historical raster asset previously referenced as `qeva-logo.png` was not present in the source material available to this build. It has therefore NOT been fabricated or silently replaced.
+
+`q.svg` and `qeva-mark.svg` are the currently available minimal QEVA Q mark used by the site. If the historical logo binary is recovered, preserve the original bytes as a separate provenance asset and update the website intentionally.

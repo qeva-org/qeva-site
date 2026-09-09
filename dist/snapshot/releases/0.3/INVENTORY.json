@@ -1,0 +1,458 @@
+[
+  {
+    "path": ".gitignore",
+    "size": 29,
+    "sha256": "53f0c100a33a56ebada040287b3d0f5dbab21c6ec6b66209fec5515c508f1144",
+    "lines": 3
+  },
+  {
+    "path": "404.html",
+    "size": 667,
+    "sha256": "28869b197f54e1a3df298588b88000384c7d95c101f4c93af9c53809f4b7e297",
+    "lines": 1
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "size": 1520,
+    "sha256": "9f7540cab53f0d3ecc040309188d07b3f7e626aadee0f6419fe4b76cc9de7ad7",
+    "lines": 31
+  },
+  {
+    "path": "LICENSES/CC0-1.0.txt",
+    "size": 7048,
+    "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "lines": 121
+  },
+  {
+    "path": "LICENSES/MIT.txt",
+    "size": 1074,
+    "sha256": "f70a801e7ed6eed22e69b04069de0ef30074ecacf3c11f0e21ef8c6051d942ce",
+    "lines": 9
+  },
+  {
+    "path": "MANIFEST.sha256",
+    "size": 6810,
+    "sha256": "d8c52583480a0b1b54a5c33c21ea2525bcee70854ad4e7ee2621a0ee302b3b8b",
+    "lines": 74
+  },
+  {
+    "path": "MANIFEST.sha512",
+    "size": 11546,
+    "sha256": "084506881f3f027d639f5abe9c9d011ef013048e86b1415ee68bddcd7991735d",
+    "lines": 74
+  },
+  {
+    "path": "README.md",
+    "size": 5264,
+    "sha256": "58e5eac253e220239c242a08f016b6d0b407d2b8cf13e68cc5e5e99e90f9c005",
+    "lines": 121
+  },
+  {
+    "path": "ROADMAP.md",
+    "size": 2111,
+    "sha256": "3219c867481c92b6bdde4e74c7dbfc154ca92b1f9093b1c7ab0eeb3aab3a9c2f",
+    "lines": 65
+  },
+  {
+    "path": "archive/CATALOG.tsv",
+    "size": 3652,
+    "sha256": "61a75d95cb82e625cc6bbeab6e871392f630aea34e98fc11fd8f4452c07a1ad0",
+    "lines": 33
+  },
+  {
+    "path": "archive/index.html",
+    "size": 56625,
+    "sha256": "0d81b00e2abd6abbe9d0345920ff92af9ff6ad58d0c5e56dca6fe52b99aa34d6",
+    "lines": 8
+  },
+  {
+    "path": "archive/index.json",
+    "size": 20634,
+    "sha256": "8145a0093c275b7f8c12c7337810d53571f09577fbb9eb5032303eac4896accc",
+    "lines": 538
+  },
+  {
+    "path": "archive/objects/attractor.r1.json",
+    "size": 2060,
+    "sha256": "98f1ed214c8cf492e757b1898a90923f17e6b16667abb471a345207e15796222",
+    "lines": 55
+  },
+  {
+    "path": "archive/objects/chaos.r1.json",
+    "size": 1755,
+    "sha256": "e6b461c1a10596a99d12ab2007df3d283dee5ad513d6d17ac2c4cfd11554c92d",
+    "lines": 43
+  },
+  {
+    "path": "archive/objects/chirality.r1.json",
+    "size": 2102,
+    "sha256": "b476ddc1daefbacc4568e525c609729c4acfff0187261acb9be52a5a2f11de8d",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/closed-form.r1.json",
+    "size": 1907,
+    "sha256": "71f483e147c95a5b74bb15bd30695e9ecb6f16ddc5788566f367430cfc5ba22d",
+    "lines": 48
+  },
+  {
+    "path": "archive/objects/coarse-graining.r1.json",
+    "size": 2256,
+    "sha256": "f8a58975a69a3d188f21b5db80bf07dd0295ec0108e998d8151ef9a4853abc63",
+    "lines": 62
+  },
+  {
+    "path": "archive/objects/collatz-conjecture.r1.json",
+    "size": 2151,
+    "sha256": "de1be2cb363c6be7eac1c619485521af9ac9177458838ce439bd24c1463532e1",
+    "lines": 58
+  },
+  {
+    "path": "archive/objects/collatz-map.r1.json",
+    "size": 1937,
+    "sha256": "a2d546b1009b5ce0bca651d13b38e4922b46f137dad73c93cc9ff82f1cb7711b",
+    "lines": 59
+  },
+  {
+    "path": "archive/objects/continuity.r1.json",
+    "size": 1987,
+    "sha256": "2b832416bc04a02747afac19d2a23400c2fddbd6cc1799f8f69631bcb21dad34",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/derivability.r1.json",
+    "size": 1994,
+    "sha256": "3c99ff2c5af847b04706569162738967574705b215a24526e25b1eb5db0ffcbd",
+    "lines": 53
+  },
+  {
+    "path": "archive/objects/discreteness.r1.json",
+    "size": 2072,
+    "sha256": "c4532cc92b2025394f19d595df8b0f1b60ade4d8ce7114c0cb3c1129a0978fa5",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/equivalence.r1.json",
+    "size": 1622,
+    "sha256": "7024a190a5e41843f499c72bcf865a3c85a4288bef371bb3a7d711b1de3949ca",
+    "lines": 41
+  },
+  {
+    "path": "archive/objects/exploration-exploitation.r1.json",
+    "size": 2183,
+    "sha256": "739b94fa04ecde2184f6e1ec71bee65d13ddd3bc6c4c9683df10ebb084b4b65e",
+    "lines": 53
+  },
+  {
+    "path": "archive/objects/fixed-point.r1.json",
+    "size": 1790,
+    "sha256": "4a15dfc0d3d0c206b02a13b625d88298065011300b5d3a79b39bef2083392183",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/formal-system.r1.json",
+    "size": 2023,
+    "sha256": "5baeec79169a3b9936b061002b7d3ebc929cc3494a746fedbcc41b57f8d690c7",
+    "lines": 45
+  },
+  {
+    "path": "archive/objects/grouping.r1.json",
+    "size": 2090,
+    "sha256": "798fc75e4e43ad7001a61c7d60f3337f65b16e74f386de99fef23b35897dfbb1",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/halving.r1.json",
+    "size": 1772,
+    "sha256": "097b397774f2fed77f7ae680beb286a4c51a1d843df80e184893101291ac74cb",
+    "lines": 42
+  },
+  {
+    "path": "archive/objects/hierarchy.r1.json",
+    "size": 2216,
+    "sha256": "46287ad898e2822b8f37dfb7c5933fa098700d2d2618a07fe78ae754e265107f",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/invariant.r1.json",
+    "size": 1728,
+    "sha256": "b455493959901168e4e4acbe722fe7f0ebca1c8db04ad6791220b71aab89b0b9",
+    "lines": 53
+  },
+  {
+    "path": "archive/objects/local-global.r1.json",
+    "size": 1948,
+    "sha256": "d315a76330b51b883bac5e370a93c7e2d7a65ad5c20744cab21c54521228e417",
+    "lines": 52
+  },
+  {
+    "path": "archive/objects/nonlinearity.r1.json",
+    "size": 1956,
+    "sha256": "916a87c6fee3f75a29f90c5bc3e86533ee45b759ef891f1f03c4307ae55592c9",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/optimization.r1.json",
+    "size": 1987,
+    "sha256": "27e3d5383f1868206285208ee96331ff31ccc862acec79ee8c203fe8f6bea6b9",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/parity.r1.json",
+    "size": 1534,
+    "sha256": "1905e463bfc964ea05ed5c8ef69b4e0851ad120564c953fc8fa0fd1dd687f369",
+    "lines": 47
+  },
+  {
+    "path": "archive/objects/periodicity.r1.json",
+    "size": 2006,
+    "sha256": "6e53be4ea1910fe7e5661171465e7d0491671b6ad3b63891bfec74f2d4745c2b",
+    "lines": 55
+  },
+  {
+    "path": "archive/objects/prime.r1.json",
+    "size": 1624,
+    "sha256": "13fc15b4e42fea175e4277f5c1ba6d130f8728d5a1b4b8ef8ef733b33e2754cc",
+    "lines": 41
+  },
+  {
+    "path": "archive/objects/quasiperiodicity.r1.json",
+    "size": 2409,
+    "sha256": "37e8da8d292186eb7034cdcb5da6c1616c90c6aed80dd5d51f66d106db82d2b9",
+    "lines": 53
+  },
+  {
+    "path": "archive/objects/recurrence.r1.json",
+    "size": 1960,
+    "sha256": "4427220b0aeaae5299397d2e9d28f3e9a3ba36b6be6d8fe960d036675e8389ea",
+    "lines": 55
+  },
+  {
+    "path": "archive/objects/satisfaction.r1.json",
+    "size": 1949,
+    "sha256": "3d14ae4985392b26a0fd136382d534583415f95b6f25c4b58bd04c913676111a",
+    "lines": 51
+  },
+  {
+    "path": "archive/objects/sensitivity.r1.json",
+    "size": 2135,
+    "sha256": "bd522498f864b9a1c05f184d5dc5041244638f9f133c4e7b792e196705eb3df6",
+    "lines": 57
+  },
+  {
+    "path": "archive/objects/sequence.r1.json",
+    "size": 1869,
+    "sha256": "7e15885efc7a3767c6712e2a8c84eb76d3f6732dbcade582960b900c66f3a458",
+    "lines": 58
+  },
+  {
+    "path": "archive/objects/signal-noise.r1.json",
+    "size": 2146,
+    "sha256": "acac399f67bbffbb5902eac51e93988e3c7d25febd4e8441294fc77a22746b98",
+    "lines": 56
+  },
+  {
+    "path": "archive/objects/stability.r1.json",
+    "size": 2257,
+    "sha256": "4c6a62ec2b27736986d95ff65a800cdf8d55c622ebf5e3c90c3740798e9a0d7a",
+    "lines": 61
+  },
+  {
+    "path": "archive/objects/symmetry.r1.json",
+    "size": 2042,
+    "sha256": "27891d8883abbdd604f6ca9861867e65a2983886c0c9d19fce72777e6c2af8c6",
+    "lines": 61
+  },
+  {
+    "path": "archive/qeva.jsonl",
+    "size": 55190,
+    "sha256": "4dd72bc2d9e85302590db8c9d68616ed17c7e633130909d09d8541b5602834ea",
+    "lines": 32
+  },
+  {
+    "path": "assets/LOGO.txt",
+    "size": 452,
+    "sha256": "88528fa1c3a0541db920dba278e31407021ccfbb2a50f083d5ad8722c1221130",
+    "lines": 5
+  },
+  {
+    "path": "assets/archive.js",
+    "size": 420,
+    "sha256": "8e123d463b611d1992cd768511d732e2dcde43840dc435fa50641ec252592f24",
+    "lines": 1
+  },
+  {
+    "path": "assets/atlas-data.js",
+    "size": 8981,
+    "sha256": "f078bf2321da9bc87f1c76233c6e3fbdae725cf25bf9de59cca444bbc4bec3ae",
+    "lines": 1
+  },
+  {
+    "path": "assets/history-data.js",
+    "size": 7883,
+    "sha256": "7597b778acb3d0e071a5108903fda30c2e807a0321eac6e7d00ae4753a010955",
+    "lines": 1
+  },
+  {
+    "path": "assets/history.js",
+    "size": 1156,
+    "sha256": "f777c0869112721d6d23964f4e04edd512432083fa7ea864c7463f8f71c02478",
+    "lines": 1
+  },
+  {
+    "path": "assets/map.js",
+    "size": 3159,
+    "sha256": "d81a67a53fc249827d97248775c4db6b11b492f6b18d1b7fd6250d9441496560",
+    "lines": 12
+  },
+  {
+    "path": "assets/q.svg",
+    "size": 239,
+    "sha256": "a1df7880e379527b268c6762027f4bc9e00b9a273cdb1e05d9bc43f506e52c83",
+    "lines": 1
+  },
+  {
+    "path": "assets/qeva-mark.svg",
+    "size": 239,
+    "sha256": "a1df7880e379527b268c6762027f4bc9e00b9a273cdb1e05d9bc43f506e52c83",
+    "lines": 1
+  },
+  {
+    "path": "assets/sandbox.js",
+    "size": 4248,
+    "sha256": "129d80d62c5a83d221850a091bbd11246a2bdfbc906cc90b8ad9b57f82732918",
+    "lines": 6
+  },
+  {
+    "path": "assets/site.css",
+    "size": 9068,
+    "sha256": "b9084ff93d04b113daa9045ad18f4adc7fac441f21e99e73cb2b2173c45a2616",
+    "lines": 6
+  },
+  {
+    "path": "atlas/README.md",
+    "size": 1063,
+    "sha256": "17a9a606cf375947063b047f5e4b9afc1cbd02f3ea942763b97f14f3057d75c9",
+    "lines": 50
+  },
+  {
+    "path": "atlas/concepts.json",
+    "size": 11579,
+    "sha256": "4a8e0c7cb04b09f02f93ab4a437c05a8489d0db4811f503aaf6f46220933ce9a",
+    "lines": 367
+  },
+  {
+    "path": "atlas/history.json",
+    "size": 10590,
+    "sha256": "030270582f2b01cb3cdae52bbf1f78da57606f29bfa96c5c30cf12ac612e805b",
+    "lines": 351
+  },
+  {
+    "path": "corpus/README.md",
+    "size": 1498,
+    "sha256": "1f8c1639d22484300fb9aa477b6456ddb3c93a7044db20b6807d1512d48aef85",
+    "lines": 42
+  },
+  {
+    "path": "corpus/SOURCE_POLICY.txt",
+    "size": 1104,
+    "sha256": "ab0c22e87c21b90e01065077fa6f98cf49f6d385c3ae4f2501caba80a8a3ada7",
+    "lines": 12
+  },
+  {
+    "path": "corpus/source-registry.json",
+    "size": 2640,
+    "sha256": "83a3f8613a1ab2ddaa65eda970b42f40edcf767350c0dfc9032364ad9f639fb9",
+    "lines": 68
+  },
+  {
+    "path": "history/index.html",
+    "size": 2958,
+    "sha256": "98baf506e05adca21dbe842c46a7aedad49dc03a20079f405e6a2b6c45f4f60b",
+    "lines": 6
+  },
+  {
+    "path": "index.html",
+    "size": 6311,
+    "sha256": "0909b73eece1cc9bc66964ce561a497cfda5f066db9e9cb3285eece7e525c65c",
+    "lines": 27
+  },
+  {
+    "path": "institution/index.html",
+    "size": 2924,
+    "sha256": "25998f818d6d18a4f7db4e56714842d076db43733de8f99f4d0dc909a1c861a3",
+    "lines": 7
+  },
+  {
+    "path": "map/index.html",
+    "size": 4033,
+    "sha256": "46ea2f0ff6afd06804b26d21526e2b5e16504cd5177bafbb013d4121e6ed96e0",
+    "lines": 9
+  },
+  {
+    "path": "preservation/index.html",
+    "size": 4266,
+    "sha256": "72b61fb270fb85cbf5b9818c803cc7a475541553ef1b923e2a7c6e86398f21fe",
+    "lines": 11
+  },
+  {
+    "path": "protocol/CORE.txt",
+    "size": 2629,
+    "sha256": "2ae706642ffc6d87d7a6a222772dcc5479a78691bf642ecc3c86e0b7dc46324e",
+    "lines": 61
+  },
+  {
+    "path": "protocol/index.html",
+    "size": 3083,
+    "sha256": "ce42271bc0a250c92a41632e6980170fcef6de3a1f600d55ee3d42b8d15798aa",
+    "lines": 16
+  },
+  {
+    "path": "protocol/qeva-object.schema.json",
+    "size": 3504,
+    "sha256": "ea60ee0743571d49a11348e61e6eb44ea8b9414ff5009d341440c705a24945f6",
+    "lines": 81
+  },
+  {
+    "path": "robots.txt",
+    "size": 23,
+    "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+    "lines": 2
+  },
+  {
+    "path": "sandbox/index.html",
+    "size": 5226,
+    "sha256": "38211e4555fcc798792e0d712dfe8fa0a728c5687cf9227657d9fb1a4965bf6f",
+    "lines": 10
+  },
+  {
+    "path": "scripts/ingest_metadata.py",
+    "size": 4308,
+    "sha256": "3dc2d9dfa36550a39f510413e17a45b5f453b40ffabca13ccbdab40f932b2633",
+    "lines": 51
+  },
+  {
+    "path": "scripts/release.py",
+    "size": 7524,
+    "sha256": "faafd01a62262d7262d1d8d493ccabb85fd037e54233e8c5d789f886718da17b",
+    "lines": 88
+  },
+  {
+    "path": "scripts/verify.py",
+    "size": 8307,
+    "sha256": "11fd5d26831f62337c317fcf5b8d42635f1d92fd23ec20afa66737abf99e7605",
+    "lines": 115
+  },
+  {
+    "path": "snapshot/READ-ME-FIRST.txt",
+    "size": 2594,
+    "sha256": "c63f6d93d83a2f1f1f4946fe3cac7bd9306d0c049c93859c8b1b8b20b33d655f",
+    "lines": 54
+  },
+  {
+    "path": "sources/index.html",
+    "size": 4590,
+    "sha256": "bc00e0660183a2c4b8e661266a5f0e5143280a9c78dcbb3fea5e7b05503db18a",
+    "lines": 26
+  }
+]

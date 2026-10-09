@@ -1,59 +1,66 @@
-# QEVA site project — 0.5.1
+# Qeva
 
-The public static website is in `dist/`. `vercel.json` declares `dist` as the
-output directory and requires no framework build. Keep the Vercel project root
-at the directory containing `vercel.json`; do not add an extra wrapper directory
-or set the project root to `dist` while keeping this outer configuration.
-No deployment has been performed by the production of this archive.
+A minimal English website for Qeva, an independent software and AI practice run by Pakin. The first consultation is free; implementation is scoped and priced separately.
+
+## Local development
+
+Requires Node.js 22.12 or newer (even-numbered LTS release).
 
 ```sh
-# Local HTTP preview
-python3 -m http.server 8000 --directory dist
-
-# Rebuild generated pages, exports and archival manifests after edits
-python3 -B dist/scripts/release.py
-
-# Outer deployment, canonical, runtime, preservation and new regression tests
-python3 -B scripts/check_project.py
-
-# Reproducible ZIP; destination must be outside this repository
-python3 -B scripts/package_release.py ../qeva-site-release.zip
+npm install
+npm run dev
 ```
 
-The ZIP contains repository files directly at its root. Copy its **contents**
-over the existing project while keeping the existing Git history. The valid
-`dist/` boundary has been retained; changing folder layout is not necessary.
+Production verification:
 
-## Scope
+```sh
+npm run build
+npm run verify
+npm run deploy:check
+```
 
-Six bounded kernels, seven analyzers, 116 current mathematical records and 159
-immutable mathematical revisions remain. The patch restores the original logo,
-fixes misleading aggregate statuses, supports replayable local run imports, adds
-a bounded browser-local shelf and repairs deployment packaging. It does not
-implement accounts, groups, alliances, user-created agents/tools, continuous
-harvesting or a live shared artifact service.
+The build generates a PNG social preview from the authored SVG, then Astro outputs portable HTML/CSS/assets to `dist/`. No Cloudflare adapter, Worker script, database, or client JavaScript is needed. Commit the generated package lock after installing dependencies.
 
-The static site has no runtime package dependencies. Python 3 and Node are
-needed for development/verification. The public core remains separate from
-future authenticated services, private data and compute workers.
+If dependencies are unavailable, `npm run preview:source` serves the same authored homepage and CSS at http://127.0.0.1:4321 using only Node. It is a source preview, not production-build validation.
 
-## Planning and audit
+## Content
 
-- [Audited master TODO v3](docs/QEVA_MASTER_TODO_v3_AUDITED.md)
-- [Audit, changes and limitations](docs/QEVA_AUDIT_v0.5_to_v0.5.1.md)
-- [Original v2 plan](docs/QEVA_MASTER_TODO_v2_DIGITAL_CIVILIZATION.md)
-- [560-item traceability register](docs/todo-traceability.json)
-- [Original-path preservation ledger](docs/audit/original-path-changes.json)
-- [Original logo provenance](branding/README.md)
+- `src/content/home.html`: page copy, layout, and decorative diagram.
+- `public/styles.css`: responsive layout, colors, typography, and reduced-motion handling.
+- `src/layouts/Layout.astro`: document metadata.
+- `public/social-preview.svg`: original social artwork; the build generates its PNG.
 
-Local browser saving is not an account or backup. Browser data may be cleared;
-export runs separately. Notes currently remain local. Imported old run exports
-retain their payload, but a legacy aggregate analysis without enough replay
-inputs is explicitly not marked verified.
+Public copy and metadata use Pakin only, with no full name or unverified claims. All contact actions use hello@qeva.org.
 
-Do not place credentials or operational corpus/private data under `dist/`.
-Harvester acquisition is a bounded prototype; the full implementation contracts
-and pipeline gaps are recorded in the TODO rather than advertised as complete.
+## Cloudflare Workers Free
 
-CI configuration is included, not remotely executed. See the audit for the
-difference between Node/DOM tests, local HTTP checks and actual live deployment.
+`wrangler.jsonc` deploys only the static `dist/` directory, with proper 404 handling. No production domain is attached by this configuration, so the first deployment is a workers.dev preview. The application is portable; only this deployment file and the Cloudflare header/redirect files are host-specific.
+
+From a working terminal:
+
+```sh
+npx wrangler login
+npm run deploy
+```
+
+Alternatively connect the repository in Cloudflare Workers Builds: build command `npm run build && npm run verify`, deploy command `npx wrangler deploy`, root directory the repository root, Node version 22. Set the Worker name to `qeva-site` to match the configuration.
+
+## Domain cutover
+
+1. Verify the workers.dev preview, including mobile layout, links and a real missing-page response.
+2. Record/export current DNS and nameservers before any changes. Check all existing web records and email MX, SPF, DKIM, DMARC and verification records.
+3. If the zone needs Cloudflare nameservers, copy and verify the existing records before changing nameservers at the registrar. Do not enable Email Routing or replace the current mail provider as part of the website migration.
+4. Add `qeva.org` as a Worker Custom Domain only after preview verification. Resolve any existing web-record conflict deliberately; do not remove unrelated records.
+5. Configure a Cloudflare Single Redirect for hostname `www.qeva.org` to `https://qeva.org`, preserving path and query string, with status 301. Ensure www has the required proxied DNS record. Domain-level redirects cannot be expressed in the static-assets `_redirects` file.
+6. Verify root/www HTTPS, the redirect, homepage assets, 404, and existing email DNS. The account owner should send and receive a real email test.
+7. Keep Vercel available until verification completes. Preserve the original DNS snapshot for rollback. Retire Vercel only after successful cutover.
+
+`vercel.json` is retained from the old checkout; this task does not change Vercel or DNS automatically. Do not assume that its previous build settings deploy the new Astro application.
+
+## Repository state at implementation
+
+Before new files were added, this checkout contained only `vercel.json` and `.git/`; the Git index recorded 948 already-missing tracked files. Those deletions were not reset or staged. New website files replace the website within the approved rebuild scope. Review Git changes before committing; no commit or push is performed automatically.
+
+## Current validation status
+
+File creation and source checks are possible. The session's terminal fails before running a command with a bundled PowerShell executable resolution error. Dependency installation, the Astro build, Wrangler validation, and deployment require a working terminal. Source-preview checks must not be reported as an Astro production build.

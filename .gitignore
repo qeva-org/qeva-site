@@ -1,5 +1,9 @@
-# Local reference and repair backups
-QEVA_0.4.0/
-dist/index.html.bak-nav-merge
-dist/sandbox/index.html.bak-0.5
-
+node_modules/
+dist/
+.astro/
+.wrangler/
+.preview/
+.env
+.env.*
+!.env.example
+.DS_Store

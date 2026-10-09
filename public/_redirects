@@ -1,0 +1,6 @@
+# Cloudflare redirects for the previous multi-page website.
+/about /#about 301
+/about/ /#about 301
+/contact /#contact 301
+/contact/ /#contact 301
+# Configure www.qeva.org -> qeva.org as a Cloudflare zone redirect after DNS verification.

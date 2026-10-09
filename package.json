@@ -1,0 +1,25 @@
+{
+  "name": "qeva-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node tools/generate-social.mjs && astro build",
+    "preview": "astro preview",
+    "preview:source": "node tools/preview-source.mjs",
+    "verify": "node tools/verify.mjs",
+    "deploy": "npm run build && npm run verify && wrangler deploy",
+    "deploy:check": "npm run build && npm run verify && wrangler deploy --dry-run"
+  },
+  "dependencies": {
+    "astro": "^6.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0",
+    "sharp": "^0.34.0"
+  }
+}
